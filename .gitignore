@@ -3,11 +3,18 @@ __pycache__/
 *.pyc
 .venv/
 
-# Raw binaries never enter this repo (ground truth lives in Odin-Paper + Drive)
-papers/
-bucket/
-archive/
+# Corpus markdown and summaries — committed
+!literature/conversions/
+!literature/conversions/**/
+
+# PDFs — fetched, not committed (use scripts/fetch_pdfs.py)
+literature/papers/
 *.pdf
+
+# Intake bucket
+literature/bucket/
+
+# Raw binaries
 *.xlsx
 *.csv
 *.zip

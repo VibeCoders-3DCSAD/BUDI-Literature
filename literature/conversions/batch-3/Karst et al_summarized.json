@@ -5,7 +5,7 @@
   "authors": "Karst, F. S.; Li, M. M.; Leimeister, J. M.",
   "year": 2025,
   "venue": "Electronic Markets",
-  "odin_topics": ["1.B", "3.A", "3.B", "4.A", "4.B", "6.A", "7.A", "7.B", "7.C", "8.A", "8.B", "10.A", "10.B", "12.A", "12.B", "12.C", "14.A", "14.B"],
+  "topic_tags": ["1.B", "3.A", "3.B", "4.A", "4.B", "6.A", "7.A", "7.B", "7.C", "8.A", "8.B", "10.A", "10.B", "12.A", "12.B", "12.C", "14.A", "14.B"],
   "tldr": "Designs and validates a synthetic data sharing ecosystem (SynDEc) for financial institutions, demonstrating that it enables privacy-preserving data exchange and improves predictive model performance, particularly benefiting smaller banks.",
   "problem_and_motivation": "Small and mid-sized banks lack the high-quality data volumes needed to leverage advanced AI for tasks like fraud detection. Existing solutions like open banking and federated learning face significant limitations related to privacy, scalability, and adaptability, creating a need for a secure and effective data-sharing ecosystem.",
   "approach": [

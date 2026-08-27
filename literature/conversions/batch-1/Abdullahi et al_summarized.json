@@ -5,7 +5,7 @@
   "authors": "Abdullahi, M.; Alhussian, H.; Aziz, N.; Abdulkadir, S. J.; Baashar, Y.; Alashhab, A. A.; Afrin, A.",
   "year": 2025,
   "venue": "IEEE Access",
-  "odin_topics": ["6.A", "6.B", "8.A", "8.B", "12.A", "12.B", "14.A", "14.B"],
+  "topic_tags": ["6.A", "6.B", "8.A", "8.B", "12.A", "12.B", "14.A", "14.B"],
   "tldr": "A systematic literature review of 60 studies identifies SVM as the most effective algorithm for detecting and adapting to concept drift in time-series data.",
   "problem_and_motivation": "Concept drift continuously changes the statistical properties of time-series datasets, degrading the predictive performance of deployed machine learning models. Most existing research on drift detection and adaptation has focused on classification tasks, leaving regression learning significantly underexplored. A comprehensive review that addresses both learning paradigms is needed to identify optimal detection methods and guide future research.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Chowdhury, A.; Paul, R.; Rozony, F.",
   "year": 2025,
   "venue": "International Journal of Scientific Interdisciplinary Research",
-  "odin_topics": ["6.A", "6.B", "14.B"],
+  "topic_tags": ["6.A", "6.B", "14.B"],
   "tldr": "Systematic review of 72 peer-reviewed studies on demand forecasting models for retail e-commerce, covering statistical, ML, hybrid, and deep learning approaches.",
   "problem_and_motivation": "E-commerce demand forecasting faces challenges from volatile consumer behavior, diverse product assortments, and fluctuating market conditions. A consolidated knowledge base comparing forecasting methodologies across statistical, ML, and deep learning approaches is needed.",
   "approach": [

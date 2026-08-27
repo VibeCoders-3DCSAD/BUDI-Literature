@@ -5,7 +5,7 @@
   "authors": "Chen, X.; Tang, Y.; Xu, J.; Zhang, J.; Zhang, S.; Peng, S.; Zheng, X.; Xiong, Y.",
   "year": 2025,
   "venue": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025)",
-  "odin_topics": ["6.B", "14.B"],
+  "topic_tags": ["6.B", "14.B"],
   "tldr": "Proposes LeTE, a learnable time encoding method using deep function learning that generalizes previous encodings and captures diverse periodic, non-periodic, and mixed temporal patterns.",
   "problem_and_motivation": "Existing time encoding methods rely on fixed inductive biases (e.g., trigonometric functions for periodicity), limiting their ability to handle diverse and complex real-world temporal patterns. Hand-crafted and functional encodings cannot model non-periodic or mixed patterns effectively.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "de Goma, J. C.; Bermudez, J. C.; Ordonio, R. M.",
   "year": 2024,
   "venue": "IEEE Access",
-  "odin_topics": ["5.A", "5.B", "14.A"],
+  "topic_tags": ["5.A", "5.B", "14.A"],
   "tldr": "Develops a music recommendation system using LightFM (hybrid collaborative + content-based matrix factorization) with Philippine OPM music data, achieving 96.8% top-5 accuracy.",
   "problem_and_motivation": "Discovering new music matching individual preferences is challenging due to content overload. Existing recommendation systems lack hybrid approaches that combine collaborative and content-based features for improved accuracy.",
   "approach": [

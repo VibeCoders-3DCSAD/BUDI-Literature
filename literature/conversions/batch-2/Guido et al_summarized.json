@@ -5,7 +5,7 @@
   "authors": "Guido, R.; Groccia, M. C.; Conforti, D.",
   "year": 2023,
   "venue": "Soft Computing",
-  "odin_topics": ["5.C", "8.B", "12.B"],
+  "topic_tags": ["5.C", "8.B", "12.B"],
   "tldr": "Proposes a multi-objective genetic algorithm approach for tuning cost-sensitive SVM hyper-parameters, with improved GA+DT version reducing computation time on imbalanced data.",
   "problem_and_motivation": "Class imbalance degrades classifier performance and hyper-parameter tuning is computationally expensive. Existing methods do not jointly optimize multiple imbalanced data performance measures.",
   "approach": [

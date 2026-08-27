@@ -5,7 +5,7 @@
   "authors": "D. R., J.; Sheela, A.; Raj, A. J.; Priyadarshini, Y.; Basha, S. M.",
   "year": 2025,
   "venue": "Engineering Applications of Artificial Intelligence",
-  "odin_topics": ["8.A", "14.A", "14.B"],
+  "topic_tags": ["8.A", "14.A", "14.B"],
   "tldr": "Proposes AHO-InDNN, a hybrid optimization algorithm combining Artificial Hummingbird Optimization and Hunger Games Search with an improved deep neural network for binary fraud detection in e-commerce transactions.",
   "problem_and_motivation": "E-commerce fraud causes massive financial losses and transaction volume makes manual detection impractical. Existing ML-based fraud detection suffers from class imbalance and suboptimal hyperparameter tuning.",
   "approach": [

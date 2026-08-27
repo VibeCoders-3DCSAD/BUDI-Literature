@@ -5,7 +5,7 @@
   "authors": "Dhanekula, R. K.; Munira, S.",
   "year": 2025,
   "venue": "Expert Systems with Applications",
-  "odin_topics": ["6.A", "6.B", "14.A"],
+  "topic_tags": ["6.A", "6.B", "14.A"],
   "tldr": "Compares DNN, LSTM, and GRU architectures for stock price and financial index forecasting, finding that a hybrid CNN-LSTM-GRU architecture achieves 2.3% lower MAPE than the best individual model.",
   "problem_and_motivation": "Financial time-series forecasting is critical for personal investment decisions but challenging due to non-stationarity, volatility, and complex temporal dependencies. Individual neural architectures have complementary strengths but no single architecture consistently outperforms.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Delena, M. T.; Fernandez, A.; Santos, J. R.",
   "year": 2024,
   "venue": "Journal of Computational Research and Technology",
-  "odin_topics": ["5.A", "14.A"],
+  "topic_tags": ["5.A", "14.A"],
   "tldr": "Develops an ensemble ML model (Random Forest + XGBoost) for predicting student retention at a Philippine university, achieving 94.2% accuracy, with academic performance and financial aid status as top predictors.",
   "problem_and_motivation": "Student attrition is a significant challenge for Philippine universities, but existing retention prediction models are developed in Western contexts and may not transfer to Philippine higher education due to different socioeconomic factors (e.g., remittances, informal financial support).",
   "approach": [

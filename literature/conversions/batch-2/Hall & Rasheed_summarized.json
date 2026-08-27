@@ -5,7 +5,7 @@
   "authors": "Hall, T.; Rasheed, K.",
   "year": 2025,
   "venue": "Applied Sciences",
-  "odin_topics": ["6.A", "6.B"],
+  "topic_tags": ["6.A", "6.B"],
   "tldr": "Comprehensive survey of 79 papers comparing tree-based and deep learning methods for time series prediction under identical experimental conditions, finding LightGBM and RNNs top-performing.",
   "problem_and_motivation": "Existing survey papers on time series prediction struggle to draw meaningful model comparisons because they analyze studies using different implementations and datasets. This heterogeneity obscures true performance differences between tree-based and deep learning approaches.",
   "approach": [

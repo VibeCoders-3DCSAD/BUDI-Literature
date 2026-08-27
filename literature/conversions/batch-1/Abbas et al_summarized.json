@@ -5,7 +5,7 @@
   "authors": "Abbas, S.K.; Hussain, M.; Rimal, Y.N.",
   "year": 2025,
   "venue": "SN Computer Science",
-  "odin_topics": ["4.A", "5.A", "5.C", "6.A", "11.A", "11.B", "12.A", "12.B"],
+  "topic_tags": ["4.A", "5.A", "5.C", "6.A", "11.A", "11.B", "12.A", "12.B"],
   "tldr": "Four ML classifiers were benchmarked on 7,000 FinTech users to predict technology acceptance from behavioral data, with XGBoost achieving the highest ROC AUC of 0.519 but overall limited discriminatory power due to class imbalance.",
   "problem_and_motivation": "Traditional technology acceptance models rely on cross-sectional survey data and intention-based indicators that suffer from self-reporting bias and fail to capture real behavioral engagement patterns. There is limited empirical evidence on how actual transactional and usage data map onto technology acceptance in FinTech, creating a research gap between perception-based frameworks and data-driven predictive approaches.",
   "approach": [

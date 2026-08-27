@@ -5,7 +5,7 @@
   "authors": "Hall, T.",
   "year": 2025,
   "venue": "University of Georgia, Master of Science Thesis",
-  "odin_topics": ["6.A", "6.B", "7.B", "7.C"],
+  "topic_tags": ["6.A", "6.B", "7.B", "7.C"],
   "tldr": "Surveys top-performing ML methods for time series prediction and applies LightGBM with engineered features to day trading, achieving returns several orders above human traders.",
   "problem_and_motivation": "Time series prediction across domains lacks meaningful model comparisons due to heterogeneous experimental setups. Day trading, constrained by human cognitive limits, requires automated systems that can process large-scale tick data.",
   "approach": [

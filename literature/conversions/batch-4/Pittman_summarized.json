@@ -5,7 +5,7 @@
   "authors": "Model Agnostic Latency; Energy Consumption Prediction",
   "year": 2016,
   "venue": "Unknown",
-  "odin_topics": [
+  "topic_tags": [
     "10.A",
     "12.A",
     "4.B",

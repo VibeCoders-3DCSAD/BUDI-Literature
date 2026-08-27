@@ -5,7 +5,7 @@
   "authors": "Lambert, M. J. C. M.; Jusoh, Z. M.; Zainudin, N.",
   "year": 2025,
   "venue": "Jurnal Pengguna Malaysia",
-  "odin_topics": ["1.A", "1.B", "1.C", "5.C"],
+  "topic_tags": ["1.A", "1.B", "1.C", "5.C"],
   "tldr": "Financial stress negatively impacts financial management among Filipino millennials, while millennial characteristics positively influence it.",
   "problem_and_motivation": "Financial well-being among Filipino millennials remains low despite economic growth, with limited research on how family resources and financial stress collectively influence their financial management. Existing studies examine these factors separately, lacking an integrated framework.",
   "approach": [

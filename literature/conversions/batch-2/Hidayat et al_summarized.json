@@ -5,7 +5,7 @@
   "authors": "Hidayat, A.; Nurhadi N, M.; Nurhidayah; Tanjung, A.; Muliani, M.; Musdalifah",
   "year": 2025,
   "venue": "ICONBIT 2025 Conference Proceedings",
-  "odin_topics": ["1.C", "2.C", "13.A"],
+  "topic_tags": ["1.C", "2.C", "13.A"],
   "tldr": "Analyzes how financial literacy affects Generation Z saving behavior in Makassar, Indonesia, finding that digital payment fully mediates the relationship between financial literacy and saving behavior.",
   "problem_and_motivation": "Generation Z in Indonesia shows low saving behavior (56.6% rarely save) and high digital payment usage, but the mechanism linking financial literacy to saving through digital payment adoption is not well understood.",
   "approach": [

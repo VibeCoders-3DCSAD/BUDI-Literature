@@ -5,7 +5,7 @@
   "authors": "Lusardi, A.; Mitchell, O.",
   "year": 2023,
   "venue": "Journal of Economic Perspectives",
-  "odin_topics": ["1.C", "2.A", "2.C", "3.A", "5.A", "5.C", "7.A", "7.B", "8.A", "10.A", "10.B", "11.A", "12.A", "13.A", "13.C"],
+  "topic_tags": ["1.C", "2.A", "2.C", "3.A", "5.A", "5.C", "7.A", "7.B", "8.A", "10.A", "10.B", "11.A", "12.A", "13.A", "13.C"],
   "tldr": "Financial literacy is low globally, varies by demographics, and is a strong predictor of financial behavior, wealth accumulation, and wealth inequality.",
   "problem_and_motivation": "People face complex financial decisions with long-lasting consequences, yet lack the necessary financial knowledge. This limited understanding restricts individual resource utilization and contributes to macroeconomic problems, including wealth inequality.",
   "approach": [

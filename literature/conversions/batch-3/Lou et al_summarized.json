@@ -5,7 +5,7 @@
   "authors": "Lou, Z.; Wang, S.; Yu, X.; Song, W.",
   "year": 2026,
   "venue": "Journal of Big Data",
-  "odin_topics": ["6.A", "6.B", "7.A", "7.B"],
+  "topic_tags": ["6.A", "6.B", "7.A", "7.B"],
   "tldr": "Predicts income levels and product recommendations using a CNN with hybrid pooling layers on a 980-person survey dataset, achieving 93.06% income prediction accuracy.",
   "problem_and_motivation": "Traditional models struggle with high-dimensional demographic data and non-linear relationships between demographics and purchasing behavior. No prior work has applied CNNs specifically to predict customer attributes and purchasing behavior from tabular data. This gap limits the accuracy of personalized retail and income-based product recommendations.",
   "approach": [

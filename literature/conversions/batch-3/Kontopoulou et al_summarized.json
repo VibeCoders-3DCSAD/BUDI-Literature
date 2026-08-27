@@ -5,7 +5,7 @@
   "authors": "Kontopoulou, V.I.; Panagopoulos, A.D.; Kakkos, I.; Matsopoulos, G.K.",
   "year": 2023,
   "venue": "Future Internet",
-  "odin_topics": ["2.D", "3.A", "4.A", "4.B", "6.A", "6.B", "7.A", "7.B", "8.A", "12.A", "12.B", "12.C"],
+  "topic_tags": ["2.D", "3.A", "4.A", "4.B", "6.A", "6.B", "7.A", "7.B", "8.A", "12.A", "12.B", "12.C"],
   "tldr": "Reviews comparative studies of ARIMA and machine learning models for time series forecasting across finance, health, weather, utilities, and network traffic, finding AI approaches generally superior but with notable exceptions where ARIMA excels.",
   "problem_and_motivation": "The scientific literature lacks a comprehensive summary comparing ARIMA and machine learning time series forecasting methods. A systematic review is needed to establish relative performance and identify conditions favoring each approach. This gap impedes informed model selection for practitioners.",
   "approach": [

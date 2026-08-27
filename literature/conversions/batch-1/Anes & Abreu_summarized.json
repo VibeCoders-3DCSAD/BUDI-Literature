@@ -5,7 +5,7 @@
   "authors": "Anes, V.; Abreu, A.",
   "year": 2025,
   "venue": "Applied Sciences",
-  "odin_topics": [
+  "topic_tags": [
     "None"
   ],
   "tldr": "An adaptive cluster-based normalization method combining fuzzy-number clustering with logarithmic normalization improves TOPSIS ranking stability and outlier robustness in multicriteria decision-making.",

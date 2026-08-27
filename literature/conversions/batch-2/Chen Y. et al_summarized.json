@@ -5,7 +5,7 @@
   "authors": "Chen, Y.; Zhang, Y.; Sherman, M.",
   "year": 2024,
   "venue": "Journal of Advanced Computing Systems (JACS)",
-  "odin_topics": ["6.A", "6.B", "8.A", "8.B"],
+  "topic_tags": ["6.A", "6.B", "8.A", "8.B"],
   "tldr": "Evaluates cost-sensitive learning, resampling, and focal loss for bankruptcy prediction under extreme imbalance on the Polish Companies dataset, finding tree ensembles with missing indicators achieve best AUPRC.",
   "problem_and_motivation": "Going-concern prediction involves extreme class imbalance (fewer than 5% firms fail) where misclassifying a distressed firm is far costlier than false alarms. Standard classifiers suffer from bias toward the majority class and evaluation metrics like accuracy are misleading.",
   "approach": [

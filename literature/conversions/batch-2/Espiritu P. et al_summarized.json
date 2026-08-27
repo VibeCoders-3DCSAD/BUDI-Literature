@@ -5,7 +5,7 @@
   "authors": "Espiritu, P.; Jadie, J.; Ponce, A.; Cheng, C.",
   "year": 2023,
   "venue": "Proceedings of the First Workshop in SouthEast Asian Language Processing",
-  "odin_topics": [
+  "topic_tags": [
     "None"
   ],
   "tldr": "Balarila achieves F0.5 of 70.75 for Filipino grammar error correction using GECToR-inspired deep learning with synthetic data, addressing semantic errors beyond lexical ones.",

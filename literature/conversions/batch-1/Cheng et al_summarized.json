@@ -5,7 +5,7 @@
   "authors": "Cheng, L.; Yu, Y.; Wang, Y.; Zheng, L.",
   "year": 2023,
   "venue": "Frontiers in Psychology",
-  "odin_topics": ["7.A"],
+  "topic_tags": ["7.A"],
   "tldr": "A scarcity mindset asymmetrically moderates mental accounting effects, inhibiting hedonic consumption from windfalls while leaving utilitarian spending from hard-earned gains unaffected.",
   "problem_and_motivation": "Mental accounting theory explains how consumers categorize money into distinct accounts, yet how a scarcity mindset interacts with these categorizations to shape hedonic versus utilitarian consumption remains unclear. Existing work has not tested whether scarcity alters mental accounting operations differently across spending types. This study fills that gap by examining the moderating role of scarcity mindset on consumption decisions within different mental accounts.",
   "approach": [

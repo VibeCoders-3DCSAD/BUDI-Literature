@@ -5,7 +5,7 @@
   "authors": "Ciric, M.; Predic, B.; Stojanovic, D.; Ciric, I.",
   "year": 2023,
   "venue": "Electronics",
-  "odin_topics": ["6.A", "6.B", "3.A"],
+  "topic_tags": ["6.A", "6.B", "3.A"],
   "tldr": "Compares single multivariate LSTM versus multiple separate LSTM networks for predicting next purchase timing and product category from medical vendor transaction data.",
   "problem_and_motivation": "Predicting both the timing and product category of a customer's next purchase is challenging because these outputs require different modeling approaches and may benefit from shared or separate representations.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Japinye, A. O.; Adedugbe, A. A.",
   "year": 2025,
   "venue": "SSR Journal of Artificial Intelligence",
-  "odin_topics": ["3.A", "4.A", "4.B", "5.A", "5.C", "6.A", "6.B", "7.A", "7.B", "8.A", "10.A", "12.A", "12.B", "14.A"],
+  "topic_tags": ["3.A", "4.A", "4.B", "5.A", "5.C", "6.A", "6.B", "7.A", "7.B", "8.A", "10.A", "12.A", "12.B", "14.A"],
   "tldr": "An explainability-first credit scoring framework integrating gradient-boosting models with SHAP explanations, isotonic calibration, and fairness-constrained thresholding demonstrates superior performance and bias reduction across three public lending datasets.",
   "problem_and_motivation": "Machine learning systems in consumer lending improve predictive accuracy but create opacity and regulatory compliance concerns. Existing post-hoc explanation methods lack rigorous stability assessment and fairness integration. A unified framework combining explanation, calibration, and fairness constraints is needed for responsible AI deployment in credit scoring.",
   "approach": [

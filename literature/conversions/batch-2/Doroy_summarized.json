@@ -5,7 +5,7 @@
   "authors": "Doroy, R. B.",
   "year": 2024,
   "venue": "Philippine Journal of Research",
-  "odin_topics": ["1.A", "1.B", "2.C", "13.B"],
+  "topic_tags": ["1.A", "1.B", "2.C", "13.B"],
   "tldr": "Survey of 198 Filipino public elementary school teachers reveals alarming debt levels: average debt-to-income ratio of 2.3, 83% indebted to multiple lenders, and significant negative correlation between debt burden and financial well-being (r=-0.61).",
   "problem_and_motivation": "Filipino public school teachers are known to carry heavy debt burdens due to low salaries and easy access to salary loans, but systematic empirical data on the extent, sources, and impact of this debt is lacking.",
   "approach": [

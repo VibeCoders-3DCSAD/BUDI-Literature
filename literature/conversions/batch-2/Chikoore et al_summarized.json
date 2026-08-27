@@ -5,7 +5,7 @@
   "authors": "Chikoore, R.; Ojo, S.; Kogeda, O.",
   "year": 2026,
   "venue": "IEEE Access",
-  "odin_topics": ["6.A", "6.B", "8.A", "8.B", "7.D"],
+  "topic_tags": ["6.A", "6.B", "8.A", "8.B", "7.D"],
   "tldr": "Proposes an Adaptive Fusion credit scoring framework integrating drift detection, retraining, windowing, ensemble learning, and adaptive weighting to maintain accuracy in dynamic financial environments.",
   "problem_and_motivation": "Static credit scoring models degrade over time due to concept drift from evolving borrower behavior and economic conditions. Existing adaptive approaches are developed for advanced economies and not suited to developing contexts with resource constraints.",
   "approach": [

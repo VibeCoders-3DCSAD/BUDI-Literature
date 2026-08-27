@@ -5,7 +5,7 @@
   "authors": "Gao, J.; Zhang, Y.; Chen, Y.; Dong, Y.; Chen, Y.; Song, S.; Tang, B.; Gu, Y.",
   "year": 2025,
   "venue": "Artificial Intelligence Review",
-  "odin_topics": ["5.C", "7.A", "14.B"],
+  "topic_tags": ["5.C", "7.A", "14.B"],
   "tldr": "Surveys Agent-in-the-Loop ML (AIL-ML) where humans and large models collaborate to construct domain-specific AI with lower costs and enhanced expert knowledge integration.",
   "problem_and_motivation": "Large neural networks excel in general domains but struggle in expert knowledge areas (healthcare, law) due to data sparsity and high annotation costs. Human-in-the-loop ML addresses this but overlooked the potential of large models as human proxies.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Gumasing, M. J. J.; Ong, A. K. S.; Sy, M. A. P. C.; Prasetyo, Y. T.; Persada, S. F.",
   "year": 2023,
   "venue": "Heliyon",
-  "odin_topics": ["1.A", "1.C", "5.A", "5.C", "6.A", "6.B"],
+  "topic_tags": ["1.A", "1.C", "5.A", "5.C", "6.A", "6.B"],
   "tldr": "Predicts Filipino consumer intention and usage behavior toward online grocery apps using an ensemble of artificial neural network and random forest classifier, achieving over 96% accuracy.",
   "problem_and_motivation": "Limited understanding exists of how Filipino consumers adopt online grocery applications, especially during health crises. Existing studies show inconsistent factors driving behavioral intention, and no prior Philippine study has applied machine learning ensembles to this problem.",
   "approach": [

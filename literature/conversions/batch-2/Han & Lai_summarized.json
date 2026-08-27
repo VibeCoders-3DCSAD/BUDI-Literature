@@ -5,7 +5,7 @@
   "authors": "Han, M.; Lai, J.",
   "year": 2026,
   "venue": "Journal of Advanced Computing Systems (JACS)",
-  "odin_topics": ["8.A", "8.B"],
+  "topic_tags": ["8.A", "8.B"],
   "tldr": "Develops a systematic temporal feature engineering framework and adaptive threshold optimization for detecting anomalous healthcare claims, evaluated on Medicare Part B data.",
   "problem_and_motivation": "Healthcare fraud accounts for billions in annual losses, but existing detection systems struggle with high false-positive rates and cannot adapt to evolving fraud tactics. The temporal dimension of claims data remains underutilized despite its potential to reveal subtle fraudulent patterns.",
   "approach": [

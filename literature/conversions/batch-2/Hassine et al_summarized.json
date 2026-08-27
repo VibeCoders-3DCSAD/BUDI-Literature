@@ -5,7 +5,7 @@
   "authors": "Hassine, N. B.; Fernandez, F. C.; Lavin, B. A.",
   "year": 2025,
   "venue": "Journal of Asian Development Studies",
-  "odin_topics": ["1.A", "1.B"],
+  "topic_tags": ["1.A", "1.B"],
   "tldr": "Examines how education levels and occupational structure have shaped wage inequality in the Philippines from 2002 to 2024 using Labor Force Survey data and RIF regressions.",
   "problem_and_motivation": "Despite sustained economic growth and poverty reduction, inequality in the Philippines remains among the highest in Southeast Asia. The relationship between education, employment structure, and wage inequality over the past two decades in the Philippines remains underexplored.",
   "approach": [

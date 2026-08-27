@@ -5,7 +5,7 @@
   "authors": "Hassan, S. Z. U.; Rafi, M.; Frnda, J.",
   "year": 2024,
   "venue": "IEEE Access",
-  "odin_topics": ["5.B", "5.C", "7.E"],
+  "topic_tags": ["5.B", "5.C", "7.E"],
   "tldr": "Proposes GCZRec, a generative zero-shot framework using conditional Wasserstein GAN to make cold-start news recommendations by synthesizing user-item interactions from latent features.",
   "problem_and_motivation": "Traditional collaborative filtering cannot recommend cold-start news items lacking historical interaction data. Existing techniques fail to incorporate collaborative information between users and items simultaneously, reducing serendipity and recommendation diversity.",
   "approach": [

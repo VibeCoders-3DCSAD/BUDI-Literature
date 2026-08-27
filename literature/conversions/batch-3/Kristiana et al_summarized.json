@@ -5,7 +5,7 @@
   "authors": "Kristiana, I.; Prabowo, H.; Gaol, F. L.; Qomariyah, N. N.",
   "year": 2026,
   "venue": "IEEE Open Journal of the Computer Society",
-  "odin_topics": ["1.C", "5.A", "5.C", "6.A", "6.B", "7.B", "7.E", "9.A", "9.B", "11.A", "11.B", "12.A", "12.B", "14.A", "14.B", "14.C"],
+  "topic_tags": ["1.C", "5.A", "5.C", "6.A", "6.B", "7.B", "7.E", "9.A", "9.B", "11.A", "11.B", "12.A", "12.B", "14.A", "14.B", "14.C"],
   "tldr": "An AI model combining a Two-Tower Network for static personalization and a Multi-Armed Bandit for adaptive nudging increases recommendation-following from 13.6% to 52.87% in a simulated mobile banking A/B test.",
   "problem_and_motivation": "Existing recommender systems in banking rely on collaborative or content-based filtering, which suffer from sparsity, cold-start problems, and a lack of behavioral awareness. There is a gap in empirically validated models that integrate static personalization with real-time adaptive learning and explicit behavioral nudge design.",
   "approach": [

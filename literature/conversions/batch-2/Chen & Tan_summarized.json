@@ -5,7 +5,7 @@
   "authors": "Chen, S.; Tan, W.",
   "year": 2025,
   "venue": "2025 2nd International Conference on Digital Economy and Computer Science (DECS 2025)",
-  "odin_topics": ["6.A", "6.B", "3.A"],
+  "topic_tags": ["6.A", "6.B", "3.A"],
   "tldr": "Proposes a bidirectional LSTM with self-attention for consumer purchase prediction, achieving 94.2% accuracy on 80M interaction records from 500K users.",
   "problem_and_motivation": "Traditional consumer behavior models (linear regression, decision trees, SVM) cannot capture temporal dependencies in large-scale e-commerce data. Existing deep learning methods lack optimized architectures for multi-class purchase intention prediction.",
   "approach": [

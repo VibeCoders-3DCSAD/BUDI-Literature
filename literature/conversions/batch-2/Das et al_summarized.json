@@ -5,7 +5,7 @@
   "authors": "Das, A.; Biswas, S.; Mallik, S.; Bhowmick, S.",
   "year": 2025,
   "venue": "Springer Book Chapter (Proceedings of IEMTRIS 2024)",
-  "odin_topics": ["14.A"],
+  "topic_tags": ["14.A"],
   "tldr": "Educational chapter comparing foundational RNN architectures (Simple RNN, LSTM, GRU, Bidirectional LSTM) on time-series prediction, textual sentiment analysis, and image classification tasks.",
   "problem_and_motivation": "Recurrent Neural Networks are widely used for sequential data but different architectures (vanilla RNN, LSTM, GRU, Bidirectional LSTM) have different strengths and limitations. Practitioners need clear comparative guidance on architecture selection.",
   "approach": [

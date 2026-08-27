@@ -5,7 +5,7 @@
   "authors": "Gabatin, R. A.; Sierra, S. M.; Maniago, M. G.; Capole, A.; Torres, R.",
   "year": 2025,
   "venue": "ICEME 2025, Beijing, China",
-  "odin_topics": ["2.A", "4.A", "5.A"],
+  "topic_tags": ["2.A", "4.A", "5.A"],
   "tldr": "Examines impulse buying drivers in Filipino digital shoppers using the SOR framework with 381 survey respondents, finding website usability and urgency as key direct predictors.",
   "problem_and_motivation": "Impulse buying is widespread in e-commerce but the interplay of social, marketing, website, and consumer factors remains unclear for the Filipino market. Existing studies lack integration of the SOR framework with Filipino consumer data.",
   "approach": [

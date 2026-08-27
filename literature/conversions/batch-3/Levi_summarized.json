@@ -5,7 +5,7 @@
   "authors": "Levi, Y.",
   "year": 2025,
   "venue": "Unknown",
-  "odin_topics": ["1.C", "2.A", "2.B", "3.B", "4.A", "4.B", "5.A", "6.A", "7.A", "7.B", "8.A", "9.A", "9.B", "10.A", "10.B", "11.A", "11.B", "12.A", "12.C", "13.A"],
+  "topic_tags": ["1.C", "2.A", "2.B", "3.B", "4.A", "4.B", "5.A", "6.A", "7.A", "7.B", "8.A", "9.A", "9.B", "10.A", "10.B", "11.A", "11.B", "12.A", "12.C", "13.A"],
   "tldr": "Information design influences consumer spending in a randomized field experiment, with a consumption-oriented frame and salient index-spending comparison reducing discretionary spending by 15%.",
   "problem_and_motivation": "Consumers' spending habits are resistant to change, and traditional saving interventions are costly or limited to retirement accounts. It was unknown whether subtle changes in how personal financial information is presented could effectively influence actual spending behavior.",
   "approach": [

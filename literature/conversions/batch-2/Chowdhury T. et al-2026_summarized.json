@@ -5,7 +5,7 @@
   "authors": "Chowdhury, T.; Chowdhury, M.; Rahman, M.; Ahmed, I.; Ahmed, N.; Tuhin, M.; Kafy, A.",
   "year": 2026,
   "venue": "Computers in Human Behavior Reports",
-  "odin_topics": ["1.A", "1.B", "1.C", "2.A", "3.A", "5.A", "5.B", "5.C", "10.B", "11.A"],
+  "topic_tags": ["1.A", "1.B", "1.C", "2.A", "3.A", "5.A", "5.B", "5.C", "10.B", "11.A"],
   "tldr": "Uses Random Forest, XGBoost, and k-means clustering on 1067 Bangladeshi adults to identify three financial behavioral segments and key literacy predictors including institutional trust.",
   "problem_and_motivation": "Traditional demographic methods fail to capture the complexity of digital financial behavior in emerging economies. Understanding how individuals use financial technology is limited, hampering the design of effective interventions for diverse populations.",
   "approach": [

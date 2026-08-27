@@ -5,7 +5,7 @@
   "authors": "Khandelwal, P.; Chaudhary, N.",
   "year": 2023,
   "venue": "Pratibodh – A Journal for Engineering",
-  "odin_topics": ["3.A", "3.B", "9.A", "9.B", "10.A", "10.B", "12.A"],
+  "topic_tags": ["3.A", "3.B", "9.A", "9.B", "10.A", "10.B", "12.A"],
   "tldr": "A systematic review of 10 case studies finds that color psychology significantly influences user behavior, emotion, and satisfaction in UI/UX design, but its application requires careful consideration of context, culture, and individual differences.",
   "problem_and_motivation": "UI/UX design increasingly integrates color psychology to influence user behavior and emotion, yet there is no unified framework to guide color choices. Research on color psychology in design is fragmented across case studies with varying domains, methods, and findings. A systematic synthesis is needed to identify consistent patterns and common challenges in applying color psychology to digital interfaces.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Hamidi, H.; Haghi, B.",
   "year": 2024,
   "venue": "Computers in Human Behavior Reports",
-  "odin_topics": ["5.A", "5.B", "5.C"],
+  "topic_tags": ["5.A", "5.B", "5.C"],
   "tldr": "Proposes a time-series-based customer segmentation method using genetic algorithm for feature weight optimization and spectral clustering, validated on 30 months of payment transaction data.",
   "problem_and_motivation": "Traditional static customer segmentation methods fail to capture temporal dynamics of customer behavior, leading to ineffective business strategies. Existing approaches neglect multivariate time series and cost as a key feature.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Boniol, P.; Liu, Q.; Huang, M.; Palpanas, T.; Paparrizos, J.",
   "year": 2024,
   "venue": "ACM Conference Proceedings",
-  "odin_topics": ["8.A", "8.B", "8.C", "6.A", "6.B", "12.A", "12.B", "4.A", "4.B"],
+  "topic_tags": ["8.A", "8.B", "8.C", "6.A", "6.B", "12.A", "12.B", "4.A", "4.B"],
   "tldr": "Comprehensive survey of time-series anomaly detection methods organized under a process-centric taxonomy spanning distance-based, density-based, and prediction-based approaches, with a meta-analysis of a decade of research trends.",
   "problem_and_motivation": "Time-series anomaly detection lacks a unified, process-centric taxonomy that groups methods by their detection mechanism rather than by application domain. Existing surveys focus on general-purpose anomaly detection and only briefly review time-series-specific methods. Disconnected research communities evaluate methods on different datasets and baselines, making cross-community comparison virtually impossible.",
   "approach": [

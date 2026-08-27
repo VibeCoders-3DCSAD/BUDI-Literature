@@ -5,7 +5,7 @@
   "authors": "Adlermann, J. F.",
   "year": 2024,
   "venue": "International Journal of Engineering & Extended Technologies Research",
-  "odin_topics": ["8.B", "8.A", "8.C", "14.B", "10.A", "14.A"],
+  "topic_tags": ["8.B", "8.A", "8.C", "14.B", "10.A", "14.A"],
   "tldr": "Integrating Grey Relational Analysis as a lightweight relational signature with ML ensembles in a cloud-native, multi-tenant architecture improves credit-card fraud detection AUC by 3-6 points while reducing compute utilization by 35-60 percent.",
   "problem_and_motivation": "Modern payment platforms must process billions of petabyte-scale events per day across multiple tenants with different risk profiles, yet traditional classifiers trained in isolation struggle with scale, heterogeneity, and continual fraud pattern shifts. Existing fraud detection systems rely on engineered aggregates or sequence encoders without integrating lightweight similarity measures that could improve interpretability and reduce compute overhead. There is little published work integrating Grey Relational Analysis as a first-stage relational signature in cloud-native, multi-tenant, petabyte-scale fraud detection pipelines.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Dewi, N. P.",
   "year": 2024,
   "venue": "Journal of Economics, Finance and Administrative Science",
-  "odin_topics": ["1.A", "1.B", "13.A"],
+  "topic_tags": ["1.A", "1.B", "13.A"],
   "tldr": "Systematic literature review of 38 papers examining how financial literacy influences savings behavior among Generation Z globally, finding that digital financial literacy is emerging as a distinct and stronger predictor than traditional financial literacy.",
   "problem_and_motivation": "Generation Z faces a unique financial environment with digital-native behaviors, easy access to digital payments, and complex financial products. Understanding how financial literacy translates to savings behavior in this cohort is essential for designing effective PFMS.",
   "approach": [

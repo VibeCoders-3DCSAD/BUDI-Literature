@@ -5,7 +5,7 @@
   "authors": "Dela Torre, M. A.; Garcia, L.; Villanueva, R.",
   "year": 2023,
   "venue": "Eurasian Journal of Research and Development",
-  "odin_topics": ["1.A", "1.B", "3.A", "4.A"],
+  "topic_tags": ["1.A", "1.B", "3.A", "4.A"],
   "tldr": "Survey of 420 Filipino college students reveals poor budgeting skills (mean score 52.3/100), heavy reliance on family allowances (78%), and significantly worse financial management among students without part-time jobs.",
   "problem_and_motivation": "College students face unique financial challenges with limited income and developing financial independence, but there is insufficient data on budgeting skills of Filipino college students to inform educational interventions and PFMS targeting.",
   "approach": [

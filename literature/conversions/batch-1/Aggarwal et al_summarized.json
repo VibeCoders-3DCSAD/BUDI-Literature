@@ -5,7 +5,7 @@
   "authors": "Aggarwal, L.; Saravanan, T.; Loana, A.; Alisa; Shreshta",
   "year": 2025,
   "venue": "Unknown",
-  "odin_topics": ["4.A", "4.B", "6.A", "8.A", "8.B", "10.A", "10.C"],
+  "topic_tags": ["4.A", "4.B", "6.A", "8.A", "8.B", "10.A", "10.C"],
   "tldr": "AI-powered fraud detection and algorithmic credit scoring are transforming global finance, but their convergence introduces systemic risks including model homogeneity, algorithmic herding, and data opacity requiring new macro-prudential governance frameworks.",
   "problem_and_motivation": "The global financial system is undergoing a structural shift where AI has moved from peripheral tools to the core of fraud detection, credit underwriting, and real-time payment verification. This rapid adoption creates tightly linked algorithmic environments where failures can cascade across jurisdictions, yet existing prudential frameworks are not equipped to manage synchronized algorithmic failures. The convergence of embedded finance, cross-border payments, and AI also introduces new vectors of systemic risk including model homogeneity, algorithmic herding, and opacity of cross-border data flows.",
   "approach": [

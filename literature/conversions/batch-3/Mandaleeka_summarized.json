@@ -5,7 +5,7 @@
   "authors": "Mandaleeka, A. P.",
   "year": 2025,
   "venue": "International Journal of Emerging Research in Engineering and Technology",
-  "odin_topics": ["5.A", "6.A", "7.A", "7.B", "7.C", "8.A", "9.A", "9.B", "10.A", "10.B", "10.C", "11.A", "11.B", "12.B", "14.B"],
+  "topic_tags": ["5.A", "6.A", "7.A", "7.B", "7.C", "8.A", "9.A", "9.B", "10.A", "10.B", "10.C", "11.A", "11.B", "12.B", "14.B"],
   "tldr": "Presents a modular, event-driven microservices framework that integrates SHAP-based explainable AI to deliver context-aware, transparent financial nudges in real-time fintech applications.",
   "problem_and_motivation": "Existing financial notification systems often deliver generic, opaque alerts that fail to engage users or build trust. There is a significant gap in integrating real-time context, explainability, and modular scalability into a single financial advisory system.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Gong, H.",
   "year": 2026,
   "venue": "ITM Web of Conferences (ATCIDS 2026)",
-  "odin_topics": ["6.A", "6.B"],
+  "topic_tags": ["6.A", "6.B"],
   "tldr": "Systematically reviews deep learning methods for stock price prediction from LSTM to Transformer, comparing ARIMA, GARCH, SVM, LSTM, and Transformer models on data requirements, indicators, and performance.",
   "problem_and_motivation": "Stock price prediction is challenged by high volatility, non-linearity, and non-stationarity. Traditional methods (ARIMA, GARCH) capture linear patterns but fail on nonlinear financial data. Deep learning offers improved accuracy but faces data noise and overfitting issues.",
   "approach": [

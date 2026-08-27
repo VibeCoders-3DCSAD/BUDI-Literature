@@ -5,7 +5,7 @@
   "authors": "George, M. Z. H.; Alam, M. K.; Hasan, M. T.",
   "year": 2023,
   "venue": "ASRC Procedia: Global Perspectives in Science and Scholarship",
-  "odin_topics": ["4.A", "4.B", "5.C", "8.B", "10.A"],
+  "topic_tags": ["4.A", "4.B", "5.C", "8.B", "10.A"],
   "tldr": "Systematic review of 118 studies on ML fraud detection in digital banking, finding supervised learning dominant but deep learning emerging, with hybrid models showing superior adaptability.",
   "problem_and_motivation": "Digital banking fraud is a growing systemic risk yet detection research remains fragmented across methodologies, regions, and regulatory contexts. No comprehensive synthesis exists.",
   "approach": [

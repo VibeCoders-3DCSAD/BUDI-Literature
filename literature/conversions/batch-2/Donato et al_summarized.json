@@ -5,7 +5,7 @@
   "authors": "Donato, M. L.; Santos, A. B.; Reyes, A. C.",
   "year": 2023,
   "venue": "Philippine Journal of Research",
-  "odin_topics": ["2.A", "2.C", "3.A", "13.B"],
+  "topic_tags": ["2.A", "2.C", "3.A", "13.B"],
   "tldr": "Qualitative study of 30 Filipino families reveals that utang na loob (debt of gratitude) significantly influences financial decision-making, leading to prioritization of extended family obligations over personal financial goals and creating complex interpersonal financial dependencies.",
   "problem_and_motivation": "Utang na loob is a core Filipino cultural value involving reciprocal obligations, but its impact on personal financial management and decision-making is poorly understood. Existing PFMS are designed for individualistic contexts and may not accommodate collectivist financial dynamics.",
   "approach": [

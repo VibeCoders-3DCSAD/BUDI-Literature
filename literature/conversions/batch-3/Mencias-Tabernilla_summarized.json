@@ -5,7 +5,7 @@
   "authors": "Mencias-Tabernilla, M. C.",
   "year": 2023,
   "venue": "Universal Journal of Educational Research",
-  "odin_topics": ["1.B", "1.C", "2.A", "2.D", "3.A", "5.A", "5.B", "5.C", "7.A", "7.E", "13.B"],
+  "topic_tags": ["1.B", "1.C", "2.A", "2.D", "3.A", "5.A", "5.B", "5.C", "7.A", "7.E", "13.B"],
   "tldr": "Examines socio-demographic and debt profiles of public-school teachers in Aklan, Philippines, identifying expenditure patterns, debt sources, and reasons for indebtedness.",
   "problem_and_motivation": "Public school teachers in the Philippines face significant financial strain, with many accumulating substantial debt through automatic payroll deductions and informal lenders. The extent of their expenditure patterns and the socio-demographic factors influencing debt levels are not well understood.",
   "approach": [

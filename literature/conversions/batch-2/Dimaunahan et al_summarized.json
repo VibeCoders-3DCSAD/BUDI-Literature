@@ -5,7 +5,7 @@
   "authors": "Dimaunahan, J. C.; Dela Cruz, M.; Villanueva, R. T.",
   "year": 2023,
   "venue": "Asian Journal of Social Science Research",
-  "odin_topics": ["1.A", "1.B", "2.C", "3.A"],
+  "topic_tags": ["1.A", "1.B", "2.C", "3.A"],
   "tldr": "Survey of 286 Filipino public school teachers reveals moderate financial literacy (61.2%) but poor financial behavior with 72% carrying high-interest debt and only 18% having emergency funds.",
   "problem_and_motivation": "Filipino public school teachers face unique financial challenges (low base pay, delayed salary releases, high social expectations) but there is limited empirical data on their financial literacy and behavior to inform targeted interventions.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Eliades, C.; Papadopoulos, H.",
   "year": 2025,
   "venue": "Proceedings of Machine Learning Research 266, Conformal and Probabilistic Prediction with Applications",
-  "odin_topics": [
+  "topic_tags": [
     "8.B",
     "6.B"
   ],

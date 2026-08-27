@@ -5,7 +5,7 @@
   "authors": "Heirene, R. M.; Vanichkina, D.; Zhang, E.; Huynh, E. L. Y.; De Leu, C. T.; Gainsbury, S. M.",
   "year": 2026,
   "venue": "Journal of Behavioral Addictions",
-  "odin_topics": ["5.A", "5.C", "6.A"],
+  "topic_tags": ["5.A", "5.C", "6.A"],
   "tldr": "Applies machine learning to predict high-risk gambling among 1,470 Australian online sports bettors, finding 30 days of behavioural data achieves AUROC 0.74-0.75 and survey data improves it to 0.85.",
   "problem_and_motivation": "Online gambling operators need effective risk detection systems, but optimal data windows and the value of combining behavioural with self-reported data remain unclear. Regulatory frameworks increasingly emphasize timely intervention, requiring clarity on minimal sufficient data.",
   "approach": [

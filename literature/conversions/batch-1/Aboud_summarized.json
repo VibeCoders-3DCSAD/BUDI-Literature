@@ -5,7 +5,7 @@
   "authors": "Aboud, M.M.S.F.",
   "year": 2025,
   "venue": "Academia Open",
-  "odin_topics": ["7.C", "4.B"],
+  "topic_tags": ["7.C", "4.B"],
   "tldr": "A weighted-preemptive hybrid Goal Programming model optimized seven competing financial objectives for an Iraqi bank from 2016 to 2024, achieving near-optimal solutions with minimal deviations using WINQSB.",
   "problem_and_motivation": "Financial institutions face complex decision-making challenges from multiple conflicting objectives such as profitability, cost control, and liquidity. Traditional financial planning models struggle to accommodate these competing goals, especially in developing economies with resource constraints. Goal Programming application in the financial sector of emerging markets like Iraq remains underexplored.",
   "approach": [

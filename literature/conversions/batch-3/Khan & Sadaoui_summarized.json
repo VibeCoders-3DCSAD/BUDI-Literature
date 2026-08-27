@@ -5,7 +5,7 @@
   "authors": "Khan, M. M. U. H.; Sadaoui, S.",
   "year": 2018,
   "venue": "Neurocomputing",
-  "odin_topics": ["6.B", "8.B", "5.C", "7.B"],
+  "topic_tags": ["6.B", "8.B", "5.C", "7.B"],
   "tldr": "A comprehensive survey and empirical evaluation of fifteen learner-based concept drift detection algorithms, comparing SPC, window, and ensemble methods on synthetic and real-world data streams.",
   "problem_and_motivation": "Concept drift degrades predictive model performance in evolving streaming environments, but the complex landscape of detection algorithms lacks a unified comparative analysis. Developers need clarity on algorithm behavior and relative strengths to select appropriate strategies for different drift types and data characteristics.",
   "approach": [

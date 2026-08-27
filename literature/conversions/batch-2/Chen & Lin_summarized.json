@@ -5,7 +5,7 @@
   "authors": "Chen, L.; Lin, H.",
   "year": 2025,
   "venue": "Journal of Trends in Financial and Economics",
-  "odin_topics": ["6.A", "6.B", "8.A", "4.A", "4.B"],
+  "topic_tags": ["6.A", "6.B", "8.A", "4.A", "4.B"],
   "tldr": "Integrates GAN-based data augmentation, adversarial learning, and cost-sensitive classification into a DL framework to improve credit risk prediction fairness and accuracy under class imbalance.",
   "problem_and_motivation": "Traditional credit risk models struggle with class imbalance and demographic invariance, leading to biased predictions. Existing DL methods address imbalance but fail to ensure fairness and stability across borrower segments.",
   "approach": [

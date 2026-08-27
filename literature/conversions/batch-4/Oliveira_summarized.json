@@ -5,7 +5,7 @@
   "authors": "Oliveira, D. N. O.",
   "year": 2026,
   "venue": "Faculdade Presidente Antônio Carlos, Brazil",
-  "odin_topics": ["8.A", "8.B", "14.B", "14.C"],
+  "topic_tags": ["8.A", "8.B", "14.B", "14.C"],
   "tldr": "Neural network architectures—MLPs, LSTMs, CNNs, Autoencoders, GNNs, and Transformers—are redefining real-time fraud detection under sub-100-millisecond latency budgets, with hybrid and ensemble frameworks consistently outperforming single-model approaches.",
   "problem_and_motivation": "Digital financial fraud caused $485.6 billion in global losses in 2023, and conventional rule-based and statistical detection methods are structurally incapable of containing the scale and sophistication of modern fraud. Real-time fraud detection must operate under sub-100-millisecond latency constraints while handling concept drift, class imbalance, adversarial evasion, and regulatory compliance requirements.",
   "approach": [

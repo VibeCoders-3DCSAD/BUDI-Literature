@@ -5,7 +5,7 @@
   "authors": "Hopfgartner, N.; Auer, M.; Helic, D.; Griffiths, M. D.",
   "year": 2026,
   "venue": "International Journal of Mental Health and Addiction",
-  "odin_topics": ["5.A", "5.C", "6.A"],
+  "topic_tags": ["5.A", "5.C", "6.A"],
   "tldr": "Tests five ML models to predict self-reported problem gambling across 1,743 British, Canadian, and Spanish online casino gamblers, finding behavioral variables more predictive than monetary ones.",
   "problem_and_motivation": "Online gambling operators need predictive models for early detection of problem gambling, but existing research lacks cross-country validation and clarity on whether behavioral or monetary variables are most predictive.",
   "approach": [

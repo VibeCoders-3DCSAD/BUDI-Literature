@@ -5,7 +5,7 @@
   "authors": "Cucio, M.; Hennig, T.",
   "year": 2025,
   "venue": "IMF Working Paper, WP/25/43",
-  "odin_topics": ["10.A", "14.B"],
+  "topic_tags": ["10.A", "14.B"],
   "tldr": "Combines AI exposure and complementarity scores with Philippine Labor Force Survey microdata to find one-third of workers highly AI-exposed, with 61% of those showing high complementarity suggesting augmentation rather than displacement.",
   "problem_and_motivation": "Rapid advances in generative AI are likely to transform labor markets globally, but granular analyses for emerging economies like the Philippines were lacking. The Philippines\u2019 large BPO sector and unique occupational structure required a country-specific assessment of which jobs face displacement versus augmentation from AI.",
   "approach": [

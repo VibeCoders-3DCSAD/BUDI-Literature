@@ -5,7 +5,7 @@
   "authors": "Hartomo, K. D.; Arthur, C.; Nataliani, Y.",
   "year": 2025,
   "venue": "IEEE Access",
-  "odin_topics": ["5.C", "7.C", "8.A", "10.A"],
+  "topic_tags": ["5.C", "7.C", "8.A", "10.A"],
   "tldr": "Proposes a weighted loss TabTransformer with SHAP-based explainability for imbalanced credit risk assessment, improving accuracy from 86.35% to 89.27% on BISAID and 93% to 95% on German Credit.",
   "problem_and_motivation": "Credit risk assessment suffers from class imbalance and opaque machine learning models, leading to biased predictions that hinder stakeholder trust. Information asymmetry between lenders and borrowers exacerbates the challenge in developing economies.",
   "approach": [

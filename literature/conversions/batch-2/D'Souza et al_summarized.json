@@ -5,7 +5,7 @@
   "authors": "D'Souza, S.; Narasimha Murthy, S.; Bademavidi, V. V.",
   "year": 2024,
   "venue": "Sustainability (MDPI)",
-  "odin_topics": ["4.A", "5.A", "6.A", "8.A", "14.A"],
+  "topic_tags": ["4.A", "5.A", "6.A", "8.A", "14.A"],
   "tldr": "A systematic literature review (2018-2024) of machine learning approaches used in personal financial management systems, covering 45 papers across clustering, classification, regression, and deep learning methods.",
   "problem_and_motivation": "Personal financial management systems (PFMS) are essential for improving financial well-being, but there is no consolidated understanding of which ML approaches are most effective across different PFMS tasks (budgeting, forecasting, fraud detection, etc.). The rapid growth of ML in finance has led to fragmented research.",
   "approach": [

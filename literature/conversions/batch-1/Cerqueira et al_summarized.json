@@ -5,7 +5,7 @@
   "authors": "Cerqueira, V.; Gomes, H.M.; Heyden, M.; Pfahringer, B.; Bifet, A.",
   "year": 2026,
   "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
-  "odin_topics": [
+  "topic_tags": [
     "None"
   ],
   "tldr": "A unified benchmarking framework for concept drift detection in data streams introduces controlled drift simulation on real datasets, timing-aware evaluation metrics, and leave-one-dataset-out hyperparameter optimization.",

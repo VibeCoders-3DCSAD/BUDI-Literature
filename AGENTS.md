@@ -1,13 +1,13 @@
 # Odin-Literature — Agent Guide
 
-**Thesis**: Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest
+**Thesis**: Development of BUDI: A Personalized Intelligent Finance Management Application for Filipinos Using Classification, Forecasting, Optimization, and Anomaly Detection Models for Improving Savings and Debt
 **Group 4, III-DCSAD, University of Makati**
 
 ---
 
 ## Repository Role
 
-This is the **self-contained RRL corpus and scoring repository** for the Odin thesis. It contains:
+This is the **self-contained RRL corpus and scoring repository** for the BUDI thesis. It contains:
 - Curated paper corpus (markdown conversions + structured summaries)
 - PDF fetch, conversion, and scoring pipeline
 - Module configuration for relevance scoring

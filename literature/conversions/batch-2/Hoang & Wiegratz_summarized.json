@@ -5,7 +5,7 @@
   "authors": "Hoang, D.; Wiegratz, K.",
   "year": 2023,
   "venue": "European Financial Management",
-  "odin_topics": ["4.A", "5.C", "6.A", "6.B"],
+  "topic_tags": ["4.A", "5.C", "6.A", "6.B"],
   "tldr": "Reviews and taxonomizes machine learning applications in finance into three archetypes: constructing superior measures, reducing prediction error, and extending the econometric toolset.",
   "problem_and_motivation": "Despite the rapid growth of ML publications in finance, it remains unclear where and how to apply ML methods to solve research problems in finance, requiring a taxonomy that captures recent applications beyond earlier classifications.",
   "approach": [

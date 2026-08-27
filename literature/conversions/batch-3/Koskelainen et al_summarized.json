@@ -5,7 +5,7 @@
   "authors": "Koskelainen, T.; Kalmi, P.; Scornavacca, E.; Vartiainen, T.",
   "year": 2023,
   "venue": "Journal of Consumer Affairs",
-  "odin_topics": ["1.C", "2.A", "3.A", "5.A", "5.C", "7.A", "9.A", "10.A", "10.B", "10.C"],
+  "topic_tags": ["1.C", "2.A", "3.A", "5.A", "5.C", "7.A", "9.A", "10.A", "10.B", "10.C"],
   "tldr": "Digitalization transforms financial services and consumer behavior, necessitating an updated conceptualization of financial literacy that integrates digital literacy components.",
   "problem_and_motivation": "Traditional financial literacy frameworks developed for an analog world may be inadequate in the current digital financial landscape. Despite the pervasiveness of digital financial services and technologies, little is known about how digitalization specifically influences individuals' financial literacy and financial capability.",
   "approach": [

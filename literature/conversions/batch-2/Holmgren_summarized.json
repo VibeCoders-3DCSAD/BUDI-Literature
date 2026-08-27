@@ -5,7 +5,7 @@
   "authors": "Holmgren, E. D. L.",
   "year": 2024,
   "venue": "International Journal of Advanced Research in Computer Science & Technology (IJARCST)",
-  "odin_topics": ["8.A", "8.B", "14.B"],
+  "topic_tags": ["8.A", "8.B", "14.B"],
   "tldr": "Proposes a DevOps-centric AI fraud detection framework combining graph-based risk ranking with supervised and unsupervised models for SAP HANA healthcare ERP, using synthetic data evaluation.",
   "problem_and_motivation": "Traditional fraud detection systems rely on rule-based engines or batch classifiers that struggle with zero-day attacks, multi-entity fraud rings, and high false positives. They lack integration with modern DevOps workflows for rapid model iteration.",
   "approach": [

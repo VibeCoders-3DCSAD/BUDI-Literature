@@ -5,7 +5,7 @@
   "authors": "Ahmed, I.; Dey, B.",
   "year": 2023,
   "venue": "Review of Applied Science and Technology",
-  "odin_topics": ["5.A", "5.B", "6.A", "11.A", "11.B", "12.A", "12.B"],
+  "topic_tags": ["5.A", "5.B", "6.A", "11.A", "11.B", "12.A", "12.B"],
   "tldr": "A neural network model trained on 200,000 mobile wallet user profiles achieved AUC 0.86 for retention forecasting, outperforming logistic regression and regularized baselines under temporally consistent validation.",
   "problem_and_motivation": "Mobile wallet retention is behaviorally inferred rather than contractually defined, creating challenges in distinguishing episodic inactivity from genuine churn. Existing linear models struggle to capture non-linear interactions among behavioral intensity, diversity, and stability dimensions that jointly shape retention outcomes in multi-functional payment ecosystems.",
   "approach": [

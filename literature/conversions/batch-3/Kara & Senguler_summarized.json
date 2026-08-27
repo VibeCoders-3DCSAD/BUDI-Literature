@@ -5,7 +5,7 @@
   "authors": "Kara, B.; Senguler, H.",
   "year": 2025,
   "venue": "Public Budgeting & Finance",
-  "odin_topics": ["3.A", "3.B", "4.A", "4.B", "6.A", "6.B", "7.A", "12.A", "12.B"],
+  "topic_tags": ["3.A", "3.B", "4.A", "4.B", "6.A", "6.B", "7.A", "12.A", "12.B"],
   "tldr": "A systematic review of 69 peer-reviewed studies finds no universally superior budget forecasting method; performance depends on context, supporting a pluralistic approach over reliance on a single model.",
   "problem_and_motivation": "The literature on budget forecasting presents a fragmented and heterogeneous assessment of method performance due to variations in datasets, time periods, and contexts. There is a need for a systematic evaluation to guide method selection for both academic researchers and practitioners. This study addresses this gap by providing a comprehensive comparative review over a four-decade period.",
   "approach": [

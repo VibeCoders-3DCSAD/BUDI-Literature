@@ -5,7 +5,7 @@
   "authors": "Jiang, J.; Abdul Hamid, N. A. W.; Yap, N. K.; Chong, C. W.",
   "year": 2026,
   "venue": "IEEE Access",
-  "odin_topics": ["3.A", "3.B", "4.A", "4.B", "5.A", "5.B", "5.C", "6.A", "6.B", "7.A", "7.B", "7.C", "7.D", "8.A", "8.B", "9.A", "12.A", "12.B", "12.C", "14.A"],
+  "topic_tags": ["3.A", "3.B", "4.A", "4.B", "5.A", "5.B", "5.C", "6.A", "6.B", "7.A", "7.B", "7.C", "7.D", "8.A", "8.B", "9.A", "12.A", "12.B", "12.C", "14.A"],
   "tldr": "Proposes an integrated Causal User Profiling pipeline combining feature selection, stratified clustering, and meta-learners to estimate heterogeneous treatment effects and classify users into four causal response types.",
   "problem_and_motivation": "Conventional uplift models detect treatment responsiveness without accounting for user heterogeneity or temporal consistency, while traditional user profiling remains descriptive and correlation-based. A gap exists between predictive profiling and causal reasoning needed for personalized intervention design. An integrated framework is needed to combine causal estimation with actionable user segmentation.",
   "approach": [

@@ -185,7 +185,7 @@ def build_validation(papers, per_paper, tier_cfg) -> str:
     return "\n".join([
         "# Validation of Automated Scores vs Existing Annotations",
         "",
-        "**Caveat:** the annotations (`odin_topics` / `topic_relevance` in the `_summarized.json`",
+        "**Caveat:** the annotations (`topic_tags` / `topic_relevance` in the `_summarized.json`",
         "files) were AI-generated under the **old** topic taxonomy (1.A-14.C) before the thesis",
         "overhaul. They are a sanity check only — not ground truth. Use them to confirm the",
         "automated scorer points in the same direction, then re-calibrate thresholds with judgment.",
@@ -381,7 +381,7 @@ def main() -> None:
 
     # ---- report.md ----
     lines = [
-        "# Odin-Literature Relevance & Quality Report",
+        "# Literature Relevance & Quality Report",
         "",
         f"- Corpus: **{len(stems)}** papers | generated **{generated}**",
         f"- Weights: BERT {weights['bert']} / TF-IDF {weights['tfidf']} / BM25 {weights['bm25']}",

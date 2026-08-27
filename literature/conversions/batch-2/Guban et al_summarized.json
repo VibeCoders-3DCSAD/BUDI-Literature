@@ -5,7 +5,7 @@
   "authors": "Guban, J. C. R.; Menderico, C. D. R.; Montalban, D. M. G.",
   "year": 2025,
   "venue": "Technological University of the Philippines - Manila",
-  "odin_topics": ["5.C", "6.A"],
+  "topic_tags": ["5.C", "6.A"],
   "tldr": "Develops a J48 decision-tree model in WEKA to predict streaming subscription plans from 2,500 user records, achieving 72% accuracy with country, age, and device as top predictors.",
   "problem_and_motivation": "Understanding user preferences in subscription plan selection is vital for data-driven strategies. Predictive models can inform plan design and targeted marketing but require interpretable outputs.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Maceda, L. L.; Llovido, J. L.; Artiaga, M. B.; Abisado, M. B.",
   "year": 2023,
   "venue": "2023 7th International Conference on Natural Language Processing and Information Retrieval (NLPIR 2023)",
-  "odin_topics": ["9.A", "9.B", "10.A"],
+  "topic_tags": ["9.A", "9.B", "10.A"],
   "tldr": "Evaluates GPT-4's zero- and one-shot sentiment classification performance on a code-mixed Filipino social media dataset, finding substantial agreement with human annotations.",
   "problem_and_motivation": "Accurate sentiment classification in large, unstructured social media datasets typically requires costly and time-consuming human-annotated training data. The potential of advanced Large Language Models like GPT-4 to perform this task without explicit training data remains underexplored, especially for low-resource and code-mixed languages.",
   "approach": [

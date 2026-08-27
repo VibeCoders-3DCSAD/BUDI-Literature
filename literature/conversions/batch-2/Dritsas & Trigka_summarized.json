@@ -5,7 +5,7 @@
   "authors": "Dritsas, E.; Trigka, M.",
   "year": 2024,
   "venue": "Information (MDPI)",
-  "odin_topics": ["4.A", "8.A", "14.A"],
+  "topic_tags": ["4.A", "8.A", "14.A"],
   "tldr": "Comprehensive survey of ML applications in e-commerce, covering 150+ papers across recommendation, fraud detection, customer segmentation, demand forecasting, and sentiment analysis, with NLP and deep learning identified as dominant trends.",
   "problem_and_motivation": "E-commerce platforms generate massive data but face challenges in personalization, fraud prevention, and customer understanding. There is no consolidated up-to-date overview of ML techniques applied across the full e-commerce value chain.",
   "approach": [

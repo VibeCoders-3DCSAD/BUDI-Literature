@@ -5,7 +5,7 @@
   "authors": "Varun Pratap Bhardwaj",
   "year": 2026,
   "venue": "arXiv preprint (arXiv:2603.xxxxx)",
-  "odin_topics": ["5.B.I", "14.B", "14.C"],
+  "topic_tags": ["5.B.I", "14.B", "14.C"],
   "tldr": "Introduces Agent Behavioral Contracts (ABC), a formal Design-by-Contract framework for autonomous AI agents that defines preconditions, invariants, governance policies, and recovery mechanisms with probabilistic (p,δ,k)-satisfaction guarantees and a proven drift bounds theorem.",
   "problem_and_motivation": "AI agents operate on prompts with no formal behavioral specification, causing drift, governance failures, and project failures that traditional software contracts solve. Runtime enforcement is a theoretical necessity: the self-evolution trilemma proves passive safety is provably insufficient for agents that evolve behavior over extended interactions.",
   "approach": [

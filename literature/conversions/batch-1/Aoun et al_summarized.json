@@ -5,7 +5,7 @@
   "authors": "Aoun, D.; Rahal, R.; Sfeir, L.; Jabbour Al Maalouf, N.",
   "year": 2026,
   "venue": "International Journal of Financial Studies",
-  "odin_topics": ["5.A", "10.B", "2.A", "4.B", "4.A", "2.C"],
+  "topic_tags": ["5.A", "10.B", "2.A", "4.B", "4.A", "2.C"],
   "tldr": "Structural equation modeling of 390 Lebanese millennials reveals that financial attitude strongly mediates the relationship between financial literacy and financial behavior, while fintech adoption exerts a weaker but significant direct effect in a crisis-affected emerging economy.",
   "problem_and_motivation": "Behavioral finance relationships between financial literacy, attitudes, and behavior remain underexplored in crisis-affected emerging economies like Lebanon, where institutional collapse, hyperinflation, and eroded trust in the financial system create distinct conditions from stable markets. Existing studies predominantly focus on developed or stable economies, leaving a critical empirical gap in the MENA region regarding how millennials' financial behavior is jointly shaped by knowledge, psychological evaluations, and digital financial tools. The prolonged Lebanese economic crisis, marked by currency devaluation exceeding 90% and widespread capital controls, makes understanding these dynamics urgent for strengthening financial inclusion and household stability.",
   "approach": [

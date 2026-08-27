@@ -5,7 +5,7 @@
   "authors": "Mesina-Romero, B. R.; Masangkay, M. C.; Franco, M.; Yambao, M. A. V.; Delgado, K.; Bueno, P. N.; Lingat, P. J.; Natividad, G. M.; Lapus, A. R.; Manuel, R. M.; Yñigo, K. T.",
   "year": 2024,
   "venue": "Bangko Sentral ng Pilipinas (BSP) Report",
-  "odin_topics": ["4.A", "4.B", "10.A", "10.B", "11.A"],
+  "topic_tags": ["4.A", "4.B", "10.A", "10.B", "11.A"],
   "tldr": "Digital retail payments reached 57.4% of volume and 59.0% of value in 2024, exceeding the Philippine Development Plan target, driven by merchant payments, P2P transfers, and B2B supplier payments.",
   "problem_and_motivation": "The BSP needs to track the progress of digital payment adoption in the Philippines to monitor policy effectiveness, identify barriers to e-payments, and guide interventions. Regular measurement provides a baseline for understanding the shift from cash to digital channels.",
   "approach": [

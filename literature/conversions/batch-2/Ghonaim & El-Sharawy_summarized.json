@@ -5,7 +5,7 @@
   "authors": "Ghonaim, W. A.; El-Sharawy, E. E.",
   "year": 2025,
   "venue": "International Journal of Theoretical and Applied Research",
-  "odin_topics": ["3.A", "4.A", "6.B", "9.A", "9.B"],
+  "topic_tags": ["3.A", "4.A", "6.B", "9.A", "9.B"],
   "tldr": "Proposes an intelligent mobile budget management app using RNN for financial transaction risk classification, achieving 97.45% accuracy with Arabic and English language support.",
   "problem_and_motivation": "Existing budgeting apps lack AI-based forecasting and Arabic language support. Users need intelligent tools that classify transaction risk levels and provide personalized financial guidance.",
   "approach": [

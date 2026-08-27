@@ -1,13 +1,13 @@
 # Odin-Literature
 
 Self-contained Review of Related Literature (RRL) corpus and scoring pipeline
-for the Odin thesis. **No LLMs, no token APIs, no agents.**
+for the BUDI thesis. **No LLMs, no token APIs, no agents.**
 
 ## What lives here
 
 - `literature/conversions/batch-1..6/` — every curated paper as:
   - `{stem}_marked.md` — full-text markdown conversion (with YAML metadata frontmatter)
-  - `{stem}_summarized.json` — structured summary (metadata, `odin_topics`, findings, citations)
+  - `{stem}_summarized.json` — structured summary (metadata, `topic_tags`, findings, citations)
 - `literature/bucket/` — raw candidate PDFs for intake
 - `literature/papers/` — fetched source PDFs (gitignored; use `scripts/fetch_pdfs.py`)
 - `config/modules.yaml` — **the single source of truth** for what "relevant" means

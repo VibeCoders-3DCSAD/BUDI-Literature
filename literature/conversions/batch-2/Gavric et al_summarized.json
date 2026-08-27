@@ -5,7 +5,7 @@
   "authors": "Gavric, M.; Zorko, M.; Slijepcevic, S.",
   "year": 2023,
   "venue": "Cantab Predictive Intelligence, Cambridge",
-  "odin_topics": ["5.C", "6.A", "12.B", "14.B"],
+  "topic_tags": ["5.C", "6.A", "12.B", "14.B"],
   "tldr": "Introduces an abstract semi-automated feature generation framework for classification on heterogeneous behavioral data that improves model accuracy 3-fold over fully automated approaches.",
   "problem_and_motivation": "Automated feature generation often results in model under-performance for business classification tasks involving time series and tabular data. Expert-knowledge-driven feature engineering is critical but lacks a scalable framework.",
   "approach": [

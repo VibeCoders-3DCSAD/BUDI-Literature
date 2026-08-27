@@ -5,7 +5,7 @@
   "authors": "Caroprese, L.; Pisani, F.S.; Veloso, B.M.; Konig, M.; Manco, G.; Hoos, H.; Gama, J.",
   "year": 2025,
   "venue": "ACM Transactions on Recommender Systems",
-  "odin_topics": ["6.A", "14.A", "12.B", "5.B"],
+  "topic_tags": ["6.A", "14.A", "12.B", "5.B"],
   "tldr": "A stream-based synthetic data generator for recommender systems models concept drift through dynamic tripartite graph embeddings, producing realistic preference data streams with controllable drift dynamics.",
   "problem_and_motivation": "The limited availability of large-scale public datasets with realistic temporal properties hampers the development and evaluation of streaming recommendation algorithms. Existing synthetic data generators fail to account for the dynamic nature of user preferences, ignoring concept drift in streaming scenarios. This gap prevents controlled benchmarking of recommendation systems under realistic distributional shifts.",
   "approach": [

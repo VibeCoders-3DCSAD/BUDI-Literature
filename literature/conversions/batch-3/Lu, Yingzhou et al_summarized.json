@@ -5,7 +5,7 @@
   "authors": "Lu, Y.; Chen, L.; Zhang, Y.; Shen, M.; Wang, H.; Wang, X.; van Rechem, C.; Fu, T.; Wei, W.",
   "year": 2021,
   "venue": "Journal of LaTeX Class Files",
-  "odin_topics": ["14.A"],
+  "topic_tags": ["14.A"],
   "tldr": "A systematic review of machine learning models for synthetic data generation, covering applications, generative methods, privacy, fairness, and evaluation strategies.",
   "problem_and_motivation": "Real-world machine learning applications face data quality issues, scarcity, and privacy constraints that limit data sharing and utilization. Synthetic data offers a promising alternative to overcome these obstacles by generating artificial data that preserves statistical properties while mitigating privacy risks. A comprehensive review of generative techniques and their evaluation is needed to guide research and application.",
   "approach": [

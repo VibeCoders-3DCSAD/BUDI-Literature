@@ -5,7 +5,7 @@
   "authors": "Hasan, M.; Shifa, S. I.; Niaz, K.; Shuvo, M. M. H.",
   "year": 2025,
   "venue": "European Journal of Science and Modern Technologies",
-  "odin_topics": ["14.A", "14.B"],
+  "topic_tags": ["14.A", "14.B"],
   "tldr": "Reviews continuous data curation and valuation techniques for maintaining long-term ML model health, proposing DataSphere as a unified framework for automated data lifecycle management.",
   "problem_and_motivation": "Machine learning models degrade over production time due to concept drift and data quality erosion, a phenomenon termed AI ageing. Current ML systems lack integrated, automated data curation pipelines, treating data work as an afterthought rather than a first-class lifecycle citizen.",
   "approach": [

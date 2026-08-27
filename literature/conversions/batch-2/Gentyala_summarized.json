@@ -5,7 +5,7 @@
   "authors": "Gentyala, R.",
   "year": 2024,
   "venue": "American International Journal of Computer Science and Technology",
-  "odin_topics": ["5.B", "5.C", "6.A", "8.B", "14.B"],
+  "topic_tags": ["5.B", "5.C", "6.A", "8.B", "14.B"],
   "tldr": "Simulates multi-cycle credit scoring to show static fairness interventions backfire over time, while feedback-aware dynamic resampling sustains 18% equity uplift with under 3% default rate increase.",
   "problem_and_motivation": "Fairness interventions in ML credit scoring produce unintended long-term effects because models reshape borrower behavior and data iteratively. One-shot fairness evaluations miss feedback loop dynamics that compound disparities.",
   "approach": [

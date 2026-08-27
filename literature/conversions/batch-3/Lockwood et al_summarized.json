@@ -5,7 +5,7 @@
   "authors": "Lockwood, E.; Kientz, J. A.; Landay, J. A.",
   "year": 2016,
   "venue": "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems",
-  "odin_topics": ["1.A", "1.C", "3.A", "4.A", "4.B", "9.A", "10.A", "10.B"],
+  "topic_tags": ["1.A", "1.C", "3.A", "4.A", "4.B", "9.A", "10.A", "10.B"],
   "tldr": "Examines low-income users' existing financial management practices and identifies design opportunities for financial literacy tools that align with their strategies.",
   "problem_and_motivation": "Low-income individuals often lack access to effective financial literacy tools, yet they face significant financial challenges that could be mitigated with better support. Existing tools are frequently designed from a high-income perspective, failing to accommodate the strategies and constraints of low-income users.",
   "approach": [

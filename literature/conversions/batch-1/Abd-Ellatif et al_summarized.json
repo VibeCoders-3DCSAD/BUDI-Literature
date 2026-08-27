@@ -5,7 +5,7 @@
   "authors": "Abd-Ellatif, L.; Abrar, M.; Ismaeel, A. A. K.",
   "year": 2025,
   "venue": "Advances in Artificial Intelligence and Machine Learning",
-  "odin_topics": ["8.A", "8.B", "6.A", "14.A", "5.C", "12.B"],
+  "topic_tags": ["8.A", "8.B", "6.A", "14.A", "5.C", "12.B"],
   "tldr": "A hybrid CNN-LSTM deep learning framework with dynamic pattern adjustment achieves 98.65% accuracy and 8.2ms latency for real-time financial fraud detection on the IEEE-CIS benchmark dataset.",
   "problem_and_motivation": "Existing financial fraud detection methods, including rule-based systems, traditional ML, and standard DL models, suffer from inability to adapt to evolving fraud tactics, high false-positive rates, poor handling of imbalanced datasets, and lack of interpretability. These shortcomings leave financial institutions vulnerable to new fraud patterns and erode stakeholder trust. A more adaptive, efficient, and interpretable DL framework is needed to meet real-time detection requirements.",
   "approach": [

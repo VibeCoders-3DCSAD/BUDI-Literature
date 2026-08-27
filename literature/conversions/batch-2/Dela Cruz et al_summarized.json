@@ -5,7 +5,7 @@
   "authors": "Dela Cruz, R.; Santos, M.; Reyes, T.",
   "year": 2023,
   "venue": "Eurasian Journal of Research and Development",
-  "odin_topics": ["1.A", "1.B", "2.A", "2.B", "3.A"],
+  "topic_tags": ["1.A", "1.B", "2.A", "2.B", "3.A"],
   "tldr": "Survey of 384 young Filipino professionals (age 22-35) reveals low financial well-being with only 23% having emergency funds, financial literacy scores below 50%, and high reliance on informal financial instruments.",
   "problem_and_motivation": "Young professionals in the Philippines face rising costs of living, stagnant wages, and limited financial literacy, but there is insufficient empirical data on their financial well-being and specific challenges to inform policy and PFMS design.",
   "approach": [

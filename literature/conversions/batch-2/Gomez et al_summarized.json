@@ -5,7 +5,7 @@
   "authors": "Gomez, A. P. I.; Kahil, I. D.; Ong, S. V. N.; Tighe, E. P.",
   "year": 2025,
   "venue": "De La Salle University, Manila",
-  "odin_topics": ["5.C"],
+  "topic_tags": ["5.C"],
   "tldr": "Explores Filipino APR by predicting individual BFI questionnaire responses from Twitter text, then aggregating to estimate Extraversion and Conscientiousness trait scores.",
   "problem_and_motivation": "Direct personality trait modeling from social media text yields subpar results. An alternative item-based approach predicting individual questionnaire responses may improve accuracy but requires validation.",
   "approach": [

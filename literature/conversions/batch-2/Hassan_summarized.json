@@ -5,7 +5,7 @@
   "authors": "Hassan, M.",
   "year": 2024,
   "venue": "Transactions on Artificial Intelligence, Machine Learning, and Cognitive Systems",
-  "odin_topics": ["8.A", "8.B", "14.B", "14.C"],
+  "topic_tags": ["8.A", "8.B", "14.B", "14.C"],
   "tldr": "Explores deep learning models and microservice-based deployment strategies for real-time risk assessment in SaaS payment platforms, emphasizing scalability, latency, and compliance.",
   "problem_and_motivation": "SaaS payment platforms require real-time risk assessment that adapts to rapid transaction fluctuations, but traditional anomaly detection struggles with diverse global transaction patterns and evolving fraud tactics. Latency, throughput, and scalability constraints complicate deep learning deployment.",
   "approach": [

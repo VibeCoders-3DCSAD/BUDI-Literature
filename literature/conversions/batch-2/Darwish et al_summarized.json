@@ -5,7 +5,7 @@
   "authors": "Darwish, S. M.; Abdelkader, H. M.; Alsharif, S. H.",
   "year": 2024,
   "venue": "FinTech (MDPI)",
-  "odin_topics": ["8.A", "14.A"],
+  "topic_tags": ["8.A", "14.A"],
   "tldr": "Proposes ABC-Sampling, a hybrid sampling method combining SMOTE with Artificial Bee Colony optimization (ABC) to address class imbalance for fraud detection in financial datasets.",
   "problem_and_motivation": "Fraud detection in financial transactions faces severe class imbalance (fraud often <1% of transactions), causing ML classifiers to be biased toward the majority class and miss fraudulent cases. Existing sampling methods struggle with high-dimensional financial data.",
   "approach": [

@@ -1,6 +1,6 @@
 # RRL Summary Format
 
-Reference for the structured JSON summary schema. Summaries are produced in `literature/` (intake) and stored with their `_marked.md` pair in **Odin-Literature** (`literature/conversions/batch-<N>/`). See `literature/_MIGRATION.md`.
+Reference for the structured JSON summary schema. Summaries are produced in `literature/` (intake) and stored with their `_marked.md` pair in **Odin-Literature** (`literature/conversions/batch-<N>/`).
 
 Full prompt: `literature/skills/paper-summarizer-skill.md`
 
@@ -14,7 +14,7 @@ Full prompt: `literature/skills/paper-summarizer-skill.md`
   "authors": "string — 'Last, F.; Last, F.' or 'Unknown'",
   "year": 0,
   "venue": "string — full name or 'Unknown'",
-  "odin_topics": ["string — topic codes, max 20"],
+  "topic_tags": ["string — topic codes, max 20"],
   "tldr": "string — one sentence, max 50 words, no 'This paper' start",
   "problem_and_motivation": "string — max 3 sentences, no methodology",
   "approach": ["string — each <=50 words, max 10 items"],

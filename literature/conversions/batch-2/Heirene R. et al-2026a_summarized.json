@@ -5,7 +5,7 @@
   "authors": "Heirene, R. M.; Chandrakumar, D.; Fahey, G.; Huynh, E. L. Y.; Gainsbury, S. M.",
   "year": 2026,
   "venue": "Harm Reduction Journal",
-  "odin_topics": ["1.C", "2.A", "2.B"],
+  "topic_tags": ["1.C", "2.A", "2.B"],
   "tldr": "Develops lower-risk gambling guidelines for Australian online sports and race betting using objective behavioural data from 1,647 wagering customers, identifying four key behavioural limits.",
   "problem_and_motivation": "Existing lower-risk gambling guidelines rely on self-reported data known to be inaccurate and apply broadly across gambling types, ignoring activity-specific risk factors. Online sports betting has unique behavioural markers (e.g., deposit frequency) not captured by general guidelines.",
   "approach": [

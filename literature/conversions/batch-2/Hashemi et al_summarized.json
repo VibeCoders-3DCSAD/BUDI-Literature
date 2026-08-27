@@ -5,7 +5,7 @@
   "authors": "Hashemi, M.; Darejeh, A.; Cruz, F.",
   "year": 2024,
   "venue": "UbiComp Companion '24, ACM International Joint Conference on Pervasive and Ubiquitous Computing",
-  "odin_topics": ["7.A", "7.C", "10.B"],
+  "topic_tags": ["7.A", "7.C", "10.B"],
   "tldr": "Proposes an axiomatic explainable AI approach using integer linear programming for participatory budgeting, finding users prefer general explanations over counterfactual ones and perceive outcomes as fairer.",
   "problem_and_motivation": "Participatory budgeting mechanisms lack transparency, making it difficult for citizens to understand why certain projects are funded. Despite complex voting rules that satisfy desirable axioms, explainability remains a barrier to trust and adoption.",
   "approach": [

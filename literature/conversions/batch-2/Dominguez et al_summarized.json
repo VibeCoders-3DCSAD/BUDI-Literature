@@ -5,7 +5,7 @@
   "authors": "Dominguez, M. R.; Santos, J.; Reyes, A.",
   "year": 2025,
   "venue": "Engineering Applications of Artificial Intelligence",
-  "odin_topics": ["10.A", "14.A", "6.A"],
+  "topic_tags": ["10.A", "14.A", "6.A"],
   "tldr": "Proposes an Adaptive Federated Learning framework for personalized financial forecasting on mobile devices, achieving 91.3% accuracy while reducing data transfer by 87% compared to centralized ML and maintaining privacy.",
   "problem_and_motivation": "Personalized financial forecasting requires user financial data, but centralized ML raises privacy concerns, data transfer costs, and latency issues. Federated learning enables on-device training, but standard FL struggles with non-IID (non-independent and identically distributed) financial data across heterogeneous devices.",
   "approach": [

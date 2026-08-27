@@ -5,7 +5,7 @@
   "authors": "Mareedu, A.",
   "year": 2023,
   "venue": "International Journal of Emerging Research in Engineering and Technology",
-  "odin_topics": ["None"],
+  "topic_tags": ["None"],
   "tldr": "A review of early AI integrations in Zero Trust architectures, covering behavioural authentication, adaptive trust scoring, and federated learning, and identifying challenges and future research directions.",
   "problem_and_motivation": "Traditional perimeter-based security models are obsolete in dynamic cloud environments with mobile workforces and evolving cyber threats. Static rules and policies in early Zero Trust implementations were insufficient, necessitating AI integration for real-time, adaptive decision-making.",
   "approach": [

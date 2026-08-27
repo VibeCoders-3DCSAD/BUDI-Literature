@@ -5,7 +5,7 @@
   "authors": "Charizanis, G.; Mavridou, E.; Vrochidou, E.; Kalampokas, T.; Papakostas, G.A.",
   "year": 2025,
   "venue": "Applied Sciences",
-  "odin_topics": ["4.A", "4.B", "5.A", "6.A", "12.A", "12.B"],
+  "topic_tags": ["4.A", "4.B", "5.A", "6.A", "12.A", "12.B"],
   "tldr": "A scoping review of 28 studies on data-driven decision support in SaaS, finding churn prediction as the dominant focus and Random Forest and XGBoost as top-performing algorithms.",
   "problem_and_motivation": "SaaS providers face high customer churn and intense competition, yet existing literature reviews on data-driven decision support for SaaS are fragmented, outdated, or lack systematic methodology. Prior reviews focused narrowly on churn prediction in non-SaaS industries, leaving a gap in holistic coverage of engagement, segmentation, and retention strategies. There is a need for a comprehensive, systematic survey that compares ML methods and evaluates their effectiveness across multiple SaaS decision-making contexts.",
   "approach": [

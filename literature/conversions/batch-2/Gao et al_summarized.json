@@ -5,7 +5,7 @@
   "authors": "Gao, W.; Wang, H.; Liu, Q.; Wang, F.; Lin, X.; Yue, L.; Zhang, Z.; Lv, R.; Wang, S.",
   "year": 2023,
   "venue": "Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '23)",
-  "odin_topics": ["5.B", "6.A", "6.B", "7.E"],
+  "topic_tags": ["5.B", "6.A", "6.B", "7.E"],
   "tldr": "Proposes TechCD, a two-stage framework using knowledge concept graphs with GCN for domain-level zero-shot cognitive diagnosis where target domain has no student-exercise interactions.",
   "problem_and_motivation": "Cognitive diagnosis models require student-exercise interaction data, but new domains (e.g., new courses) lack such records. Existing cold-start methods using exercise text fail due to linguistic bias and overfitting.",
   "approach": [

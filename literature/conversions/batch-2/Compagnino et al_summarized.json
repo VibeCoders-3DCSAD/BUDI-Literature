@@ -5,7 +5,7 @@
   "authors": "Compagnino, A.; Tutone, A.; Maruccia, Y.; Cavuoti, S.; Crupi, R.; Riccio, G.; Pagliaro, A.",
   "year": 2024,
   "venue": "Unknown (Review article)",
-  "odin_topics": ["8.A", "8.B", "4.A", "4.B", "10.A"],
+  "topic_tags": ["8.A", "8.B", "4.A", "4.B", "10.A"],
   "tldr": "Comprehensive review of ML methods for financial fraud detection covering credit card fraud, financial statement fraud, insurance fraud, and money laundering with supervised, unsupervised, and hybrid approaches.",
   "problem_and_motivation": "Financial fraud poses substantial economic and social challenges globally. Detecting diverse fraud types requires sophisticated ML approaches, but deploying them faces challenges including data imbalance, concept drift, and privacy concerns.",
   "approach": [

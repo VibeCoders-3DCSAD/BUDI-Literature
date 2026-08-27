@@ -5,7 +5,7 @@
   "authors": "Meka, S.",
   "year": 2023,
   "venue": "International Journal of Research and Applied Innovations (IJRAI)",
-  "odin_topics": ["4.A", "6.A", "7.A", "8.A", "9.A", "10.A", "11.A", "12.A", "13.A"],
+  "topic_tags": ["4.A", "6.A", "7.A", "8.A", "9.A", "10.A", "11.A", "12.A", "13.A"],
   "tldr": "Presents a full-stack FinTech development initiative for community banks, demonstrating significant improvements in operational reliability, engineering velocity, and system stability through an Agile, CI/CD-driven enterprise architecture.",
   "problem_and_motivation": "Community banks face the challenge of providing modern digital banking functionalities with limited budgets on aging infrastructures, while maintaining high security and reliability. There is a need for a sustainable, enterprise-grade digital core that balances innovation with operational stability.",
   "approach": [

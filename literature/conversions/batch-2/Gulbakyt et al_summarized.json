@@ -5,7 +5,7 @@
   "authors": "Gulbakyt, S.; Almaz, A.; Saule, S.; Suhrab, Y.",
   "year": 2025,
   "venue": "Journal of Applied Data Sciences",
-  "odin_topics": ["7.A", "7.B", "7.C", "7.D"],
+  "topic_tags": ["7.A", "7.B", "7.C", "7.D"],
   "tldr": "Proposes dynamic multi-criteria optimization framework for regional budget allocation using SQP and GA, allocating 42.7B tenge across 7 sectors with Gini coefficient of 0.223 indicating fair distribution.",
   "problem_and_motivation": "Regional budget allocation in Kazakhstan suffers from opaque procedures and lack of public trust. Manual allocation fails to balance citizen satisfaction, strategic priorities, basic needs, and urbanization levels.",
   "approach": [

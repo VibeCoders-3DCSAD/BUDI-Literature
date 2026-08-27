@@ -5,7 +5,7 @@
   "authors": "Cedeno, J.G.; Manteza, A.E.; Nacar, N.C.; Umbukan, M.P.; Muana, C.G.; Vasay, M.J.; Benablo, C.I.P.; Adlaon, K.M.M.",
   "year": 2024,
   "venue": "TechRxiv",
-  "odin_topics": [
+  "topic_tags": [
     "None"
   ],
   "tldr": "Pitik is a Cebuano-Binisaya intent-based chatbot developed to profile cardiovascular disease patients and assess risk factors using Gricean Maxims for communication validation.",

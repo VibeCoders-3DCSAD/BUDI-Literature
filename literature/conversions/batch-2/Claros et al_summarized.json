@@ -5,7 +5,7 @@
   "authors": "Claros, J.; Gaza, J.; Villaverde, Z.; Angeles, I.",
   "year": 2026,
   "venue": "Journal of Interdisciplinary and Multidisciplinary Research (JIMRES)",
-  "odin_topics": ["1.A", "1.B", "1.C", "2.A", "2.C", "5.A", "13.A"],
+  "topic_tags": ["1.A", "1.B", "1.C", "2.A", "2.C", "5.A", "13.A"],
   "tldr": "Uses PLS-SEM to examine financial literacy, parental influence, peer impact, and self-control as determinants of saving behavior among Filipino university students.",
   "problem_and_motivation": "Understanding the psychological and social determinants of saving behavior among young Filipino adults is important for developing effective financial education. The interplay between self-control, social influence, and literacy in the Philippine context is not well understood.",
   "approach": [

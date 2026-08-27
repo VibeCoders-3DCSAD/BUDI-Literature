@@ -5,7 +5,7 @@
   "authors": "D'Acunto, F.; Rossi, A. G.",
   "year": 2023,
   "venue": "Annual Review of Financial Economics",
-  "odin_topics": ["4.A", "4.B", "7.A", "7.B", "13.A", "13.B", "10.A", "10.B"],
+  "topic_tags": ["4.A", "4.B", "7.A", "7.B", "13.A", "13.B", "10.A", "10.B"],
   "tldr": "Surveys how robo-advice uses big data to provide households with rational-expectation benchmarks across consumption, saving, investment, and debt management, transforming biased decision-makers into neoclassical agents.",
   "problem_and_motivation": "Households worldwide make suboptimal financial decisions (household finance puzzles) due to cognitive biases, lack of financial literacy, and limited access to affordable advice. Traditional solutions (human advisors, nudges) are expensive, not scalable, or insufficiently personalized.",
   "approach": [

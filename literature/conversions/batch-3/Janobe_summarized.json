@@ -5,7 +5,7 @@
   "authors": "Janobe, J.",
   "year": 2025,
   "venue": "Journal Dekstop Application",
-  "odin_topics": ["3.A", "4.A", "9.A", "9.B", "9.C", "10.A", "10.B", "13.A"],
+  "topic_tags": ["3.A", "4.A", "9.A", "9.B", "9.C", "10.A", "10.B", "13.A"],
   "tldr": "A desktop budget management system using Visual Basic .NET and MySQL was developed to provide offline, privacy-focused personal financial tracking with automated income/expense summaries and balance calculation.",
   "problem_and_motivation": "Many individuals lack reliable, accessible tools for consistent financial discipline, while existing manual methods and cloud-based alternatives suffer from errors, privacy risks, or connectivity dependencies. There is a need for a simple, secure, offline, and cost-free personal finance application that provides real-time financial insights and promotes financial literacy.",
   "approach": [

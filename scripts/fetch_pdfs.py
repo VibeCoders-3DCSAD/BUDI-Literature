@@ -102,7 +102,7 @@ def fetch_from_remote(url: str, output_dir: Path) -> dict:
 
     print(f"  downloading: {url}")
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Odin-Literature/1.0"})
+        req = urllib.request.Request(url, headers={"User-Agent": "Literature-Pipeline/1.0"})
         with urllib.request.urlopen(req, timeout=300) as resp:
             data = resp.read()
     except Exception as e:

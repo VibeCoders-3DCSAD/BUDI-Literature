@@ -5,7 +5,7 @@
   "authors": "Mienye, I.D.; Swart, T.G.; Obaido, G.",
   "year": 2024,
   "venue": "Information",
-  "odin_topics": ["6.B", "7.A", "4.A", "5.C", "2.D", "8.B"],
+  "topic_tags": ["6.B", "7.A", "4.A", "5.C", "2.D", "8.B"],
   "tldr": "A comprehensive review of RNN architectures, including LSTM, GRU, and bidirectional variants, and their applications in NLP, speech, time-series, autonomous vehicles, and anomaly detection, highlighting hybrid models and future challenges.",
   "problem_and_motivation": "Existing reviews on RNNs do not fully capture the latest architectural innovations, such as hybrid models with CNNs and transformers, nor do they cover the breadth of emerging application domains. This gap limits the ability of researchers to assess the current state and future directions of RNN research.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Guedi, H. I.",
   "year": 2026,
   "venue": "Frontiers in Emerging Multidisciplinary Sciences",
-  "odin_topics": ["4.A", "6.A", "10.A", "14.B"],
+  "topic_tags": ["4.A", "6.A", "10.A", "14.B"],
   "tldr": "Proposes a predictive financial decision platform integrating scalable cloud computing, reinforcement learning, and reward-driven analytics for adaptive digital financial ecosystems.",
   "problem_and_motivation": "Conventional financial decision systems suffer from limited personalization, insufficient predictive capability, weak scalability under real-time demand, and inadequate behavioral intelligence integration.",
   "approach": [

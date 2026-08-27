@@ -5,7 +5,7 @@
   "authors": "Kashif, H.; Naseer, F.",
   "year": 2025,
   "venue": "Unknown",
-  "odin_topics": ["8.A", "8.B", "12.A"],
+  "topic_tags": ["8.A", "8.B", "12.A"],
   "tldr": "A systematic evaluation of fraud detection systems finds hybrid supervised-unsupervised models (92.7% accuracy) outperform rule-based systems (78.3%), with graph-based deep learning reducing false positives by 34% and increasing true positives by 27%.",
   "problem_and_motivation": "Financial fraud costs global economies an estimated $5.4 trillion annually. Existing systems are struggling to keep pace with the sophistication and volume of modern fraud. There is a need for a systematic evaluation of current detection methods to guide improvements.",
   "approach": [

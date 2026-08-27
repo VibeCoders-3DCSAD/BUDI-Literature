@@ -5,7 +5,7 @@
   "authors": "Laspiñas, E. L.; Murcia, J. V. B.",
   "year": 2024,
   "venue": "TWIST",
-  "odin_topics": ["6.A", "6.B", "12.B"],
+  "topic_tags": ["6.A", "6.B", "12.B"],
   "tldr": "A comparison of six machine learning classifiers for binary income prediction shows RandomForest and Random Tree achieve the highest accuracy and F-measures on the Adult Income dataset.",
   "problem_and_motivation": "Conventional econometric models are limited by linear assumptions and cannot fully capture the complex, non-linear dynamics of income distribution. There is a research gap in the systematic application and comparison of machine learning classifiers for income level prediction. This study addresses the need for a more accurate and data-driven approach to socioeconomic forecasting.",
   "approach": [

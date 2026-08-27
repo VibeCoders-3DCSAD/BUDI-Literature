@@ -5,7 +5,7 @@
   "authors": "Agrawal, R.; Khanna, A.; Hamdare, S.",
   "year": 2025,
   "venue": "International Journal of Computational Intelligence Systems",
-  "odin_topics": ["3.A", "3.B", "5.A", "5.C", "6.A", "6.B", "11.A", "11.B", "12.B", "14.A"],
+  "topic_tags": ["3.A", "3.B", "5.A", "5.C", "6.A", "6.B", "11.A", "11.B", "12.B", "14.A"],
   "tldr": "ML techniques including K-Means clustering and regression models analyze Indian credit card spending patterns to optimize personalized reward point allocation, achieving an R2 value of 0.99.",
   "problem_and_motivation": "Traditional credit card reward programs use one-size-fits-all structures that fail to differentiate between high-value and nominal spenders, resulting in missed opportunities for customer engagement and retention. Existing models lack adaptability to evolving user preferences and overlook discretionary spending categories such as luxury and travel. There is a gap in developing tailored systems that use machine learning to optimize sales and reward structures for credit card companies.",
   "approach": [

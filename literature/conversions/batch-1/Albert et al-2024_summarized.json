@@ -5,7 +5,7 @@
   "authors": "Albert, J.R.G.; Briones, R.M.; Rivera, J.P.R.",
   "year": 2024,
   "venue": "PIDS Discussion Paper Series",
-  "odin_topics": ["1.A", "1.B", "1.C", "2.A", "2.B", "2.D", "4.B"],
+  "topic_tags": ["1.A", "1.B", "1.C", "2.A", "2.B", "2.D", "4.B"],
   "tldr": "The Philippine middle class grew from 28.5% in 1991 to 39.8% in 2021 but COVID-19 reversed gains, and a four-pronged strategy of climate justice, MSME trade opportunities, workforce readiness, and digital governance is proposed for expansion.",
   "problem_and_motivation": "The Philippines aims to become a predominantly middle-class society free of poverty by 2040 but faces significant global headwinds including geopolitical fragmentation, technological disruption, climate change, and widening inequalities that threaten this aspiration. Growing the middle class requires new wealth creation rather than poverty reduction or redistribution alone, yet the country's structural transformation has been slower than other East Asian economies.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Garg, A.; Pandey, M.; Pathak, A. R.",
   "year": 2024,
   "venue": "International Journal of Emerging Trends in Computer Science and Information Technology",
-  "odin_topics": ["4.A", "4.B", "10.A", "11.A", "14.B"],
+  "topic_tags": ["4.A", "4.B", "10.A", "11.A", "14.B"],
   "tldr": "Proposes a three-layer AI-IoT convergence framework (Input, Intelligence, Experience) with edge computing, federated learning, and zero-trust security for adaptive banking services.",
   "problem_and_motivation": "IoT and AI convergence in banking remains fragmented, with isolated solutions for fraud detection, credit scoring, and personalization. No unified architecture exists that integrates streaming IoT data with AI analytics securely.",
   "approach": [

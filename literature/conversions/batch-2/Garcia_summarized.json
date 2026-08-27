@@ -5,7 +5,7 @@
   "authors": "Garcia, E. C.",
   "year": 2025,
   "venue": "Journal of Interdisciplinary Perspectives",
-  "odin_topics": ["1.A", "1.B", "1.C", "2.C"],
+  "topic_tags": ["1.A", "1.B", "1.C", "2.C"],
   "tldr": "Assesses financial literacy and health of 241 public junior high school teachers in Quezon City, finding high literacy but 'Financially Coping' health with critical gaps in savings and retirement planning.",
   "problem_and_motivation": "Public school teachers face financial insecurity from low wages and rising costs, yet localized research on their financial literacy and health remains scarce. Existing studies lack focus on urban districts with intense financial pressures.",
   "approach": [

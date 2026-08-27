@@ -5,7 +5,7 @@
   "authors": "Martin, C. E.; Lefèvre, H. A.; Dubois, C. R.",
   "year": 2023,
   "venue": "Adaptive Intelligence and Lifelong Systems",
-  "odin_topics": ["6.A", "6.B", "7.D", "14.B"],
+  "topic_tags": ["6.A", "6.B", "7.D", "14.B"],
   "tldr": "Surveys adaptive learning architectures for evolving data streams, focusing on incremental learning, concept drift adaptation, and real-time model updating.",
   "problem_and_motivation": "Traditional static models fail in non-stationary environments where data distributions evolve. Lifelong learning systems must retain knowledge while adapting to new information, but catastrophic forgetting and concept drift remain unsolved. There is a need for robust, scalable architectures that balance plasticity and stability under resource constraints.",
   "approach": [

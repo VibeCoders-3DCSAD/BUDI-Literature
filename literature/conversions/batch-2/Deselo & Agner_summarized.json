@@ -5,7 +5,7 @@
   "authors": "Deselo, J.; Agner, L. P.",
   "year": 2023,
   "venue": "Eurasian Journal of Research and Development",
-  "odin_topics": ["2.A", "2.C", "3.A", "3.B"],
+  "topic_tags": ["2.A", "2.C", "3.A", "3.B"],
   "tldr": "Qualitative and quantitative study of 300 low-income Filipino households reveals that trust in formal institutions, documentation requirements, and minimum balance requirements are the top three barriers to financial inclusion.",
   "problem_and_motivation": "Despite national financial inclusion initiatives, a significant portion of low-income Filipino households remain unbanked or underbanked. Understanding specific barriers is critical for designing inclusive PFMS.",
   "approach": [

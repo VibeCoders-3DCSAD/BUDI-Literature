@@ -5,7 +5,7 @@
   "authors": "Garg, A.; Mishra, S.; Jain, A.",
   "year": 2023,
   "venue": "International Journal of Artificial Intelligence, Data Science, and Machine Learning",
-  "odin_topics": ["4.A", "4.B", "10.A", "10.B", "11.A"],
+  "topic_tags": ["4.A", "4.B", "10.A", "10.B", "11.A"],
   "tldr": "Proposes an IoT-driven layered architecture for personalized banking using real-time contextual data from wearables, ATMs, and mobile devices with AI analytics for adaptive financial services.",
   "problem_and_motivation": "Traditional banking relies on rigid product offerings and static personalization. IoT enables context-aware banking but faces challenges in data privacy, legacy system integration, and interoperability across fragmented device ecosystems.",
   "approach": [

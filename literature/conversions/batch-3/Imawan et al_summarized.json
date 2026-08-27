@@ -5,7 +5,7 @@
   "authors": "Imawan, R.; Putra, W. P.; Alqahtani, R.; Milakis, E. D.; Dumchykov, M.",
   "year": 2025,
   "venue": "Journal of Hypermedia & Technology-Enhanced Learning",
-  "odin_topics": ["3.A", "3.B", "7.A", "9.A", "9.B", "11.A", "11.B", "12.A"],
+  "topic_tags": ["3.A", "3.B", "7.A", "9.A", "9.B", "11.A", "11.B", "12.A"],
   "tldr": "An Android personal finance app using the Waterfall model achieved a 4.6/5 usability score with 50 young adult users, demonstrating high satisfaction and engagement through income tracking, budgeting, and goal-setting features.",
   "problem_and_motivation": "Young adults face unique financial challenges including limited experience, fluctuating income, and vulnerability to debt, yet existing financial tools are not tailored to their needs or behaviors. This gap is critical because financial habits formed in early adulthood have long-term implications and deficits can perpetuate cycles of debt and instability. A targeted mobile solution is needed to instill positive financial behaviors and resilience in this demographic.",
   "approach": [

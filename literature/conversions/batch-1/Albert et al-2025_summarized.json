@@ -5,7 +5,7 @@
   "authors": "Jose Ramon G. Albert, Connie B. Dacuycuy, Agnes R. Quisumbing, Lovelaine B. Basillote, Deanne Lorraine D. Cabalfin, Anna Rita P. Vargas, Paola Ellaine D. Luzon, and Mohammad A. Mahmoud",
   "year": 2025,
   "venue": "PIDS Discussion Paper Series, No. 2025-35",
-  "odin_topics": ["1.A", "2.A.IV", "8.A.I", "10.A.III"],
+  "topic_tags": ["1.A", "2.A.IV", "8.A.I", "10.A.III"],
   "tldr": "Examines Philippines progress on SDG 5 and SDG 10 using intersectional and Shapley decomposition analysis, finding substantial policy achievements alongside critical implementation gaps that perpetuate compound marginalization for women, persons with disabilities, and indigenous peoples.",
   "problem_and_motivation": "Despite progressive legal frameworks (Magna Carta of Women, Magna Carta for Disabled Persons, IPRA), women, persons with disabilities, and indigenous peoples in the Philippines continue to face intersecting forms of marginalization that single-identity policies fail to address. The COVID-19 pandemic further exacerbated inequalities, pushing 2.8 million more Filipinos into poverty and disproportionately affecting already vulnerable groups. Evidence-based policy requires comprehensive intersectional analysis of how gender, disability, ethnicity, and geography interact to shape development outcomes.",
   "approach": [

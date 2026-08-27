@@ -5,7 +5,7 @@
   "authors": "Majeed, K.",
   "year": 2025,
   "venue": "Central Philippine University",
-  "odin_topics": ["1.C", "2.A", "2.D", "3.A", "5.A", "7.A", "10.A", "11.A"],
+  "topic_tags": ["1.C", "2.A", "2.D", "3.A", "5.A", "7.A", "10.A", "11.A"],
   "tldr": "BNPL consumers in Iloilo City show frequent purchases and high unplanned buying, with debt accumulation as the top perceived financial risk, while spending patterns differ by sex and civil status.",
   "problem_and_motivation": "The rapid growth of Buy Now, Pay Later (BNPL) services in the Philippines presents potential risks to consumer financial health, yet empirical research on the specific spending patterns and perceived financial risks among Filipino BNPL users remains limited. This gap is critical for understanding how BNPL adoption may contribute to over-indebtedness and financial instability among young professionals and other demographic groups.",
   "approach": [

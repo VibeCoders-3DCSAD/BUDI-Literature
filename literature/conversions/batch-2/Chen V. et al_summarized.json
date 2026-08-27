@@ -5,7 +5,7 @@
   "authors": "Chen, V.; Liao, Q.; Vaughan, J.; Bansal, G.",
   "year": 2023,
   "venue": "Proceedings of the ACM on Human-Computer Interaction (CSCW)",
-  "odin_topics": ["10.B", "11.A"],
+  "topic_tags": ["10.B", "11.A"],
   "tldr": "Through a think-aloud study, identifies three intuition-driven pathways that decision-makers use to override AI predictions and shows example-based explanations outperform feature-based ones.",
   "problem_and_motivation": "AI explanations are meant to improve human-AI decision-making but empirical studies show they can increase overreliance on incorrect AI predictions. The role of human intuition in processing explanations is poorly understood.",
   "approach": [

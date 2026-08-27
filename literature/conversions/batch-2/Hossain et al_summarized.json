@@ -5,7 +5,7 @@
   "authors": "Hossain, M. R.; Pabel, M. A. H.; Ul Haque, M. S.; Khan, M. S.; Obaid, M. O.; Akter, S.; Ahmed, M.",
   "year": 2025,
   "venue": "International Interdisciplinary Business Economics Advancement Journal",
-  "odin_topics": ["5.C", "6.A"],
+  "topic_tags": ["5.C", "6.A"],
   "tldr": "Proposes a hybrid deep neural network integrating structured financial data with unstructured text (customer service logs, news, social media) for credit scoring, achieving 87% accuracy and 0.91 AUC-ROC.",
   "problem_and_motivation": "Traditional credit models rely on structured data and fail to assess borrowers with limited credit footprints. Unstructured data sources rich in behavioral cues remain underutilized in credit risk assessment.",
   "approach": [

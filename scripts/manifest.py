@@ -4,7 +4,7 @@ Regenerate whenever conversions change:
     python3 scripts/manifest.py
 
 Output: one entry per stem with metadata sourced from the _summarized.json
-(paper_id, title, authors, year, venue, designation, odin_topics) and the
+(paper_id, title, authors, year, venue, designation, topic_tags) and the
 _marked.md frontmatter (source_pdf, sha256, page_count, char count).
 """
 
@@ -37,7 +37,7 @@ def main() -> None:
     for stem, md_path, json_path in papers:
         meta = parse_frontmatter(read_marked(md_path))
         summary = load_summary(json_path) or {}
-        topics = summary.get("odin_topics") or []
+        topics = summary.get("topic_tags") or []
         manifest["papers"][stem] = {
             "paper_id": summary.get("paper_id"),
             "title": summary.get("title"),
@@ -45,7 +45,7 @@ def main() -> None:
             "year": summary.get("year"),
             "venue": summary.get("venue"),
             "designation": summary.get("designation"),
-            "odin_topics": topics if isinstance(topics, list) else [],
+            "topic_tags": topics if isinstance(topics, list) else [],
             "source_pdf": meta.get("source_pdf"),
             "source_pdf_sha256": meta.get("source_pdf_sha256"),
             "page_count": meta.get("page_count"),

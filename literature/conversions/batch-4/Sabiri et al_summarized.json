@@ -5,7 +5,7 @@
   "authors": "Sabiri, B.; Khtira, A.; El Asri, B.; Rhanoui, M.",
   "year": 2025,
   "venue": "Journal of Imaging",
-  "odin_topics": ["None"],
+  "topic_tags": ["None"],
   "tldr": "A systematic literature review of 52 hybrid recommender system papers that catalogs hybridization strategies, datasets, evaluation metrics, and open challenges in big-data e-commerce contexts.",
   "problem_and_motivation": "Data sparsity, cold-start problems, and bias limit the performance of single-strategy recommender systems. Hybrid approaches that combine collaborative, content-based, and demographic filtering promise higher accuracy and user satisfaction but lack a consolidated evidence base. No prior SLR had systematically mapped hybridization techniques, application domains, and evaluation practices across 52 recent studies.",
   "approach": [

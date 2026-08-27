@@ -5,7 +5,7 @@
   "authors": "Houria, K.; Hadjer, H.",
   "year": 2025,
   "venue": "Kasdi Merbah University - Ouargla, Master Thesis",
-  "odin_topics": ["10.A", "10.C", "14.A", "14.C"],
+  "topic_tags": ["10.A", "10.C", "14.A", "14.C"],
   "tldr": "Explores an integrated federated learning and XAI framework for IoT networks using CNN, evaluating FedAvg, FedOpt, and FedAdam across different data distributions and synchronization modes.",
   "problem_and_motivation": "Federated learning faces challenges applying traditional interpretability techniques due to decentralized data, and tension exists between privacy-preserving techniques and human-understandable explanations for AI decisions.",
   "approach": [

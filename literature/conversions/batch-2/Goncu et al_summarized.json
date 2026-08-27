@@ -5,7 +5,7 @@
   "authors": "Goncu, A.; Kuzubas, T. U.; Saltoglu, B.",
   "year": 2026,
   "venue": "Borsa Istanbul Review",
-  "odin_topics": ["5.B", "5.C", "6.A", "7.E", "12.B"],
+  "topic_tags": ["5.B", "5.C", "6.A", "7.E", "12.B"],
   "tldr": "Compares ML models to regulatory benchmark for profiling risk of 81,563 Turkish pension fund participants, finding boosting methods yield modest improvements and 4 variables match full questionnaire performance.",
   "problem_and_motivation": "Risk profiling in pension systems relies on lengthy questionnaires causing participant friction and low completion rates. ML may identify informative variables and capture nonlinear relationships missed by regulatory scoring.",
   "approach": [

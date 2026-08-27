@@ -5,7 +5,7 @@
   "authors": "Chepkutwo, D.",
   "year": 2024,
   "venue": "Unknown",
-  "odin_topics": ["9.C", "10.A", "10.B", "11.A", "4.B"],
+  "topic_tags": ["9.C", "10.A", "10.B", "11.A", "4.B"],
   "tldr": "Argues that UK fintechs should adopt African mobile money design principles including community-led design, agent networks, offline-first architecture, and frugal innovation.",
   "problem_and_motivation": "UK financial services exclude underbanked populations despite advanced digital infrastructure. African mobile money systems like M-Pesa have achieved higher inclusion rates by designing for community needs and infrastructure constraints, offering lessons for developed markets.",
   "approach": [

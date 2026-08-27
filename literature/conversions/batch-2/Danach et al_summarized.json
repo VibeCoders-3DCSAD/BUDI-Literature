@@ -5,7 +5,7 @@
   "authors": "Danach, K.; Harik, R.; Al Kork, S.; El Hassan, M.",
   "year": 2024,
   "venue": "Information (MDPI)",
-  "odin_topics": ["4.A", "14.B", "10.A", "10.B"],
+  "topic_tags": ["4.A", "14.B", "10.A", "10.B"],
   "tldr": "A systematic review of explainable AI (XAI) in decision-making applications, analyzing 108 papers to categorize XAI methods, evaluation frameworks, and domain-specific implementations.",
   "problem_and_motivation": "AI-driven decision-making systems are increasingly deployed across critical domains but operate as black boxes, reducing user trust and accountability. There is no unified framework for implementing and evaluating XAI across diverse decision-making contexts.",
   "approach": [

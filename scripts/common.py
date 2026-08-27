@@ -1,4 +1,4 @@
-"""Shared helpers for the Odin-Literature scoring pipeline.
+"""Shared helpers for the literature scoring pipeline.
 
 Everything here is deterministic and dependency-light so the pipeline stays
 fast to re-run when the corpus or config changes.

@@ -5,7 +5,7 @@
   "authors": "Kowsar, M. M.; Islam, S.; Mohiuddin, M.; Siddiqui, N. A.",
   "year": 2025,
   "venue": "ASRC Procedia: Global Perspectives in Science and Scholarship",
-  "odin_topics": ["2.D", "3.A", "4.A", "4.B", "7.A", "9.A", "10.A", "10.B", "11.A", "11.B", "12.A", "12.C"],
+  "topic_tags": ["2.D", "3.A", "4.A", "4.B", "7.A", "9.A", "10.A", "10.B", "11.A", "11.B", "12.A", "12.C"],
   "tldr": "Digitization in South Asian retail banking enhances customer engagement and financial product adoption through mobile infrastructure, AI-driven personalization, and fintech innovation, though inclusion remains uneven.",
   "problem_and_motivation": "Comprehensive, empirically grounded reviews focused on South Asia's digital banking landscape remain scarce despite rapid digitization. Existing global studies lack region-specific analysis of how digital technologies influence customer engagement and financial product adoption in diverse socio-economic and cultural settings.",
   "approach": [

@@ -5,7 +5,7 @@
   "authors": "Contreras, E.",
   "year": 2026,
   "venue": "ICCK Journal of Software Engineering",
-  "odin_topics": ["6.A", "6.B", "8.A", "8.B", "14.B"],
+  "topic_tags": ["6.A", "6.B", "8.A", "8.B", "14.B"],
   "tldr": "Proposes ARL-CPO, a reinforcement learning-based continuous policy optimization framework for adaptive risk scoring that outperforms Random Forest, Gradient Boosting, and Transformer baselines.",
   "problem_and_motivation": "FinTech systems require real-time risk assessment with low latency that is robust to concept drift and can be updated without service disruption. Existing models (Random Forest, Gradient Boosting, Transformers) require periodic batch retraining and cannot adapt continuously.",
   "approach": [

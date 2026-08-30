@@ -100,6 +100,69 @@ pip install -r requirements.txt
 | `PyYAML` | `score.py` |
 | `joblib` | `embed.py`, `score.py` |
 
+## Intake Runbook — Batch 7 (17 verified papers)
+
+Concrete, ready-to-run steps for the current intake (the 17 PDFs staged in
+`literature/papers/`). Execute these only when processing actually starts.
+
+### 0. Prerequisite (done during prep)
+
+- PDFs are already staged flat in `literature/papers/` (moved from `bucket/`).
+- Dependencies installed from `requirements.txt` (includes `markitdown[pdf]`).
+- Destination `literature/conversions/batch-7/` exists.
+
+### 1. Convert
+
+```bash
+python3 scripts/prepare_pdf.py literature/papers/ --page-aware
+```
+
+Produces `{stem}_marked.md` + empty `{stem}_summarized.json` for all 17 PDFs.
+Preview page counts first if useful:
+```bash
+python3 scripts/count_pdf_pages.py literature/papers/
+```
+
+> Note: `prepare_pdf.py` scans only the flat `literature/papers/` top level for
+> `.pdf`. The `international/` and `local/` subdirectories are reserved for future
+> designation-based categorization and are intentionally left out of conversion.
+
+### 2. Rename & move into the batch
+
+Assign canonical stems per `docs/standards/rrl-naming-conventions.md`
+(`{Prefix}--{AuthorLastName}-{Year}`), then move each `_marked.md` +
+`_summarized.json` pair into `literature/conversions/batch-7/`.
+
+```bash
+mkdir -p literature/conversions/batch-7
+# rename + move each pair; e.g.
+mv "literature/papers/I--Hajj-2023_marked.md" \
+   "literature/papers/I--Hajj-2023_summarized.json" \
+   literature/conversions/batch-7/
+```
+
+### 3. Summarize (AI agent)
+
+Fill each `{stem}_summarized.json` using the corresponding `_marked.md` as input.
+Schema + field rules: `docs/standards/summary-format.md`.
+
+### 4. Score
+
+```bash
+python3 scripts/embed.py --force   # rebuild caches (conversions changed)
+python3 scripts/score.py           # relevance tiers, redundancy, validation
+```
+
+Regenerates `scores/`. This replaces the stale 518-paper scoring outputs.
+
+### 5. Manifest
+
+```bash
+python3 scripts/manifest.py        # refresh scores/manifest.json
+```
+
+---
+
 ## Script Reference
 
 | Script | Purpose |

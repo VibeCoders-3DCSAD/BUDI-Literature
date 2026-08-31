@@ -11,8 +11,8 @@ All steps happen within **Odin-Literature**. No cross-repo transfers required.
 Obtain source PDFs from a local archive or remote source:
 
 ```bash
-# From a sibling directory (e.g. Odin-Paper/literature/papers/):
-python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/literature/papers/
+# From a sibling directory (e.g. Odin-Paper/archived-literature/papers/):
+python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/archived-literature/papers/
 
 # From a .zip archive:
 python3 scripts/fetch_pdfs.py --source local --path /path/to/pdf-archives/

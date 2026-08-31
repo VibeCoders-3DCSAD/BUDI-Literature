@@ -2,8 +2,6 @@
 
 Reference for the structured JSON summary schema. Summaries are produced in `literature/` (intake) and stored with their `_marked.md` pair in **Odin-Literature** (`literature/conversions/batch-<N>/`).
 
-Full prompt: `literature/skills/paper-summarizer-skill.md`
-
 ## Schema
 
 ```json

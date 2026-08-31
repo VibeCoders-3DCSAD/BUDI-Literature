@@ -78,8 +78,9 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 
 ### Batch Structure
 
-Conversions are organized by intake run: `literature/conversions/batch-1/` through `batch-6/`.
-Start a new `batch-N` directory (next number) when adding a group of papers.
+Conversions are organized by intake run: `literature/conversions/batch-<N>/`.
+Start a new `batch-<N>` directory (next number) when adding a group of papers.
+(The earlier batch-1..6 conversion working files were removed as superseded; a fresh `batch-7/` is the active intake directory.)
 
 ---
 
@@ -89,7 +90,7 @@ Start a new `batch-N` directory (next number) when adding a group of papers.
 
 ```bash
 # From a sibling directory:
-python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/literature/papers/
+python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/archived-literature/papers/
 
 # From a .zip archive:
 python3 scripts/fetch_pdfs.py --source local --path /path/to/archives/

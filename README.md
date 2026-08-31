@@ -5,9 +5,10 @@ for the BUDI thesis. **No LLMs, no token APIs, no agents.**
 
 ## What lives here
 
-- `literature/conversions/batch-1..6/` — every curated paper as:
+- `literature/conversions/` — the curated paper corpus, organized by intake run as `batch-<N>/`:
   - `{stem}_marked.md` — full-text markdown conversion (with YAML metadata frontmatter)
   - `{stem}_summarized.json` — structured summary (metadata, `topic_tags`, findings, citations)
+  - (The previous batch conversions were removed as superseded working files; `batch-7/` is reserved for the next intake.)
 - `literature/bucket/` — raw candidate PDFs for intake
 - `literature/papers/` — fetched source PDFs (gitignored; use `scripts/fetch_pdfs.py`)
 - `config/modules.yaml` — **the single source of truth** for what "relevant" means
@@ -30,8 +31,8 @@ pip install -r requirements.txt
 ### 1. Fetch PDFs
 
 ```bash
-# From a sibling directory (e.g. Odin-Paper/literature/papers/):
-python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/literature/papers/
+# From a sibling directory (e.g. Odin-Paper/archived-literature/papers/):
+python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/archived-literature/papers/
 
 # From a .zip archive:
 python3 scripts/fetch_pdfs.py --source local --path /path/to/pdf-archives/

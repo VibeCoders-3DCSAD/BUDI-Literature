@@ -11,7 +11,7 @@ Odin-Paper contains ~518 source PDFs in `literature/papers/` (Git LFS tracked). 
 ### 1. Selection
 
 - **Who:** Researcher (final decision)
-- **Input:** Odin-Paper/literature/papers/ (518 PDFs across batch-1..6)
+- **Input:** Odin-Paper/archived-literature/papers/ (518 PDFs across batch-1..6)
 - **Output:** Shortlist of 10-20 PDFs per batch
 - **Strategy:** Start with batch-6 (18 papers, newest), or curated shortlist
 
@@ -21,7 +21,7 @@ Place selected PDFs in `Odin-Literature/literature/bucket/`.
 
 ```bash
 # Copy PDFs from Odin-Paper to Odin-Literature bucket
-cp ../Odin-Paper/literature/papers/batch-6/*.pdf literature/bucket/
+cp ../Odin-Paper/archived-literature/papers/batch-6/*.pdf literature/bucket/
 ```
 
 ### 3. Pre-assessment (Automated)
@@ -71,7 +71,7 @@ After researcher validates papers:
 
 | Location | Purpose |
 |----------|---------|
-| `Odin-Paper/literature/papers/` | Source PDFs (Git LFS) |
+| `Odin-Paper/archived-literature/papers/` | Source PDFs (Git LFS) |
 | `Odin-Literature/literature/bucket/` | Intake staging area |
 | `Odin-Literature/literature/conversions/` | Converted Markdown + summaries |
 | `Odin-Literature/scores/` | Relevance/quality scores |

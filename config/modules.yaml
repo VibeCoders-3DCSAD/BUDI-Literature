@@ -45,6 +45,8 @@ modules:
       - socioeconomic
       - demographic segmentation
       - psychographic
+      - SVM
+      - support vector machine
 
   - id: financial_literacy
     name: Financial Literacy and Capability
@@ -88,6 +90,7 @@ modules:
       - time series
       - LSTM
       - ARIMA
+      - SARIMA
       - spend prediction
       - income volatility
       - seasonal spending
@@ -101,6 +104,7 @@ modules:
     keywords:
       - anomaly detection
       - outlier
+      - IQR
       - isolation forest
       - unusual transaction
       - overspending
@@ -121,6 +125,7 @@ modules:
       - spending limit
       - envelope budgeting
       - zero-based budgeting
+      - linear programming
       - budget planning
       - allocation strategy
 

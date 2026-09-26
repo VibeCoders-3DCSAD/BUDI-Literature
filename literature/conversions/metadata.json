@@ -94,9 +94,11 @@
       ],
       "first_author": "Alenazi",
       "year": "2023",
-      "venue": "Proceedings of the British Computer Society HCl International Conference (BCSHCI 2023)",
+      "venue": "Proceedings of the British Computer Society HCI International Conference (BCSHCI 2023), 1-12",
       "doi": "10.14236/ewic/BCSHCI2023.1",
-      "note": "Venue name inferred from the DOI prefix; confirm against the proceedings before final citation."
+      "note": "Lancaster University. Twelve-page conference paper; the proceedings paginate from 1.",
+      "pages": "1-12",
+      "publisher": "British Computer Society"
     },
     "A--Ayari-2025": {
       "stem": "A--Ayari-2025",
@@ -183,12 +185,12 @@
         "D'Souza, M.",
         "Bhegade, P.",
         "Bhalekar, P.",
-        "et al."
+        "Bhavsar, Y."
       ],
       "first_author": "D'Souza",
       "year": "2026",
       "venue": "P.E.S Modern College of Engineering, Pune, India",
-      "note": "Three-plus authors; full list not yet transcribed from page 1."
+      "note": "Four authors, complete. Unpublished manuscript: no journal, DOI, or page numbers on page 1, only the department and institutional e-mail addresses."
     },
     "A--DeZarza-2024": {
       "stem": "A--DeZarza-2024",
@@ -275,13 +277,20 @@
       "converted_at": "2026-09-07T10:04:03Z",
       "title": "Dynamic Calibration of Decision Thresholds for Financial Anomaly Detection: Verification With Payment Platform Information and Data",
       "authors": [
-        "Huang, A."
+        "Huang, A.",
+        "Zhang, X.",
+        "Wang, Y.",
+        "Tsai, S.",
+        "Zhou, P.",
+        "Chen, L."
       ],
       "first_author": "Huang",
       "year": "2025",
-      "venue": "Journal of Global Information Management, 33(1)",
-      "note": "Sole author. Chapter 2 V3 cites this as 'Huang et al. (2025)'; use 'Huang (2025)'.",
-      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+      "venue": "Journal of Global Information Management, 33(1), 1-26",
+      "note": "Six authors set in a two-column masthead; the first text extraction showed only the left column and wrongly suggested a sole author. Received 2025-09-07, accepted 2025-12-01.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "doi": "10.4018/JGIM.395852",
+      "pages": "1-26"
     },
     "A--Jayaprakashnarayan-2026": {
       "stem": "A--Jayaprakashnarayan-2026",
@@ -559,8 +568,9 @@
       "authors": [
         "Zhong, M."
       ],
-      "venue": "University of Chicago",
-      "note": "No journal or DOI on the document; treat as an unpublished manuscript until a publisher record is located."
+      "venue": "2025 International Symposium on Artificial Intelligence and Computational Social Sciences (AICSS 2025), ACM",
+      "note": "Conference paper, Beijing, 19-21 Sept 2025. Previously recorded as an unpublished University of Chicago manuscript.",
+      "doi": "10.1145/3776759.3776850"
     },
     "A--Zlobin-2025": {
       "stem": "A--Zlobin-2025",
@@ -604,8 +614,13 @@
       ],
       "first_author": "Cumaio",
       "year": "2026",
-      "venue": "Review",
-      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+      "venue": "Journal of Risk and Financial Management, 19(6), 425",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "doi": "10.3390/jrfm19060425",
+      "volume": "19",
+      "issue": "6",
+      "pages": "425",
+      "note": "MDPI. The venue had been the literal string 'Review', which is a document-type label at the top of the manuscript, not a journal name."
     },
     "I--Danahy-2024": {
       "stem": "I--Danahy-2024",
@@ -1006,8 +1021,12 @@
       ],
       "first_author": "Francisco",
       "year": "2026",
-      "venue": "Journal, 4(1)",
-      "note": "Journal name not legible on the extracted page 1."
+      "venue": "International Journal of Multidisciplinary Educational Research and Innovation, 4(1), 705-728",
+      "note": "Venue read from the paper's own Recommended Citation block. The venue had been the literal string 'Journal'. E-ISSN 2980-4760, P-ISSN 2980-4752.",
+      "volume": "4",
+      "issue": "1",
+      "pages": "705-728",
+      "publisher": "IJMERI, Saint Joseph College, Southern Leyte, Philippines"
     },
     "L--LaspinasMurcia-2024": {
       "stem": "L--LaspinasMurcia-2024",
@@ -1060,7 +1079,18 @@
       "source_pdf_sha256": "2b2a11d464f6b8e87a0ece76135ba2777612b1038ee90a11a9d443769b178196",
       "page_count": 10,
       "converted_at": "2026-09-07T10:23:06Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "authors": [
+        "Santiago, R. L. T.",
+        "Villarica, M. V.",
+        "Bernardino, M. P."
+      ],
+      "venue": "International Journal of Advanced Research in Computer Science, 16(3), 128-137",
+      "volume": "16",
+      "issue": "3",
+      "pages": "128-137",
+      "doi": "10.26483/ijarcs.v16i3.7256",
+      "note": "Three authors; only the first was previously transcribed. Pages 128-137 from the article footers. Laguna State Polytechnic University."
     },
     "L--Vecina-2025": {
       "stem": "L--Vecina-2025",

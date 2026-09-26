@@ -1,0 +1,994 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-09-26",
+  "purpose": "Bibliographic metadata for the RRL corpus, keyed by stem and cross-indexed by source PDF SHA-256. Values marked metadata_source='verified from PDF page 1 on 2026-09-26' were read off the first page of the source PDF. Unverified entries carry only conversion frontmatter and must not be cited until checked.",
+  "key_convention": "source_pdf_sha256 is the stable key; stems are mutable and are corrected as front-author errors are found.",
+  "counts": {
+    "total": 91,
+    "verified": 13,
+    "unverified": 78,
+    "author_unverified": 1
+  },
+  "renames_applied": [
+    {
+      "from": "A--Agrawal-2025",
+      "to": "A--Hamdare-2025",
+      "reason": "first author is Hamdare; Agrawal is third author"
+    },
+    {
+      "from": "I--Awaluddin-2023",
+      "to": "I--Sapiri-2023",
+      "reason": "first author is Sapiri"
+    },
+    {
+      "from": "I--HuangR-2025",
+      "to": "I--Zhao-2025",
+      "reason": "sole listed author is Zhao"
+    },
+    {
+      "from": "L--Encarnacion-2025",
+      "to": "L--Vecina-2025",
+      "reason": "sole author is Vecina"
+    },
+    {
+      "from": "L--Espelita-2025",
+      "to": "L--Atento-2025",
+      "reason": "first author is Atento; Espelita is second"
+    },
+    {
+      "from": "I--Samli-2025",
+      "to": "I--Samli-2026",
+      "reason": "volume 24 issue 1, received 2 May 2026"
+    },
+    {
+      "from": "A--DeZarza-2023",
+      "to": "A--DeZarza-2024",
+      "reason": "published in AI 5(2024) 91-114"
+    }
+  ],
+  "unresolved": [
+    {
+      "stem": "I--RSingh-2025",
+      "issue": "first-author surname truncated to 'R' on the page-1 byline; cannot confirm stem or rename"
+    },
+    {
+      "stem": "L--BangkoSentral-2023b",
+      "issue": "text extraction fell back to pypdf and is garbled; the Q1-2024 hypothesis is unconfirmed. Source PDF is not in the repo, so page 1 cannot be checked."
+    },
+    {
+      "stem": "I--Yang-2024 / I--Yang-2024b",
+      "issue": "both are first-authored by a J. Yang in 2024 but are different papers; the 'b' disambiguator is correct and must be kept"
+    }
+  ],
+  "entries": {
+    "A--Abdullahi-2025": {
+      "stem": "A--Abdullahi-2025",
+      "designation": "A",
+      "source_pdf": "Abdullahi et al., 2025.pdf",
+      "source_pdf_sha256": "1945bea2daf6675092ab0fe40aa56835d7f87f1b09b4f4a21abb089117f94633",
+      "page_count": 31,
+      "converted_at": "2026-09-07T10:36:50Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Aldrees-2025": {
+      "stem": "A--Aldrees-2025",
+      "designation": "A",
+      "source_pdf": "Aldrees et al., 2025.pdf",
+      "source_pdf_sha256": "f08c53280250f7eb617a09ac7e0b6b0d86934740521257a1200dcbab11521f72",
+      "page_count": 24,
+      "converted_at": "2026-09-07T10:00:48Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Alenazi-2023": {
+      "stem": "A--Alenazi-2023",
+      "designation": "A",
+      "source_pdf": "Alenazi & Sas, 2023.pdf",
+      "source_pdf_sha256": "2bc492ff8ea110793eb3737c314cdbfcc93fde0933c3f613f02771cd99962697",
+      "page_count": 12,
+      "converted_at": "2026-09-07T09:33:09Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Ayari-2025": {
+      "stem": "A--Ayari-2025",
+      "designation": "A",
+      "source_pdf": "Ayari et al., 2025.pdf",
+      "source_pdf_sha256": "62bdb2d8a5749e159aabe1c3eb11deb3d88d5dccd052e79a71ddf70bb6932050",
+      "page_count": 54,
+      "converted_at": "2026-09-07T09:39:29Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Bader-2025": {
+      "stem": "A--Bader-2025",
+      "designation": "A",
+      "source_pdf": "Haraty & Bader, 2025.pdf",
+      "source_pdf_sha256": "19cd635a53f514dfddeeac3e6e39f1ca872b79064912a11bf40d7593af9e9752",
+      "page_count": 19,
+      "converted_at": "2026-09-07T05:56:20Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Begum-2025": {
+      "stem": "A--Begum-2025",
+      "designation": "A",
+      "source_pdf": "Begum, 2025.pdf",
+      "source_pdf_sha256": "1ed08e9b7d48c101c9b5a97480b19078ea5614c6aabd88bb0c49615de09c8426",
+      "page_count": 19,
+      "converted_at": "2026-09-07T09:40:14Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Bhavana-2025": {
+      "stem": "A--Bhavana-2025",
+      "designation": "A",
+      "source_pdf": "Bhavana et al., 2025.pdf",
+      "source_pdf_sha256": "fd3d6cbff11e9f8e1fd538f795a2fd82f5408533b83597ceb76c9dd9e40b6126",
+      "page_count": 7,
+      "converted_at": "2026-09-07T09:40:34Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Chahar-2026": {
+      "stem": "A--Chahar-2026",
+      "designation": "A",
+      "source_pdf": "Chahar et al., 2026.pdf",
+      "source_pdf_sha256": "290e3820bd5cec46d3a85985a8c785b6d3c7c256c86e740e747b11ec61f7a1b2",
+      "page_count": 13,
+      "converted_at": "2026-09-07T09:41:04Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--ChenJ-2024": {
+      "stem": "A--ChenJ-2024",
+      "designation": "A",
+      "source_pdf": "J. Chen et al., 2024.pdf",
+      "source_pdf_sha256": "725092e0974a288381e986c5bd74b591656212b3d831c684569f6faff0aeac8d",
+      "page_count": 18,
+      "converted_at": "2026-09-07T10:10:11Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--ChenTan-2025": {
+      "stem": "A--ChenTan-2025",
+      "designation": "A",
+      "source_pdf": "S. Chen & Tan, 2025.pdf",
+      "source_pdf_sha256": "2679ce41b30a33fcdc01b858e609033bbb7f888d8e85c5f3c7b6aca85a33c241",
+      "page_count": 6,
+      "converted_at": "2026-09-07T10:10:25Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Chikoore-2026": {
+      "stem": "A--Chikoore-2026",
+      "designation": "A",
+      "source_pdf": "Chikoore et al., 2026.pdf",
+      "source_pdf_sha256": "cb034b87887cc03b5f75edc3317360ea67326b23261a2ad65da5c20ab48f3ab1",
+      "page_count": 11,
+      "converted_at": "2026-09-07T10:01:28Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--DSouza-2026": {
+      "stem": "A--DSouza-2026",
+      "designation": "A",
+      "source_pdf": "DSouza et al., 2026.pdf",
+      "source_pdf_sha256": "9027cba26f098b2f73e202f0c93054a5ae44f6dd16e5872938b28839f1dff3d5",
+      "page_count": 18,
+      "converted_at": "2026-09-07T09:41:25Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--DeZarza-2024": {
+      "stem": "A--DeZarza-2024",
+      "designation": "A",
+      "source_pdf": "De Zarzà et al., 2023.pdf",
+      "source_pdf_sha256": "5bf260262d1f218aa99a2e4e56e752ae8ab48b59788000c78163a06c6fb533e0",
+      "page_count": 24,
+      "converted_at": "2026-09-07T10:12:41Z",
+      "title": "Optimized Financial Planning: Integrating Individual and Cooperative Budgeting Models with LLM Recommendations",
+      "authors": [
+        "de Zarza, I.",
+        "de Curto, J.",
+        "Roig, G.",
+        "Calafate, C. T."
+      ],
+      "first_author": "de Zarza",
+      "year": "2024",
+      "venue": "AI, 5, 91-114",
+      "note": "Year corrected from 2023: published in AI 5(2024) 91-114, received 18 Nov 2023. Chapter 2 V3 already cites 2024.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "A--Ghonaim-2025": {
+      "stem": "A--Ghonaim-2025",
+      "designation": "A",
+      "source_pdf": "Ghonaim & El-Sharawy, 2025.pdf",
+      "source_pdf_sha256": "b458e4cdcf67395272dd6ad896d550b6cd037c31f0fcb4ce6dcd08a81fe83978",
+      "page_count": 13,
+      "converted_at": "2026-09-07T10:02:07Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Gulbakyt-2025": {
+      "stem": "A--Gulbakyt-2025",
+      "designation": "A",
+      "source_pdf": "Gulbakyt, 2025.pdf",
+      "source_pdf_sha256": "b59a87f97724b56f2dde4a53e5534f46a31a7dab4a57a8584e3729de9e0600a1",
+      "page_count": 14,
+      "converted_at": "2026-09-07T05:55:59Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Hamdare-2025": {
+      "stem": "A--Hamdare-2025",
+      "designation": "A",
+      "source_pdf": "Agrawal et al., 2025.pdf",
+      "source_pdf_sha256": "189392ac6f3a2730fc374a2b7c82a2058c1d4a9cf3253dfd665242b0315c8597",
+      "page_count": 21,
+      "converted_at": "2026-09-07T09:59:03Z",
+      "title": "Analyzing and Rewarding Credit Card Spending Habits in India: A Machine Learning Approach",
+      "authors": [
+        "Hamdare, S.",
+        "Khanna, A.",
+        "Agrawal, R."
+      ],
+      "first_author": "Hamdare",
+      "year": "2025",
+      "venue": "International Journal of Computational Intelligence Systems, 18, 165",
+      "note": "Renamed from A--Agrawal-2025: Renuka Agrawal is the third author, not the first.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "A--Hu-2023": {
+      "stem": "A--Hu-2023",
+      "designation": "A",
+      "source_pdf": "Hu et al., 2023.pdf",
+      "source_pdf_sha256": "7f64317b7eb44c629665a64a1b6e4aac8a37bd233eebfe555e3ebc4767973a57",
+      "page_count": 26,
+      "converted_at": "2026-09-07T10:13:17Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Huang-2025": {
+      "stem": "A--Huang-2025",
+      "designation": "A",
+      "source_pdf": "A. Huang et al., 2025.pdf",
+      "source_pdf_sha256": "6312ad9421b12b78b9bb213a91e5560eaf054ce33f985b16afc741a5b80e38a2",
+      "page_count": 26,
+      "converted_at": "2026-09-07T10:04:03Z",
+      "title": "Dynamic Calibration of Decision Thresholds for Financial Anomaly Detection: Verification With Payment Platform Information and Data",
+      "authors": [
+        "Huang, A."
+      ],
+      "first_author": "Huang",
+      "year": "2025",
+      "venue": "Journal of Global Information Management, 33(1)",
+      "note": "Sole author. Chapter 2 V3 cites this as 'Huang et al. (2025)'; use 'Huang (2025)'.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "A--Jayaprakashnarayan-2026": {
+      "stem": "A--Jayaprakashnarayan-2026",
+      "designation": "A",
+      "source_pdf": "Jayaprakashnarayan et al., 2026.pdf",
+      "source_pdf_sha256": "62dcb5a111a2678bd11f47d7e81d6eb1abcb74a7b563791b832424d7f986a6f5",
+      "page_count": 23,
+      "converted_at": "2026-09-07T05:57:15Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--John-2025": {
+      "stem": "A--John-2025",
+      "designation": "A",
+      "source_pdf": "John, 2025.pdf",
+      "source_pdf_sha256": "7fe1d644f8ffdfb5af893a01384fc5564b440e244a0d0abd15ec931847ab6485",
+      "page_count": 18,
+      "converted_at": "2026-09-07T09:07:29Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--KaraSenguler-2025": {
+      "stem": "A--KaraSenguler-2025",
+      "designation": "A",
+      "source_pdf": "Kara & Şengüler, 2025.pdf",
+      "source_pdf_sha256": "ee3a1f3befa3833b065b162fb84f3c6b4b6c9beaa00438226ad2e67f9c5cf80f",
+      "page_count": 18,
+      "converted_at": "2026-09-07T09:09:02Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Khan-2025": {
+      "stem": "A--Khan-2025",
+      "designation": "A",
+      "source_pdf": "Khan et al., 2025.pdf",
+      "source_pdf_sha256": "8d9a33714d9ed620aaaff262e79fa718a50119deb686f6a9ec5dd64089afe72d",
+      "page_count": 65,
+      "converted_at": "2026-09-07T09:15:40Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Lu-2025": {
+      "stem": "A--Lu-2025",
+      "designation": "A",
+      "source_pdf": "Lu et al., 2025.pdf",
+      "source_pdf_sha256": "661e556772305e50ea5d5913ab0dce4fca7bff922aebdeabecf43439cab51f00",
+      "page_count": 28,
+      "converted_at": "2026-09-07T09:16:53Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Olabintan-2026": {
+      "stem": "A--Olabintan-2026",
+      "designation": "A",
+      "source_pdf": "Olabintan, 2026.pdf",
+      "source_pdf_sha256": "08d04041b7cd0f5676e88c770e444c757cb987c8eaaf74ca7c5d7b0c5dd19f88",
+      "page_count": 24,
+      "converted_at": "2026-09-07T09:17:51Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--PatelSingh-2026": {
+      "stem": "A--PatelSingh-2026",
+      "designation": "A",
+      "source_pdf": "Patel & Singh, 2026.pdf",
+      "source_pdf_sha256": "6503ae1e139ef83f408124dbd5ac783827143169b922f20c33117263929cf1fe",
+      "page_count": 10,
+      "converted_at": "2026-09-07T09:18:26Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Patra-2026": {
+      "stem": "A--Patra-2026",
+      "designation": "A",
+      "source_pdf": "Patra et al., 2026.pdf",
+      "source_pdf_sha256": "889f4a1c27e19baea24a5e4aa59d88e4a308947d80a572241da3005ba6f3be32",
+      "page_count": 16,
+      "converted_at": "2026-09-07T09:19:28Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Pratama-2024": {
+      "stem": "A--Pratama-2024",
+      "designation": "A",
+      "source_pdf": "Pratama, 2024.pdf",
+      "source_pdf_sha256": "727305b02ca1fe4adfa98fdddbab3350575e2bf6b8d66a8554fc18b88cfd6777",
+      "page_count": 12,
+      "converted_at": "2026-09-07T09:20:12Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Pretnar-2025": {
+      "stem": "A--Pretnar-2025",
+      "designation": "A",
+      "source_pdf": "Pretnar et al., 2025.pdf",
+      "source_pdf_sha256": "dab89adb7e2191050f50d94b13d2be0129d072381e5f9bce2ba37d3cfbe501fd",
+      "page_count": 47,
+      "converted_at": "2026-09-07T09:21:11Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Sankaewtong-2025": {
+      "stem": "A--Sankaewtong-2025",
+      "designation": "A",
+      "source_pdf": "Sankaewtong et al., 2025.pdf",
+      "source_pdf_sha256": "7d528a064115c861edf227c0e0f07dca3db9115b54f8f7969fc1446d62688b33",
+      "page_count": 43,
+      "converted_at": "2026-09-07T10:08:54Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Sappa-2024": {
+      "stem": "A--Sappa-2024",
+      "designation": "A",
+      "source_pdf": "Sappa, 2024.pdf",
+      "source_pdf_sha256": "22a550326432d3198b164c18e7422ca9c05e3277c09aeda3e0bfd39c4d4b9f1b",
+      "page_count": 21,
+      "converted_at": "2026-09-07T10:03:25Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Sarkar-2026": {
+      "stem": "A--Sarkar-2026",
+      "designation": "A",
+      "source_pdf": "Sarkar & Usa, 2026.pdf",
+      "source_pdf_sha256": "014e54183df3136dfbcb97ef840a7390ffc181a08550ca849843f7f7156955ac",
+      "page_count": 37,
+      "converted_at": "2026-09-07T09:23:43Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Shaha-2025": {
+      "stem": "A--Shaha-2025",
+      "designation": "A",
+      "source_pdf": "Shaha & Gavekar, 2025.pdf",
+      "source_pdf_sha256": "cdb38880aaa833d26ba9bf14123f013455890e4f8a85b77f72e168bd0e38b9b1",
+      "page_count": 12,
+      "converted_at": "2026-09-07T10:09:37Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Shuryhin-2024": {
+      "stem": "A--Shuryhin-2024",
+      "designation": "A",
+      "source_pdf": "Shuryhin & Zinovatna, 2024.pdf",
+      "source_pdf_sha256": "0060aab621d432a60c3c3e1967f4c728a024b702e939addfeed6368c67f785e8",
+      "page_count": 11,
+      "converted_at": "2026-09-07T09:24:28Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--SinghU-2025": {
+      "stem": "A--SinghU-2025",
+      "designation": "A",
+      "source_pdf": "Singh et al., 2025.pdf",
+      "source_pdf_sha256": "f1c437eb2c4c24d978a912927cb6884161d4b613332cdace8cb26f6f1f1c5cfd",
+      "page_count": 6,
+      "converted_at": "2026-09-07T09:24:46Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Sireesha-2026": {
+      "stem": "A--Sireesha-2026",
+      "designation": "A",
+      "source_pdf": "Sireesha et al., 2026.pdf",
+      "source_pdf_sha256": "bbce4ef04a97bcbd4fc9d47f71067fb533594987767ea9e7239ec68ef2e19779",
+      "page_count": 8,
+      "converted_at": "2026-09-07T09:46:29Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Siswara-2024": {
+      "stem": "A--Siswara-2024",
+      "designation": "A",
+      "source_pdf": "Siswara et al., 2024.pdf",
+      "source_pdf_sha256": "74bb5a3f1f28f07e37c2646dde20fdeb74d2076ab78e04a75191055558c88a69",
+      "page_count": 14,
+      "converted_at": "2026-09-07T10:11:44Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Song-2024": {
+      "stem": "A--Song-2024",
+      "designation": "A",
+      "source_pdf": "Song et al., 2024.pdf",
+      "source_pdf_sha256": "66f7972e3deb5b6fec0041204ab38eb0163f2d2b0aab99e21c2fb57e68852638",
+      "page_count": 67,
+      "converted_at": "2026-09-07T09:28:28Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Sonkavde-2023": {
+      "stem": "A--Sonkavde-2023",
+      "designation": "A",
+      "source_pdf": "Sonkavde et al., 2023.pdf",
+      "source_pdf_sha256": "2f18f5621edef0660100ffecbfef797bb9f16d5b35182f3ea86a6a58a70f0c23",
+      "page_count": 22,
+      "converted_at": "2026-09-07T10:11:02Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Sujon-2025": {
+      "stem": "A--Sujon-2025",
+      "designation": "A",
+      "source_pdf": "Sujon et al., 2025.pdf",
+      "source_pdf_sha256": "056bd769441ff961955756636fb9c9c02c5e80c4e6c0736be0197d9f004d39ee",
+      "page_count": 45,
+      "converted_at": "2026-09-07T09:30:40Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Thakur-2025": {
+      "stem": "A--Thakur-2025",
+      "designation": "A",
+      "source_pdf": "Thakur, 2025.pdf",
+      "source_pdf_sha256": "3acc1e20f775556b4e811d13c8c7c4d49401d4365b1411787a21accc11b39696",
+      "page_count": 11,
+      "converted_at": "2026-09-07T09:31:07Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Veldurthi-2025": {
+      "stem": "A--Veldurthi-2025",
+      "designation": "A",
+      "source_pdf": "Veldurthi, 2025.pdf",
+      "source_pdf_sha256": "b44924f7f178ae964dc75ad164f4b05c01911f96090ddd04fda4f0f1e86642e7",
+      "page_count": 15,
+      "converted_at": "2026-09-07T09:12:51Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Vijayanand-2024": {
+      "stem": "A--Vijayanand-2024",
+      "designation": "A",
+      "source_pdf": "Vijayanand & Smrithy, 2024.pdf",
+      "source_pdf_sha256": "afce7b3295139fc88d97139da884f203daa4ebfd17c192aec06e533fcbcecf27",
+      "page_count": 16,
+      "converted_at": "2026-09-07T09:47:02Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Vinitha-2026": {
+      "stem": "A--Vinitha-2026",
+      "designation": "A",
+      "source_pdf": "Vinitha et al., 2026.pdf",
+      "source_pdf_sha256": "df52fc5c3b5b00fe3e54eeead3cda3268ed11f0a54ca12e754a3091a0ff42c0b",
+      "page_count": 9,
+      "converted_at": "2026-09-07T09:47:25Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Yachamaneni-2025": {
+      "stem": "A--Yachamaneni-2025",
+      "designation": "A",
+      "source_pdf": "Yachamaneni et al., 2025.pdf",
+      "source_pdf_sha256": "bfec3ab38b34c71bcf07e2f753882bec39cede906f67345220df57bd5a2f7eb0",
+      "page_count": 10,
+      "converted_at": "2026-09-07T09:31:45Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--ZhangEtAl-2023": {
+      "stem": "A--ZhangEtAl-2023",
+      "designation": "A",
+      "source_pdf": "A. Zhang et al., 2023.pdf",
+      "source_pdf_sha256": "33617c7d44c1cb12c6146c6c4f3618737b7d4a1f365f14fde3e32ec2a7b0c6f2",
+      "page_count": 14,
+      "converted_at": "2026-09-07T10:05:11Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--ZhangHou-2026": {
+      "stem": "A--ZhangHou-2026",
+      "designation": "A",
+      "source_pdf": "H. Zhang & Hou, 2026.pdf",
+      "source_pdf_sha256": "7c7ade6031132a07f23c885b56849d134211a94e9c78b6d90d35664932aa1479",
+      "page_count": 6,
+      "converted_at": "2026-09-07T10:02:34Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "A--Zhong-2025": {
+      "stem": "A--Zhong-2025",
+      "designation": "A",
+      "source_pdf": "Zhong, 2025.pdf",
+      "source_pdf_sha256": "2f725d1b7d7412c203d3e9e27d6458ef7284a32e18974ce5491ad5c056c29096",
+      "page_count": 10,
+      "converted_at": "2026-09-07T09:13:31Z",
+      "first_author": "Zhong",
+      "year": "2025",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "A--Zlobin-2025": {
+      "stem": "A--Zlobin-2025",
+      "designation": "A",
+      "source_pdf": "Zlobin & Bazylevych, 2025.pdf",
+      "source_pdf_sha256": "9c9d1000d4898d57a12367eb0dac3b356bd95728930fd5e4f6f5a0e3d34069ef",
+      "page_count": 12,
+      "converted_at": "2026-09-07T10:12:15Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Andresen-2025": {
+      "stem": "I--Andresen-2025",
+      "designation": "I",
+      "source_pdf": "Andresen et al., 2025.pdf",
+      "source_pdf_sha256": "989cd2c4a72a8f6d01d2b03383379c29c20f6a501b96654e28870546117b1748",
+      "page_count": 63,
+      "converted_at": "2026-09-07T10:34:58Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Bai-2023": {
+      "stem": "I--Bai-2023",
+      "designation": "I",
+      "source_pdf": "Bai, 2023.pdf",
+      "source_pdf_sha256": "e0e1a0607c74f9d77fbb369f8afb85479b802cc827498593beba71987e26dc41",
+      "page_count": 18,
+      "converted_at": "2026-09-07T05:51:10Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Cumaio-2026": {
+      "stem": "I--Cumaio-2026",
+      "designation": "I",
+      "source_pdf": "Cumaio et al., 2026.pdf",
+      "source_pdf_sha256": "a0347a768d605d43b2b0a6b60fa04373620a5999819bb01bb0d920dbe872abf1",
+      "page_count": 27,
+      "converted_at": "2026-09-07T05:52:03Z",
+      "title": "Linking Financial Literacy and Behavioural Finance to Saving and Debt Behaviours: A Literature Review of Global and Developing Economy Contexts",
+      "authors": [
+        "Cumaio, S.",
+        "Serrasqueiro, Z.",
+        "Madaleno, M."
+      ],
+      "first_author": "Cumaio",
+      "year": "2026",
+      "venue": "Review",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "I--Danahy-2024": {
+      "stem": "I--Danahy-2024",
+      "designation": "I",
+      "source_pdf": "Danahy et al., 2024.pdf",
+      "source_pdf_sha256": "461c6f60d6aef838aac93216adbcfd1da059ec6d03c00a26723dd6046d21959e",
+      "page_count": 18,
+      "converted_at": "2026-09-07T09:42:03Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Dheepiga-2025": {
+      "stem": "I--Dheepiga-2025",
+      "designation": "I",
+      "source_pdf": "Dheepiga & Sivakumar, 2025.pdf",
+      "source_pdf_sha256": "bb0dafa283eff38f076c1cbc17b706bd16906ac09e68cfec129a94a99657358e",
+      "page_count": 14,
+      "converted_at": "2026-09-07T09:42:30Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Gan-2025": {
+      "stem": "I--Gan-2025",
+      "designation": "I",
+      "source_pdf": "Gan & Kay, 2025.pdf",
+      "source_pdf_sha256": "81e673ae19598c5e1849c5d4e3cd720b998004c0a45745f1f62732de7dfc5dec",
+      "page_count": 22,
+      "converted_at": "2026-09-07T05:54:01Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Ganong-2025": {
+      "stem": "I--Ganong-2025",
+      "designation": "I",
+      "source_pdf": "Ganong et al., 2025.pdf",
+      "source_pdf_sha256": "1171a752f6f409e355fcabe186a72a2a3f2e7792da45cc7192e7dc3b5f2a30b7",
+      "page_count": 78,
+      "converted_at": "2026-09-07T09:43:48Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Hajj-2023": {
+      "stem": "I--Hajj-2023",
+      "designation": "I",
+      "source_pdf": "Hajj & Hammoud, 2023.pdf",
+      "source_pdf_sha256": "4fc4f040bdd60a581262f5540d3d0ea119aedaa755b7d422626c0267c2ee3129",
+      "page_count": 16,
+      "converted_at": "2026-09-07T09:44:15Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Prakoso-2024": {
+      "stem": "I--Prakoso-2024",
+      "designation": "I",
+      "source_pdf": "Prakoso & Apriliani, 2024.pdf",
+      "source_pdf_sha256": "311070ca6d1e1c2760d0003358c016900ad0ebd461d56f6f7f53f5cf3924b5e6",
+      "page_count": 16,
+      "converted_at": "2026-09-07T05:54:32Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--RSingh-2025": {
+      "stem": "I--RSingh-2025",
+      "designation": "I",
+      "source_pdf": "R & Singh, 2025.pdf",
+      "source_pdf_sha256": "0d9a4f1cb79cdf3189c27e02bf55444c778ef041370044c97a7b1575369138ac",
+      "page_count": 14,
+      "converted_at": "2026-09-07T09:21:42Z",
+      "first_author": "Singh",
+      "year": "2025",
+      "venue": "International Journal of Research in Multidisciplinary Technology, 1(4), 1-14",
+      "author_unverified": true,
+      "note": "Page 1 byline reads 'Sai Sanhosh R, Ashuosh Kumar Singh'. The first author's surname appears truncated to 'R', so neither the stem nor a rename can be confirmed. Keep as-is and verify against the publisher record.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "I--Rane-2024": {
+      "stem": "I--Rane-2024",
+      "designation": "I",
+      "source_pdf": "Rane et al., 2024.pdf",
+      "source_pdf_sha256": "ff0aaf026f22460489514706957b62f199e9ab01ae6df1f21f75a48d6d15c4f6",
+      "page_count": 22,
+      "converted_at": "2026-09-07T09:45:26Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Salminen-2023": {
+      "stem": "I--Salminen-2023",
+      "designation": "I",
+      "source_pdf": "Salminen et al., 2023.pdf",
+      "source_pdf_sha256": "b4d104044ba87b4796c90a2fda17838cc29144dd1bab55fa322594c23ab8d18b",
+      "page_count": 16,
+      "converted_at": "2026-09-07T09:46:13Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Samli-2026": {
+      "stem": "I--Samli-2026",
+      "designation": "I",
+      "source_pdf": "Samli et al., 2026.pdf",
+      "source_pdf_sha256": "0f2e7a31da195bf7e5e7995666bb30cb16a644679d14d0342ef600efbfff3b51",
+      "page_count": 15,
+      "converted_at": "2026-09-07T09:29:59Z",
+      "title": "A Bibliometric Analysis of How Financial Behaviour Drives Effective Debt Management",
+      "authors": [
+        "Samli, F. B.",
+        "Zaini, Z.",
+        "Yusof, K. S."
+      ],
+      "first_author": "Samli",
+      "year": "2026",
+      "venue": "Labuan Bulletin of International Business & Finance, 24(1)",
+      "note": "Year corrected from 2025: Volume 24 Issue 1, received 2 May 2026.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "I--Sapiri-2023": {
+      "stem": "I--Sapiri-2023",
+      "designation": "I",
+      "source_pdf": "Awaluddin et al., 2023.pdf",
+      "source_pdf_sha256": "f836299b3839de874dffdec6b659892135d10ea7ff2c0f0fdac4019a74dac82a",
+      "page_count": 9,
+      "converted_at": "2026-09-07T05:50:46Z",
+      "title": "Distribution of Financial Attitude, Financial Behavior, Financial Knowledge and Financial Literacy on the Investment Decision Behavior of Young Investors",
+      "authors": [
+        "Sapiri, M.",
+        "Awaluddin, M."
+      ],
+      "first_author": "Sapiri",
+      "year": "2023",
+      "venue": "Journal of Distribution Science, 21(11), 45-53",
+      "note": "Renamed from I--Awaluddin-2023: Muhtar Sapiri is the first author.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "I--Sohilauw-2026": {
+      "stem": "I--Sohilauw-2026",
+      "designation": "I",
+      "source_pdf": "Sohilauw et al., 2026.pdf",
+      "source_pdf_sha256": "fa99300f4fe4fb5ed58662ca7ff97c6db7853ef8be2550df82eee0212a65caf0",
+      "page_count": 28,
+      "converted_at": "2026-09-07T05:55:11Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--WangLy-2023": {
+      "stem": "I--WangLy-2023",
+      "designation": "I",
+      "source_pdf": "Wang-Ly & Newell, 2023.pdf",
+      "source_pdf_sha256": "3a9b62dcf2b0b18bb97b827f116a04456858176da817950b0acc60f765b76598",
+      "page_count": 47,
+      "converted_at": "2026-09-07T09:48:29Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Yadav-2026": {
+      "stem": "I--Yadav-2026",
+      "designation": "I",
+      "source_pdf": "Yadav et al, 2026.pdf",
+      "source_pdf_sha256": "2f8c152d5b6eed8f7a7026bc29d5aa29047ec59a33f895dff138363d6a20044a",
+      "page_count": 8,
+      "converted_at": "2026-09-07T09:49:08Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Yang-2024": {
+      "stem": "I--Yang-2024",
+      "designation": "I",
+      "source_pdf": "J. Yang, 2024.pdf",
+      "source_pdf_sha256": "fe5e6a73912d3ade345d484dc3b003a73a717d795961a0ed3103e97460f3eca6",
+      "page_count": 14,
+      "converted_at": "2026-09-07T05:56:43Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Yang-2024b": {
+      "stem": "I--Yang-2024b",
+      "designation": "I",
+      "source_pdf": "Yang et al., 2024b.pdf",
+      "source_pdf_sha256": "08664ebb5fa930af66e34a11f444e33c40fd8a69b2b3750fa0e321eefa2b905e",
+      "page_count": 10,
+      "converted_at": "2026-09-07T09:32:13Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Yeo-2023": {
+      "stem": "I--Yeo-2023",
+      "designation": "I",
+      "source_pdf": "Yeo et al., 2023.pdf",
+      "source_pdf_sha256": "88ce667aabf6a82b1a999312c57b726ae8ca10ca225609ecda6b171c6d9507fa",
+      "page_count": 23,
+      "converted_at": "2026-09-07T09:50:41Z",
+      "title": "Financial Planning Behaviour: A Systematic Literature Review and New Theory Development",
+      "authors": [
+        "Yeo, K. H. K.",
+        "Lim, W. M.",
+        "Yii, K.-J."
+      ],
+      "first_author": "Yeo",
+      "year": "2023",
+      "venue": "Journal of Financial Services Marketing, 29, 979-1001",
+      "doi": "10.1057/s41264-023-00249-1",
+      "note": "Published online 3 Oct 2023; issue dated 2024. Cited as 2023 per the online-first date.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "I--Yoganandham-2025": {
+      "stem": "I--Yoganandham-2025",
+      "designation": "I",
+      "source_pdf": "Yoganandham, 2025.pdf",
+      "source_pdf_sha256": "255f009b595766fbbba812cf0cc6b45d2ffea114499b801316b0e0688ef34283",
+      "page_count": 15,
+      "converted_at": "2026-09-07T09:51:26Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Yuttama-2025": {
+      "stem": "I--Yuttama-2025",
+      "designation": "I",
+      "source_pdf": "Yuttama, 2025.pdf",
+      "source_pdf_sha256": "a46448c7c0df6a7d6c9b82dab6cb0f37373ae40a6db2d36546430aaf56d0ad93",
+      "page_count": 14,
+      "converted_at": "2026-09-07T09:51:57Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--ZhangLu-2026": {
+      "stem": "I--ZhangLu-2026",
+      "designation": "I",
+      "source_pdf": "Z. Zhang & Lu, 2026.pdf",
+      "source_pdf_sha256": "f9bfe3fe5a3fc233898173e13c2d21293bdb54391460782d2e9e010eba8f67e0",
+      "page_count": 36,
+      "converted_at": "2026-09-07T09:53:59Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "I--Zhao-2025": {
+      "stem": "I--Zhao-2025",
+      "designation": "I",
+      "source_pdf": "R. Huang et al., 2025.pdf",
+      "source_pdf_sha256": "84dde4f9a91e373683836e5bb17e90e369f0216dde848991fcf6245fa8dd74c2",
+      "page_count": 10,
+      "converted_at": "2026-09-07T09:44:40Z",
+      "title": "Wealth-Voyager: Navigating Intelligent Wealth Management with a Multi-Agent Framework",
+      "authors": [
+        "Zhao, Z."
+      ],
+      "first_author": "Zhao",
+      "year": "2025",
+      "venue": "Blockchain and Intelligent Technology Research Center, CUHK-Shenzhen",
+      "note": "Renamed from I--HuangR-2025: sole listed author is Zimo Zhao.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "L--Abila-2026": {
+      "stem": "L--Abila-2026",
+      "designation": "L",
+      "source_pdf": "Abila & Ulibas, 2026.pdf",
+      "source_pdf_sha256": "88cd2321aa598690509cad40a3d1c9660b44030132c828074086aa82c22b7a14",
+      "page_count": 14,
+      "converted_at": "2026-09-07T10:14:03Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Atento-2025": {
+      "stem": "L--Atento-2025",
+      "designation": "L",
+      "source_pdf": "Espelita et al., 2025.pdf",
+      "source_pdf_sha256": "8a019574d944430147c80b34972aaf44a348415649f2076a4674f4c7718c04bd",
+      "page_count": 24,
+      "converted_at": "2026-09-07T05:53:04Z",
+      "title": "Understanding Monetary Policy: Student Awareness, Perceptions, and Financial Behaviors in the Philippine Context",
+      "authors": [
+        "Atento, R. G.",
+        "Espelita, C. A. M.",
+        "Rao, L.",
+        "Tian, Y."
+      ],
+      "first_author": "Atento",
+      "year": "2025",
+      "venue": "First Asia Institute of Technology and the Humanities",
+      "note": "Renamed from L--Espelita-2025: Ramon George Atento is the first author.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "L--BangkoSentral-2023": {
+      "stem": "L--BangkoSentral-2023",
+      "designation": "L",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2023.pdf",
+      "source_pdf_sha256": "d8e9fc0149ef75bbef7223c2ed9bf44ce3b1d90140c33616fcd469e6f20b9983",
+      "page_count": 9,
+      "converted_at": "2026-09-07T10:14:25Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--BangkoSentral-2023b": {
+      "stem": "L--BangkoSentral-2023b",
+      "designation": "L",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2023.pdf",
+      "source_pdf_sha256": "32a066b364c03a18063e60ad2c5af169c678f302b4bea2f4f8b82320ec47422e",
+      "page_count": 69,
+      "converted_at": "2026-09-07T09:31:00Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--BangkoSentral-2025": {
+      "stem": "L--BangkoSentral-2025",
+      "designation": "L",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2025.pdf",
+      "source_pdf_sha256": "afe880c9877f4c323ab0e1496832f38043a6a313ad4388901d3cf858e202522e",
+      "page_count": 142,
+      "converted_at": "2026-09-07T10:18:23Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--BangkoSentral-2026": {
+      "stem": "L--BangkoSentral-2026",
+      "designation": "L",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2026.pdf",
+      "source_pdf_sha256": "af94e03704ccecdc0f305447034de000a7fa15b4b3abaac88a8690c8a01886da",
+      "page_count": 24,
+      "converted_at": "2026-09-07T10:20:03Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--BangkoSentral-2026b": {
+      "stem": "L--BangkoSentral-2026b",
+      "designation": "L",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2026.pdf",
+      "source_pdf_sha256": "c70dbfe5e93ceaf5c54d899d890734749d900997f56328a96cdb6d1970fe1cce",
+      "page_count": 72,
+      "converted_at": "2026-09-07T09:31:47Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Bulan-2025": {
+      "stem": "L--Bulan-2025",
+      "designation": "L",
+      "source_pdf": "Bulan & Nemino, 2025.pdf",
+      "source_pdf_sha256": "106aa3a56321e356a414611f41f2421295b3280512ac8e9e7d8f875310b7d32a",
+      "page_count": 13,
+      "converted_at": "2026-09-07T10:20:43Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Claro-2025": {
+      "stem": "L--Claro-2025",
+      "designation": "L",
+      "source_pdf": "Claro & Noval, 2025.pdf",
+      "source_pdf_sha256": "8af32fe3bb5224f273a5c9141d03b6bf09425fc73b4cf536a80cc9d2ef28813f",
+      "page_count": 7,
+      "converted_at": "2026-09-07T05:51:28Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Cruz-2026": {
+      "stem": "L--Cruz-2026",
+      "designation": "L",
+      "source_pdf": "Cruz et al., 2026.pdf",
+      "source_pdf_sha256": "1b5464e2f6d0e2ee0f3cfa97a6edc85af523c007b3f1e1d38ef59ec5b1ffcdb0",
+      "page_count": 17,
+      "converted_at": "2026-09-07T09:28:48Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Erno-2026": {
+      "stem": "L--Erno-2026",
+      "designation": "L",
+      "source_pdf": "Erno & Grefalde, 2026.pdf",
+      "source_pdf_sha256": "48e040524549f775cffa65d352b3d5bbb2ce32f78746ae384d74a43b4d3f8d97",
+      "page_count": 23,
+      "converted_at": "2026-09-07T10:21:39Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Esperanza-2025": {
+      "stem": "L--Esperanza-2025",
+      "designation": "L",
+      "source_pdf": "Esperanza et al., 2025.pdf",
+      "source_pdf_sha256": "622b580bfb67036088319f3804b6ed079a07236849e0f83e090aafa195004b73",
+      "page_count": 17,
+      "converted_at": "2026-09-07T05:53:34Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Francisco-2026": {
+      "stem": "L--Francisco-2026",
+      "designation": "L",
+      "source_pdf": "Francisco et al., 2026.pdf",
+      "source_pdf_sha256": "7265328ccc2099d5a6256c63390e947f0258806e580697ced341e48d9d2d8d1b",
+      "page_count": 24,
+      "converted_at": "2026-09-07T10:22:37Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--LaspinasMurcia-2024": {
+      "stem": "L--LaspinasMurcia-2024",
+      "designation": "L",
+      "source_pdf": "Laspiñas & Murcia, 2024.pdf",
+      "source_pdf_sha256": "7d81a8dc9dd4738d4bcc4d3d347263ea63643fae36ee66ddf04175018e8010e8",
+      "page_count": 6,
+      "converted_at": "2026-09-07T09:13:19Z",
+      "title": "Machine Learning Approaches in Classifying Income Levels",
+      "authors": [
+        "Laspinas, E. L.",
+        "Murcia, J. V. B."
+      ],
+      "first_author": "Laspinas",
+      "year": "2024",
+      "venue": "TWIST, 19(2), 92-97",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "L--Pinca-2024": {
+      "stem": "L--Pinca-2024",
+      "designation": "L",
+      "source_pdf": "Pinca et al., 2024.pdf",
+      "source_pdf_sha256": "e4ba1e26530c6068ef47628e09b7efb620d2e2833955f5e8b7cd80d9f0f19b5a",
+      "page_count": 15,
+      "converted_at": "2026-09-07T09:29:25Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Reyes-2024": {
+      "stem": "L--Reyes-2024",
+      "designation": "L",
+      "source_pdf": "Reyes et al., 2024.pdf",
+      "source_pdf_sha256": "9a23f3a12b64a967ab378eca3f8acf67d54087ea2902c980265e46d164a2d472",
+      "page_count": 7,
+      "converted_at": "2026-09-07T10:13:29Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Salvador-2024": {
+      "stem": "L--Salvador-2024",
+      "designation": "L",
+      "source_pdf": "Salvador, 2024.pdf",
+      "source_pdf_sha256": "ac4c9ac0274274dab6d0ed1c67265512a3882d4471ed45f73f4d9b96645d4fd2",
+      "page_count": 10,
+      "converted_at": "2026-09-07T10:11:18Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Santiago-2025": {
+      "stem": "L--Santiago-2025",
+      "designation": "L",
+      "source_pdf": "Santiago, 2025.pdf",
+      "source_pdf_sha256": "2b2a11d464f6b8e87a0ece76135ba2777612b1038ee90a11a9d443769b178196",
+      "page_count": 10,
+      "converted_at": "2026-09-07T10:23:06Z",
+      "metadata_source": "unverified (frontmatter only)"
+    },
+    "L--Vecina-2025": {
+      "stem": "L--Vecina-2025",
+      "designation": "L",
+      "source_pdf": "Encarnacion & Vecina, 2025.pdf",
+      "source_pdf_sha256": "41bbf8da343b2dfd516a33a99823a42e13c8ba508fce87dd37fb2f6ed847bb17",
+      "page_count": 20,
+      "converted_at": "2026-09-07T05:52:21Z",
+      "title": "Improving Financial Performance through Financial Literacy, Good Financial Practice and Fintech Adoption",
+      "authors": [
+        "Vecina, R. A. P."
+      ],
+      "first_author": "Vecina",
+      "year": "2025",
+      "venue": "Divine Word International Journal of Management and Humanities, 4(2), 1688-1707",
+      "note": "Renamed from L--Encarnacion-2025: Rey Anthony P. Vecina is the sole author.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    }
+  }
+}

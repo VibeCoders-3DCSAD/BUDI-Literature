@@ -1,6 +1,6 @@
 # BUDI-Literature — Agent Guide
 
-**Thesis**: Development of BUDI: A Personalized Intelligent Finance Management Application for Filipinos Using Classification, Forecasting, Optimization, and Anomaly Detection Models for Improving Savings and Debt
+**Thesis**: Development of BUDGIE: A Personal Financial Management App Using SARIMA to Improve Financial Planning. The project was named BUDI, then TAYA; Topical Outline V4 (09.26) and Chapter 2 V3 (09.26) use **BUDGIE**.
 **Group 4, III-DCSAD, University of Makati**
 
 ---
@@ -54,6 +54,9 @@ BUDI-Literature/
 | `docs/standards/rrl-workflow.md` | Full processing workflow (fetch → convert → summarize → score) |
 | `docs/standards/summary-format.md` | JSON schema for `_summarized.json` files |
 | `docs/standards/rrl-naming-conventions.md` | File naming rules for the corpus |
+| `literature/conversions/metadata.json` | Bibliographic sidecar: verified titles, authors, venues, DOIs, keyed by source-PDF SHA-256 |
+| `docs/OUTLINE-V4-COVERAGE.md` | Crucial/supporting paper counts per Outline V4 leaf — read before requesting new sources |
+| `docs/NEW-SCOPE-SOURCES.md` | Prioritised manual-download list, re-prioritised against Outline V4 |
 | `scores/report.md` | Human-readable ranked report |
 | `scores/index.json` | Machine-readable per-paper scores |
 | `scores/redundancy.json` | Near-duplicate clusters |
@@ -168,5 +171,8 @@ pip install torch --index-url https://download.pytorch.org/whl/cpu
 - **PDFs are not committed.** Use `scripts/fetch_pdfs.py` to obtain them. The scoring pipeline operates entirely on markdown conversions — PDFs are only needed for conversion.
 - **`cache/` is regenerable.** Run `python3 scripts/embed.py --force` to rebuild. Only `scores/` and `literature/conversions/` are committed.
 - **Old topic codes (1.A–14.C)** in `_summarized.json` files follow the previous thesis outline. The current module definitions in `config/modules.yaml` supersede them for scoring purposes.
+- **Stems name the first author, but source PDF filenames often do not.** Seven corpus stems were built from filenames and turned out to name a later author. Each was corrected on 2026-09-26 after reading page 1. Verify any stem against the PDF before citing it. `literature/conversions/metadata.json` records which entries have actually been verified from page 1 (22 of 91 as of 2026-09-26) and which carry only conversion frontmatter.
+- **A rename invalidates the caches.** `embed.py` keys `cache/embeddings_stems.json` by stem, so renaming a conversion makes `score.py` fail with a `KeyError` on the old stem. Re-run `embed.py` after any rename, not just `score.py`.
+- **`config/modules.yaml` was realigned to Outline V4 on 2026-09-26.** Measure corpus coverage against `docs/OUTLINE-V4-COVERAGE.md` before proposing new sources; three outline leaves currently have zero crucial-tier papers.
 - **Generated scores are committed** so the scored corpus is browsable without running anything.
 - **Batch structure is by intake run**, not by topic. Re-organize by topic when the topical outline is finalized.

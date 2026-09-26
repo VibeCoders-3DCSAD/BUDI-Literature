@@ -1,4 +1,4 @@
-# Odin-Literature — Agent Guide
+# BUDI-Literature — Agent Guide
 
 **Thesis**: Development of BUDI: A Personalized Intelligent Finance Management Application for Filipinos Using Classification, Forecasting, Optimization, and Anomaly Detection Models for Improving Savings and Debt
 **Group 4, III-DCSAD, University of Makati**
@@ -13,7 +13,7 @@ This is the **self-contained RRL corpus and scoring repository** for the BUDI th
 - Module configuration for relevance scoring
 - Generated scores (relevance, quality, redundancy)
 
-It does **not** contain thesis documents, application code, or ML model implementations — those live in **Odin-Paper** (documentation) and **Odin-App** / **Odin-ML** (code) respectively.
+It does **not** contain thesis documents, application code, or ML model implementations — those live in **BUDI-Base** (documentation) and **BUDI-App** / **BUDI-ML** (code) respectively.
 
 ---
 
@@ -32,7 +32,7 @@ Enforcement: Follow the naming conventions for all paper files. Use the summary 
 ## Top-Level Directory Layout
 
 ```
-Odin-Literature/
+BUDI-Literature/
   AGENTS.md              # This file
   README.md              # Project overview and quick start
   requirements.txt       # Python dependencies
@@ -68,19 +68,25 @@ Every curated paper has up to three files:
 | File | Location |
 |------|----------|
 | `{stem}.pdf` | `literature/papers/` (fetched, gitignored) |
-| `{stem}_marked.md` | `literature/conversions/batch-<N>/` |
-| `{stem}_summarized.json` | `literature/conversions/batch-<N>/` (same folder as `_marked.md`) |
+| `{stem}_marked.md` | `literature/conversions/` |
+| `{stem}_summarized.json` | `literature/conversions/` (same folder as `_marked.md`) |
 
 ### File Prefix Convention
 
 `L--` = local (Philippine), `I--` = international, `A--` = algorithm/system focus.
 Full reference: `docs/standards/rrl-naming-conventions.md`
 
-### Batch Structure
+### Corpus Layout
 
-Conversions are organized by intake run: `literature/conversions/batch-<N>/`.
-Start a new `batch-<N>` directory (next number) when adding a group of papers.
-(The earlier batch-1..6 conversion working files were removed as superseded; a fresh `batch-7/` is the active intake directory.)
+Conversions live flat in `literature/conversions/`, one `{stem}_marked.md` per
+paper, named by its bibliographically correct first author. Do not reintroduce
+per-intake subdirectories: `scripts/common.py` discovers the corpus with
+`rglob("*_marked.md")`, and a nested layout only obscures the 91-paper set when
+auditing stems, duplicates, or citation metadata.
+
+Intake provenance is tracked in git history, not in the directory layout. The
+earlier `batch-1..6` and `batch-7` conversion working files were flattened or
+removed as superseded.
 
 ---
 
@@ -90,7 +96,7 @@ Start a new `batch-<N>` directory (next number) when adding a group of papers.
 
 ```bash
 # From a sibling directory:
-python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/archived-literature/papers/
+python3 scripts/fetch_pdfs.py --source local --path ../BUDI-Base/archived-literature/papers/
 
 # From a .zip archive:
 python3 scripts/fetch_pdfs.py --source local --path /path/to/archives/
@@ -102,11 +108,11 @@ python3 scripts/fetch_pdfs.py --source remote --url https://example.com/papers.z
 ### 2. Convert
 
 ```bash
+```bash
 python3 scripts/prepare_pdf.py literature/papers/ --page-aware
-# Then move the pair into a batch directory:
-mkdir -p literature/conversions/batch-N
+# Then move the pair into the corpus root:
 mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
-   literature/conversions/batch-N/
+   literature/conversions/
 ```
 
 ### 3. Summarize

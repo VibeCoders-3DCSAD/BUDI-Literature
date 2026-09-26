@@ -1,6 +1,6 @@
 # Documentation Format
 
-Shared formatting conventions for all Odin thesis repositories (Odin-Paper, Odin-Literature, Odin-ML).
+Shared formatting conventions for all BUDI thesis repositories (BUDI-Base, BUDI-Literature, BUDI-ML).
 
 ---
 

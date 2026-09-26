@@ -1,27 +1,29 @@
 # Literature Migration Workflow
 
-Documents the process for migrating relevant literature from Odin-Paper to Odin-Literature.
+> **Deprecated source:** `BUDI-Base/archived-literature/` is deprecated per `../BUDI-Base/archived-literature/DEPRECATED.md`. New-scope intake uses fresh downloads into `literature/bucket/` (see `rrl-workflow.md`); this workflow only documents the legacy 518-PDF migration.
+
+Documents the process for migrating relevant literature from BUDI-Base to BUDI-Literature.
 
 ## Overview
 
-Odin-Paper contains ~518 source PDFs in `literature/papers/` (Git LFS tracked). These need to be screened, assessed, and migrated to Odin-Literature in small batches.
+BUDI-Base (formerly Odin-Paper) contains ~518 source PDFs in `archived-literature/papers/` (Git LFS tracked). These need to be screened, assessed, and migrated to BUDI-Literature in small batches.
 
 ## Workflow
 
 ### 1. Selection
 
 - **Who:** Researcher (final decision)
-- **Input:** Odin-Paper/archived-literature/papers/ (518 PDFs across batch-1..6)
+- **Input:** BUDI-Base/archived-literature/papers/ (518 PDFs across batch-1..6)
 - **Output:** Shortlist of 10-20 PDFs per batch
 - **Strategy:** Start with batch-6 (18 papers, newest), or curated shortlist
 
 ### 2. Intake
 
-Place selected PDFs in `Odin-Literature/literature/bucket/`.
+Place selected PDFs in `BUDI-Literature/literature/bucket/`.
 
 ```bash
-# Copy PDFs from Odin-Paper to Odin-Literature bucket
-cp ../Odin-Paper/archived-literature/papers/batch-6/*.pdf literature/bucket/
+# Copy PDFs from BUDI-Base to BUDI-Literature bucket
+cp ../BUDI-Base/archived-literature/papers/batch-6/*.pdf literature/bucket/
 ```
 
 ### 3. Pre-assessment (Automated)
@@ -35,10 +37,9 @@ python3 scripts/fetch_pdfs.py --source local --path literature/bucket/
 # Convert PDFs to Markdown
 python3 scripts/prepare_pdf.py literature/papers/ --page-aware
 
-# Move to new batch directory
-mkdir -p literature/conversions/batch-7
+# Move to the corpus root
 mv literature/papers/*_marked.md literature/papers/*_summarized.json \
-   literature/conversions/batch-7/
+   literature/conversions/
 
 # Build embeddings and score
 python3 scripts/embed.py --force
@@ -71,11 +72,11 @@ After researcher validates papers:
 
 | Location | Purpose |
 |----------|---------|
-| `Odin-Paper/archived-literature/papers/` | Source PDFs (Git LFS) |
-| `Odin-Literature/literature/bucket/` | Intake staging area |
-| `Odin-Literature/literature/conversions/` | Converted Markdown + summaries |
-| `Odin-Literature/scores/` | Relevance/quality scores |
-| `Odin-Literature/config/modules.yaml` | Module definitions for scoring |
+| `BUDI-Base/archived-literature/papers/` | Source PDFs (Git LFS) |
+| `BUDI-Literature/literature/bucket/` | Intake staging area |
+| `BUDI-Literature/literature/conversions/` | Converted Markdown + summaries |
+| `BUDI-Literature/scores/` | Relevance/quality scores |
+| `BUDI-Literature/config/modules.yaml` | Module definitions for scoring |
 
 ## Notes
 

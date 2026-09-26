@@ -2,7 +2,7 @@
 
 Workflow for adding and processing literature in the Review of Related Literature.
 
-All steps happen within **Odin-Literature**. No cross-repo transfers required.
+All steps happen within **BUDI-Literature**. No cross-repo transfers required.
 
 ## Steps
 
@@ -11,8 +11,8 @@ All steps happen within **Odin-Literature**. No cross-repo transfers required.
 Obtain source PDFs from a local archive or remote source:
 
 ```bash
-# From a sibling directory (e.g. Odin-Paper/archived-literature/papers/):
-python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/archived-literature/papers/
+# From a sibling directory (e.g. BUDI-Base/archived-literature/papers/):
+python3 scripts/fetch_pdfs.py --source local --path ../BUDI-Base/archived-literature/papers/
 
 # From a .zip archive:
 python3 scripts/fetch_pdfs.py --source local --path /path/to/pdf-archives/
@@ -45,15 +45,15 @@ Options:
 - `--page-aware`: Add `<!-- PAGE N -->` markers extracted via pdfminer.six
 - `--json-sidecar`: Write a separate `{stem}_conversion_meta.json`
 
-Move the converted pair into a batch directory:
+Move the converted pair into the corpus root:
 
 ```bash
-mkdir -p literature/conversions/batch-N
 mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
-   literature/conversions/batch-N/
+   literature/conversions/
 ```
 
-Start a new `batch-N` directory (next number) when adding a group of papers.
+The corpus is flat; do not create per-intake subdirectories. See
+`docs/standards/rrl-naming-conventions.md`.
 
 ### 3. Summarize
 
@@ -109,7 +109,7 @@ Concrete, ready-to-run steps for the current intake (the 17 PDFs staged in
 
 - PDFs are already staged flat in `literature/papers/` (moved from `bucket/`).
 - Dependencies installed from `requirements.txt` (includes `markitdown[pdf]`).
-- Destination `literature/conversions/batch-7/` exists.
+- Destination `literature/conversions/` is the flat corpus root.
 
 ### 1. Convert
 
@@ -127,18 +127,17 @@ python3 scripts/count_pdf_pages.py literature/papers/
 > `.pdf`. The `international/` and `local/` subdirectories are reserved for future
 > designation-based categorization and are intentionally left out of conversion.
 
-### 2. Rename & move into the batch
+### 2. Rename & move into the corpus
 
 Assign canonical stems per `docs/standards/rrl-naming-conventions.md`
 (`{Prefix}--{AuthorLastName}-{Year}`), then move each `_marked.md` +
-`_summarized.json` pair into `literature/conversions/batch-7/`.
+`_summarized.json` pair into `literature/conversions/`.
 
 ```bash
-mkdir -p literature/conversions/batch-7
 # rename + move each pair; e.g.
 mv "literature/papers/I--Hajj-2023_marked.md" \
    "literature/papers/I--Hajj-2023_summarized.json" \
-   literature/conversions/batch-7/
+   literature/conversions/
 ```
 
 ### 3. Summarize (AI agent)

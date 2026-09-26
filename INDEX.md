@@ -1,4 +1,4 @@
-# Odin-Literature — Repository Index
+# BUDI-Literature — Repository Index
 
 - **Project:** Development of BUDI: A Personalized Intelligent Finance Management Application for Filipinos Using Classification, Forecasting, Optimization, and Anomaly Detection Models for Improving Savings and Debt
 - **Institution:** University of Makati | Group 4, III-DCSAD
@@ -18,8 +18,8 @@
 | Corpus file naming rules | `docs/standards/rrl-naming-conventions.md` |
 | Pipeline scripts | `scripts/` |
 | Generated scores (ranked report) | `scores/report.md` |
-| Thesis documentation (system spec, PRD, chapters) | **Odin-Paper** |
-| ML service and training pipeline | **Odin-ML** |
+| Thesis documentation (system spec, PRD, chapters) | **BUDI-Base** |
+| ML service and training pipeline | **BUDI-ML** |
 
 ---
 
@@ -94,7 +94,8 @@ Generated, committed outputs. All are browsable without running the pipeline.
 | `docs/standards/rrl-workflow.md` | Full processing workflow (fetch → convert → summarize → score). |
 | `docs/standards/summary-format.md` | JSON schema for `_summarized.json` files. |
 | `docs/standards/rrl-naming-conventions.md` | Corpus file naming rules. |
-| `docs/standards/migration-workflow.md` | Cross-repository migration workflow from Odin-Paper. |
+| `docs/standards/migration-workflow.md` | Cross-repository migration workflow from BUDI-Base. |
+| `docs/NEW-SCOPE-SOURCES.md` | Download checklist for new-scope literature sources. |
 | `docs/standards/documentation-format.md` | Shared documentation formatting rules. |
 
 ---
@@ -103,6 +104,6 @@ Generated, committed outputs. All are browsable without running the pipeline.
 
 | Task | Use |
 | :--- | :--- |
-| Thesis documents (system spec, PRD, chapters) | **Odin-Paper** |
-| ML service and training pipeline | **Odin-ML** |
-| Migration of papers from Odin-Paper | `docs/standards/migration-workflow.md` |
+| Thesis documents (system spec, PRD, chapters) | **BUDI-Base** |
+| ML service and training pipeline | **BUDI-ML** |
+| Migration of papers from BUDI-Base | `docs/standards/migration-workflow.md` |

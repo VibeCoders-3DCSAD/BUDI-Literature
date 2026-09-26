@@ -4,7 +4,7 @@ Fetch PDFs from a local directory or remote source into literature/papers/.
 
 Usage:
     # From a sibling directory containing PDFs:
-    python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/literature/papers/
+    python3 scripts/fetch_pdfs.py --source local --path ../BUDI-Base/archived-literature/papers/
 
     # From a directory containing .zip archives:
     python3 scripts/fetch_pdfs.py --source local --path /path/to/pdf-archives/

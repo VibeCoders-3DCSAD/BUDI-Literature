@@ -25,8 +25,8 @@ Each paper has up to three files, distinguished by suffix:
 | Suffix | Meaning | Location |
 |--------|---------|----------|
 | `.pdf` | Source paper PDF | `literature/papers/` (fetched, gitignored) |
-| `_marked.md` | Markdown conversion with YAML frontmatter | `literature/conversions/batch-<N>/` |
-| `_summarized.json` | Structured JSON summary | `literature/conversions/batch-<N>/` (same folder as `_marked.md`) |
+| `_marked.md` | Markdown conversion with YAML frontmatter | `literature/conversions/` |
+| `_summarized.json` | Structured JSON summary | `literature/conversions/` (same folder as `_marked.md`) |
 
 ### Legacy Suffixes
 

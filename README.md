@@ -1,14 +1,14 @@
-# Odin-Literature
+# BUDI-Literature
 
 Self-contained Review of Related Literature (RRL) corpus and scoring pipeline
 for the BUDI thesis. **No LLMs, no token APIs, no agents.**
 
 ## What lives here
 
-- `literature/conversions/` — the curated paper corpus, organized by intake run as `batch-<N>/`:
+- `literature/conversions/` — the curated paper corpus, flat (one file pair per paper):
   - `{stem}_marked.md` — full-text markdown conversion (with YAML metadata frontmatter)
   - `{stem}_summarized.json` — structured summary (metadata, `topic_tags`, findings, citations)
-  - (The previous batch conversions were removed as superseded working files; `batch-7/` is reserved for the next intake.)
+  - (Intake provenance lives in git history; earlier per-batch subdirectories were flattened or removed as superseded.)
 - `literature/bucket/` — raw candidate PDFs for intake
 - `literature/papers/` — fetched source PDFs (gitignored; use `scripts/fetch_pdfs.py`)
 - `config/modules.yaml` — **the single source of truth** for what "relevant" means
@@ -31,8 +31,8 @@ pip install -r requirements.txt
 ### 1. Fetch PDFs
 
 ```bash
-# From a sibling directory (e.g. Odin-Paper/archived-literature/papers/):
-python3 scripts/fetch_pdfs.py --source local --path ../Odin-Paper/archived-literature/papers/
+# From a sibling directory (e.g. BUDI-Base/archived-literature/papers/):
+python3 scripts/fetch_pdfs.py --source local --path ../BUDI-Base/archived-literature/papers/
 
 # From a .zip archive:
 python3 scripts/fetch_pdfs.py --source local --path /path/to/pdf-archives/
@@ -58,12 +58,11 @@ python3 scripts/prepare_pdf.py literature/papers/ --page-aware
 
 Produces `{stem}_marked.md` (with metadata frontmatter) + empty `{stem}_summarized.json`.
 
-Move into a batch directory:
+Move into the corpus root:
 
 ```bash
-mkdir -p literature/conversions/batch-N
 mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
-   literature/conversions/batch-N/
+   literature/conversions/
 ```
 
 ### 3. Summarize

@@ -13,11 +13,11 @@ Confusion vs `supporting_min=0.3` threshold (positive = automated relevance >= t
 
 | | annotated relevant | annotated not |
 |---|---|---|
-| automated >= thr | 0 (TP) | 87 (FP) |
-| automated < thr  | 0 (FN) | 4 (TN) |
+| automated >= thr | 0 (TP) | 89 (FP) |
+| automated < thr  | 0 (FN) | 2 (TN) |
 
 - Sensitivity (recall of annotated-relevant): **nan**
-- Specificity: **0.044**
+- Specificity: **0.022**
 - Precision: **0.000**
 - F1: **nan**
 

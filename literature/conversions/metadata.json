@@ -5,8 +5,8 @@
   "key_convention": "source_pdf_sha256 is the stable key; stems are mutable and are corrected as front-author errors are found.",
   "counts": {
     "total": 91,
-    "verified": 13,
-    "unverified": 78,
+    "verified": 22,
+    "unverified": 69,
     "author_unverified": 1
   },
   "renames_applied": [
@@ -86,7 +86,17 @@
       "source_pdf_sha256": "2bc492ff8ea110793eb3737c314cdbfcc93fde0933c3f613f02771cd99962697",
       "page_count": 12,
       "converted_at": "2026-09-07T09:33:09Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "Evaluating Budgeting Apps: Limited Support for Budgeting Compared to Tracking",
+      "authors": [
+        "Alenazi, M.",
+        "Sas, C."
+      ],
+      "first_author": "Alenazi",
+      "year": "2023",
+      "venue": "Proceedings of the British Computer Society HCl International Conference (BCSHCI 2023)",
+      "doi": "10.14236/ewic/BCSHCI2023.1",
+      "note": "Venue name inferred from the DOI prefix; confirm against the proceedings before final citation."
     },
     "A--Ayari-2025": {
       "stem": "A--Ayari-2025",
@@ -167,7 +177,18 @@
       "source_pdf_sha256": "9027cba26f098b2f73e202f0c93054a5ae44f6dd16e5872938b28839f1dff3d5",
       "page_count": 18,
       "converted_at": "2026-09-07T09:41:25Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "A Comprehensive Review of Machine Learning Techniques for Intelligent Personal Finance Management Systems",
+      "authors": [
+        "D'Souza, M.",
+        "Bhegade, P.",
+        "Bhalekar, P.",
+        "et al."
+      ],
+      "first_author": "D'Souza",
+      "year": "2026",
+      "venue": "P.E.S Modern College of Engineering, Pune, India",
+      "note": "Three-plus authors; full list not yet transcribed from page 1."
     },
     "A--DeZarza-2024": {
       "stem": "A--DeZarza-2024",
@@ -205,7 +226,17 @@
       "source_pdf_sha256": "b59a87f97724b56f2dde4a53e5534f46a31a7dab4a57a8584e3729de9e0600a1",
       "page_count": 14,
       "converted_at": "2026-09-07T05:55:59Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "Dynamic Model for Budget Allocation in via Multi-Criteria Optimization",
+      "authors": [
+        "Gulbakyt, S.",
+        "Almaz, A.",
+        "Saule, S.",
+        "Suhrab, Y."
+      ],
+      "first_author": "Gulbakyt",
+      "year": "2025",
+      "venue": "Journal of Applied Data Sciences, 6(4), 3075-3088"
     },
     "A--Hamdare-2025": {
       "stem": "A--Hamdare-2025",
@@ -295,7 +326,17 @@
       "source_pdf_sha256": "661e556772305e50ea5d5913ab0dce4fca7bff922aebdeabecf43439cab51f00",
       "page_count": 28,
       "converted_at": "2026-09-07T09:16:53Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "A Constrained, Data-Driven Budgeting Framework Integrating Macro Demand Forecasting and Marketing Response Modeling",
+      "authors": [
+        "Lu, Y.",
+        "Zhou, H.",
+        "Zhang, Y."
+      ],
+      "first_author": "Lu",
+      "year": "2025",
+      "venue": "Journal of Technology Informatics and Engineering, 4(3), 493-520",
+      "doi": "10.51903/jtie.v4i3.466"
     },
     "A--Olabintan-2026": {
       "stem": "A--Olabintan-2026",
@@ -513,7 +554,13 @@
       "converted_at": "2026-09-07T09:13:31Z",
       "first_author": "Zhong",
       "year": "2025",
-      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "Adaptive Anomaly Detection Threshold for Financial Data Quality Monitoring Based on Time Series Features",
+      "authors": [
+        "Zhong, M."
+      ],
+      "venue": "University of Chicago",
+      "note": "No journal or DOI on the document; treat as an unpublished manuscript until a publisher record is located."
     },
     "A--Zlobin-2025": {
       "stem": "A--Zlobin-2025",
@@ -755,7 +802,14 @@
       "source_pdf_sha256": "255f009b595766fbbba812cf0cc6b45d2ffea114499b801316b0e0688ef34283",
       "page_count": 15,
       "converted_at": "2026-09-07T09:51:26Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "Mastering Economic and Financial Sources with Reference to Budgeting, Savings, Early Investing, Debt Management and the Power of Financial Planning: A Comprehensive Analysis",
+      "authors": [
+        "Yoganandham, G."
+      ],
+      "first_author": "Yoganandham",
+      "year": "2025",
+      "venue": "Degres Journal, ISSN 0376-8163"
     },
     "I--Yuttama-2025": {
       "stem": "I--Yuttama-2025",
@@ -855,7 +909,15 @@
       "source_pdf_sha256": "af94e03704ccecdc0f305447034de000a7fa15b4b3abaac88a8690c8a01886da",
       "page_count": 24,
       "converted_at": "2026-09-07T10:20:03Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "Consumer Expectations Survey Report: 2nd Quarter 2026",
+      "authors": [
+        "Bangko Sentral ng Pilipinas"
+      ],
+      "first_author": "Bangko Sentral ng Pilipinas",
+      "year": "2026",
+      "venue": "Monetary and Economics Sector, Department of Economic Statistics",
+      "note": "Institutional author. Cited in Chapter 2 V3 as 'The Bangko Sentral ng Pilipinas (2026)'."
     },
     "L--BangkoSentral-2026b": {
       "stem": "L--BangkoSentral-2026b",
@@ -882,7 +944,16 @@
       "source_pdf_sha256": "8af32fe3bb5224f273a5c9141d03b6bf09425fc73b4cf536a80cc9d2ef28813f",
       "page_count": 7,
       "converted_at": "2026-09-07T05:51:28Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "The Regressors of Financial Well-Being Among LGU Employees in Davao del Norte",
+      "authors": [
+        "Claro, D. M. L.",
+        "Noval, J. E. G."
+      ],
+      "first_author": "Claro",
+      "year": "2025",
+      "venue": "ISRG Journal of Economics, Business and Management, 3(6)",
+      "note": "Byline on page 1 is Dyna Mae L. Claro and Joseph Elmer G. Noval, matching the 'Claro and Noval' citation in Chapter 2 V3. The stem is correct."
     },
     "L--Cruz-2026": {
       "stem": "L--Cruz-2026",
@@ -909,7 +980,15 @@
       "source_pdf_sha256": "622b580bfb67036088319f3804b6ed079a07236849e0f83e090aafa195004b73",
       "page_count": 17,
       "converted_at": "2026-09-07T05:53:34Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "Digital Lending Efficacy on Debt Management of Wage Earners",
+      "authors": [
+        "Esperanza, D. N."
+      ],
+      "first_author": "Esperanza",
+      "year": "2025",
+      "venue": "ASEAN Journal of Management & Innovation, 12(2), 111-127",
+      "note": "Sole named author on page 1, though the source PDF filename reads 'Esperanza et al.'"
     },
     "L--Francisco-2026": {
       "stem": "L--Francisco-2026",
@@ -918,7 +997,17 @@
       "source_pdf_sha256": "7265328ccc2099d5a6256c63390e947f0258806e580697ced341e48d9d2d8d1b",
       "page_count": 24,
       "converted_at": "2026-09-07T10:22:37Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "title": "Causes of Salary Loan Dependency: Basis for Strengthening Financial Literacy Program",
+      "authors": [
+        "Francisco, A. A.",
+        "Legal, G. A.",
+        "Legal, F."
+      ],
+      "first_author": "Francisco",
+      "year": "2026",
+      "venue": "Journal, 4(1)",
+      "note": "Journal name not legible on the extracted page 1."
     },
     "L--LaspinasMurcia-2024": {
       "stem": "L--LaspinasMurcia-2024",

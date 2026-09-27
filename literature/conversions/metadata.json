@@ -941,6 +941,31 @@
       "converted_at": "2026-09-07T09:28:48Z",
       "metadata_source": "unverified (frontmatter only)"
     },
+    "L--Dasmarinas-2024": {
+      "stem": "L--Dasmarinas-2024",
+      "designation": "L",
+      "source_pdf": "Dasmarinas et al., 2024.pdf",
+      "source_pdf_sha256": "8b56774e65027d006dc627e9962e8c90330bfdfecaa90ba026e5bed2b5cffc1d",
+      "page_count": 21,
+      "converted_at": "2026-09-27T06:26:34Z",
+      "metadata_source": "verified from PDF page 1 on 2026-09-27",
+      "authors": [
+        "Dasmariñas, A. P.",
+        "De Castro, G. H.",
+        "Lazona, B. J. M.",
+        "Usona, L. P."
+      ],
+      "first_author": "Dasmariñas",
+      "title": "Forecasting the Impact of COVID-19 on the Household Final Consumption Expenditure (HFCE) in the Philippines",
+      "year": "2024",
+      "venue": "PUP Journal of Science & Technology, 14(1), 70-90",
+      "volume": "14",
+      "issue": "1",
+      "pages": "70-90",
+      "doi": "10.70922/ctzevg57",
+      "publisher": "Polytechnic University of the Philippines",
+      "note": "Venue, pages and DOI are NOT readable in the held copy and were confirmed on 2026-09-27 against the publisher's OJS record (publishing.pup.edu.ph), whose recommended citation matches the string above. The held PDF is the pre-typeset manuscript: its document properties are still the submission template ('Paper Title (use style: paper title)', author 'Mini Carrascal'), and the document carries no journal header, page numbers, or DOI of its own. Scope limit: the study models national aggregate quarterly HFCE 2001-2021 (84 quarters) and contains no individual-household, budget-allocation or savings content, so it evidences population-level seasonality only. Publisher labels the issue 'Vol. 14 No. 1 (2021)' while the citation year is 2024; the journal's own citation format uses 2024."
+    },
     "L--Erno-2026": {
       "stem": "L--Erno-2026",
       "designation": "L",

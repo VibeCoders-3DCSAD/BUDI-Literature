@@ -1,65 +1,4 @@
 {
-  "schema_version": "1.0",
-  "generated": "2026-09-26",
-  "purpose": "Bibliographic metadata for the RRL corpus, keyed by stem and cross-indexed by source PDF SHA-256. Values marked metadata_source='verified from PDF page 1 on 2026-09-26' were read off the first page of the source PDF. Unverified entries carry only conversion frontmatter and must not be cited until checked.",
-  "key_convention": "source_pdf_sha256 is the stable key; stems are mutable and are corrected as front-author errors are found.",
-  "counts": {
-    "total": 91,
-    "verified": 22,
-    "unverified": 69,
-    "author_unverified": 1
-  },
-  "renames_applied": [
-    {
-      "from": "A--Agrawal-2025",
-      "to": "A--Hamdare-2025",
-      "reason": "first author is Hamdare; Agrawal is third author"
-    },
-    {
-      "from": "I--Awaluddin-2023",
-      "to": "I--Sapiri-2023",
-      "reason": "first author is Sapiri"
-    },
-    {
-      "from": "I--HuangR-2025",
-      "to": "I--Zhao-2025",
-      "reason": "sole listed author is Zhao"
-    },
-    {
-      "from": "L--Encarnacion-2025",
-      "to": "L--Vecina-2025",
-      "reason": "sole author is Vecina"
-    },
-    {
-      "from": "L--Espelita-2025",
-      "to": "L--Atento-2025",
-      "reason": "first author is Atento; Espelita is second"
-    },
-    {
-      "from": "I--Samli-2025",
-      "to": "I--Samli-2026",
-      "reason": "volume 24 issue 1, received 2 May 2026"
-    },
-    {
-      "from": "A--DeZarza-2023",
-      "to": "A--DeZarza-2024",
-      "reason": "published in AI 5(2024) 91-114"
-    }
-  ],
-  "unresolved": [
-    {
-      "stem": "I--RSingh-2025",
-      "issue": "first-author surname truncated to 'R' on the page-1 byline; cannot confirm stem or rename"
-    },
-    {
-      "stem": "L--BangkoSentral-2023b",
-      "issue": "text extraction fell back to pypdf and is garbled; the Q1-2024 hypothesis is unconfirmed. Source PDF is not in the repo, so page 1 cannot be checked."
-    },
-    {
-      "stem": "I--Yang-2024 / I--Yang-2024b",
-      "issue": "both are first-authored by a J. Yang in 2024 but are different papers; the 'b' disambiguator is correct and must be kept"
-    }
-  ],
   "entries": {
     "A--Abdullahi-2025": {
       "stem": "A--Abdullahi-2025",
@@ -190,7 +129,8 @@
       "first_author": "D'Souza",
       "year": "2026",
       "venue": "P.E.S Modern College of Engineering, Pune, India",
-      "note": "Four authors, complete. Unpublished manuscript: no journal, DOI, or page numbers on page 1, only the department and institutional e-mail addresses."
+      "note": "Four authors, complete. Unpublished manuscript: no journal, DOI, or page numbers on page 1, only the department and institutional e-mail addresses.\n\nVENUE UNVERIFIED: recorded venue is an affiliation (P.E.S Modern College of Engineering), not a journal. Likely a preprint.",
+      "venue_unverified": true
     },
     "A--DeZarza-2024": {
       "stem": "A--DeZarza-2024",
@@ -201,15 +141,15 @@
       "converted_at": "2026-09-07T10:12:41Z",
       "title": "Optimized Financial Planning: Integrating Individual and Cooperative Budgeting Models with LLM Recommendations",
       "authors": [
-        "de Zarza, I.",
-        "de Curto, J.",
+        "de Zarzà, I.",
+        "de Curtò, J.",
         "Roig, G.",
         "Calafate, C. T."
       ],
       "first_author": "de Zarza",
       "year": "2024",
       "venue": "AI, 5, 91-114",
-      "note": "Year corrected from 2023: published in AI 5(2024) 91-114, received 18 Nov 2023. Chapter 2 V3 already cites 2024.",
+      "note": "Year 2024 confirmed from page 1 running head \"Recommendations. AI 2024, 5, 91-114\". The source PDF filename says 2023 and is wrong. Accents restored on de Zarzà / de Curtò from the page 1 byline.",
       "metadata_source": "verified from PDF page 1 on 2026-09-26"
     },
     "A--Ghonaim-2025": {
@@ -219,7 +159,15 @@
       "source_pdf_sha256": "b458e4cdcf67395272dd6ad896d550b6cd037c31f0fcb4ce6dcd08a81fe83978",
       "page_count": 13,
       "converted_at": "2026-09-07T10:02:07Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-27",
+      "authors": [
+        "Ghonaim, W. A.",
+        "El-Sharawy, E. E."
+      ],
+      "year": "2025",
+      "venue": "International Journal of Theoretical and Applied Research (IJTAR), 4(2), 840-852",
+      "title": "An Intelligent Budget Management Mobile Application Based on a Recurrent Neural Network",
+      "note": "Verified from page 1 on 2026-09-27. No DOI present on page 1. Top mobile_design scorer (0.41); added to close a verified-source gap."
     },
     "A--Gulbakyt-2025": {
       "stem": "A--Gulbakyt-2025",
@@ -498,7 +446,16 @@
       "source_pdf_sha256": "3acc1e20f775556b4e811d13c8c7c4d49401d4365b1411787a21accc11b39696",
       "page_count": 11,
       "converted_at": "2026-09-07T09:31:07Z",
-      "metadata_source": "unverified (frontmatter only)"
+      "metadata_source": "verified from PDF page 1 on 2026-09-27",
+      "authors": [
+        "Thakur, R. S.",
+        "Jadhav, A."
+      ],
+      "year": "2025",
+      "doi": "10.14744/sigma.2025.00119",
+      "venue": "Sigma Journal of Engineering and Natural Sciences, 43(4), 1265-1275",
+      "title": "Expense Tracker Management System Using Machine Learning",
+      "note": "Verified from page 1 on 2026-09-27. Second mobile_design paper added to reach the 5-source quota."
     },
     "A--Veldurthi-2025": {
       "stem": "A--Veldurthi-2025",
@@ -687,8 +644,9 @@
       "year": "2025",
       "venue": "International Journal of Research in Multidisciplinary Technology, 1(4), 1-14",
       "author_unverified": true,
-      "note": "Page 1 byline reads 'Sai Sanhosh R, Ashuosh Kumar Singh'. The first author's surname appears truncated to 'R', so neither the stem nor a rename can be confirmed. Keep as-is and verify against the publisher record.",
-      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+      "note": "Page 1 byline reads 'Sai Sanhosh R, Ashuosh Kumar Singh'. The first author's surname appears truncated to 'R', so neither the stem nor a rename can be confirmed. Keep as-is and verify against the publisher record.\n\nUNUSABLE: no authors, no title, no DOI recorded. Byline is ambiguous between \"R\" and \"Singh\". Excluded from all citations until the PDF is re-read.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "venue_unverified": true
     },
     "I--Rane-2024": {
       "stem": "I--Rane-2024",
@@ -824,7 +782,9 @@
       ],
       "first_author": "Yoganandham",
       "year": "2025",
-      "venue": "Degres Journal, ISSN 0376-8163"
+      "venue": "Degres Journal, ISSN 0376-8163",
+      "note": "WEAK VENUE: \"Degres Journal\" with no volume, issue or pages. Not a stable scholarly outlet. Do not count toward a topic source quota without panel sign-off.",
+      "venue_unverified": true
     },
     "I--Yuttama-2025": {
       "stem": "I--Yuttama-2025",
@@ -858,8 +818,9 @@
       "first_author": "Zhao",
       "year": "2025",
       "venue": "Blockchain and Intelligent Technology Research Center, CUHK-Shenzhen",
-      "note": "Renamed from I--HuangR-2025: sole listed author is Zimo Zhao.",
-      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+      "note": "Renamed from I--HuangR-2025: sole listed author is Zimo Zhao.\n\nVENUE UNVERIFIED: recorded venue is an affiliation (Blockchain and Intelligent Technology Research Center, CUHK-Shenzhen), not a journal. Likely a preprint.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "venue_unverified": true
     },
     "L--Abila-2026": {
       "stem": "L--Abila-2026",
@@ -887,8 +848,9 @@
       "first_author": "Atento",
       "year": "2025",
       "venue": "First Asia Institute of Technology and the Humanities",
-      "note": "Renamed from L--Espelita-2025: Ramon George Atento is the first author.",
-      "metadata_source": "verified from PDF page 1 on 2026-09-26"
+      "note": "Renamed from L--Espelita-2025: Ramon George Atento is the first author.\n\nVENUE UNVERIFIED: recorded venue is an author affiliation (First Asia Institute of Technology and the Humanities), not a journal. Page 1 does not name a publication outlet. Likely a preprint.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-26",
+      "venue_unverified": true
     },
     "L--BangkoSentral-2023": {
       "stem": "L--BangkoSentral-2023",
@@ -1090,7 +1052,9 @@
       "issue": "3",
       "pages": "128-137",
       "doi": "10.26483/ijarcs.v16i3.7256",
-      "note": "Three authors; only the first was previously transcribed. Pages 128-137 from the article footers. Laguna State Polytechnic University."
+      "note": "Title and year recovered from page 1 on 2026-09-27; both were previously null, which made this the top-scoring system_evaluation paper uncitable. Page range 128-137 is still unconfirmed - not visible on page 1.",
+      "year": "2025",
+      "title": "Budget and Financial Management Information System for Public Elementary Schools: Analytics and Predictive Insights for MOOE Allocation Using Linear Regression"
     },
     "L--Vecina-2025": {
       "stem": "L--Vecina-2025",
@@ -1101,12 +1065,13 @@
       "converted_at": "2026-09-07T05:52:21Z",
       "title": "Improving Financial Performance through Financial Literacy, Good Financial Practice and Fintech Adoption",
       "authors": [
-        "Vecina, R. A. P."
+        "Vecina, R. A. P.",
+        "Encarnacion, M. J. G."
       ],
       "first_author": "Vecina",
       "year": "2025",
       "venue": "Divine Word International Journal of Management and Humanities, 4(2), 1688-1707",
-      "note": "Renamed from L--Encarnacion-2025: Rey Anthony P. Vecina is the sole author.",
+      "note": "Two authors, confirmed from page 1: Rey Anthony P. Vecina (first) and Marie Joy G. Encarnacion. The source PDF filename reverses the order (\"Encarnacion & Vecina\") and is wrong.",
       "metadata_source": "verified from PDF page 1 on 2026-09-26"
     }
   }

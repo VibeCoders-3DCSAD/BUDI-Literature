@@ -38,22 +38,31 @@ file were written with invented metadata and had to be removed:
 <!-- Unchecked papers are either outside the 2023 citation window, inaccessible behind a
      paywall, or pending the page-1 check described above. -->
 
-## P0 — zero corpus coverage, named explicitly by Outline V4
+## P0 — highest priority: zero coverage, and citations the corpus cannot back
 
 These three leaves score **0 crucial** against the current corpus. Chapter 2 V3 discusses all
 three across roughly ten paragraphs with almost nothing behind them.
 
 ### P0.1 Seasonal expense forecasting (the thesis's core technical claim)
 
-Dasmariñas is not optional. Chapter 2 V3 cites it seven times and it is the corpus's only
-Philippine SARIMA-on-consumption source, so the entire seasonal forecasting argument currently
-rests on a paper the project does not hold.
+Dasmariñas was not optional. Chapter 2 V3 cited it seven times and it was the corpus's only
+Philippine SARIMA-on-consumption source, so the entire seasonal forecasting argument rested on a
+paper the project did not hold. **Acquired 2026-09-27 as `L--Dasmarinas-2024`**; it is now the
+top-ranked paper in the corpus for `forecasting` and second for `seasonal_expense_forecasting`. Its
+venue, pages, and DOI were confirmed against the publisher's record rather than assumed, which
+retires the earlier concern that the DOI came from a citing bibliography.
 
-- [ ] **verified** — Dasmariñas, A. P., De Castro, G., Lazona, B. J., & Usona, L. (2024). Forecasting the impact of COVID-19 on the household final consumption expenditure (HFCE) in the Philippines. *PUP Journal of Science & Technology, 14*(1), 70-90. https://doi.org/10.70922/ctzevg57
-- [ ] **verified** — Dey, S., & Arefin, M. S. (2025). Developing a rule-based system to recommend household budget. *Journal of Information Systems Engineering and Management, 10*(47s), 148-182. — also closes a 3-citation gap in Chapter 2.
+Its scope limit is recorded in the sidecar and constrains how Chapter 2 may use it: it models
+national aggregate quarterly consumption expenditure for 2001–2021, not an individual household's
+monthly expenses. The population-to-individual disaggregation step therefore remains an assumption
+of the chapter, flagged as such, and Dey and Arefin below is still worth having.
+
+- [x] **verified and held** — Dasmariñas, A. P., De Castro, G. H., Lazona, B. J. M., & Usona, L. P. (2024). Forecasting the impact of COVID-19 on the household final consumption expenditure (HFCE) in the Philippines. *PUP Journal of Science & Technology, 14*(1), 70-90. https://doi.org/10.70922/ctzevg57 — `L--Dasmarinas-2024`
+- [ ] **verified** — Dey, S., & Arefin, M. S. (2025). Developing a rule-based system to recommend household budget. *Journal of Information Systems Engineering and Management, 10*(47s), 148-182. — the closest precedent for the rule-based classifier, and the remaining gap for individual-household rather than aggregate forecasting.
 - [ ] **needs page-1 check** — Srisamai, K., & Siriruk, P. Demand forecasting to reduce dead stock and loss sales: A case study of the wholesale electric equipment and part company. *13th Annual International Conference on Industrial Engineering and Operations Management (IEOM)*. **Confirm this is the source Chapter 2 means** before citing; the intended multi-level evaluation paper has not been identified.
 
-The adviser's standard for a core algorithm is six to seven sources. Dasmariñas alone is one.
+The adviser's standard for a core algorithm is six to seven sources. Dasmariñas was the one that
+mattered most; the rest are adjacent-domain.
 
 ### P0.2 Agile lifecycle and Kanban
 
@@ -78,6 +87,23 @@ Outline V4 names both explicitly. One supporting corpus paper, and it is not abo
 cited as the instrument's definition under the window exception, with the 2025 systematic review
 carrying the substantive properties. This is the one place the chapter steps outside 2023+, and
 it is flagged inline at the point of citation rather than buried here.
+
+### P0.4 Sources cited in Chapter 2 that the corpus does not hold
+
+Found by the provenance audit of 2026-09-27, not by an outline-coverage gap. All six are cited in
+the chapter, were inherited from Chapter 2 V3, and resolve to no file in `conversions/`, `papers/`,
+or `bucket/`. **A reference is not verified until the file is held.** In acquisition order:
+
+- [ ] **verified** — Brooke, J. (1996). SUS: A "quick and dirty" usability scale. In *Usability Evaluation in Industry*, 189-194. — the canonical System Usability Scale source, load-bearing for *Software Quality Evaluation*, and the chapter's only pre-2023 window exception. One page; the cheapest item on this list and the most cited-per-page.
+- [ ] **verified** — Philippine Statistics Authority (2023). *Family Income and Expenditure Survey.* — annual income, expense, household-size, and distributional inputs to the Conceptual Model.
+- [ ] **verified** — Philippine Statistics Authority (2026). *Household Final Consumption Expenditure* series. — seasonal proportions for the temporal disaggregation. `L--Dasmarinas-2024` is a partial substitute (it analyses Philippine quarterly consumption 2001–2021) but is an academic study of an aggregate series, not the official statistical release the design names.
+- [ ] **verified** — Ariningsih, P., & Muhammad, A. H. (2024). *Quality evaluation of Indonesian sharia fintech.* — PFM feature comparison.
+- [ ] **verified** — Lianto, M. E., Primasari, C. H., Marsella, E., Wibisono, Y., et al. (2023). Budgeting-app study. — PFM feature comparison.
+- [ ] **verified** — Lim, P. C., Lim, Y. L., Rajah, R., & Zainal, H. (2025). *Usability* study. — PFM features and the usability argument.
+
+Two Chapter 2 references are legitimately outside the corpus and are not on this list:
+International Organization for Standardization (2023) is a standard, and Group 4 (2026) is the
+team's own PUEPS instrument, which lives in `BUDI-Base/questionnaires/`.
 
 ## P1 — topic gaps in well-covered leaves
 

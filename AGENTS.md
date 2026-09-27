@@ -84,7 +84,7 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 Conversions live flat in `literature/conversions/`, one `{stem}_marked.md` per
 paper, named by its bibliographically correct first author. Do not reintroduce
 per-intake subdirectories: `scripts/common.py` discovers the corpus with
-`rglob("*_marked.md")`, and a nested layout only obscures the 91-paper set when
+`rglob("*_marked.md")`, and a nested layout only obscures the corpus (92 papers as of 2026-09-27) when
 auditing stems, duplicates, or citation metadata.
 
 Intake provenance is tracked in git history, not in the directory layout. The
@@ -171,7 +171,7 @@ pip install torch --index-url https://download.pytorch.org/whl/cpu
 - **PDFs are not committed.** Use `scripts/fetch_pdfs.py` to obtain them. The scoring pipeline operates entirely on markdown conversions — PDFs are only needed for conversion.
 - **`cache/` is regenerable.** Run `python3 scripts/embed.py --force` to rebuild. Only `scores/` and `literature/conversions/` are committed.
 - **Old topic codes (1.A–14.C)** in `_summarized.json` files follow the previous thesis outline. The current module definitions in `config/modules.yaml` supersede them for scoring purposes.
-- **Stems name the first author, but source PDF filenames often do not.** Seven corpus stems were built from filenames and turned out to name a later author. Each was corrected on 2026-09-26 after reading page 1. Verify any stem against the PDF before citing it. `literature/conversions/metadata.json` records which entries have actually been verified from page 1 (22 of 91 as of 2026-09-26) and which carry only conversion frontmatter.
+- **Stems name the first author, but source PDF filenames often do not.** Seven corpus stems were built from filenames and turned out to name a later author. Each was corrected on 2026-09-26 after reading page 1. Verify any stem against the PDF before citing it. `literature/conversions/metadata.json` records which entries have actually been verified from page 1 (26 of 92 as of 2026-09-27; the file wraps them under an `entries` key, so count there, not at the top level) and which carry only conversion frontmatter.
 - **A rename invalidates the caches.** `embed.py` keys `cache/embeddings_stems.json` by stem, so renaming a conversion makes `score.py` fail with a `KeyError` on the old stem. Re-run `embed.py` after any rename, not just `score.py`.
 - **`config/modules.yaml` was realigned to Outline V4 on 2026-09-26.** Measure corpus coverage against `docs/OUTLINE-V4-COVERAGE.md` before proposing new sources; three outline leaves currently have zero crucial-tier papers.
 - **Generated scores are committed** so the scored corpus is browsable without running anything.

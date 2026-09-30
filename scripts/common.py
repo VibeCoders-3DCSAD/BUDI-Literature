@@ -1,7 +1,9 @@
-"""Shared helpers for the literature scoring pipeline.
+"""Shared helpers for the literature review pipeline.
 
 Everything here is deterministic and dependency-light so the pipeline stays
-fast to re-run when the corpus or config changes.
+fast to re-run when the corpus or config changes. Nothing in this module knows
+about topic taxonomies or relevance scoring; it deals only in paths, text
+cleaning, and frontmatter.
 """
 
 from __future__ import annotations
@@ -13,9 +15,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CORPUS = REPO_ROOT / "literature" / "conversions"
-DEFAULT_CACHE = REPO_ROOT / "cache"
-DEFAULT_SCORES = REPO_ROOT / "scores"
-DEFAULT_CONFIG = REPO_ROOT / "config" / "modules.yaml"
+DEFAULT_REVIEW = REPO_ROOT / "review"
+DEFAULT_CONFIG = REPO_ROOT / "config" / "taxonomy.yaml"
 
 
 def corpus_paths(corpus_dir: str | Path | None = None) -> list[tuple[str, Path, Path | None]]:

@@ -14,13 +14,16 @@ literature/papers/
 # Intake bucket
 literature/bucket/
 
-# Raw binaries
-*.xlsx
+# Derived heavy artifacts (regenerable, if a stage ever needs them)
+cache/
+
+# Raw binary exports — ignored so a stray spreadsheet is never committed
 *.csv
+*.xlsx
 *.zip
 
-# Derived heavy artifacts (regenerable via scripts/embed.py)
-cache/
+# ...except the generated review tables, which are deliverables
+!review/data/*.csv
 
 # Local scratch
 *.log

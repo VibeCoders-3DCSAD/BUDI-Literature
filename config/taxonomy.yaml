@@ -1,0 +1,264 @@
+# Literature review taxonomy for BUDGIE.
+#
+# THIS FILE IS THE SINGLE SOURCE OF TRUTH for what a corpus paper can be
+# "about" in the literature review matrix. It is a controlled vocabulary, not a
+# scoring configuration: a paper is assigned to zero or more modules by whoever
+# reads it during extraction, and coverage is tallied from those assignments.
+# There are no weights, thresholds, or similarity scores.
+#
+# ## Provenance
+#
+# Derived 2026-09-30 from the thesis outline and chapter drafts, then frozen
+# here so this repository does not depend on them at run time:
+#
+#   - PRIMARY: Topical Outline V4, `GROUP4 - TOPICAL OUTLINE - V4 - 09.26.26`.
+#     Five top-level sections. This is the target structure.
+#   - LEAF DETAIL: Chapter 2 V3, `GROUP4 - CHAPTER 2 - V3 - 09.26.2026`, for the
+#     sub-leaves and metric lists beneath each node.
+#   - SCOPE: Chapter 1 (current) and Technical Specification V1, 09.24.2026,
+#     lightly, for the definitions of the four BUDGIE algorithms.
+#
+# Chapter 2 is being revised and compressed to fit Outline V4, so where the two
+# disagree the outline wins and Chapter 2 supplies only finer detail. Chapter 2
+# V3 had six top-level sections; those compress into the five below, with its
+# "BUDGIE Application" section folding into the module leaves of sections 1, 3
+# and 5 rather than surviving as a section of its own.
+#
+# Those drafts live in a superseded mirror repository and are not a durable
+# reference. If the outline is revised, update this file and record the new
+# provenance here; nothing else needs to change.
+#
+# ## Why this replaced the previous 22-module vocabulary
+#
+# The previous vocabulary was keyed to a different axis — generic feature
+# buckets such as `ml_algorithms`, `financial_literacy`, `privacy_security` and
+# `synthetic_data_mlops`. It had no module at all for three of BUDGIE's four
+# algorithms: `linear_programming`, `interquartile_range` and
+# `rule_based_classification` were absent, so literature on three quarters of
+# the thesis's technical contribution had nowhere to be recorded.
+
+# A module is a node the review must cover. `section` groups related modules.
+sections:
+  - id: pfm
+    name: Personal Financial Management
+    outline_leaves: [Personal Financial Management]
+
+  - id: pfm_apps
+    name: Personal Financial Management Apps
+    outline_leaves: [Personal Financial Management Apps]
+
+  - id: algorithms
+    name: Models and Algorithms
+    outline_leaves: [Models and Algorithms]
+
+  - id: methodology
+    name: System Methodology
+    outline_leaves: [System Methodology]
+
+  - id: evaluation
+    name: System Evaluation
+    outline_leaves: [System Evaluation]
+
+modules:
+  # --- 1. Personal Financial Management -------------------------------------
+  - id: financial_planning
+    section: pfm
+    name: Financial Planning
+    definition: >-
+      The practice of allocating available income across competing present and
+      future financial needs, and the theory of how that allocation is decided.
+    keywords: [financial planning, budgeting process, cash flow planning, financial goals]
+    outline_leaves: [Overview of Financial Planning, Context of Financial Planning, Components of Financial Planning]
+
+  - id: budgeting
+    section: pfm
+    name: Budgeting
+    definition: >-
+      Constructing and following a spending plan; includes budget creation,
+      budget constraints, budget adherence and budget-tracking tools.
+    keywords: [budgeting, budget creation, budget allocation, budget adherence, budget constraints]
+    outline_leaves: [Budgeting, Budget Constraints, Budget Creation, Importance of Budget Creation]
+
+  - id: savings_debt_management
+    section: pfm
+    name: Savings and Debts Management
+    definition: >-
+      Saving behaviour, goal-directed saving, debt management and repayment
+      strategy, including why household buffers are thin and how debt is
+      prioritised.
+    keywords: [savings, saving behaviour, debt management, debt repayment, financial buffer, emergency fund]
+    outline_leaves: [Savings and Debts Management, Importance of Savings and Debt Management]
+
+  - id: income_expense_management
+    section: pfm
+    name: Income and Expense Management
+    definition: >-
+      Recording and managing inflows and outflows; expense categorisation and
+      transaction-level tracking, including local practices such as ambag and
+      paluwagan.
+    keywords: [income and expense management, expense tracking, cash flow, transaction management, expense categorisation]
+    outline_leaves: [Income and Expense Management, Overview of Income and Expense Management, Problems in Income and Expense Management, Importance of Income and Expense Management]
+
+  # --- 2. Personal Financial Management Apps --------------------------------
+  - id: pfm_apps_overview
+    section: pfm_apps
+    name: Overview of Personal Financial Management Apps
+    definition: >-
+      What personal financial management applications are, their current form,
+      and the market they occupy.
+    keywords: [personal finance app, PFM application, finance application, budgeting app, expense tracker]
+    outline_leaves: [Overview of Personal Financial Management Apps, Context of Personal Financial Management Apps]
+
+  - id: pfm_apps_features
+    section: pfm_apps
+    name: Features of Personal Financial Management Apps
+    definition: >-
+      Feature sets these applications provide — dashboards, savings goals,
+      billers, reports, alerts, forecasts — and their measured usefulness.
+    keywords: [app features, feature set, dashboard, savings goal, financial reports, alerts, forecasting feature]
+    outline_leaves: [Features of Personal Financial Management Apps, Importance of Seasonal Expense Forecasting]
+
+  - id: pfm_apps_problems
+    section: pfm_apps
+    name: Problems in Personal Financial Management Apps
+    definition: >-
+      Defects and omissions in current applications: limited forecasting,
+      absent seasonal awareness, weak or non-localised decision support.
+    keywords: [limitations of finance apps, gaps in PFM apps, missing features, usability problems]
+    outline_leaves: [Problems in Personal Financial Management Apps, Gaps in Personal Financial Management Apps]
+
+  - id: pfm_apps_importance
+    section: pfm_apps
+    name: Importance of PFM Applications in Financial Planning
+    definition: >-
+      Evidence that software-supported planning changes outcomes, and for whom.
+    keywords: [importance of PFM apps, benefits of finance software, decision support, financial wellbeing outcomes]
+    outline_leaves: [Importance of Personal Financial Management Apps]
+
+  # --- 3. Models and Algorithms --------------------------------------------
+  - id: sarima
+    section: algorithms
+    name: Seasonal Auto-Regressive Integrated Moving Average
+    definition: >-
+      SARIMA as a time-series forecasting method, its use for expense and
+      demand forecasting, seasonal period selection, and its evaluation.
+    keywords: [SARIMA, seasonal ARIMA, time series forecasting, seasonal forecasting, ARIMA, forecast accuracy, exponential smoothing]
+    outline_leaves: [Seasonal Auto-Regressive Integrated Moving Average (SARIMA), Overview of SARIMA, SARIMA in Forecasting, SARIMA Performance Metrics]
+
+  - id: rule_based_classification
+    section: algorithms
+    name: Rule-Based Classification
+    definition: >-
+      Deterministic if-then classification as a method, applied to savings and
+      debt profile classification, and its testing.
+    keywords: [rule-based classification, rule-based algorithm, rule-based system, if-then rules, decision list, profile classification]
+    outline_leaves: [Rule-Based Classification, Rule-Based Classification in Savings and Debt Profile Classification, Rule-Based Classification Performance Metrics]
+
+  - id: linear_programming
+    section: algorithms
+    name: Linear Programming
+    definition: >-
+      LP as an optimisation method for allocating constrained resources, applied
+      to budget generation, and its evaluation.
+    keywords: [linear programming, LP, optimisation, constrained allocation, resource allocation, knapsack, simplex, integer programming]
+    outline_leaves: [Linear Programming (LP), Overview of Linear Programming, Linear Programming in Optimization, Linear Programming Performance Metrics]
+
+  - id: interquartile_range
+    section: algorithms
+    name: Inter-Quartile Range
+    definition: >-
+      IQR as a robust outlier-detection statistic, applied to flagging unusual
+      transactions and overspending.
+    keywords: [interquartile range, IQR, outlier detection, anomaly detection, unusual expense, robust statistics, box plot]
+    outline_leaves: [Inter-Quartile Range (IQR), Overview of Inter-Quartile Range, Inter-Quartile Range in Anomaly Detection, Inter-Quartile Range Performance Metrics]
+
+  - id: model_algorithm_integration
+    section: algorithms
+    name: Integration of Models and Algorithms
+    definition: >-
+      Pipelines and architectures that combine several of these methods, and
+      how forecasts feed downstream planning.
+    keywords: [model integration, algorithm integration, pipeline, ensemble architecture, hybrid model, end-to-end system]
+    outline_leaves: [Integration of Models and Algorithms, Model and Algorithm Integration, Integration into Financial Planning, Performance Analysis]
+
+  # --- 4. System Methodology -----------------------------------------------
+  - id: development_methodology
+    section: methodology
+    name: Development Methodology
+    definition: >-
+      Software development lifecycle choices — Agile, iterative delivery, and
+      justification of the method against project characteristics.
+    keywords: [agile methodology, software development methodology, iterative development, sprint, kanban, development lifecycle]
+    outline_leaves: [Development Methodology, Development Methodology]
+
+  - id: data_collection
+    section: methodology
+    name: Data Collection
+    definition: >-
+      Sources and instruments used to gather development and evaluation data,
+      including FIES, HFCE, and the public user expectations survey.
+    keywords: [data collection, FIES, family income and expenditure survey, HFCE, household final consumption expenditure, survey instrument, PSA]
+    outline_leaves: [Data Collection, Family Income and Expenditure Survey, Household Final Consumption Expenditure, Public User Expectations and Perceptions Survey]
+
+  - id: model_development
+    section: methodology
+    name: Model Development
+    definition: >-
+      The training and preparation workflow for the four models, including
+      temporal disaggregation of aggregate data into model-ready series.
+    keywords: [model development, training pipeline, data preprocessing, feature engineering, temporal disaggregation, model training, cross-validation]
+    outline_leaves: [Model Development, Temporal Disaggregation, Seasonal Expense Forecasting, Savings and Debt Profile Classification, Budget Creation, Unusual Expense Detection]
+
+  - id: system_development
+    section: methodology
+    name: System Development
+    definition: >-
+      Implementation stack and practice: mobile and web frameworks, offline-first
+      storage, and synchronisation.
+    keywords: [system development, mobile application development, React Native, offline-first, local storage, synchronisation, backend architecture]
+    outline_leaves: [System Development, System Development]
+
+  # --- 5. System Evaluation ------------------------------------------------
+  - id: software_quality_evaluation
+    section: evaluation
+    name: Software Quality Evaluation
+    definition: >-
+      Usability and quality measurement, principally the System Usability Scale
+      and the ISO/IEC 25010 quality model.
+    keywords: [system usability scale, SUS, ISO/IEC 25010, software quality, usability evaluation, software evaluation]
+    outline_leaves: [Software Quality Evaluation, System Usability Scale, ISO/IEC 25010]
+
+  - id: model_performance_evaluation
+    section: evaluation
+    name: Model Performance Evaluation
+    definition: >-
+      Measuring how well each of the four models performs, using the metrics
+      Chapter 1 names for each algorithm.
+    keywords: [model performance, performance evaluation, MAE, SMAPE, MDA, RMSE, accuracy, precision, recall, F1, rule coverage]
+    outline_leaves: [Model Performance Evaluation, Model Performance Evaluation]
+
+  - id: system_performance_evaluation
+    section: evaluation
+    name: System Performance Evaluation
+    definition: >-
+      Measuring the deployed system rather than the models: whether the plan it
+      produces is followed and whether alerts are useful.
+    keywords: [system performance, system evaluation metrics, plan adherence, savings progress, debt progress, alert frequency]
+    outline_leaves: [System Performance Evaluation]
+    # The outline requires these metrics to be derived from the topics above
+    # rather than asserted: "Must derive system performance metrics from
+    # abovementioned topics. If none can be identified, the provided system
+    # performance metrics below must be forcefully derived from the abovementioned
+    # topics." Chapter 2 V3 answers that derivation with the five measures below.
+    derived_metrics: [savings_rate, savings_progress, alert_frequency, debt_progress, plan_adherence]
+
+# Metric leaves the outline requires literature backing for, grouped by the
+# module that owns them. These are not modules: a paper is not "about" a metric.
+# They exist so the review can show whether each named metric has support, and
+# so an extraction records which metric a reported effect actually measures.
+metric_leaves:
+  sarima: [mae, smape, mda, rmse]
+  rule_based_classification: [rule_coverage, boundary_value_analysis, equivalence_partitioning, expected_output_agreement, test_case_pass_rate]
+  linear_programming: [constraint_satisfaction_rate, budget_utilization_rate, deviation_from_user_preferences]
+  interquartile_range: [accuracy, precision, recall, f1_score]
+  system_performance_evaluation: [savings_rate, savings_progress, alert_frequency, debt_progress, plan_adherence]

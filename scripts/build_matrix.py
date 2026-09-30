@@ -1,42 +1,48 @@
-"""Build the generated literature review matrix and its long tables.
+"""Build the generated literature review matrix, long tables, and per-paper notes.
 
     python3 scripts/build_matrix.py            # build all outputs
     python3 scripts/build_matrix.py --check    # validate only, exit 1 on error
 
-`docs/literature-review-matrix.md` is a generated view, not a database. It is
-rebuilt from three sources, in this order of authority:
+`review/literature-review-matrix.md` is a generated view, not a database. It is
+rebuilt from two sources, in this order of authority:
 
-    literature/conversions/metadata.json   bibliographic metadata (page-1 verified)
-    scores/index.json                      relevance tiers from config/modules.yaml
-    literature/conversions/*_summarized.json  extraction
+    literature/conversions/metadata.json      bibliographic metadata (page-1 verified)
+    literature/conversions/*_summarized.json   extraction, including module assignment
+
+A paper is assigned to zero or more modules of `config/taxonomy.yaml` by whoever
+reads it during extraction. There is no relevance scoring: no weights, no
+thresholds, no similarity numbers. Coverage per module is tallied from those
+assignments, so the taxonomy and the corpus are never out of step.
 
 Nothing in the matrix is hand-written. To correct a value, edit the source above
-and re-run. Schema and column definitions: docs/standards/matrix-format.md
+and re-run. Column definitions: `docs/standards/review-layout.md`.
 
 Outputs:
-    docs/literature-review-matrix.md   lean 17-column index, one row per corpus paper
-    scores/quotes.json                 one record per extracted quotation
-    scores/effects.json                one record per statistical result
-    scores/matrix-validation.md        what passed, what failed, what is missing
+    review/literature-review-matrix.md   lean 15-column index, one row per paper
+    review/data/papers.csv               the same projection, for spreadsheets
+    review/data/screening.csv            corpus triage inventory
+    review/data/quotes.csv               one record per extracted quotation
+    review/data/effects.csv              one record per statistical result
+    review/data/themes.csv               per-module coverage tally
+    review/notes/{stem}.md               readable per-paper note
+    review/validation.md                 what passed, what failed, what is missing
 
-Stdlib only — no pandas, and `.gitignore` ignores `*.csv`, so long tables are
-JSON to match the rest of the committed generated outputs.
+`review/synthesis/` is hand-written and never touched by this script.
 """
 
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import re
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-from common import DEFAULT_CONFIG, DEFAULT_CORPUS, DEFAULT_SCORES, REPO_ROOT, corpus_paths, load_summary
+from common import DEFAULT_CONFIG, DEFAULT_CORPUS, DEFAULT_REVIEW, REPO_ROOT, corpus_paths, load_summary
 
-DEFAULT_MATRIX = REPO_ROOT / "docs" / "literature-review-matrix.md"
 DEFAULT_METADATA = DEFAULT_CORPUS / "metadata.json"
-DEFAULT_INDEX = DEFAULT_SCORES / "index.json"
 
 NOT_REPORTED = "Not reported"
 NOT_APPLICABLE = "Not applicable"
@@ -92,6 +98,19 @@ QUOTED_NUMBER_RE = re.compile(r"\d+(?:[.,]\d+)+%?|\d+(?:[.,]\d+)+\s*%")
 # Fill-rate verdicts below this many extracted rows are noise: with 2 rows a
 # single empty cell reads as a 50% gap.
 MIN_ROWS_FOR_FILL_VERDICT = 10
+
+# Module ids from the retired 22-module vocabulary. A summary may still carry
+# these in `topic_tags` or `topic_relevance.topics[].code`; they are reported so
+# the paper gets re-tagged, not silently accepted. `financial_planning` is the
+# one id the new taxonomy kept, and it is deliberately not listed here.
+RETIRED_MODULE_IDS = {
+    "ml_algorithms", "financial_literacy", "expense_categorization", "forecasting",
+    "anomaly_detection", "budget_recommendation", "savings", "debt_management",
+    "behavioral_insights", "pfms_systems", "filipino_context", "privacy_security",
+    "user_engagement", "mobile_design", "system_evaluation", "performance_indicators",
+    "agile_methodology", "synthetic_data_mlops", "financial_wellbeing",
+    "seasonal_expense_forecasting", "financial_profile_classification",
+}
 
 
 class Findings:
@@ -208,6 +227,37 @@ def slug(text: str) -> str:
     return PUNCT.sub("", WS.sub("-", (text or "").strip().lower())).strip("-")
 
 
+def assigned_modules(summary: dict) -> list[str]:
+    """Module ids assigned during extraction, de-duplicated, in taxonomy order.
+
+    Order is applied by the caller against the taxonomy, so this only has to
+    return a clean set.
+    """
+    out: list[str] = []
+    for value in summary.get("modules") or []:
+        if isinstance(value, str) and value.strip() and value.strip() not in out:
+            out.append(value.strip())
+    return out
+
+
+def section_names(modules: list[str], module_section: dict[str, str], section_name: dict[str, str]) -> str:
+    """Human-readable outline sections a paper's modules fall under."""
+    names: list[str] = []
+    for module in modules:
+        sid = module_section.get(module)
+        if sid and section_name.get(sid) and section_name[sid] not in names:
+            names.append(section_name[sid])
+    return "; ".join(names) if names else NOT_REPORTED
+
+
+def first_limitation(summary: dict) -> str:
+    limits = summary.get("limitations") or []
+    for item in limits:
+        if isinstance(item, str) and item.strip():
+            return cap(item)
+    return NOT_REPORTED
+
+
 # A `method/` tag is one controlled word, so map the free-text design label onto
 # a fixed vocabulary rather than slugging a whole sentence into the cell. The
 # first phrase before a colon or parenthesis is the design proper; the rest is
@@ -227,11 +277,11 @@ DESIGN_METHODS: list[tuple[str, tuple[str, ...]]] = [
 ]
 
 
-def design_slug(study_design: str) -> str | None:
-    """Map a free-text design label onto one controlled `method/` tag."""
+def design_method(study_design: str) -> str:
+    """Map a free-text design label onto one controlled `method/` value."""
     label = WS.sub(" ", (study_design or "").strip())
     if not label or label in (NOT_REPORTED, NOT_APPLICABLE):
-        return None
+        return ""
     head = label.split(":")[0].split("(")[0].lower()
     haystack = f"{head} {label.lower()}"
     for tag, needles in DESIGN_METHODS:
@@ -240,52 +290,84 @@ def design_slug(study_design: str) -> str | None:
     return "other"
 
 
-MAX_THEME_TAGS = 5
+def build_tags(stem: str, summary: dict, meta: dict, modules: list[str]) -> str:
+    """Controlled tags: modules, scope, method, status, quality.
 
-
-def build_tags(stem: str, scores: dict, thresholds: dict, summary: dict, meta: dict) -> str:
-    """Controlled tags: modules over threshold, scope, method, status, quality.
-
-    Theme tags are the top `MAX_THEME_TAGS` by score, not every module that
-    clears the floor: broad reviews legitimately clear eighteen, and an
-    eighteen-tag cell is the sparse-cell problem the matrix exists to avoid.
-    The full per-module ranking stays in `scores/index.json`.
+    Module tags come from the extraction, so there is no ranking to truncate and
+    no `+Nmore`: a paper legitimately belongs to four modules and says so.
     """
-    tags: list[str] = []
-    floor = thresholds.get("supporting_min", 0.30)
-    qualifying = [
-        (module_id, score)
-        for module_id, score in (scores.get("scores") or {}).items()
-        if isinstance(score, (int, float)) and score >= floor
-    ]
-    qualifying.sort(key=lambda kv: (-kv[1], kv[0]))
-    tags = [f"theme/{module_id}" for module_id, _ in qualifying[:MAX_THEME_TAGS]]
-    extra = len(qualifying) - len(tags)
-    if extra > 0:
-        tags.append(f"theme/+{extra}more")
-
+    tags = [f"module/{m}" for m in modules]
     scope = designation_of(stem)
     if scope != NOT_REPORTED:
         tags.append(f"scope/{scope}")
-
-    method = design_slug(summary.get("study_design") or "")
+    method = design_method(summary.get("study_design") or "")
     if method:
         tags.append(f"method/{method}")
-
     tags.append("status/not-extracted" if not summary else "status/extracted")
-
     if meta.get("venue_unverified") or not normalize_doi(str(meta.get("doi") or "")):
         tags.append("quality/metadata-partial")
-
     return "; ".join(tags)
 
 
-def first_limitation(summary: dict) -> str:
-    limits = summary.get("limitations") or []
-    for item in limits:
-        if isinstance(item, str) and item.strip():
-            return cap(item)
-    return NOT_REPORTED
+COLUMNS = [
+    "paper_id", "first_author", "year", "title", "venue", "doi", "type",
+    "designation", "section", "modules", "design", "sample", "key_finding",
+    "gap", "status",
+]
+
+
+def row_sort_key(row: dict) -> tuple:
+    year = row["year"]
+    return (0 if year.isdigit() else 1, -int(year) if year.isdigit() else 0, row["paper_id"])
+
+
+def assemble_rows(
+    metadata: dict,
+    summaries: dict,
+    marked: set[str],
+    module_order: list[str],
+    module_section: dict[str, str],
+    section_name: dict[str, str],
+) -> list[dict]:
+    """One row per corpus paper, from metadata plus whatever extraction exists.
+
+    A paper with no summary still gets a row: its bibliographic columns are real
+    and its extraction columns read `Not reported`, so the coverage gap is
+    visible in the matrix instead of being a set of absent files.
+    """
+    rows = []
+    for stem in sorted(set(metadata) | set(summaries)):
+        meta = metadata.get(stem) or {}
+        summary = summaries.get(stem) or {}
+        doi = normalize_doi(str(meta.get("doi") or ""))
+        modules = assigned_modules(summary)
+        # Present module ids in taxonomy order, then anything unknown at the end
+        # so the validator can report it without the order looking arbitrary.
+        ordered = [m for m in module_order if m in modules]
+        ordered += [m for m in modules if m not in module_order]
+        rows.append({
+            "paper_id": stem,
+            "first_author": first_author(meta, stem),
+            "year": str(meta.get("year") or NOT_REPORTED),
+            "title": cap(meta.get("title") or NOT_REPORTED, 140),
+            "venue": venue_of(meta),
+            "doi": doi or NOT_REPORTED,
+            "type": paper_type(summary, meta),
+            "designation": designation_of(stem),
+            "section": section_names(ordered, module_section, section_name),
+            "modules": "; ".join(ordered) if ordered else NOT_REPORTED,
+            "design": cap(summary.get("study_design") or NOT_REPORTED),
+            "sample": cap(summary.get("sample") or NOT_REPORTED),
+            "key_finding": cap(summary.get("tldr") or NOT_REPORTED),
+            "gap": first_limitation(summary),
+            "status": "extracted" if summary else "not extracted",
+            "tags": build_tags(stem, summary, meta, ordered),
+            "_meta": meta,
+            "_summary": summary,
+            "_marked": stem in marked,
+        })
+    rows.sort(key=row_sort_key)
+    return rows
 
 
 def collect_long_tables(rows: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -301,7 +383,7 @@ def collect_long_tables(rows: list[dict]) -> tuple[list[dict], list[dict]]:
                 "paper_id": row["paper_id"],
                 "text": WS.sub(" ", str(q.get("text") or "").strip()),
                 "locator": str(q.get("locator") or NOT_REPORTED),
-                "theme": str(q.get("theme") or NOT_REPORTED),
+                "module": str(q.get("module") or q.get("theme") or NOT_REPORTED),
             })
         for e in summary.get("effects") or []:
             if not isinstance(e, dict):
@@ -320,9 +402,10 @@ def collect_long_tables(rows: list[dict]) -> tuple[list[dict], list[dict]]:
     return quotes, effects
 
 
-def validate(rows: list[dict], f: Findings, modules: dict, redundancy: dict) -> dict:
-    """Apply every rule in docs/standards/matrix-format.md."""
-    known_modules = set(modules)
+def validate(rows: list[dict], f: Findings, taxonomy: dict) -> dict:
+    """Apply every rule in docs/standards/review-layout.md."""
+    known_modules = {m["id"] for m in taxonomy.get("modules") or []}
+    known_methods = {tag for tag, _ in DESIGN_METHODS} | {"other"}
     stats: dict = {}
 
     # --- DOI shape -------------------------------------------------------
@@ -366,24 +449,18 @@ def validate(rows: list[dict], f: Findings, modules: dict, redundancy: dict) -> 
         f.error(f"Summary disagrees with metadata.json — {item}. metadata.json wins; fix the summary.")
     stats["metadata_disagreement"] = len(disagree)
 
-    # --- corpus / score resolvability ------------------------------------
+    # --- corpus resolvability --------------------------------------------
     unmarked = [r["paper_id"] for r in rows if not r["_marked"]]
     for stem in unmarked:
         f.error(f"`{stem}` is in the matrix but has no `_marked.md` in the corpus.")
-    unscored = [r["paper_id"] for r in rows if not r["_scored"]]
-    for stem in unscored:
-        f.error(
-            f"`{stem}` has a conversion but no entry in scores/index.json — "
-            f"run `python3 scripts/embed.py && python3 scripts/score.py`."
-        )
-    stats["unmarked"], stats["unscored"] = len(unmarked), len(unscored)
+    stats["unmarked"] = len(unmarked)
 
     # --- duplicates ------------------------------------------------------
     by_doi: dict[str, list[str]] = defaultdict(list)
     by_title: dict[str, list[str]] = defaultdict(list)
     by_author_year: dict[str, list[str]] = defaultdict(list)
     for row in rows:
-        # The "Not reported" sentinel is not a DOI: 42 entries lack one, and
+        # The "Not reported" sentinel is not a DOI: many entries lack one, and
         # grouping them would report every missing DOI as a duplicate.
         if row["doi"] != NOT_REPORTED:
             by_doi[normalize_doi(row["doi"])].append(row["paper_id"])
@@ -420,7 +497,7 @@ def validate(rows: list[dict], f: Findings, modules: dict, redundancy: dict) -> 
         if stem_year.isdigit() and meta_year.isdigit() and stem_year != meta_year:
             mismatched.append(f"{row['paper_id']}: stem {stem_year} vs metadata {meta_year}")
     for item in mismatched:
-        f.error(f"Stem year disagrees with metadata year — {item}. Rename the stem and re-run embed.py.")
+        f.error(f"Stem year disagrees with metadata year — {item}. Rename the stem and re-convert.")
     stats["year_mismatch"] = len(mismatched)
 
     # --- controlled vocabularies -----------------------------------------
@@ -430,29 +507,56 @@ def validate(rows: list[dict], f: Findings, modules: dict, redundancy: dict) -> 
         if r["type"] != NOT_REPORTED and r["type"] not in CONTROLLED_TYPES
     ]
     for item in bad_type:
-        f.error(f"Uncontrolled `type` value — {item}. See matrix-format.md for the list.")
+        f.error(f"Uncontrolled `type` value — {item}. See review-layout.md for the list.")
     stats["bad_type"] = len(bad_type)
 
-    bad_theme: set[str] = set()
+    bad_module: set[str] = set()
     bad_method: set[str] = set()
-    known_methods = {tag for tag, _ in DESIGN_METHODS} | {"other"}
+    bad_prefix: set[str] = set()
     for row in rows:
         for tag in row["tags"].split("; "):
             prefix, _, value = tag.partition("/")
             if not value:
-                bad_theme.add(tag)
-            elif prefix == "theme" and not value.startswith("+"):
-                if value not in known_modules:
-                    bad_theme.add(tag)
+                bad_prefix.add(tag)
+            elif prefix == "module" and value not in known_modules:
+                bad_module.add(f"{row['paper_id']}: module/{value}")
             elif prefix == "method" and value not in known_methods:
                 bad_method.add(tag)
-            elif prefix not in ("theme", "scope", "method", "status", "quality"):
-                bad_theme.add(tag)
+            elif prefix not in ("module", "scope", "method", "status", "quality"):
+                bad_prefix.add(tag)
+    for item in sorted(bad_module):
+        f.error(f"Unknown module id — {item}. See config/taxonomy.yaml.")
     for tag in sorted(bad_method):
         f.error(f"Tag `{tag}` is not a controlled `method/` value. See DESIGN_METHODS in build_matrix.py.")
-    for tag in sorted(bad_theme):
-        f.error(f"Tag `{tag}` is not a known theme, scope, status, or quality tag.")
-    stats["bad_theme_tags"] = len(bad_theme)
+    for tag in sorted(bad_prefix):
+        f.error(f"Tag `{tag}` is not a known module, scope, method, status, or quality tag.")
+    stats["bad_module_ids"] = len(bad_module)
+
+    # --- stale assignments from the retired vocabulary --------------------
+    stale = []
+    for row in rows:
+        s = row["_summary"]
+        if not s:
+            continue
+        legacy = set()
+        for value in s.get("topic_tags") or []:
+            if isinstance(value, str):
+                legacy.add(value.strip())
+        for topic in (s.get("topic_relevance") or {}).get("topics") or []:
+            if isinstance(topic, dict) and isinstance(topic.get("code"), str):
+                legacy.add(topic["code"].strip())
+        for q in s.get("quotes") or []:
+            if isinstance(q, dict):
+                legacy.add(str(q.get("theme") or "").strip())
+        hits = sorted(legacy & RETIRED_MODULE_IDS)
+        if hits:
+            stale.append(f"`{row['paper_id']}`: {', '.join(hits)}")
+    for item in stale:
+        f.gap(
+            f"Carries retired vocabulary in `topic_tags` / `topic_relevance` / `quotes[].theme` — "
+            f"{item}. These predate config/taxonomy.yaml; re-tag the paper into `modules[]`."
+        )
+    stats["stale_vocabulary"] = len(stale)
 
     # --- no silent blanks -------------------------------------------------
     blank = [f"{r['paper_id']}.{k}" for r in rows for k, v in r.items() if not k.startswith("_") and not str(v).strip()]
@@ -520,13 +624,25 @@ def validate(rows: list[dict], f: Findings, modules: dict, redundancy: dict) -> 
             )
     stats["unrecorded_discrepancies"] = unrecorded
 
-    # --- redundancy (carried through from score.py) -----------------------
-    for cluster in (redundancy or {}).get("clusters", []):
+    # --- module coverage (informational) ---------------------------------
+    by_module: dict[str, list[str]] = defaultdict(list)
+    for row in rows:
+        if row["modules"] == NOT_REPORTED:
+            continue
+        for module in str(row["modules"]).split("; "):
+            by_module[module].append(row["paper_id"])
+    uncovered = [m["id"] for m in taxonomy.get("modules") or [] if not by_module.get(m["id"])]
+    unassigned = [r["paper_id"] for r in rows if r["modules"] == NOT_REPORTED]
+    if uncovered:
         f.gap(
-            f"Near-duplicate cluster ({len(cluster['papers'])} papers, "
-            f"max cosine {cluster.get('max_similarity', 0):.3f}): keep "
-            f"`{cluster['keep']}`, cull {', '.join(cluster['cull'])}."
+            f"{len(uncovered)} of {len(known_modules)} modules have no paper assigned: "
+            f"{', '.join(uncovered)}."
         )
+    if unassigned:
+        f.gap(f"{len(unassigned)} papers have no module assignment yet.")
+    stats["modules_covered"] = len(by_module)
+    stats["modules_total"] = len(known_modules)
+    stats["papers_unassigned"] = len(unassigned)
 
     # --- fill rates -------------------------------------------------------
     extracted = [r for r in rows if r["status"] == "extracted"]
@@ -559,54 +675,24 @@ def validate(rows: list[dict], f: Findings, modules: dict, redundancy: dict) -> 
     return stats
 
 
-COLUMNS = [
-    "paper_id", "first_author", "year", "title", "venue", "doi", "type",
-    "designation", "tier", "best_module", "relevance", "tags", "design",
-    "sample", "key_finding", "gap", "status",
-]
+# --- rendering ------------------------------------------------------------
+
+def md_cell(value: str) -> str:
+    """Escape a value for a Markdown table cell."""
+    return str(value).replace("|", "\\|").replace("\n", " ")
 
 
-def row_sort_key(row: dict) -> tuple:
-    year = row["year"]
-    return (0 if year.isdigit() else 1, -int(year) if year.isdigit() else 0, row["paper_id"])
+def render_matrix(rows: list[dict], quotes: list[dict], effects: list[dict], generated: str, taxonomy: dict) -> str:
+    by_module: dict[str, list[str]] = defaultdict(list)
+    for row in rows:
+        if row["modules"] == NOT_REPORTED:
+            continue
+        for module in str(row["modules"]).split("; "):
+            by_module[module].append(row["paper_id"])
 
+    section_name = {s["id"]: s["name"] for s in taxonomy.get("sections") or []}
+    module_of = {m["id"]: m for m in taxonomy.get("modules") or []}
 
-def assemble_rows(metadata: dict, index: dict, summaries: dict, marked: set[str]) -> list[dict]:
-    papers = index.get("papers") or {}
-    rows = []
-    for stem in sorted(set(metadata) | set(papers)):
-        meta = metadata.get(stem) or {}
-        scored = papers.get(stem) or {}
-        summary = summaries.get(stem) or {}
-        doi = normalize_doi(str(meta.get("doi") or ""))
-        rows.append({
-            "paper_id": stem,
-            "first_author": first_author(meta, stem),
-            "year": str(meta.get("year") or NOT_REPORTED),
-            "title": cap(meta.get("title") or NOT_REPORTED, 140),
-            "venue": venue_of(meta),
-            "doi": doi or NOT_REPORTED,
-            "type": paper_type(summary, meta),
-            "designation": designation_of(stem),
-            "tier": scored.get("tier") or NOT_REPORTED,
-            "best_module": scored.get("best_module") or NOT_REPORTED,
-            "relevance": f"{scored['best_score']:.3f}" if isinstance(scored.get("best_score"), (int, float)) else NOT_REPORTED,
-            "tags": build_tags(stem, scored, index.get("tiers") or {}, summary, meta),
-            "design": cap(summary.get("study_design") or NOT_REPORTED),
-            "sample": cap(summary.get("sample") or NOT_REPORTED),
-            "key_finding": cap(summary.get("tldr") or NOT_REPORTED),
-            "gap": first_limitation(summary),
-            "status": "extracted" if summary else "not extracted",
-            "_meta": meta,
-            "_summary": summary,
-            "_scored": bool(scored),
-            "_marked": stem in marked,
-        })
-    rows.sort(key=row_sort_key)
-    return rows
-
-
-def render_matrix(rows: list[dict], generated: str, stats: dict) -> str:
     lines = [
         "---",
         "document-type: matrix",
@@ -616,60 +702,232 @@ def render_matrix(rows: list[dict], generated: str, stats: dict) -> str:
         "",
         "# Literature Review Matrix of BUDGIE",
         "",
-        f"**Generated file — do not edit.** Rebuild with `python3 scripts/build_matrix.py`.",
+        "**Generated file — do not edit.** Rebuild with `python3 scripts/build_matrix.py`.",
         "",
-        f"- Corpus: **{len(rows)}** papers | **{stats.get('extracted', 0)}** extracted, "
-        f"**{stats.get('not_extracted', 0)}** not extracted",
+        f"- Corpus: **{len(rows)}** papers | **{sum(1 for r in rows if r['status'] == 'extracted')}** extracted, "
+        f"**{sum(1 for r in rows if r['status'] != 'extracted')}** not extracted",
         "- Bibliographic source: `literature/conversions/metadata.json` (page-1 verified)",
-        "- Relevance source: `scores/index.json` (from `config/modules.yaml`)",
+        f"- Taxonomy: `config/taxonomy.yaml` — {len(module_of)} modules in {len(section_name)} outline sections",
         "- Extraction source: `literature/conversions/{stem}_summarized.json`",
-        "- Column definitions and validation rules: `docs/standards/matrix-format.md`",
+        "- Column definitions and validation rules: `docs/standards/review-layout.md`",
         "",
-        "Long evidence tables: [`quotes.json`](../scores/quotes.json) | "
-        "[`effects.json`](../scores/effects.json) | "
-        "[`matrix-validation.md`](../scores/matrix-validation.md)",
+        f"Long tables: [`data/papers.csv`](data/papers.csv) | [`data/screening.csv`](data/screening.csv) | "
+        f"[`data/quotes.csv`](data/quotes.csv) ({len(quotes)}) | "
+        f"[`data/effects.csv`](data/effects.csv) ({len(effects)}) | "
+        f"[`data/themes.csv`](data/themes.csv) | [`validation.md`](validation.md)",
         "",
+        "Per-paper notes: [`notes/`](notes/). Hand-written synthesis: [`synthesis/`](synthesis/).",
+        "",
+        "## Coverage by Module",
+        "",
+        "Counted from the `modules[]` assignment in each summary. A module with no papers is a",
+        "gap in the corpus, not a gap in the taxonomy.",
+        "",
+        "| Section | Module | Papers |",
+        "| :--- | :--- | ---: |",
     ]
-
-    # Theme view: a paper relevant to several leaves should be findable from any.
-    by_module: dict[str, list[dict]] = defaultdict(list)
-    for row in rows:
-        if row["best_module"] != NOT_REPORTED:
-            by_module[row["best_module"]].append(row)
-    if by_module:
-        lines += [
-            "## By Theme",
-            "",
-            "Best-scoring module per paper. `scripts/score.py` produces the full",
-            "per-module ranking in `scores/report.md`.",
-            "",
-            "| Module | Papers | Crucial | Supporting |",
-            "| :--- | ---: | ---: | ---: |",
-        ]
-        for module_id in sorted(by_module, key=lambda m: (-len(by_module[m]), m)):
-            members = by_module[module_id]
-            crucial = sum(1 for r in members if r["tier"] == "crucial")
-            supporting = sum(1 for r in members if r["tier"] == "supporting")
-            lines.append(f"| `{module_id}` | {len(members)} | {crucial} | {supporting} |")
-        lines.append("")
-
+    for section in taxonomy.get("sections") or []:
+        for module in taxonomy.get("modules") or []:
+            if module.get("section") != section["id"]:
+                continue
+            stems = by_module.get(module["id"], [])
+            lines.append(
+                f"| {md_cell(section['name'])} | `{module['id']}` | {len(stems)} |"
+            )
     lines += [
+        "",
         "## All Papers",
         "",
         "| " + " | ".join(COLUMNS) + " |",
-        "|" + "|".join([" --- "] * len(COLUMNS)) + "|",
+        "| " + " | ".join("---" for _ in COLUMNS) + " |",
     ]
     for row in rows:
-        cells = []
-        for col in COLUMNS:
-            value = str(row[col]).replace("|", "\\|")
-            cells.append(value)
-        lines.append("| " + " | ".join(cells) + " |")
+        lines.append("| " + " | ".join(md_cell(row[c]) for c in COLUMNS) + " |")
     lines.append("")
     return "\n".join(lines)
 
 
-def render_validation(rows: list[dict], f: Findings, stats: dict, generated: str, tiers: dict) -> str:
+def render_note(row: dict) -> str:
+    """A readable per-paper note rendered from the extraction.
+
+    The 15-column matrix shows five extracted fields. The summary holds roughly
+    twenty, and the ones a writer actually reaches for — definitions, equations,
+    the paper's own citations, what it says it contributes — have no column at
+    all. This is where they surface.
+    """
+    s = row["_summary"]
+    fm = [
+        "---",
+        f"paper_id: {row['paper_id']}",
+        f"first_author: {json.dumps(row['first_author'], ensure_ascii=False)}",
+        f"year: {row['year']}",
+        f"title: {json.dumps(row['_meta'].get('title') or NOT_REPORTED, ensure_ascii=False)}",
+        f"venue: {json.dumps(row['venue'], ensure_ascii=False)}",
+        f"doi: {json.dumps(row['doi'], ensure_ascii=False)}",
+        f"type: {row['type']}",
+        f"designation: {row['designation']}",
+        f"section: {json.dumps(row['section'], ensure_ascii=False)}",
+        f"modules: {json.dumps([] if row['modules'] == NOT_REPORTED else str(row['modules']).split('; '), ensure_ascii=False)}",
+        f"status: {row['status']}",
+        "generated-by: scripts/build_matrix.py",
+        "---",
+        "",
+    ]
+    out = list(fm)
+    out.append(f"# {row['_meta'].get('title') or row['paper_id']}")
+    out.append("")
+    out.append(f"`{row['paper_id']}` — {row['first_author']} ({row['year']}), *{row['venue']}*")
+    out.append("")
+
+    if not s:
+        out += [
+            "## Not extracted",
+            "",
+            "No `_summarized.json` content for this paper. Bibliographic columns above are",
+            "page-1 verified; everything below is absent because the paper has not been read",
+            "into the corpus yet. See `skills/literature-review-summarizer.md`.",
+            "",
+        ]
+        return "\n".join(out)
+
+    def section(title: str) -> None:
+        out.append(f"## {title}")
+        out.append("")
+
+    if s.get("tldr"):
+        section("Summary")
+        out.append(s["tldr"].strip())
+        out.append("")
+    if s.get("problem_and_motivation"):
+        section("Problem and Motivation")
+        out.append(s["problem_and_motivation"].strip())
+        out.append("")
+
+    method_bits: list[str] = []
+    if s.get("study_design"):
+        method_bits.append(f"**Design.** {s['study_design'].strip()}")
+    if s.get("sample"):
+        method_bits.append(f"**Sample.** {s['sample'].strip()}")
+    context = s.get("context") or {}
+    if isinstance(context, dict) and any(
+        context.get(k) and context[k] not in (NOT_REPORTED, NOT_APPLICABLE)
+        for k in ("geography", "population", "setting")
+    ):
+        bits = [f"{k}: {context[k]}" for k in ("geography", "population", "setting") if context.get(k)]
+        method_bits.append("**Context.** " + "; ".join(bits))
+    for item in s.get("approach") or []:
+        if isinstance(item, str) and item.strip():
+            method_bits.append(f"- {item.strip()}")
+    if method_bits:
+        section("Method")
+        out += method_bits
+        out.append("")
+    if s.get("software"):
+        section("Software")
+        out += [f"- {x}" for x in s["software"] if isinstance(x, str)]
+        out.append("")
+
+    for key, title in (("findings", "Key Findings"), ("key_figures_tables", "Key Figures and Tables")):
+        items = [x for x in (s.get(key) or []) if isinstance(x, str) and x.strip()]
+        if items:
+            section(title)
+            out += [f"- {x.strip()}" for x in items]
+            out.append("")
+
+    limits = [x for x in (s.get("limitations") or []) if isinstance(x, str) and x.strip()]
+    if limits:
+        section("Limitations and Gaps")
+        out += [f"- {x.strip()}" for x in limits]
+        out.append("")
+
+    definitions = [d for d in (s.get("definitions") or []) if isinstance(d, dict)]
+    if definitions:
+        section("Definitions")
+        out += [f"- **{d.get('term', '?').strip()}** — {d.get('definition', '').strip()}" for d in definitions]
+        out.append("")
+
+    equations = [e for e in (s.get("key_equations") or []) if isinstance(e, dict)]
+    if equations:
+        section("Key Equations")
+        for e in equations:
+            out.append(f"- `{e.get('equation', '').strip()}` — {e.get('explanation', '').strip()}")
+        out.append("")
+
+    effect_rows = [e for e in (s.get("effects") or []) if isinstance(e, dict)]
+    if effect_rows:
+        section("Statistical Evidence")
+        out.append("| Outcome | Metric | Value | CI | p | Locator |")
+        out.append("| :--- | :--- | :--- | :--- | :--- | :--- |")
+        for e in effect_rows:
+            out.append(
+                "| " + " | ".join(
+                    md_cell(str(e.get(k) or "—"))
+                    for k in ("outcome", "metric", "value", "ci", "p", "locator")
+                ) + " |"
+            )
+        out.append("")
+
+    quote_rows = [q for q in (s.get("quotes") or []) if isinstance(q, dict)]
+    if quote_rows:
+        section("Quotes")
+        for q in quote_rows:
+            locator = str(q.get("locator") or NOT_REPORTED)
+            module = str(q.get("module") or q.get("theme") or "")
+            suffix = f" — `{module}`" if module else ""
+            out.append(f"> \"{str(q.get('text') or '').strip()}\"")
+            out.append(f">")
+            out.append(f"> — {locator}{suffix}")
+            out.append("")
+
+    tr = s.get("topic_relevance") or {}
+    tr_bits: list[str] = []
+    for topic in tr.get("topics") or []:
+        if not isinstance(topic, dict):
+            continue
+        code = str(topic.get("code") or topic.get("name") or "?").strip()
+        level = str(topic.get("relevance") or "").strip()
+        why = str(topic.get("justification") or "").strip()
+        tr_bits.append(f"- `{code}` — {level}{': ' + why if why else ''}")
+    if tr.get("contribution_to_field"):
+        tr_bits += ["", str(tr["contribution_to_field"]).strip()]
+    for item in tr.get("directly_justifies") or []:
+        if isinstance(item, str) and item.strip():
+            tr_bits += ["", f"- Justifies: {item.strip()}"]
+    if tr_bits:
+        section("Relevance to BUDGIE")
+        out += tr_bits
+        out.append("")
+
+    remember = [x for x in (s.get("remember_this") or []) if isinstance(x, str) and x.strip()]
+    if remember:
+        section("Remember This")
+        out += [f"- {x.strip()}" for x in remember]
+        out.append("")
+
+    cites = [c for c in (s.get("citations") or []) if isinstance(c, dict)]
+    if cites:
+        section("Cited Works")
+        for c in cites:
+            who = str(c.get("author") or "?").strip()
+            year = str(c.get("year") or "").strip()
+            role = str(c.get("role") or "").strip()
+            claim = str(c.get("claim") or "").strip()
+            locator = " ".join(
+                x for x in (str(c.get("page") or "").strip(), str(c.get("paragraph") or "").strip()) if x
+            )
+            tail = f" ({role})" if role else ""
+            out.append(f"- {who} ({year}){tail} — {claim}" + (f" [{locator}]" if locator else ""))
+        out.append("")
+
+    out.append("---")
+    out.append("")
+    out.append(f"Conversion: [`{row['paper_id']}_marked.md`](../../literature/conversions/{row['paper_id']}_marked.md)"
+               f" · Summary: [`{row['paper_id']}_summarized.json`](../../literature/conversions/{row['paper_id']}_summarized.json)")
+    out.append("")
+    return "\n".join(out)
+
+
+def render_validation(rows: list[dict], f: Findings, stats: dict, generated: str) -> str:
     lines = [
         "# Literature Review Matrix Validation",
         "",
@@ -677,59 +935,43 @@ def render_validation(rows: list[dict], f: Findings, stats: dict, generated: str
         f"- Papers: **{len(rows)}** | extracted: **{stats.get('extracted', 0)}** | "
         f"not extracted: **{stats.get('not_extracted', 0)}**",
         f"- Errors: **{len(f.errors)}** | informational gaps: **{len(f.gaps)}**",
-        f"- Thresholds: crucial >= {tiers.get('crucial_min')}, supporting >= {tiers.get('supporting_min')}",
         "",
         "Regenerate with `python3 scripts/build_matrix.py --check` (exit 1 on any error).",
-        "Rules are defined in `docs/standards/matrix-format.md`.",
+        "Rules are defined in `docs/standards/review-layout.md`.",
         "",
+        "## Counts",
+        "",
+        "| Check | Count |",
+        "| :--- | ---: |",
     ]
-
-    lines += ["## Counts", "", "| Check | Count |", "| :--- | ---: |"]
     for key, value in stats.items():
         lines.append(f"| `{key}` | {value} |")
+    lines += ["", "## Errors", ""]
+    lines += [f"1. {e}" for e in f.errors] if f.errors else ["None. Every rule passed."]
+    lines += ["", "## Informational Gaps", ""]
+    lines += [f"- {g}" for g in f.gaps] if f.gaps else ["None."]
+    lines += ["", "## Corpus Composition", "", "| Year | Papers |", "| :--- | ---: |"]
+    years = Counter(r["year"] for r in rows)
+    for year in sorted(years, key=lambda y: (-int(y) if y.isdigit() else 0, y)):
+        lines.append(f"| {year} | {years[year]} |")
+    lines += ["", "| Designation | Papers |", "| :--- | ---: |"]
+    for key, value in sorted(Counter(r["designation"] for r in rows).items()):
+        lines.append(f"| {key} | {value} |")
     lines.append("")
-
-    lines += ["## Errors", ""]
-    if f.errors:
-        lines += [f"1. {e}" for e in f.errors]
-    else:
-        lines.append("None. Every rule passed.")
-    lines.append("")
-
-    lines += ["## Informational Gaps", ""]
-    if f.gaps:
-        lines += [f"- {g}" for g in f.gaps]
-    else:
-        lines.append("None.")
-    lines.append("")
-
-    if not rows:
-        lines += ["## Corpus", "", "No papers found.", ""]
-    else:
-        years = Counter(r["year"] for r in rows)
-        designations = Counter(r["designation"] for r in rows)
-        tiers_seen = Counter(r["tier"] for r in rows)
-        lines += [
-            "## Corpus Composition",
-            "",
-            "| Year | Papers |",
-            "| :--- | ---: |",
-        ]
-        for year in sorted(years, key=lambda y: (-int(y) if y.isdigit() else 0, y)):
-            lines.append(f"| {year} | {years[year]} |")
-        lines += ["", "| Designation | Papers |", "| :--- | ---: |"]
-        for key in sorted(designations):
-            lines.append(f"| {key} | {designations[key]} |")
-        lines += ["", "| Tier | Papers |", "| :--- | ---: |"]
-        for key in sorted(tiers_seen):
-            lines.append(f"| {key} | {tiers_seen[key]} |")
-        lines.append("")
-
     return "\n".join(lines)
 
 
+def write_csv(path: Path, fieldnames: list[str], records: list[dict]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fieldnames, extrasaction="ignore")
+        writer.writeheader()
+        for record in records:
+            writer.writerow(record)
+
+
 def load_yaml(path: str | Path) -> dict:
-    import yaml  # local import: only the builder needs it, and score.py owns the rest
+    import yaml  # local import: only the builder needs it
 
     return yaml.safe_load(Path(path).read_text(encoding="utf-8")) or {}
 
@@ -738,63 +980,125 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="Build the generated literature review matrix.")
     ap.add_argument("--corpus", default=str(DEFAULT_CORPUS))
     ap.add_argument("--metadata", default=str(DEFAULT_METADATA))
-    ap.add_argument("--index", default=str(DEFAULT_INDEX))
     ap.add_argument("--config", default=str(DEFAULT_CONFIG))
-    ap.add_argument("--redundancy", default=str(DEFAULT_SCORES / "redundancy.json"))
-    ap.add_argument("--out", default=str(DEFAULT_MATRIX))
-    ap.add_argument("--quotes", default=str(DEFAULT_SCORES / "quotes.json"))
-    ap.add_argument("--effects", default=str(DEFAULT_SCORES / "effects.json"))
-    ap.add_argument("--validation", default=str(DEFAULT_SCORES / "matrix-validation.md"))
+    ap.add_argument("--out", default=str(DEFAULT_REVIEW / "literature-review-matrix.md"))
+    ap.add_argument("--data", default=str(DEFAULT_REVIEW / "data"))
+    ap.add_argument("--notes", default=str(DEFAULT_REVIEW / "notes"))
+    ap.add_argument("--validation", default=str(DEFAULT_REVIEW / "validation.md"))
     ap.add_argument("--check", action="store_true", help="Validate only; write nothing, exit 1 on error.")
     args = ap.parse_args()
 
     metadata = json.loads(Path(args.metadata).read_text(encoding="utf-8")).get("entries", {})
-    index = json.loads(Path(args.index).read_text(encoding="utf-8"))
-    redundancy = json.loads(Path(args.redundancy).read_text(encoding="utf-8")) if Path(args.redundancy).exists() else {}
+    taxonomy = load_yaml(args.config)
+    sections = taxonomy.get("sections") or []
+    taxonomy_modules = taxonomy.get("modules") or []
+    section_name = {s["id"]: s["name"] for s in sections}
+    module_section = {m["id"]: m.get("section") for m in taxonomy_modules}
+    module_order = [m["id"] for m in taxonomy_modules]
 
-    config = load_yaml(args.config)
-    modules = {m["id"]: m for m in (config.get("modules") or [])}
-    tiers = index.get("tiers") or config.get("tiers") or {}
-
-    summaries = {}
+    summaries: dict[str, dict] = {}
     marked: set[str] = set()
-    for stem, md_path, json_path in corpus_paths(args.corpus):
+    for stem, md, summary_path in corpus_paths(args.corpus):
         marked.add(stem)
-        summaries[stem] = load_summary(json_path) or {}
+        summary = load_summary(summary_path) if summary_path else None
+        if summary:
+            summaries[stem] = summary
 
-    rows = assemble_rows(metadata, index, summaries, marked)
-    if not rows:
-        raise SystemExit(f"No papers found in {args.corpus} or {args.metadata}")
-
-    f = Findings()
-    stats = validate(rows, f, modules, redundancy)
+    rows = assemble_rows(metadata, summaries, marked, module_order, module_section, section_name)
     quotes, effects = collect_long_tables(rows)
 
+    f = Findings()
+    stats = validate(rows, f, taxonomy)
+
+    if args.check:
+        print(f"papers: {len(rows)}  extracted: {stats.get('extracted', 0)}  "
+              f"modules: {stats.get('modules_covered', 0)}/{stats.get('modules_total', 0)}")
+        print(f"errors: {len(f.errors)}  gaps: {len(f.gaps)}")
+        for e in f.errors:
+            print(f"  ERROR  {e}")
+        for g in f.gaps:
+            print(f"  gap    {g}")
+        if not f.ok:
+            raise SystemExit(1)
+        return
+
     generated = datetime.now(timezone.utc).isoformat()
-    validation_md = render_validation(rows, f, stats, generated, tiers)
+    out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(render_matrix(rows, quotes, effects, generated, taxonomy), encoding="utf-8")
 
-    if not args.check:
-        Path(args.out).parent.mkdir(parents=True, exist_ok=True)
-        Path(args.out).write_text(render_matrix(rows, generated, stats), encoding="utf-8")
-        Path(args.quotes).write_text(
-            json.dumps({"generated_at": generated, "count": len(quotes), "quotes": quotes},
-                       ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        Path(args.effects).write_text(
-            json.dumps({"generated_at": generated, "count": len(effects), "effects": effects},
-                       ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        Path(args.validation).write_text(validation_md, encoding="utf-8")
+    data = Path(args.data)
+    write_csv(data / "papers.csv", COLUMNS + ["tags"], rows)
+    write_csv(
+        data / "screening.csv",
+        ["paper_id", "first_author", "year", "designation", "type", "status",
+         "module_count", "modules", "has_doi", "venue_verified", "converted"],
+        [
+            {
+                "paper_id": r["paper_id"],
+                "first_author": r["first_author"],
+                "year": r["year"],
+                "designation": r["designation"],
+                "type": r["type"],
+                "status": r["status"],
+                "module_count": 0 if r["modules"] == NOT_REPORTED else len(str(r["modules"]).split("; ")),
+                "modules": r["modules"],
+                "has_doi": "yes" if r["doi"] != NOT_REPORTED else "no",
+                "venue_verified": "no" if UNVERIFIED in r["venue"] else "yes",
+                "converted": "yes" if r["_marked"] else "no",
+            }
+            for r in rows
+        ],
+    )
+    write_csv(
+        data / "quotes.csv",
+        ["paper_id", "text", "locator", "module"],
+        quotes,
+    )
+    write_csv(
+        data / "effects.csv",
+        ["paper_id", "outcome", "metric", "value", "ci", "p", "locator"],
+        [dict(e, ci=e.get("ci", ""), p=e.get("p", "")) for e in effects],
+    )
 
-    print(f"{len(rows)} papers | {stats.get('extracted', 0)} extracted | "
-          f"{len(quotes)} quotes | {len(effects)} effects | "
-          f"{len(f.errors)} errors | {len(f.gaps)} gaps")
-    for e in f.errors[:20]:
+    by_module: dict[str, list[str]] = defaultdict(list)
+    for row in rows:
+        if row["modules"] == NOT_REPORTED:
+            continue
+        for module in str(row["modules"]).split("; "):
+            by_module[module].append(row["paper_id"])
+    themes = [
+        {
+            "section": section_name.get(module_section.get(m["id"], ""), NOT_REPORTED),
+            "module_id": m["id"],
+            "module_name": m.get("name", ""),
+            "papers": len(by_module.get(m["id"], [])),
+            "paper_ids": "; ".join(by_module.get(m["id"], [])) or NOT_REPORTED,
+        }
+        for m in taxonomy_modules
+    ]
+    write_csv(data / "themes.csv", ["section", "module_id", "module_name", "papers", "paper_ids"], themes)
+
+    notes = Path(args.notes)
+    notes.mkdir(parents=True, exist_ok=True)
+    expected = {f"{row['paper_id']}.md" for row in rows}
+    for stale in notes.glob("*.md"):
+        if stale.name not in expected:
+            stale.unlink()
+    for row in rows:
+        (notes / f"{row['paper_id']}.md").write_text(render_note(row), encoding="utf-8")
+
+    Path(args.validation).write_text(render_validation(rows, f, stats, generated), encoding="utf-8")
+
+    print(f"wrote {out.relative_to(REPO_ROOT)}  ({len(rows)} papers)")
+    print(f"wrote {len(list(data.glob('*.csv')))} csv in {data.relative_to(REPO_ROOT)}  "
+          f"({len(quotes)} quotes, {len(effects)} effects)")
+    print(f"wrote {len(rows)} notes in {notes.relative_to(REPO_ROOT)}")
+    print(f"wrote {Path(args.validation).relative_to(REPO_ROOT)}")
+    print(f"errors: {len(f.errors)}  gaps: {len(f.gaps)}")
+    for e in f.errors:
         print(f"  ERROR  {e}")
-    for g in f.gaps[:20]:
-        print(f"  gap    {g}")
-    if len(f.errors) > 20:
-        print(f"  ... and {len(f.errors) - 20} more errors (see the validation report)")
-
-    if args.check and not f.ok:
+    if not f.ok:
         raise SystemExit(1)
 
 

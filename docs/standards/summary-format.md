@@ -46,6 +46,31 @@ Reference for the structured JSON summary schema. Summaries are produced in `lit
   },
   "limitations": ["string — use '[unacknowledged]' suffix if needed"],
   "remember_this": ["string — key takeaways, <=20 words, 3-5 items"],
+  "study_design": "string — design label as the paper states it, e.g. 'Systematic review'",
+  "sample": "string — N and unit as reported, e.g. 'n = 32,581 loan records'",
+  "context": {
+    "geography": "string — country/region, or 'Not reported'",
+    "population": "string — population studied, or 'Not reported'",
+    "setting": "string — institutional or virtual setting, or 'Not reported'"
+  },
+  "software": ["string — named tools/packages with versions, or 'Not reported'"],
+  "quotes": [
+    {
+      "text": "string — verbatim, <=40 words",
+      "locator": "string — 'p. 7', 'Abstract', 'Table 3'",
+      "theme": "string — module id from config/modules.yaml"
+    }
+  ],
+  "effects": [
+    {
+      "outcome": "string — what was measured",
+      "metric": "string — accuracy, RMSE, OR, r, etc.",
+      "value": "string — exactly as printed, e.g. '95.21%'",
+      "ci": "string — e.g. '+/-2.1%', or omit if unreported",
+      "p": "string — e.g. '<0.05', or omit if unreported",
+      "locator": "string — 'Table 3', 'Sec. 5'"
+    }
+  ],
   "summarization_metadata": {
     "summarized_at": "ISO-8601 timestamp",
     "summarizer_model": "string",
@@ -99,6 +124,39 @@ Reference for the structured JSON summary schema. Summaries are produced in `lit
 - `topic_relevance.topic_mapping_rationale`: Must explicitly state that all topic domains were systematically scanned.
 - `citations`: Maximum 15 entries. Each `claim` must be specific and <=30 words.
 - `summarization_metadata.conversion_reference`: Populated from the YAML frontmatter of the source `_marked.md` file.
+
+## Extraction Fields
+
+Added 2026-09-30 so the generated matrix
+(`docs/literature-review-matrix.md`, schema in `docs/standards/matrix-format.md`)
+can be built without a 56-column table. **All of these keys are optional.** A
+summary written before this revision stays valid, and a summary may omit any of
+them; the builder then renders `Not reported` for that column.
+
+| Key | Feeds matrix column | Notes |
+| :--- | :--- | :--- |
+| `study_design` | `design` | Use the paper's own label. Normalize to `method/<slug>` in the matrix tag. |
+| `sample` | `sample` | N and unit together, as reported. |
+| `context` | — | Retained for synthesis; not a matrix column. |
+| `software` | — | Retained for reproducibility checks. |
+| `quotes[]` | `scores/quotes.json` | One verbatim quotation per record, not a run-on cell. |
+| `effects[]` | `scores/effects.json` | One statistical result per record. |
+
+### Field Rules for Extraction Fields
+
+- `quotes[].text` is verbatim, `<=40` words, in straight double quotes. Every
+  quote carries a `locator`. `theme` must be a module id that exists in
+  `config/modules.yaml`; an invented id is a validation error.
+- `effects[].value` reproduces the printed number exactly. Do not round,
+  recompute, or convert units. `ci` and `p` are omitted rather than guessed.
+- **One record per result.** A paper reporting two accuracy figures for two
+  conditions gets two records, not one cell containing both.
+- When a paper reports the same `metric` twice with different values, keep both
+  records with their locators and state the discrepancy in `limitations`. Do not
+  silently prefer one. `A--Aldrees-2025` is the worked example: 14.03% in the
+  abstract against 14.82% in the conclusion, both genuine.
+- `limitations[0]` is what the matrix `gap` column shows, so the first entry
+  should be the paper's own most significant acknowledged limitation.
 
 ## Summary File Naming
 

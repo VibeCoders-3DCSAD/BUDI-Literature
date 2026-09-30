@@ -5,7 +5,7 @@ files) were AI-generated under the **old** topic taxonomy (1.A-14.C) before the 
 overhaul. They are a sanity check only — not ground truth. Use them to confirm the
 automated scorer points in the same direction, then re-calibrate thresholds with judgment.
 
-- Papers with at least one `medium`/`high` annotated topic: **0** / 92
+- Papers with at least one `medium`/`high` annotated topic: **0** / 93
 - Point-biserial correlation (annotated med/high vs best combined score): **nan**
 - Point-biserial correlation (annotated high vs best combined score): **nan**
 
@@ -13,7 +13,7 @@ Confusion vs `supporting_min=0.3` threshold (positive = automated relevance >= t
 
 | | annotated relevant | annotated not |
 |---|---|---|
-| automated >= thr | 0 (TP) | 90 (FP) |
+| automated >= thr | 0 (TP) | 91 (FP) |
 | automated < thr  | 0 (FN) | 2 (TN) |
 
 - Sensitivity (recall of annotated-relevant): **nan**

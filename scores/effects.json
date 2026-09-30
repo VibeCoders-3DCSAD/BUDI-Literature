@@ -1,0 +1,316 @@
+{
+  "generated_at": "2026-09-30T06:53:14.383131+00:00",
+  "count": 44,
+  "effects": [
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Studies included in the systematic review after screening",
+      "metric": "included studies",
+      "value": "60",
+      "locator": "Sect. III-B Stage 2 Screening Process, p. 6"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Unique records retrieved and reviewed during screening",
+      "metric": "screened records",
+      "value": "183",
+      "locator": "Sect. III-B Stage 2 Screening Process, p. 6"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Articles excluded during screening",
+      "metric": "excluded records",
+      "value": "123",
+      "locator": "Sect. III-B Stage 2 Screening Process, p. 6"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Records excluded for being written in a language other than English",
+      "metric": "excluded records",
+      "value": "eight",
+      "locator": "Sect. III-C Stage 3 Eligibility and Quality Assessment, p. 7"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Preliminary Google Scholar search output after quality filtering",
+      "metric": "records",
+      "value": "5,850",
+      "locator": "Sect. III-A-1 Keyword Identification, p. 6"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Included studies published in journals",
+      "metric": "studies",
+      "value": "N = 46",
+      "locator": "Sect. IV-A Characteristics of the Selected Studies, p. 9"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Included studies published in conference proceedings",
+      "metric": "studies",
+      "value": "N = 14",
+      "locator": "Sect. IV-A Characteristics of the Selected Studies, p. 9"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Included studies published in Expert Systems with Applications, the highest-output journal",
+      "metric": "publications",
+      "value": "five",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 9"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Included studies published in Information Sciences, second-highest journal output",
+      "metric": "publications",
+      "value": "four",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 9"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Share of included studies whose ML problem scope is classification (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "60%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Share of included studies whose ML problem scope is time-series (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "12%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Share of included studies whose ML problem scope is supervised (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "7%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Share of included studies whose ML problem scope is imbalance (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "7%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Share of included studies whose ML problem scope is unsupervised (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "6%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Share of included studies whose ML problem scope is regression (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "6%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Share of included studies whose ML problem scope is semi-supervised (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "2%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Quality scoring scale applied to each screened study during eligibility assessment",
+      "metric": "score for Yes / Partially / No",
+      "value": "1 / 0.5 / 0",
+      "locator": "Sect. III-C Stage 3 Eligibility and Quality Assessment, p. 7"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Sensor count in the Mica2Dot real temperature dataset used by an included fog-DeepStream study",
+      "metric": "sensors",
+      "value": "54",
+      "locator": "Sec. VII Discussion, p. 22"
+    },
+    {
+      "paper_id": "A--Abdullahi-2025",
+      "outcome": "Publication window covered by the review's search strategy",
+      "metric": "years",
+      "value": "2013 – 2024",
+      "locator": "Sec. III-A-1 Keyword Identification, p. 6"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Risk detection accuracy improvement of the proposed CFM-LPA across financed amounts",
+      "metric": "accuracy improvement",
+      "value": "14.03%",
+      "locator": "Abstract, p. 1"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Return rate analysis improvement of the proposed CFM-LPA across financed amounts",
+      "metric": "return rate improvement",
+      "value": "13.28%",
+      "locator": "Abstract, p. 1"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Risk detection analysis improvement of the proposed CFM-LPA for the different interest rates",
+      "metric": "accuracy improvement",
+      "value": "14.82%",
+      "locator": "Sec. 6 Conclusion, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Return rate analysis improvement of the proposed CFM-LPA for the different interest rates",
+      "metric": "return rate improvement",
+      "value": "13.63%",
+      "locator": "Sec. 6 Conclusion, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "New risk detection, proposed CFM-LPA",
+      "metric": "accuracy",
+      "value": "95.21%",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "New risk detection, FEEM-VO baseline",
+      "metric": "accuracy",
+      "value": "90.32%",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "New risk detection, LightGBM-GAN baseline",
+      "metric": "accuracy",
+      "value": "86.45%",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "New risk detection, SMOTE-ENN baseline",
+      "metric": "accuracy",
+      "value": "80.12%",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Return rate analysis, proposed CFM-LPA",
+      "metric": "return rate",
+      "value": "0.97",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Return rate analysis, FEEM-VO baseline",
+      "metric": "return rate",
+      "value": "0.92",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Return rate analysis, LightGBM-GAN baseline",
+      "metric": "return rate",
+      "value": "0.88",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Return rate analysis, SMOTE-ENN baseline",
+      "metric": "return rate",
+      "value": "0.81",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "New risk detection by limit category, proposed CFM-LPA",
+      "metric": "accuracy by loan grade",
+      "value": "A: 90, B: 93, C: 95, D: 96",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "New risk detection by limit category, FEEM-VO baseline",
+      "metric": "accuracy by loan grade",
+      "value": "A: 86, B: 89, C: 91, D: 93",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "New risk detection by limit category, LightGBM-GAN baseline",
+      "metric": "accuracy by loan grade",
+      "value": "A: 82, B: 85, C: 88, D: 90",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "New risk detection by limit category, SMOTE-ENN baseline",
+      "metric": "accuracy by loan grade",
+      "value": "A: 78, B: 80, C: 82, D: 84",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Reliability procedure reported for the accuracy estimates",
+      "metric": "95% confidence interval half-width for accuracy",
+      "value": "± 2.1%",
+      "locator": "Sec. 5 Results and Discussion, p. 19",
+      "ci": "± 2.1%"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Significance testing reported for the comparative results",
+      "metric": "paired t-test p-value",
+      "value": "p < 0.05",
+      "locator": "Sec. 5 Results and Discussion, p. 19",
+      "p": "<0.05"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Group A (majority) average credit score in the dataset",
+      "metric": "credit score",
+      "value": "720",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Group A (majority) loan acceptance rate in the dataset",
+      "metric": "acceptance rate",
+      "value": "85%",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Group A (majority) default rate in the dataset",
+      "metric": "default rate",
+      "value": "5%",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Group B (minority) average credit score in the dataset",
+      "metric": "credit score",
+      "value": "680",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Group B (minority) loan approval rate in the dataset",
+      "metric": "approval rate",
+      "value": "65%",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Group B (minority) default rate in the dataset",
+      "metric": "default rate",
+      "value": "7%",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "paper_id": "A--Aldrees-2025",
+      "outcome": "Evaluation sample size",
+      "metric": "records",
+      "value": "32,581",
+      "locator": "Sec. 3 Data Description, p. 6"
+    }
+  ]
+}

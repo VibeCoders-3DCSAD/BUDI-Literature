@@ -61,7 +61,15 @@ Use an AI agent to fill `{stem}_summarized.json` with a structured summary. Feed
 
 The summarizer is **objective and unbiased** — it describes what the paper says without application-specific framing. Page and paragraph references are included in structured `citations` objects.
 
-See `docs/standards/summary-format.md` for the JSON schema.
+See `docs/standards/summary-format.md` for the JSON schema, and
+`skills/literature-review-summarizer.md` for the output contract: the extraction
+fields (`study_design`, `sample`, `context`, `software`, `quotes[]`, `effects[]`)
+that step 5 builds the matrix from, and the rule for a paper that reports
+contradictory figures.
+
+Bibliographic fields (`title`, `authors`, `year`, `venue`, `doi`) are copied from
+`literature/conversions/metadata.json`, the page-1-verified citation authority.
+The agent does not re-derive them.
 
 ### 4. Score
 
@@ -74,9 +82,32 @@ python3 scripts/score.py        # relevance/quality tiers, redundancy, validatio
 
 `score.py` ranks every paper against the thesis modules (BERT 0.5 / TF-IDF 0.3 / BM25 0.2) and assigns tiers: **crucial** (>=0.45), **supporting** (>=0.30), **cull** (<0.30). Redundant near-duplicates are flagged (threshold 0.98). Outputs land in `scores/`.
 
-### 5. Adapt to Thesis Changes
+### 5. Build the Matrix
 
-The thesis outline, architecture, and algorithm selections change often. When they do, edit **only** `config/modules.yaml` (module queries, weights, tier thresholds, redundancy threshold) and re-run `score.py`. No code changes needed.
+Regenerate the literature review matrix from the three sources:
+
+```bash
+python3 scripts/build_matrix.py           # build matrix + long tables + validation
+python3 scripts/build_matrix.py --check   # validate only, exit 1 on any error
+```
+
+Inputs, in order of authority: `metadata.json` (bibliographic), `scores/index.json`
+(relevance), `{stem}_summarized.json` (extraction). Outputs:
+
+| File | Contents |
+|------|----------|
+| `docs/literature-review-matrix.md` | 17-column index, one row per corpus paper, plus a theme-count view. |
+| `scores/quotes.json` | One record per extracted quotation. |
+| `scores/effects.json` | One record per statistical result. |
+| `scores/matrix-validation.md` | Validation errors and informational gaps. |
+
+**Never hand-edit the matrix.** Fix the source and rebuild. Column definitions,
+the tag namespace, and every validation rule are in
+`docs/standards/matrix-format.md`.
+
+### 6. Adapt to Thesis Changes
+
+The thesis outline, architecture, and algorithm selections change often. When they do, edit **only** `config/modules.yaml` (module queries, weights, tier thresholds, redundancy threshold), then re-run `score.py` followed by `build_matrix.py`. No code changes needed.
 
 ## Python Dependencies
 
@@ -160,6 +191,14 @@ Regenerates `scores/`. This replaces the stale 518-paper scoring outputs.
 python3 scripts/manifest.py        # refresh scores/manifest.json
 ```
 
+### 6. Matrix
+
+```bash
+python3 scripts/build_matrix.py    # refresh the matrix and long tables
+```
+
+Run this after any step that changes a score, a stem, or a summary.
+
 ---
 
 ## Script Reference
@@ -173,4 +212,5 @@ python3 scripts/manifest.py        # refresh scores/manifest.json
 | `scripts/embed.py` | Build/cache text, BERT embeddings, TF-IDF, BM25 |
 | `scripts/score.py` | Score corpus against module queries |
 | `scripts/manifest.py` | Build corpus manifest from conversions |
+| `scripts/build_matrix.py` | Build the generated review matrix, long tables, and validation report |
 | `scripts/common.py` | Shared helpers (corpus paths, text cleaning, frontmatter parsing) |

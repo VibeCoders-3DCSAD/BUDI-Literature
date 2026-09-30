@@ -53,14 +53,20 @@ BUDI-Literature/
 | `config/modules.yaml` | Module definitions, weights, tier thresholds — the single source of truth for relevance |
 | `docs/standards/rrl-workflow.md` | Full processing workflow (fetch → convert → summarize → score) |
 | `docs/standards/summary-format.md` | JSON schema for `_summarized.json` files |
+| `docs/standards/matrix-format.md` | Generated matrix columns, tag namespace, validator rules |
 | `docs/standards/rrl-naming-conventions.md` | File naming rules for the corpus |
 | `literature/conversions/metadata.json` | Bibliographic sidecar: verified titles, authors, venues, DOIs, keyed by source-PDF SHA-256 |
 | `docs/OUTLINE-V4-COVERAGE.md` | Crucial/supporting paper counts per Outline V4 leaf — read before requesting new sources |
 | `docs/NEW-SCOPE-SOURCES.md` | Prioritised manual-download list, re-prioritised against Outline V4 |
 | `scores/report.md` | Human-readable ranked report |
 | `scores/index.json` | Machine-readable per-paper scores |
+| `docs/literature-review-matrix.md` | **Generated** 17-column index over the whole corpus — never hand-edit |
+| `scores/quotes.json` | Generated: one record per extracted quotation |
+| `scores/effects.json` | Generated: one record per statistical result |
 | `scores/redundancy.json` | Near-duplicate clusters |
 | `scores/validation.md` | Sanity check of automated scores vs existing annotations |
+| `scores/matrix-validation.md` | Generated: matrix validation errors and informational gaps |
+| `skills/literature-review-summarizer.md` | Extraction contract for `_summarized.json` (supersedes the retired 56-column matrix inserter) |
 
 ---
 
@@ -120,7 +126,8 @@ mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
 
 ### 3. Summarize
 
-Use an AI agent to fill `_summarized.json` (schema: `docs/standards/summary-format.md`).
+Use an AI agent to fill `_summarized.json` (schema: `docs/standards/summary-format.md`,
+extraction contract: `skills/literature-review-summarizer.md`).
 
 ### 4. Score
 
@@ -129,9 +136,16 @@ python3 scripts/embed.py        # rebuild caches when conversions change
 python3 scripts/score.py        # relevance/quality tiers, redundancy, validation
 ```
 
-### 5. Adapt
+### 5. Build the matrix
 
-Edit `config/modules.yaml` (module queries, weights, thresholds) → re-run `score.py`. No code changes needed.
+```bash
+python3 scripts/build_matrix.py         # regenerate matrix + quotes/effects + validation
+python3 scripts/build_matrix.py --check # validate only, exit 1 on any error
+```
+
+### 6. Adapt
+
+Edit `config/modules.yaml` (module queries, weights, thresholds) → re-run `score.py`, then `build_matrix.py`. No code changes needed.
 
 ---
 
@@ -146,6 +160,7 @@ Edit `config/modules.yaml` (module queries, weights, thresholds) → re-run `sco
 | `scripts/embed.py` | Build/cache text, BERT embeddings, TF-IDF, BM25 |
 | `scripts/score.py` | Score corpus against module queries |
 | `scripts/manifest.py` | Build corpus manifest from conversions |
+| `scripts/build_matrix.py` | Build the generated review matrix, long tables, and validation report |
 | `scripts/common.py` | Shared helpers (corpus paths, text cleaning, frontmatter parsing) |
 
 ---
@@ -171,8 +186,10 @@ pip install torch --index-url https://download.pytorch.org/whl/cpu
 - **PDFs are not committed.** Use `scripts/fetch_pdfs.py` to obtain them. The scoring pipeline operates entirely on markdown conversions — PDFs are only needed for conversion.
 - **`cache/` is regenerable.** Run `python3 scripts/embed.py --force` to rebuild. Only `scores/` and `literature/conversions/` are committed.
 - **Old topic codes (1.A–14.C)** in `_summarized.json` files follow the previous thesis outline. The current module definitions in `config/modules.yaml` supersede them for scoring purposes.
-- **Stems name the first author, but source PDF filenames often do not.** Seven corpus stems were built from filenames and turned out to name a later author. Each was corrected on 2026-09-26 after reading page 1. Verify any stem against the PDF before citing it. `literature/conversions/metadata.json` records which entries have actually been verified from page 1 (26 of 92 as of 2026-09-27; the file wraps them under an `entries` key, so count there, not at the top level) and which carry only conversion frontmatter.
+- **Stems name the first author, but source PDF filenames often do not.** Seven corpus stems were built from filenames and turned out to name a later author. Each was corrected on 2026-09-26 after reading page 1. Verify any stem against the PDF before citing it. `literature/conversions/metadata.json` is the citation authority and records verification per entry (all 93 entries verified from page 1 as of 2026-09-30; the file wraps them under an `entries` key, so count there, not at the top level).
 - **A rename invalidates the caches.** `embed.py` keys `cache/embeddings_stems.json` by stem, so renaming a conversion makes `score.py` fail with a `KeyError` on the old stem. Re-run `embed.py` after any rename, not just `score.py`.
 - **`config/modules.yaml` was realigned to Outline V4 on 2026-09-26.** Measure corpus coverage against `docs/OUTLINE-V4-COVERAGE.md` before proposing new sources; three outline leaves currently have zero crucial-tier papers.
 - **Generated scores are committed** so the scored corpus is browsable without running anything.
 - **Batch structure is by intake run**, not by topic. Re-organize by topic when the topical outline is finalized.
+- **`docs/literature-review-matrix.md` is generated.** Never hand-edit it: `scripts/build_matrix.py` overwrites it from `metadata.json`, `scores/index.json`, and the `_summarized.json` files. To change a value, fix the source and rebuild. Run `build_matrix.py --check` after any extraction; it exits 1 on an error.
+- **A paper that contradicts itself is not an extraction bug.** `A--Aldrees-2025` reports different headline figures in its abstract and its conclusion. Keep both with their locators and record the discrepancy in `limitations`; the validator flags the conflict and deliberately does not choose.

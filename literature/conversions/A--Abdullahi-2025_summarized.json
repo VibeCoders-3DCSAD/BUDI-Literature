@@ -1,0 +1,588 @@
+{
+  "paper_id": "A--Abdullahi-2025",
+  "designation": "international-algorithm-specific",
+  "title": "A Systematic Literature Review of Concept Drift Mitigation in Time-Series Applications",
+  "authors": "Abdullahi, M.; Alhussian, H.; Aziz, N.; Abdulkadir, S. J.; Baashar, Y.; Alashhab, A. A.; Afrin, A.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "topic_tags": [
+    "ml_algorithms",
+    "forecasting",
+    "anomaly_detection",
+    "synthetic_data_mlops",
+    "seasonal_expense_forecasting"
+  ],
+  "tldr": "A PRISMA 2020 systematic review of 60 studies (2013–2024) finds SVM the most effective learner for detecting and adapting concept drift in time-series classification and regression tasks, and maps a five-step AI-learner roadmap against ADWIN, DDM and EDDM baselines.",
+  "problem_and_motivation": "Concept drift continuously changes the statistical properties of nonstationary data, degrading the predictive performance of time-series machine learning models after deployment. Existing drift work concentrates on classification learning and pays little attention to regression, and benchmark-based evaluation may not reflect real-world industrial data. Selecting an appropriate detection technique for a given dataset remains difficult.",
+  "approach": [
+    "Frame the review on PRISMA 2020 and Kitchenham-Charters guidelines, structured in four screening stages: preliminary study, screening, eligibility/quality assessment, and data extraction (Sect. III).",
+    "Build search strings from 'Concept Drift' OR 'CD' AND 'Model Degradation' AND 'Drift Handling' AND 'Drift Detector' AND 'Concept Evaluation' AND 'Time-Series' AND 'AI/ML' AND 'Regression' AND 'Classification', taking synonyms from Lima et al. [34].",
+    "Search six databases — SCOPUS, ScienceDirect, IEEE Xplore, Web of Science, ACM Digital Library and MDPI — over titles, abstracts and keywords for English-language journal and conference papers published 2013–2024.",
+    "Screen 183 unique records with two reviewers, exclude 123 (including eight non-English articles), and retain 60 studies, then score eligibility and quality as 1 (Yes), 0.5 (Partially), 0 (No).",
+    "Extract year, algorithm, metrics, domain, ML techniques, datasets, CD algorithm, problem scope and algorithm learning into Microsoft Excel 16.77, with extraction done by two authors.",
+    "Pose four research questions: which ensemble methods detect drift (RQ1), which ML models are used and how actionable they are (RQ2), which drift-handling algorithms were used over the last decade (RQ3), and what the main pipeline steps are (RQ4).",
+    "Characterise the corpus by publication year, journal, ML problem scope, evaluation metric and learner algorithm (Figs. 5–9), then tabulate studies by classification learner, regression learner, model performance and drift-handling technique (Tables 5–8).",
+    "Propose a roadmap of AI-based learners keyed to drift speed and severity (incremental, gradual, sudden, recurrent) and specify the metrics, evaluation procedures (prequential, holdout, cross-validation) and baselines it should use (Sect. VI).",
+    "Compare that roadmap qualitatively against Page-Hinkley, ADWIN, DDM, EDDM, DW_HDDM and WSTD on detection capability, adaptability/flexibility, and performance/scalability (Sect. VI-C).",
+    "Synthesise lessons learned and best practices on computational cost, window sizing, drift-type handling, drift-versus-noise discrimination, ensemble diversity, evaluation thoroughness, system architecture, and real versus synthetic data (Sect. VIII)."
+  ],
+  "findings": [
+    "num: 60 studies published 2013–2024 were included after 183 unique records were screened and 123 articles excluded, eight of the exclusions being non-English papers (Abstract, p. 1; Sect. III-B, p. 6; Sect. III-C, p. 7).",
+    "num: SVM is reported as the most effective learning algorithm for detecting and adapting concept drift in both regression and classification time-series tasks, with k-NN and LSTM next most used (Abstract, p. 1; Sect. V-B, p. 16).",
+    "num: Fig. 7 problem-scope shares of the included studies: classification 60%, time-series 12%, supervised 7%, imbalance 7%, unsupervised 6%, regression 6%, semi-supervised 2% (Sect. IV-A, p. 10).",
+    "num: The 60 studies split into N = 46 journal articles and N = 14 conference papers, concentrated in Expert Systems with Applications (five) and Information Sciences (four) (Sect. IV-A, p. 9).",
+    "num: The preliminary Google Scholar keyword search returned 5,850 records after filtering (Sect. III-A-1, p. 6).",
+    "num: The corpus catalogues 21 learner algorithms and 20 evaluation metrics (counted from the enumerations printed in Sect. IV-A, pp. 10–11).",
+    "num: Publication volume over 2013–2024 peaks in 2022, with the sharpest rise between 2021 and 2022 (Sect. IV-A, p. 8, Fig. 5).",
+    "num: Accuracy is the dominant evaluation metric across the reviewed studies, ahead of AUC, AUROC, RMSE, MAE, MSE and F1 (Sect. IV-A, pp. 10–11, Fig. 8).",
+    "ADWIN, HDDM and DDM are the most-used drift-handling techniques in the corpus, and each is matched to a specific drift type (Sect. IV-B-3, p. 12).",
+    "Ensemble approaches — ENSDS, SVR, ELM, OS-ELM, DEMSC and dynamic ensemble selection — are identified as the most common drift-detection families in time-series settings (Sect. V-A, p. 15)."
+  ],
+  "key_figures_tables": [
+    "Fig. 1 (p. 3): Concept drift types by speed → incremental, gradual, sudden and recurrent drift are the taxonomy used throughout the roadmap.",
+    "Fig. 2 (p. 5): Systematic literature review mapping process → the survey methodology is organised into four screening stages.",
+    "Fig. 3 (p. 5): Google Scholar keyword-combination results → the preliminary search used to select search terms, reduced to 5,850 records after filtering.",
+    "Fig. 4 (p. 7): PRISMA 2020 flow diagram of study screening and selection → the documented path from database search to 183 screened, 123 excluded and 60 included.",
+    "Fig. 5 (p. 8): Distribution of studies by publication year → CD research grows over 2013–2024, peaking in 2022.",
+    "Fig. 6 (p. 9): Distribution of studies by journal → 46 journal and 14 conference papers, led by Expert Systems with Applications and Information Sciences.",
+    "Fig. 7 (p. 9): Characteristics of studies based on the problem scope of machine learning → classification 60%, time-series 12%, supervised 7%, imbalance 7%, unsupervised 6%, regression 6%, semi-supervised 2% (read from the chart, stated in Sect. IV-A, p. 10).",
+    "Fig. 8 (p. 10): Characteristics of studies based on evaluation metrics → accuracy is the primary reported measure, with 20 metrics in total.",
+    "Fig. 9 (p. 10): Characteristics of studies using learning algorithms → 21 learners catalogued, with SVM and LSTM most frequent.",
+    "Fig. 10 (p. 16): Ensemble-based learners for concept drift detection in time-series data → the ensemble families that answer RQ1.",
+    "Fig. 11 (p. 20): Illustration of AI learners for concept drift detection → maps AI learners onto drift speed and severity categories.",
+    "Fig. 12 (p. 22): Lessons learned and best practices for concept drift mitigation in time-series applications → the graphical summary of the Sect. VIII practices.",
+    "Table 1 (p. 4): Comparison with other studies in the same domain → positions this SLR against earlier concept drift reviews.",
+    "Table 2 (p. 6): Formulated research questions and motivation → the four RQs that structure Sections V-A to V-D.",
+    "Table 3 (p. 6): Inclusion and exclusion criteria → eligibility rules for the screened records.",
+    "Table 4 (p. 8): Eligibility and quality assessment scoring criteria → 1 for Yes, 0.5 for Partially, 0 for No.",
+    "Table 7 (p. 13): Studies categorized by model performance for CD detection and adaptation in a general context → links error metrics to drift detection.",
+    "Table 8 (p. 14): Studies categorized by a technique that handles concept drift → maps ADWIN, HDDM, DDM and related detectors to drift types.",
+    "Table 9 (p. 15): Summary of ensemble-based learning concept drift detection techniques → the ENSDS, SVR, ELM, OS-ELM, DEMSC and DES families.",
+    "Table 12 (p. 24): Evaluation metrics and datasets for CD detection from the selected studies → the per-study metric and dataset inventory.",
+    "Table 13 (p. 25): State-of-the-art studies with their contributions, strengths and weaknesses → the qualitative appraisal of each included study.",
+    "Table 14 (p. 26): PRISMA 2020 checklist → self-reported compliance, obtained from prisma-statement.org on 19 May 2025."
+  ],
+  "key_equations": [
+    {
+      "equation": "Accuracy (ACC) = (TP + TN) / (TP + TN + FP + FN)",
+      "explanation": "Proportion of instances, drift and no-drift, correctly identified."
+    },
+    {
+      "equation": "Precision (P) = TP / (TP + FP)",
+      "explanation": "Share of flagged drift that is genuinely drift."
+    },
+    {
+      "equation": "Recall (R) = TP / (TP + FN)",
+      "explanation": "Share of actual drift events the model detects."
+    },
+    {
+      "equation": "F1 = 2 x Precision x Recall / (Precision + Recall)",
+      "explanation": "Harmonic balance of precision and recall."
+    },
+    {
+      "equation": "RMSE = sqrt( (1/n) * sum_{i=1}^{n} (y_hat_i - y_i)^2 )",
+      "explanation": "Root mean squared prediction error, used for time-series drift models."
+    },
+    {
+      "equation": "MSE = (1/n) * sum_{i=1}^{n} (y_hat_i - y_i)^2",
+      "explanation": "Average squared prediction error; abrupt rises signal drift."
+    },
+    {
+      "equation": "MAE = (1/n) * sum_{i=1}^{n} |y_hat_i - y_i|",
+      "explanation": "Average absolute prediction error over the stream."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Concept Drift (CD)",
+      "definition": "Continuous change in the statistical properties of a dataset over time, i.e. a change in the relationship between input data and model target values, which degrades ML performance after deployment."
+    },
+    {
+      "term": "Dataset shift",
+      "definition": "Any change in the joint distribution of input and target variables between training and testing; unlike CD it need not imply time evolution."
+    },
+    {
+      "term": "Incremental drift",
+      "definition": "Minimal, continuous change in the original data distribution; hard to detect in real time because increments are small."
+    },
+    {
+      "term": "Gradual drift",
+      "definition": "Noticeable change in the target data distribution, producing long-term effects but allowing earlier detection than incremental drift."
+    },
+    {
+      "term": "Sudden drift",
+      "definition": "Abrupt and significant change in the data distribution at a particular time point, causing unforeseen model behaviour."
+    },
+    {
+      "term": "Recurrent drift",
+      "definition": "An old concept reappears after a period of absence, changing previously observed concepts."
+    },
+    {
+      "term": "ADWIN",
+      "definition": "Adaptive windowing detector that shrinks its window when statistical differences between sub-windows exceed a specified confidence level."
+    },
+    {
+      "term": "DDM / EDDM / HDDM",
+      "definition": "Drift Detection Method, Early Drift Detection Method and Hoeffding Drift Detection Method — error-rate and statistical-distance detectors used as baselines."
+    },
+    {
+      "term": "Prequential evaluation",
+      "definition": "Test-then-train protocol in which each new data point tests the model before training on it, simulating a constant data stream."
+    },
+    {
+      "term": "PRISMA 2020",
+      "definition": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses 2020, the reporting and screening standard the review follows."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Page, M. J.; McKenzie, J. E.; Bossuyt, P. M.; et al.",
+      "year": 2021,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "PRISMA 2020 statement supplied the reporting standard for the review's screening and selection process.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kitchenham, B.; Charters, S.",
+      "year": 2007,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "Study screening and selection followed the established software engineering systematic review guidelines.",
+      "role": "methodology"
+    },
+    {
+      "author": "Sezer, O. B.; Gudelek, M. U.; Ozbayoglu, A. M.",
+      "year": 2020,
+      "page": 1,
+      "paragraph": 2,
+      "claim": "Financial time series forecasting with deep learning: a systematic literature review covering 2005 to 2019.",
+      "role": "context"
+    },
+    {
+      "author": "Gama, J.; Zliobaite, I.; Bifet, A.; Pechenizkiy, M.; Bouchachia, A.",
+      "year": 2014,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Survey of adaptive learning methods for concept drift, categorising window-based and ensemble strategies with strengths and limits.",
+      "role": "context"
+    },
+    {
+      "author": "Bayram, F.; Ahmed, B. S.; Kassler, A.",
+      "year": 2022,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Analysis and hierarchical taxonomy of performance-based concept drift detectors from the past decade.",
+      "role": "methodology"
+    },
+    {
+      "author": "Shen, P. K.; Ming, Y.; Li, H.; Gao, J.; Zhang, W.",
+      "year": 2023,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Survey of unsupervised concept drift detectors with a taxonomy for real applications, but lacking empirical evaluation.",
+      "role": "context"
+    },
+    {
+      "author": "Lima, M.; Neto, M.; Filho, S. T.; De A. Fagundes, R. A.",
+      "year": 2022,
+      "page": 6,
+      "paragraph": 1,
+      "claim": "Supplied the synonyms for 'concept drift' used to broaden the review's keyword combinations.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cavalcante, R. C.; Oliveira, A. L. I.",
+      "year": 2015,
+      "page": 14,
+      "paragraph": 1,
+      "claim": "Ensemble ELM with explicit drift detection shortened prediction time of online sequential ELM while maintaining accuracy.",
+      "role": "finding"
+    },
+    {
+      "author": "Uchiteleva, E.; Primak, S. L.; Luccini, M.; Hussein, A. R.; Shami, A.",
+      "year": 2022,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "TriLS three-layered, three-state system adjusts a lightweight predictive model in time for IIoT nonstationary environments.",
+      "role": "methodology"
+    },
+    {
+      "author": "Tang, J.; Lin, K.-Y.; Li, L.",
+      "year": 2022,
+      "page": 22,
+      "paragraph": 3,
+      "claim": "Incremental SVM with domain adaptation evaluated drift handling on five industrial datasets including clean and credit data.",
+      "role": "finding"
+    },
+    {
+      "author": "Sun, L.; Ji, Y.; Zhu, M.; Gu, F.; Dai, F.; Li, K.",
+      "year": 2021,
+      "page": 19,
+      "paragraph": 2,
+      "claim": "DLSTM, LSTM and OAR learners assigned prediction tasks to sub-models to handle hybrid recurring drift in process industry streams.",
+      "role": "finding"
+    },
+    {
+      "author": "Alencar, B. M.; Canario, J. P.; Lobao Neto, R.; et al.",
+      "year": 2023,
+      "page": 22,
+      "paragraph": 4,
+      "claim": "Fog-DeepStream combined LSTM, concept drift and deep neural networks on 54 Mica2Dot weather sensor readings.",
+      "role": "finding"
+    },
+    {
+      "author": "Kaminskyi, D.; Li, B.; Muller, E.",
+      "year": 2022,
+      "page": 22,
+      "paragraph": 4,
+      "claim": "Autoencoder-based unsupervised drift detection used synthetic changing-sine sudden and incremental streams.",
+      "role": "finding"
+    },
+    {
+      "author": "Heidrich, B.; Ludwig, N.; Turowski, M.; Mikut, R.; Hagenmeyer, V.",
+      "year": 2022,
+      "page": 18,
+      "paragraph": 1,
+      "claim": "RMSE and MASE were used to evaluate a concept drift model in an energy time-series forecasting context.",
+      "role": "finding"
+    },
+    {
+      "author": "Disabato, S.; Roveri, M.",
+      "year": 2024,
+      "page": 19,
+      "paragraph": 1,
+      "claim": "Tiny machine learning solution integrated k-NN, SVM and NN with a hybrid adaptation module for gradual drift.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "ml_algorithms",
+        "name": "Machine Learning Algorithms for Personal Finance",
+        "relevance": "high",
+        "justification": "The review's whole object is algorithm selection for drift detection and adaptation, naming SVM, k-NN, LSTM, XGBoost, RF and 15 further learners across 60 studies."
+      },
+      {
+        "code": "forecasting",
+        "name": "Seasonal Expense Forecasting",
+        "relevance": "high",
+        "justification": "Time-series forecasting is the review's target application; Sect. V-D maps ACC, MAE, RMSE and MASE onto drift evaluation and models ELM/online-learning forecasts under drift."
+      },
+      {
+        "code": "anomaly_detection",
+        "name": "Anomaly and Overspending Detection",
+        "relevance": "medium",
+        "justification": "Drift detection is framed as separating true distribution change from noise and outliers, and several included studies are anomaly and intrusion detection tasks; the connection is by method, not by spending data."
+      },
+      {
+        "code": "synthetic_data_mlops",
+        "name": "Synthetic Data and ML Serving",
+        "relevance": "medium",
+        "justification": "Sect. VIII-H weighs synthetic versus real-world data for validating detectors, and Sect. VIII-G covers hybrid cloud-edge architectures that migrate model retraining off the edge device."
+      },
+      {
+        "code": "seasonal_expense_forecasting",
+        "name": "Seasonal Consumption Patterns",
+        "relevance": "low",
+        "justification": "Seasonal fluctuations and autocorrelations are named as temporal patterns that drive drift characterisation, but no seasonality model is built or measured."
+      },
+      {
+        "code": "financial_planning",
+        "name": "Financial Planning Process",
+        "relevance": "low",
+        "justification": "Financial time-series prediction and early financial forecasting are cited as drift-prone application areas, but household planning behaviour is not studied."
+      },
+      {
+        "code": "system_evaluation",
+        "name": "Software Quality and Usability Evaluation",
+        "relevance": "low",
+        "justification": "Computational cost, detection delay, false alarm rate and memory use are named as evaluation dimensions, but no SUS or ISO/IEC 25010 instrument is applied."
+      },
+      {
+        "code": "filipino_context",
+        "name": "Filipino Financial Ecosystem and Culture",
+        "relevance": "low",
+        "justification": "No Philippine institution, data source or population is involved; the search was worldwide and the authors are at Malaysian and Libyan universities."
+      }
+    ],
+    "contribution_to_field": "The paper consolidates a decade of concept drift work on time-series data into one PRISMA-screened corpus of 60 studies, deliberately widening the frame beyond the classification-heavy reviews that preceded it to include regression tasks. It names SVM, k-NN and LSTM as the learners most often and most effectively applied, and statistical detectors ADWIN, HDDM and DDM as the workhorse mitigation techniques. Its distinctive contribution is a roadmap that maps AI learners onto drift speed and severity and fixes the metrics, evaluation protocols and baselines such a roadmap should be judged against. The comparative section against Page-Hinkley, ADWIN, DDM, EDDM, DW_HDDM and WSTD is argued qualitatively rather than measured, so the roadmap remains a proposal awaiting the experimental evaluation the paper says it presents.",
+    "directly_justifies": [
+      "SVM is reported as the most effective learner for detecting and adapting concept drift in time-series regression and classification tasks.",
+      "ADWIN, HDDM and DDM are the most-used drift-handling techniques across the 60 reviewed studies.",
+      "A systematic review of 60 studies published 2013-2024 was screened from 183 unique records under PRISMA 2020.",
+      "Accuracy is the dominant evaluation metric reported across the surveyed concept drift studies.",
+      "Baseline drift detectors such as Page-Hinkley, ADWIN, DDM and EDDM reduce effectiveness on incremental and recurrent drift because of fixed statistical thresholds.",
+      "Drift handling should follow five steps: nature of data, detection, characterisation, adaptation, and evaluation and validation."
+    ],
+    "limits": [
+      "The PRISMA counts reported in text are only partially reconciled: 5,850 preliminary Google Scholar records, 183 unique database records, 123 exclusions and 60 inclusions are given, but the flow diagram's own numbers are not stated and the two search routes are not reconciled.",
+      "The Sect. VI 'experimental evaluation' and Sect. VI-C 'comparative analysis' report no numerical results; the roadmap is compared with baselines only in prose.",
+      "Scope is restricted to English-language journal and conference papers from 2013-2024 in six databases, and similarity/dissimilarity-based detection was not investigated at all.",
+      "The Fig. 7 problem-scope percentages (classification 60%, time-series 12%, supervised 7%, imbalance 7%, unsupervised 6%, regression 6%, semi-supervised 2%) are read off a published chart and cannot be reconciled against the extracted per-study records in this conversion.",
+      "No risk of bias tool (e.g. ROBINS-I, GRADE) is named, so the study-quality appraisal rests on an unvalidated Yes/Partially/No scoring scheme."
+    ],
+    "topic_mapping_rationale": "All topic domains defined in config/modules.yaml were systematically scanned against the full paper text, including the abstract, introduction, related reviews, the four-stage survey methodology, the results and analysis section with Figures 5 to 9, the four research-question sections, the taxonomy and experimental evaluation, the comparative analysis, the lessons-learned section, the conclusion with its limitations and future directions, and the appendices with Tables 12 to 14. The paper maps most strongly to ml_algorithms and forecasting, which is why the designation is international-algorithm-specific: no Philippine institution, data or population is involved, and the contribution concerns specific computational techniques for drift detection and adaptation. seasonal_expense_forecasting, financial_planning, system_evaluation and filipino_context were each checked and retained only at low or contextual relevance. expense_categorization, financial_profile_classification, financial_literacy, financial_wellbeing, savings, budget_recommendation, debt_management, behavioral_insights, anomaly_detection, pfms_systems, privacy_security, user_engagement, mobile_design, performance_indicators and agile_methodology were each checked and found absent or only tangentially present, and no topic was assigned on the strength of a passing mention."
+  },
+  "limitations": [
+    "Search-criteria restriction acknowledged by the authors: only English-language journal and conference papers published between 2013 and 2024 in SCOPUS, ScienceDirect, IEEE Xplore, Web of Science, MDPI and ACM were eligible, so some relevant studies were excluded (Sect. IX Conclusion, p. 24).",
+    "The authors note that most proposed drift detection, handling and adaptation methods remain unsolved, that reliance on simulation datasets may not capture real-world scenarios, and that single-dataset testing limits generalizability (Sect. IX, p. 24).",
+    "Comparisons with active state-of-the-art approaches are limited, and similarity-based and dissimilarity-based detection methods for time-series data were not investigated (Sect. IX, p. 24).",
+    "The authors recommend broader database coverage and adaptive learning models that adapt to drift without explicit re-training, plus unsupervised and semi-supervised detectors, causal representation learning and multimodal deep learning (Sect. IX, pp. 24–26).",
+    "[unacknowledged] The Sect. VI-B 'experimental evaluation' and Sect. VI-C 'comparative analysis' are presented as performed but report no numerical result; the roadmap-versus-baseline comparison is qualitative only.",
+    "[unacknowledged] Tables 5–13, which hold the per-study datasets, metrics and state-of-the-art appraisals behind Figures 5–9, appear only as captions in the converted text, so the per-study values cannot be verified against the figures.",
+    "[unacknowledged] The Fig. 7 problem-scope percentages are chart-read proportions and their denominators are never stated, so they cannot be tied back to the 60 included studies without the original figure."
+  ],
+  "remember_this": [
+    "PRISMA 2020 review of 60 studies on concept drift detection and adaptation in time-series data, 2013–2024.",
+    "SVM is the recommended learner; k-NN and LSTM are the next most used, ahead of XGBoost and RF.",
+    "ADWIN, HDDM and DDM are the dominant statistical drift-handling techniques in the corpus.",
+    "Problem scope is lopsided: 60% classification against only 6% regression and 2% semi-supervised.",
+    "Roadmap compares AI learners against Page-Hinkley, ADWIN, DDM, EDDM, DW_HDDM and WSTD qualitatively only."
+  ],
+  "study_design": "Systematic literature review (SLR) following the PRISMA 2020 statement and Kitchenham-Charters guidelines: a secondary, non-experimental synthesis of 60 published studies, plus a proposed non-executed AI-learner roadmap with a qualitative comparison to baseline drift detectors. No original dataset is collected, trained or evaluated by the authors.",
+  "sample": "Primary (the review's own corpus): n = 60 included studies, unit = published journal article or conference paper published 2013–2024, drawn from 183 unique records screened with 123 excluded (eight for non-English language); the 60 split into N = 46 journal articles and N = 14 conference proceedings. Secondary dataset analysed by the review: none — no dataset is collected, modelled or benchmarked by the authors; Sect. VI-B only specifies a prospective evaluation on real-world financial, weather and sensor time series and reports no results from it.",
+  "context": {
+    "geography": "Not applicable to a study population: the literature search was conducted worldwide and explicitly not restricted to a single nation or area. Author affiliations are Universiti Teknologi PETRONAS and Universiti Malaysia Sabah Labuan (Malaysia) and Alasmarya Islamic University, Zliten (Libya).",
+    "population": "Not reported — the unit of analysis is published literature (60 studies), not human participants or patients.",
+    "setting": "Virtual/literature-based: database searching of SCOPUS, ScienceDirect, IEEE Xplore, Web of Science, ACM Digital Library and MDPI, with a preliminary Google Scholar keyword search and data extraction in Microsoft Excel 16.77; no laboratory, clinical or field setting was involved."
+  },
+  "software": [
+    "Microsoft Excel (version 16.77) — data extraction and compilation of the 60 included studies",
+    "SCOPUS (version not reported) — bibliographic database",
+    "ScienceDirect (version not reported) — bibliographic database",
+    "IEEE Xplore (version not reported) — bibliographic database",
+    "Web of Science (version not reported) — bibliographic database",
+    "ACM Digital Library (version not reported) — bibliographic database",
+    "MDPI (version not reported) — bibliographic database",
+    "Google Scholar (version not reported) — preliminary keyword-combination search to build the search strategy"
+  ],
+  "quotes": [
+    {
+      "text": "This study conducted a Systematic Literature Review (SLR) that classified, identified, and recommended an optimal method for the detection and adaptation of CD in regression and classification tasks involving time-series data.",
+      "locator": "Abstract, p. 1",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "However, certain limitations exist, and most studies on CD detection and adaptation in time-series data have focused on classification learning, with minimal attention paid to regression learning.",
+      "locator": "Abstract, p. 1",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "60 studies published between 2013 and 2024 were thoroughly surveyed and evaluated using PRISMA guidelines.",
+      "locator": "Abstract, p. 1",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "Additionally, the evaluation metric performance for the validation of CD in ML models using benchmark datasets may not accurately reflect real-world industrial data.",
+      "locator": "Sec. I Introduction, p. 2",
+      "theme": "forecasting"
+    },
+    {
+      "text": "A comparative review of existing CD detection approaches based on accuracy, adaptability, and computational efficiency was conducted by synthesizing recent developments and identifying research gaps.",
+      "locator": "Sec. I Introduction, p. 2",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "These approaches maintain a set of competing models, allowing dynamic selection of the most relevant hypothesis based on the current input.",
+      "locator": "Sec. II Related Reviews, p. 3",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "This indicates that most advancements in CD detection and adaptation can be attributed to the focus on classification problems within time-series contexts.",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "In addition, most studies have employed SVM and LSTM models for CD detection and adaptation because of their ability to handle dynamic data shifts.",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 11",
+      "theme": "forecasting"
+    },
+    {
+      "text": "Metrics such as MSE and MAE are employed in time-series forecasting because of their accurate measurement of error magnitude over time.",
+      "locator": "Sec. IV-B-2 Summary of Studies Based on Model Performance, p. 12",
+      "theme": "forecasting"
+    },
+    {
+      "text": "For example, abrupt increases in error rates, such as the mean squared error (MSE), classification error, or abrupt decreases in confidence scores, indicate drift.",
+      "locator": "Sec. IV-B-2 Summary of Studies Based on Model Performance, p. 12",
+      "theme": "anomaly_detection"
+    },
+    {
+      "text": "the SVM and k-NN models are robust against feature-based changes, whereas LSTM captures temporal dependencies, making them appropriate options for various types of drifts in time-series applications.",
+      "locator": "Sec. V-B RQ2, p. 16",
+      "theme": "forecasting"
+    },
+    {
+      "text": "Temporal trends frequently exhibit trends, seasonality, and autocorrelations.",
+      "locator": "Sec. V-D RQ4, p. 17",
+      "theme": "seasonal_expense_forecasting"
+    },
+    {
+      "text": "However, standard drift detection techniques such as Page-Hinkley, ADWIN, DDM, and EDDM have been used as baselines.",
+      "locator": "Sec. VI-B-4 Baseline Methods, p. 21",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "The Intel Berkeley Research Lab provided real temperature data from 54 Mica2Dot sensors that contained weather plates.",
+      "locator": "Sec. VII Discussion, p. 22",
+      "theme": "synthetic_data_mlops"
+    },
+    {
+      "text": "For example, ADWIN dynamically adjusts the window size based on variations in the observed data.",
+      "locator": "Sec. VIII-B Selecting Appropriate Window Sizes, p. 23",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "The OAR-DLSTM method assigns prediction tasks to multiple sub-models based on recurring concepts to manage hybrid recurring drifts in industrial processes",
+      "locator": "Sec. VIII-C Handling Different Drift Types, p. 23",
+      "theme": "forecasting"
+    },
+    {
+      "text": "The lesson learned is that both data types are important because synthetic data allow rigorous and controlled experimentation, whereas real-world data demonstrate practical applicability and unforeseen challenges.",
+      "locator": "Sec. VIII-H Real-World Versus Synthetic Data, p. 24",
+      "theme": "synthetic_data_mlops"
+    },
+    {
+      "text": "However, reliance on simulation datasets may not fully capture real-world scenarios. Moreover, several studies have tested the proposed method using a single dataset, which may limit generalizability.",
+      "locator": "Sec. IX Conclusion and Future Directions, p. 24",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "Finally, this study was unable to investigate other approaches to CD detection, such as similarity and dissimilarity-based methods, using time-series data.",
+      "locator": "Sec. IX Conclusion and Future Directions, p. 24",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "Most existing methods in the literature require training models after drift detection, which can be time-consuming and disruptive in real-world scenarios",
+      "locator": "Sec. IX Future Directions, p. 25",
+      "theme": "synthetic_data_mlops"
+    }
+  ],
+  "effects": [
+    {
+      "outcome": "Studies included in the systematic review after screening",
+      "metric": "included studies",
+      "value": "60",
+      "locator": "Sect. III-B Stage 2 Screening Process, p. 6"
+    },
+    {
+      "outcome": "Unique records retrieved and reviewed during screening",
+      "metric": "screened records",
+      "value": "183",
+      "locator": "Sect. III-B Stage 2 Screening Process, p. 6"
+    },
+    {
+      "outcome": "Articles excluded during screening",
+      "metric": "excluded records",
+      "value": "123",
+      "locator": "Sect. III-B Stage 2 Screening Process, p. 6"
+    },
+    {
+      "outcome": "Records excluded for being written in a language other than English",
+      "metric": "excluded records",
+      "value": "eight",
+      "locator": "Sect. III-C Stage 3 Eligibility and Quality Assessment, p. 7"
+    },
+    {
+      "outcome": "Preliminary Google Scholar search output after quality filtering",
+      "metric": "records",
+      "value": "5,850",
+      "locator": "Sect. III-A-1 Keyword Identification, p. 6"
+    },
+    {
+      "outcome": "Included studies published in journals",
+      "metric": "studies",
+      "value": "N = 46",
+      "locator": "Sect. IV-A Characteristics of the Selected Studies, p. 9"
+    },
+    {
+      "outcome": "Included studies published in conference proceedings",
+      "metric": "studies",
+      "value": "N = 14",
+      "locator": "Sect. IV-A Characteristics of the Selected Studies, p. 9"
+    },
+    {
+      "outcome": "Included studies published in Expert Systems with Applications, the highest-output journal",
+      "metric": "publications",
+      "value": "five",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 9"
+    },
+    {
+      "outcome": "Included studies published in Information Sciences, second-highest journal output",
+      "metric": "publications",
+      "value": "four",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 9"
+    },
+    {
+      "outcome": "Share of included studies whose ML problem scope is classification (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "60%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "outcome": "Share of included studies whose ML problem scope is time-series (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "12%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "outcome": "Share of included studies whose ML problem scope is supervised (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "7%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "outcome": "Share of included studies whose ML problem scope is imbalance (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "7%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "outcome": "Share of included studies whose ML problem scope is unsupervised (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "6%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "outcome": "Share of included studies whose ML problem scope is regression (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "6%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "outcome": "Share of included studies whose ML problem scope is semi-supervised (Fig. 7 chart-read proportion)",
+      "metric": "share of studies",
+      "value": "2%",
+      "locator": "Sec. IV-A Characteristics of the Selected Studies, p. 10 (Fig. 7)"
+    },
+    {
+      "outcome": "Quality scoring scale applied to each screened study during eligibility assessment",
+      "metric": "score for Yes / Partially / No",
+      "value": "1 / 0.5 / 0",
+      "locator": "Sect. III-C Stage 3 Eligibility and Quality Assessment, p. 7"
+    },
+    {
+      "outcome": "Sensor count in the Mica2Dot real temperature dataset used by an included fog-DeepStream study",
+      "metric": "sensors",
+      "value": "54",
+      "locator": "Sec. VII Discussion, p. 22"
+    },
+    {
+      "outcome": "Publication window covered by the review's search strategy",
+      "metric": "years",
+      "value": "2013 – 2024",
+      "locator": "Sec. III-A-1 Keyword Identification, p. 6"
+    }
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-09-30T06:39:17Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "A--Abdullahi-2025_marked.md",
+      "converted_at": "2026-09-07T10:36:50Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

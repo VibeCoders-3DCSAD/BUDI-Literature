@@ -1,0 +1,599 @@
+{
+  "paper_id": "A--Aldrees-2025",
+  "designation": "international-algorithm-specific",
+  "title": "Behavioral Patterns in Micro-lending: Enhancing Credit Risk Assessment with Collaborative Filtering and Federated Learning",
+  "authors": "Aldrees, A.; Shahab, S.; Dutta, A. K.; Ahmad, W.; Anjum, M.",
+  "year": 2025,
+  "venue": "International Journal of Computing and Intelligent Systems",
+  "topic_tags": [
+    "ml_algorithms",
+    "debt_management",
+    "behavioral_insights",
+    "privacy_security",
+    "anomaly_detection",
+    "synthetic_data_mlops",
+    "financial_wellbeing",
+    "forecasting"
+  ],
+  "tldr": "A privacy-preserving credit risk method for micro-lending, CFM-LPA, combines collaborative filtering over lending patterns with federated learning, updating a behaviour factor each repayment period to filter new credit risks without sharing borrower data.",
+  "problem_and_motivation": "Micro-lending platforms struggle to assess credit risk because borrower data are scarce, borrower variety is high, and centralized credit scoring exposes sensitive financial data. Return rate and customer history behave differently at low-interest scales, where delayed or failed returns across increasing tenures shift credit risk in ways conventional methods do not capture. Existing machine learning and ensemble approaches depend on centralized data sources and rarely include privacy-preserving behavioural analysis.",
+  "approach": [
+    "Use the public Kaggle credit-risk dataset (32,581 records, 12 features) and split it into an initial input block (return + response) and a behaviour pattern block.",
+    "Derive a behaviour factor from return rate, prompt return, credit limit, credit history, default rate, liability and economic conditions, then update it at every repayment period.",
+    "Apply collaborative filtering over lending patterns, matching new borrowers to similar borrowers through user- and item-based filtering to generate risk ratings from repayment history.",
+    "Wrap the filtering in federated learning so that multiple lenders train collaboratively, exchanging model updates rather than raw borrower records.",
+    "Filter risk with Arisk, contrasting maximum and minimum credit periods, then detect new risk with riskdetect(t) conditioned on the filtered factor of the previous return period.",
+    "Bound the behaviour factor with a credit-period threshold rule, assigning Cperiod to its maximum or minimum branch when the credit-score-to-history ratio crosses the threshold.",
+    "Benchmark against SMOTE-ENN (Aruleba and Sun), LightGBM-GAN (Zhuang and Wei) and FEEM-VO (Yang and Xiao) over tenure, interest rate, amount and limit-category variants.",
+    "Run experiments in WEKA and Python 3.9 on an NVIDIA A100 (80 GB VRAM) with a 64-core AMD EPYC 7742, 128 GB RAM and 10 Gbps Ethernet.",
+    "State reliability procedures: 95% confidence intervals, a paired t-test, a Wilcoxon signed-rank test, and fivefold cross-validated Bayesian optimisation of XGBoost hyperparameters.",
+    "Discuss mitigations for model drift, poisoning and inference attacks, plus group bias, using FedAvg/FedProx, Krum, differential privacy, AIF360 and Fairlearn."
+  ],
+  "findings": [
+    "num: Table 3 reports 95.21% new risk detection for CFM-LPA, against 90.32% for FEEM-VO, 86.45% for LightGBM-GAN and 80.12% for SMOTE-ENN.",
+    "num: The abstract claims 14.03% better risk detection accuracy and 13.28% better return rate analysis across financed amounts, while Sect. 6 claims 14.82% and 13.63% for different interest rates.",
+    "num: Table 3 return rate analysis values rise from 0.81 (SMOTE-ENN) to 0.88 (LightGBM-GAN), 0.92 (FEEM-VO) and 0.97 (CFM-LPA).",
+    "num: Evaluation uses 32,581 loan records described by 12 features, with ages 20–45, loan amounts 0.5K–35K, interest rates 5.42–23.22 and credit histories of 2–30 years.",
+    "num: Table 3 limit-category accuracy for CFM-LPA is A: 90, B: 93, C: 95, D: 96, against A: 78, B: 80, C: 82, D: 84 for SMOTE-ENN.",
+    "num: Sect. 5 states 95% confidence intervals (± 2.1% for accuracy) and a paired t-test at p < 0.05, with fivefold cross-validated Bayesian optimisation of an XGBoost setup.",
+    "num: The dataset's Group A (majority) has an average credit score of 720, an 85% loan acceptance rate and a 5% default rate; Group B has 680, 65% and 7%.",
+    "num: Comparative X-variants span tenure 2–20 yrs, interest rate 5–23, amount 5–35K and limit categories A to D.",
+    "The behaviour factor is recomputed each repayment period, so the previous period's factor conditions credit risk for the next period.",
+    "The authors acknowledge that federated learning needs heavy computation and robust synchronisation across lenders, which may not scale."
+  ],
+  "key_figures_tables": [
+    "Fig. 1 (p. 6): Data used for evaluation — 32,581 records across 12 features → the behaviour factor is computed from return rate, prompt return and credit limit.",
+    "Fig. 2 (p. 8): Return rate and credit limit relation — if Rrate = Econ × t then BrC = good → a high return rate with a high score marks good behaviour patterns and low risk.",
+    "Fig. 3 (p. 9): Credit risk analysis — Crisk(t + 1) tracks borrowers whose risk grows over tenure → high debt with consistent payment still yields a high risk score.",
+    "Fig. 4 (p. 11): Lending pattern analysis — stable monthly repayment yields smooth patterns, irregular repayment yields abnormal ones → repayment consistency is the risk signal.",
+    "Fig. 5 (p. 14): Behaviour factor estimation using federated learning — Lenpat(t) enters each period → lending patterns propagate across lenders without moving raw data.",
+    "Fig. 6 (p. 15): Behaviour factor analysis under Bfact variants → a low behaviour factor marks missed payments and irregular financial activity.",
+    "Fig. 7 (p. 17): Filtering ratio analysis — Arisk contrasts maximum and minimum credit periods → a high filtering ratio means more risk being detected and filtered.",
+    "Fig. 8 (p. 19): New risk detection over time by borrower specification → stable borrowers show low occurrence of new risk, so the method surfaces fewer new risks.",
+    "Fig. 9 (p. 20): Return rate analysis — CFM-LPA holds return rate above the baselines → continuous federated updates stabilise repayment under economic fluctuation.",
+    "Table 1 (p. 5): Summary of existing models (partially garbled character-level extraction) → prior work is dominated by centralized ML, ensemble and oversampling approaches.",
+    "Table 2 (p. 21): Experimental setup — A100 80 GB, 64-core EPYC 7742, 128 GB RAM, Windows 11, Python 3.9, AIF360/Fairlearn, learning rate 0.01, max depth 10, 500 estimators → hardware is specified, but the XGBoost-style settings do not belong to the proposed CFM-LPA method.",
+    "Table 3 (p. 21): Comparative analysis — CFM-LPA 95.21% new risk detection and 0.97 return rate analysis against SMOTE-ENN 80.12%/0.81 → best reported value on both metrics."
+  ],
+  "key_equations": [
+    {
+      "equation": "ML(t) = (Clm + BrC × ((Irate × Econ + Bfact) / (1 + Bfact(t + 1)))) × Crisk",
+      "explanation": "Micro-lending risk at time t from limit, score, rate and behaviour factor."
+    },
+    {
+      "equation": "Rrate = (Ramt−tot / amt) + exp(Clm × BrC / ML(t))",
+      "explanation": "Return rate: amount returned over amount lent, adjusted by risk."
+    },
+    {
+      "equation": "Lenadjust = log((amt × Crisk / (1 − (1 + Irate)^t)) × (Rrate × Clm / (BrC × Chist))) + (1 − Dri) + Hres(t)",
+      "explanation": "Adjusted lending pattern from risk, return rate and default rate."
+    },
+    {
+      "equation": "Crisk(t + 1) = (1 / (1 + Lenpat + Econ)) × (amt × Crisk / (1 − (1 + Irate)^t))",
+      "explanation": "Next-period credit risk from lending pattern and economic condition."
+    },
+    {
+      "equation": "Lenfed(t) = Lenpat × Crisk(t + 1) × (1 / (1 + Σ (Cstable/Urepay) + BrC/(1 + Irate) + 1/(1 + Dri × Econ)))",
+      "explanation": "Federated lending pattern weighting credit stability and default."
+    },
+    {
+      "equation": "Ftbh(t) = Lenfed(t) × Ftbh−in × (1 / (1 + Econ)) ∀Urepay",
+      "explanation": "Behaviour pattern over time across all repayment tenures."
+    },
+    {
+      "equation": "Bfact(t) = Cperiod × Ftbh(t) × (Σ Oi / (1 + Irate)) × (BrC − Dri)",
+      "explanation": "Behaviour factor from credit period, pattern and liability."
+    },
+    {
+      "equation": "Arisk = Σ (Crisk × Cstable)/(Irate − maxt Cperiod) − (Crisk × Urepay)/(Irate − mint Cperiod) + Rrate × Clm + Dri × Econ",
+      "explanation": "Risk filter contrasting maximum and minimum credit periods."
+    },
+    {
+      "equation": "riskdetect(t) = (BrC + Chist + Clm) × (1 / Arisk) × (Bfact − Cperiod + Econ)",
+      "explanation": "Detected risk; exceeding Arisk indicates a high-risk borrower."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "CFM-LPA",
+      "definition": "Collaborative Filtering Method using Lending Pattern Analysis, the paper's proposed credit risk assessment method."
+    },
+    {
+      "term": "Behaviour factor (Bfact)",
+      "definition": "Borrower behavioural factor derived from credit period, liability and pattern, normalised and recomputed each repayment period."
+    },
+    {
+      "term": "Return rate (Rrate)",
+      "definition": "Share of the lent amount returned by the borrower, adjusted by credit limit and micro-lending risk."
+    },
+    {
+      "term": "Credit limit (Clm)",
+      "definition": "Limit extended to the borrower over time; a high limit is treated as a signal of financial risk."
+    },
+    {
+      "term": "Lenpat / Lenfed",
+      "definition": "The lending pattern term and its federated-learning counterpart that generalises patterns across lenders."
+    },
+    {
+      "term": "Arisk",
+      "definition": "Filtered risk factor built from the difference between maximum and minimum credit periods."
+    },
+    {
+      "term": "FEEM-VO",
+      "definition": "Feature Enhanced Ensemble Modeling with Voting Optimization, a Yang and Xiao baseline used for comparison."
+    },
+    {
+      "term": "Kaggle credit-risk dataset",
+      "definition": "Public dataset by Kaggle user laotse supplying the 32,581 records and 12 features used in all experiments."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Zhuang, Y.; Wei, H.",
+      "year": 2024,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "GAN-LightGBM model uses generative adversarial networks for data imbalance and LightGBM to estimate credit risk in fintech.",
+      "role": "baseline"
+    },
+    {
+      "author": "Aruleba, I.; Sun, Y.",
+      "year": 2024,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Ensemble of Random Forest, adaptive boosting and XGBoost with SMOTE-ENN plus SHAP improves interpretability and class balance.",
+      "role": "baseline"
+    },
+    {
+      "author": "Yang, D.; Xiao, B.",
+      "year": 2024,
+      "page": 3,
+      "paragraph": 3,
+      "claim": "Multi-stage ensemble model combines behavioural and non-financial data with bagging-based oversampling for SME credit risk.",
+      "role": "baseline"
+    },
+    {
+      "author": "Gamba-Santamaria, S.; Melo-Velandia, L. F.; Orozco-Vanegas, C.",
+      "year": 2023,
+      "page": 3,
+      "paragraph": 4,
+      "claim": "Intrinsic estimators with penalized regression split loan risk into payment capacity and risk-taking components, handling multicollinearity.",
+      "role": "context"
+    },
+    {
+      "author": "Wang, F.; Ding, L.; Yu, H.; Zhao, Y.",
+      "year": 2020,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Nonlinear least squares SVM builds an index system for credit risk classification in online supply chains.",
+      "role": "methodology"
+    },
+    {
+      "author": "Rao, C.; Liu, Y.; Goh, M.",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "Particle swarm optimisation tunes XGBoost hyperparameters for auto loan credit risk while lowering computational cost.",
+      "role": "methodology"
+    },
+    {
+      "author": "Shetabi, M.",
+      "year": 2024,
+      "page": 4,
+      "paragraph": 3,
+      "claim": "Evolutionary ensemble feature selection adapts to changing risk factors in FinTech lending.",
+      "role": "context"
+    },
+    {
+      "author": "Xia, H.; Liu, J.; Zhang, Z. J.",
+      "year": 2024,
+      "page": 4,
+      "paragraph": 3,
+      "claim": "Machine learning classification over platform Q&A text identifies harmful behaviour on online loan platforms.",
+      "role": "context"
+    },
+    {
+      "author": "Sinkey, J. F., Jr.; Greenawalt, M. B.",
+      "year": 1991,
+      "page": 4,
+      "paragraph": 4,
+      "claim": "Statistical analysis of loan-loss experience and risk-taking at large commercial banks informs lending strategy.",
+      "role": "context"
+    },
+    {
+      "author": "Li, Z.; Liang, S.; Pan, X.; Pang, M.",
+      "year": 2024,
+      "page": 4,
+      "paragraph": 4,
+      "claim": "Loan profit forecast combining financial and non-financial information improves SME credit risk prediction.",
+      "role": "context"
+    },
+    {
+      "author": "Wang, Y.; Zhang, Y.; Liang, M.; Yuan, R.; Feng, J.; Wu, J.",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 5,
+      "claim": "Heterogeneous ensemble learning with SHAP corrects class imbalance for national student loan default prediction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Zhang, R.; Lin, C.; Tong, Z.",
+      "year": 2021,
+      "page": 4,
+      "paragraph": 5,
+      "claim": "Visual early warning system analyses danger indicators in real time for college net loan credit risk.",
+      "role": "context"
+    },
+    {
+      "author": "Liu, P.; Shao, Y.",
+      "year": 2013,
+      "page": 4,
+      "paragraph": 6,
+      "claim": "Loan securitization and risk-sharing systems reduce revenue volatility for small enterprises.",
+      "role": "context"
+    },
+    {
+      "author": "laotse (Kaggle)",
+      "year": 0,
+      "page": 6,
+      "paragraph": 1,
+      "claim": "Public Kaggle credit-risk dataset supplies the 32,581 records and 12 features used for all experiments.",
+      "role": "methodology"
+    },
+    {
+      "author": "Aiello, M. A.; Angelico, C.",
+      "year": 2023,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Carbon tax exposure affects business loan default rates at Italian banks, motivating risk-factor based credit assessment.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "ml_algorithms",
+        "name": "Machine Learning Algorithms for Personal Finance",
+        "relevance": "high",
+        "justification": "Supplies the core algorithm, a collaborative filtering plus federated learning risk model benchmarked against SMOTE-ENN, LightGBM-GAN and FEEM-VO, with accuracy reported in Table 3."
+      },
+      {
+        "code": "debt_management",
+        "name": "Debt Management",
+        "relevance": "high",
+        "justification": "Micro-lending, repayment behaviour, default rate, credit limit and credit risk are the paper's entire subject, expressed through return rate and credit stability terms."
+      },
+      {
+        "code": "behavioral_insights",
+        "name": "Behavioral Finance Insights",
+        "relevance": "high",
+        "justification": "The behaviour factor is built from repayment consistency, peer influence, financial adaptability and loan purpose, making borrower psychology the model's signal."
+      },
+      {
+        "code": "privacy_security",
+        "name": "Privacy and Security in Finance Apps",
+        "relevance": "high",
+        "justification": "Decentralized federated training is proposed explicitly as the remedy for centralized data collection, with poisoning, inference attacks and differential privacy discussed."
+      },
+      {
+        "code": "anomaly_detection",
+        "name": "Anomaly and Overspending Detection",
+        "relevance": "medium",
+        "justification": "New-risk detection, filtering ratio and abnormal repayment patterns are operationalised through Arisk and riskdetect(t) rather than classical outlier methods."
+      },
+      {
+        "code": "synthetic_data_mlops",
+        "name": "Synthetic Data and ML Serving",
+        "relevance": "medium",
+        "justification": "GAN and SMOTE based synthetic oversampling appear in the baselines, and the paper discusses drift-aware aggregation, model upgrades and serving concerns."
+      },
+      {
+        "code": "financial_wellbeing",
+        "name": "Financial Well-being and Security",
+        "relevance": "low",
+        "justification": "Credit stability and repayment consistency are treated as financial stability indicators of borrowers, but no well-being instrument or measure is used."
+      },
+      {
+        "code": "forecasting",
+        "name": "Seasonal Expense Forecasting",
+        "relevance": "low",
+        "justification": "Period-to-period updating and drift monitoring (FedProx, ADWIN, Kolmogorov–Smirnov) are discussed, but no time series forecast or seasonality is modelled."
+      },
+      {
+        "code": "pfms_systems",
+        "name": "Personal Finance Management Systems",
+        "relevance": "low",
+        "justification": "Lending-platform credit scoring is adjacent to finance applications, but no personal finance app, dashboard or interface is built or evaluated."
+      },
+      {
+        "code": "filipino_context",
+        "name": "Filipino Financial Ecosystem and Culture",
+        "relevance": "low",
+        "justification": "No Philippine institution, data source or population appears; the study is international and uses a public non-Filipino loan dataset."
+      }
+    ],
+    "contribution_to_field": "The paper packages credit risk scoring for micro-lending as a privacy problem rather than purely a predictive one, proposing that lenders share federated model updates instead of borrower records. It shows how a behaviour factor derived from return rate, credit limit, credit history and economic conditions can be refreshed every repayment period and filtered to isolate newly emerging risks. Empirically, the proposed CFM-LPA reports the best values among three published baselines on a 32,581-record public loan dataset. The contribution is therefore conceptual and architectural; the reported gains are large but rest on a single offline dataset with internally inconsistent headline numbers, which limits how far the result generalises.",
+    "directly_justifies": [
+      "Privacy-preserving credit scoring can be achieved by exchanging federated model updates across lenders instead of raw borrower records.",
+      "Recomputing a behaviour factor every repayment period lets a model filter new credit risks that centralised batch scoring misses.",
+      "CFM-LPA reported 95.21% new risk detection on 32,581 public loan records, above SMOTE-ENN, LightGBM-GAN and FEEM-VO.",
+      "Collaborative filtering over lending patterns generalises risk ratings to new borrowers with sparse individual repayment history."
+    ],
+    "limits": [
+      "Headline gains are self-contradictory: 14.03%/13.28% in the abstract against 14.82%/13.63% in the conclusion, and neither is reproducible from Table 3.",
+      "Table 2's XGBoost hyperparameters, learning rate and estimator count do not describe the proposed CFM-LPA method, so the experimental setup is not reproducible as stated.",
+      "Only accuracy and return rate analysis are reported; no precision, recall, F1, per-fold variance or per-class result is given.",
+      "Table 1 and Table 3 suffer garbled column alignment in the conversion, leaving the X-variant columns ambiguous."
+    ],
+    "topic_mapping_rationale": "All topic domains defined in config/modules.yaml were systematically scanned against the full paper text, including the abstract, introduction, related works, method sections 4.1 and 4.2, the equations, algorithms, the results tables and the conclusion. The paper maps most strongly to ml_algorithms, debt_management, behavioral_insights and privacy_security, which is why the designation is international-algorithm-specific: no Philippine institution, data or population is involved, and the contribution is a specific computational technique. Forecasting, seasonal_expense_forecasting, financial_planning, savings, budget_recommendation, expense_categorization, financial_profile_classification, financial_literacy, financial_wellbeing, user_engagement, mobile_design, system_evaluation, performance_indicators and agile_methodology were each checked and found absent or only tangentially present, and no topic was assigned on the strength of a passing mention."
+  },
+  "limitations": [
+    "Headline results are internally inconsistent and not reproducible: the Abstract reports 14.03% better risk detection accuracy and 13.28% better return rate analysis across financed amounts, while Sect. 6 (Conclusion, p. 21) reports 14.82% and 13.63% for different interest rates; neither matches the 95.21% vs 80.12% gap in Table 3.",
+    "The authors acknowledge that reliance on collaborative filtering may introduce biases when lending data are sparse or imbalanced, producing inaccurate risk predictions for new or underrepresented borrowers (Sect. 6, p. 22).",
+    "Federated learning requires significant computational resources and robust synchronization across multiple lending institutions, which may pose scalability challenges (Sect. 6, p. 22).",
+    "Future studies are still needed on scalability through efficient federated communication protocols, reduced computational overhead, and real-time financial indicators or alternative credit data such as social and transactional behaviour (Sect. 6, p. 22).",
+    "[unacknowledged] The study is an offline simulation on a single public Kaggle dataset with no live lending platform, no human participants and no Philippine data, so external validity is untested.",
+    "[unacknowledged] Table 2's learning rate, max depth, 500 estimators and Bayesian-optimised XGBoost settings belong to a baseline-style configuration rather than the proposed CFM-LPA, leaving the reported setup unreproducible.",
+    "[unacknowledged] No precision, recall, F1, per-fold variance or per-class result is reported, and the Table 1 and Table 3 column alignment is ambiguous, so the comparison cannot be fully reconstructed."
+  ],
+  "remember_this": [
+    "CFM-LPA pairs collaborative filtering with federated learning for privacy-preserving micro-lending credit risk assessment.",
+    "Evaluation uses 32,581 public Kaggle loan records against SMOTE-ENN, LightGBM-GAN and FEEM-VO baselines.",
+    "Table 3 gives CFM-LPA 95.21% new risk detection, the highest of the four compared models.",
+    "Abstract and conclusion disagree: 14.03% versus 14.82% risk detection, 13.28% versus 13.63% return rate.",
+    "The behaviour factor is recomputed each repayment period and conditions the next period's credit risk."
+  ],
+  "study_design": "Computational method-development study with comparative benchmark evaluation against three published models; the authors state no formal design label.",
+  "sample": "n = 32,581 loan records (public Kaggle credit-risk dataset by user laotse, 12 features, one record per loan application)",
+  "context": {
+    "geography": "Not reported (no country stated; the dataset is a public international loan dataset)",
+    "population": "Micro-lending borrowers aged 20-45 with incomes of 4K-2039K, employment tenure of 1-31 years, loan grades A-D and loan amounts of 0.5K-35K",
+    "setting": "Virtual/computational: offline simulation of micro-lending credit risk assessment on an NVIDIA A100 with WEKA and Python 3.9; no live lending platform was involved"
+  },
+  "software": [
+    "WEKA (version not reported)",
+    "Python 3.9",
+    "AIF360 (version not reported)",
+    "Fairlearn (version not reported)",
+    "XGBoost, Bayesian-optimised: 500 boosting rounds, learning rate 0.05, max depth 6, subsample 0.8, feature fraction 0.7, L2 lambda 1.2",
+    "SMOTE-ENN (baseline implementation, version not reported)",
+    "LightGBM-GAN (baseline implementation, version not reported)",
+    "FEEM-VO (baseline implementation, version not reported)",
+    "FedAvg / FedProx federated aggregation (version not reported)"
+  ],
+  "quotes": [
+    {
+      "text": "This article introduces a Collaborative Filtering Method using Lending Pattern Analysis (CFM-LPA).",
+      "locator": "Abstract, p. 1",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "The proposed method enhances risk detection accuracy by 14.03% and improves return rate analysis by 13.28% across financed amounts.",
+      "locator": "Abstract, p. 1",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "The proposed method improves the risk detection analysis by 14.82% and return rate analysis by 13.63% for the different interest rates.",
+      "locator": "Sec. 6 Conclusion, p. 21",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "Data shortage, borrower variety, and privacy issues contribute to micro-lending platforms’ ongoing struggles with proper credit risk assessment.",
+      "locator": "Sec. 1.1 Research Gap, p. 2",
+      "theme": "debt_management"
+    },
+    {
+      "text": "Due to security concerns and a lack of flexibility for changing financial patterns, traditional credit scoring algorithms often depend on centralized data collecting.",
+      "locator": "Sec. 1.1 Research Gap, p. 2",
+      "theme": "privacy_security"
+    },
+    {
+      "text": "The above data are provided for 32,581 record sets as collected from the dataset.",
+      "locator": "Sec. 3 Data Description, p. 6",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "Research on the combination of federated learning with collaborative filtering for customized credit risk prediction is still in its early stages, but it provides a privacy-preserving option.",
+      "locator": "Sec. 2 Related Works, p. 6",
+      "theme": "privacy_security"
+    },
+    {
+      "text": "CFM enhances lending decisions through federated learning without exchanging borrower-specific data directly to maintain privacy.",
+      "locator": "Sec. 4.1 Collaborative Filtering, p. 10",
+      "theme": "privacy_security"
+    },
+    {
+      "text": "A borrower with irregular repayment and behaviour patterns leads to abnormal patterns and indicates a potential risk during lending.",
+      "locator": "Sec. 4.1 Collaborative Filtering, p. 12",
+      "theme": "behavioral_insights"
+    },
+    {
+      "text": "One possible source of bias in the dataset is the difference between Group A (the majority) and Group B (the minority).",
+      "locator": "Sec. 5 Results and Discussion, p. 19",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "A borrower with predictable and stable financial behaviour will have a low occurrence of new risk",
+      "locator": "Sec. 5 Results and Discussion, p. 20",
+      "theme": "anomaly_detection"
+    },
+    {
+      "text": "As data distributions vary over time, a phenomenon known as model drift occurs, and the prediction performance continues to decline.",
+      "locator": "Sec. 5 Results and Discussion, p. 20",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "However, the model’s reliance on collaborative filtering may introduce biases if the available lending data is sparse or imbalanced, potentially leading to inaccurate risk predictions for new or underrepresented borrowers.",
+      "locator": "Sec. 6 Conclusion, pp. 21-22",
+      "theme": "ml_algorithms"
+    },
+    {
+      "text": "Federated learning ensures data privacy; it requires significant computational resources and robust synchronization across multiple lending institutions, which may pose scalability challenges.",
+      "locator": "Sec. 6 Conclusion, p. 22",
+      "theme": "privacy_security"
+    }
+  ],
+  "effects": [
+    {
+      "outcome": "Risk detection accuracy improvement of the proposed CFM-LPA across financed amounts",
+      "metric": "accuracy improvement",
+      "value": "14.03%",
+      "locator": "Abstract, p. 1"
+    },
+    {
+      "outcome": "Return rate analysis improvement of the proposed CFM-LPA across financed amounts",
+      "metric": "return rate improvement",
+      "value": "13.28%",
+      "locator": "Abstract, p. 1"
+    },
+    {
+      "outcome": "Risk detection analysis improvement of the proposed CFM-LPA for the different interest rates",
+      "metric": "accuracy improvement",
+      "value": "14.82%",
+      "locator": "Sec. 6 Conclusion, p. 21"
+    },
+    {
+      "outcome": "Return rate analysis improvement of the proposed CFM-LPA for the different interest rates",
+      "metric": "return rate improvement",
+      "value": "13.63%",
+      "locator": "Sec. 6 Conclusion, p. 21"
+    },
+    {
+      "outcome": "New risk detection, proposed CFM-LPA",
+      "metric": "accuracy",
+      "value": "95.21%",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "New risk detection, FEEM-VO baseline",
+      "metric": "accuracy",
+      "value": "90.32%",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "New risk detection, LightGBM-GAN baseline",
+      "metric": "accuracy",
+      "value": "86.45%",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "New risk detection, SMOTE-ENN baseline",
+      "metric": "accuracy",
+      "value": "80.12%",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "Return rate analysis, proposed CFM-LPA",
+      "metric": "return rate",
+      "value": "0.97",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "Return rate analysis, FEEM-VO baseline",
+      "metric": "return rate",
+      "value": "0.92",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "Return rate analysis, LightGBM-GAN baseline",
+      "metric": "return rate",
+      "value": "0.88",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "Return rate analysis, SMOTE-ENN baseline",
+      "metric": "return rate",
+      "value": "0.81",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "New risk detection by limit category, proposed CFM-LPA",
+      "metric": "accuracy by loan grade",
+      "value": "A: 90, B: 93, C: 95, D: 96",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "New risk detection by limit category, FEEM-VO baseline",
+      "metric": "accuracy by loan grade",
+      "value": "A: 86, B: 89, C: 91, D: 93",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "New risk detection by limit category, LightGBM-GAN baseline",
+      "metric": "accuracy by loan grade",
+      "value": "A: 82, B: 85, C: 88, D: 90",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "New risk detection by limit category, SMOTE-ENN baseline",
+      "metric": "accuracy by loan grade",
+      "value": "A: 78, B: 80, C: 82, D: 84",
+      "locator": "Table 3, p. 21"
+    },
+    {
+      "outcome": "Reliability procedure reported for the accuracy estimates",
+      "metric": "95% confidence interval half-width for accuracy",
+      "value": "± 2.1%",
+      "ci": "± 2.1%",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "outcome": "Significance testing reported for the comparative results",
+      "metric": "paired t-test p-value",
+      "value": "p < 0.05",
+      "p": "<0.05",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "outcome": "Group A (majority) average credit score in the dataset",
+      "metric": "credit score",
+      "value": "720",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "outcome": "Group A (majority) loan acceptance rate in the dataset",
+      "metric": "acceptance rate",
+      "value": "85%",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "outcome": "Group A (majority) default rate in the dataset",
+      "metric": "default rate",
+      "value": "5%",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "outcome": "Group B (minority) average credit score in the dataset",
+      "metric": "credit score",
+      "value": "680",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "outcome": "Group B (minority) loan approval rate in the dataset",
+      "metric": "approval rate",
+      "value": "65%",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "outcome": "Group B (minority) default rate in the dataset",
+      "metric": "default rate",
+      "value": "7%",
+      "locator": "Sec. 5 Results and Discussion, p. 19"
+    },
+    {
+      "outcome": "Evaluation sample size",
+      "metric": "records",
+      "value": "32,581",
+      "locator": "Sec. 3 Data Description, p. 6"
+    }
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-09-30T06:32:39Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "A--Aldrees-2025_marked.md",
+      "converted_at": "2026-09-07T10:00:48Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

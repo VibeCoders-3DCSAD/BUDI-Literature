@@ -14,7 +14,8 @@ for the BUDI thesis. **No LLMs, no token APIs, no agents.**
 - `config/modules.yaml` — **the single source of truth** for what "relevant" means
 - `scripts/` — fetch, convert, embed, and score pipeline
 - `scores/` — generated, committed outputs (see below)
-- `docs/standards/` — naming conventions, summary schema, workflow documentation
+- `skills/` — agent-facing extraction contract for `_summarized.json`
+- `docs/standards/` — naming conventions, summary schema, matrix format, workflow documentation
 
 ## Setup
 
@@ -68,7 +69,8 @@ mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
 ### 3. Summarize
 
 Use an AI agent to fill `_summarized.json` with a structured summary.
-Schema: `docs/standards/summary-format.md`.
+Schema: `docs/standards/summary-format.md`. Output contract:
+`skills/literature-review-summarizer.md`.
 
 ### 4. Score
 
@@ -77,6 +79,18 @@ python3 scripts/embed.py            # --force to rebuild; resumable
 python3 scripts/score.py            # --modules a,b to score a subset
 python3 scripts/manifest.py         # rebuild manifest if conversions changed
 ```
+
+### 5. Build the literature review matrix
+
+```bash
+python3 scripts/build_matrix.py           # regenerate matrix + long tables + validation
+python3 scripts/build_matrix.py --check   # validate only; exit 1 on any error
+```
+
+Reads `metadata.json`, `scores/index.json`, and every `_summarized.json`, then
+writes `docs/literature-review-matrix.md`, `scores/quotes.json`,
+`scores/effects.json`, and `scores/matrix-validation.md`. The matrix is
+generated — never hand-edit it. Column rules: `docs/standards/matrix-format.md`.
 
 ## How relevance & quality are computed
 
@@ -98,7 +112,8 @@ The design rule is: **edits go in `config/`, never in code.**
 |--------|-----------|
 | New/renamed/removed module, or new query wording | Edit `config/modules.yaml` -> `python3 scripts/score.py` |
 | Thresholds (crucial/supporting, redundancy) | Edit `config/modules.yaml` -> `python3 scripts/score.py` |
-| A conversion or new paper added/changed | `python3 scripts/embed.py` -> `python3 scripts/score.py` |
+| A conversion or new paper added/changed | `python3 scripts/embed.py` -> `python3 scripts/score.py` -> `python3 scripts/build_matrix.py` |
+| A paper summarized or re-read | `python3 scripts/build_matrix.py` |
 | Topics now come from a different outline | Replace the `modules:` block in `config/modules.yaml` |
 
 ## Scores reference
@@ -107,10 +122,14 @@ The design rule is: **edits go in `config/`, never in code.**
 - `scores/report.md` — per-module ranked tables, prime cull candidates, near-duplicate clusters
 - `scores/redundancy.json` — duplicate clusters with `keep`/`cull` decisions
 - `scores/validation.md` — sanity check of automated scores vs existing annotations
+- `scores/quotes.json`, `scores/effects.json` — long evidence tables extracted per paper
+- `scores/matrix-validation.md` — matrix validation errors and informational gaps
+- `docs/literature-review-matrix.md` — generated 17-column index over the corpus
 
 ## Notes
 
 - Generated scores are committed so the scored corpus is browsable without running anything.
 - `cache/` is gitignored (regenerable). Only ~101 MB of markdown is committed.
 - Batch structure is by intake run, not by topic. Re-organize when the topical outline is finalized.
+- Bibliographic metadata lives in `literature/conversions/metadata.json` (page-1 verified) and overrides conversion frontmatter. There is no `refs.bib`.
 - Old topic codes (`1.A`-`14.C`) in summaries follow the previous thesis outline. Module definitions in `config/modules.yaml` supersede them for scoring.

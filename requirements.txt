@@ -1,17 +1,17 @@
 # Offline RRL processing — no LLM/token APIs.
-#
-# For a CPU-only install, pre-install torch from the CPU index to keep it small:
-#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Stdlib-only scripts (build_matrix.py) need nothing but PyYAML.
 
-# Scoring pipeline
-numpy>=1.26
-scikit-learn>=1.4
-rank-bm25>=0.2.2
+# Taxonomy
 PyYAML>=6.0
-sentence-transformers>=3.0
 
 # PDF conversion
 markitdown[pdf]
 pypdf
 PyPDF2
 pdfminer.six
+
+# Optional: perceptual-hash tier of scripts/check_dupe_pdfs.py --cascade.
+# The script falls back to SHA-256 + text similarity when these are absent.
+# PyMuPDF>=1.24
+# Pillow>=10.0
+# ImageHash>=4.3

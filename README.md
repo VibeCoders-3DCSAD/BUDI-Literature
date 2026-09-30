@@ -1,33 +1,42 @@
 # BUDI-Literature
 
-Self-contained Review of Related Literature (RRL) corpus and scoring pipeline
-for the BUDI thesis. **No LLMs, no token APIs, no agents.**
+Self-contained Review of Related Literature (RRL) corpus and matrix generator for
+the BUDGIE thesis.
 
-## What lives here
+A paper enters the corpus as a PDF, becomes a markdown conversion and a
+structured summary, and is then projected into a generated review matrix. There
+is no scoring stage: which outline modules a paper belongs to is decided during
+extraction, and the matrix is a count of those assignments.
 
-- `literature/conversions/` — the curated paper corpus, flat (one file pair per paper):
-  - `{stem}_marked.md` — full-text markdown conversion (with YAML metadata frontmatter)
-  - `{stem}_summarized.json` — structured summary (metadata, `topic_tags`, findings, citations)
-  - (Intake provenance lives in git history; earlier per-batch subdirectories were flattened or removed as superseded.)
-- `literature/bucket/` — raw candidate PDFs for intake
-- `literature/papers/` — fetched source PDFs (gitignored; use `scripts/fetch_pdfs.py`)
-- `config/modules.yaml` — **the single source of truth** for what "relevant" means
-- `scripts/` — fetch, convert, embed, and score pipeline
-- `scores/` — generated, committed outputs (see below)
-- `skills/` — agent-facing extraction contract for `_summarized.json`
-- `docs/standards/` — naming conventions, summary schema, matrix format, workflow documentation
+## What's Here
+
+| Directory / File | Purpose |
+| :--- | :--- |
+| `config/taxonomy.yaml` | **The single source of truth** for the module namespace: 20 modules across the 5 Topical Outline V4 sections |
+| `literature/conversions/` | The curated corpus, flat, one file pair per paper — `{stem}_marked.md` plus `{stem}_summarized.json` — and `metadata.json`, the page-1 verified bibliographic authority |
+| `review/` | **Generated** matrix, CSV tables, and per-paper notes; `review/synthesis/` is hand-written |
+| `literature/bucket/` | Raw candidate PDFs for intake |
+| `literature/papers/` | Fetched source PDFs (gitignored; use `scripts/fetch_pdfs.py`) |
+| `scripts/` | Fetch, convert, and matrix generation |
+| `skills/` | Agent-facing extraction contract for `_summarized.json` |
+| `docs/standards/` | Naming conventions, summary schema, review layout, workflow documentation |
+
+Intake provenance lives in git history; earlier per-batch subdirectories were flattened or removed as superseded.
 
 ## Setup
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-# CPU-only torch first (smaller), then the rest:
-pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
 ```
 
-## Full Pipeline
+## Usage
+
+A paper enters the corpus as a PDF, becomes a markdown conversion and a
+structured summary, and is then projected into a generated review matrix. There
+is no scoring stage: which outline modules a paper belongs to is decided during
+extraction, and the matrix is a count of those assignments.
 
 ### 1. Fetch PDFs
 
@@ -44,7 +53,7 @@ python3 scripts/fetch_pdfs.py --source remote --url https://example.com/papers.z
 
 PDFs land in `literature/papers/` (gitignored). SHA-256 hashes are printed for each file.
 
-Optional: inspect before converting:
+Optional inspection before converting:
 
 ```bash
 python3 scripts/count_pdf_pages.py literature/papers/
@@ -57,9 +66,8 @@ python3 scripts/check_dupe_pdfs.py literature/papers/ --cascade
 python3 scripts/prepare_pdf.py literature/papers/ --page-aware
 ```
 
-Produces `{stem}_marked.md` (with metadata frontmatter) + empty `{stem}_summarized.json`.
-
-Move into the corpus root:
+Produces `{stem}_marked.md` (with metadata frontmatter) plus an empty
+`{stem}_summarized.json`. Move the pair into the corpus root:
 
 ```bash
 mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
@@ -68,41 +76,43 @@ mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
 
 ### 3. Summarize
 
-Use an AI agent to fill `_summarized.json` with a structured summary.
-Schema: `docs/standards/summary-format.md`. Output contract:
-`skills/literature-review-summarizer.md`.
+Use an AI agent to fill `_summarized.json`. Schema:
+`docs/standards/summary-format.md`. Extraction contract, including the module
+assignment rules: `skills/literature-review-summarizer.md`.
 
-### 4. Score
+The one field that cannot be skipped is `modules[]` — the ids from
+`config/taxonomy.yaml` that this paper genuinely covers, each with a
+`module_rationale` clause.
 
-```bash
-python3 scripts/embed.py            # --force to rebuild; resumable
-python3 scripts/score.py            # --modules a,b to score a subset
-python3 scripts/manifest.py         # rebuild manifest if conversions changed
-```
-
-### 5. Build the literature review matrix
+### 4. Build the matrix
 
 ```bash
-python3 scripts/build_matrix.py           # regenerate matrix + long tables + validation
+python3 scripts/build_matrix.py           # regenerate review/
 python3 scripts/build_matrix.py --check   # validate only; exit 1 on any error
 ```
 
-Reads `metadata.json`, `scores/index.json`, and every `_summarized.json`, then
-writes `docs/literature-review-matrix.md`, `scores/quotes.json`,
-`scores/effects.json`, and `scores/matrix-validation.md`. The matrix is
-generated — never hand-edit it. Column rules: `docs/standards/matrix-format.md`.
+Reads `metadata.json`, every `_summarized.json`, and `config/taxonomy.yaml`, then
+writes the whole `review/` tree: `literature-review-matrix.md`, the five CSVs
+under `data/`, one note per paper under `notes/`, and `validation.md`.
 
-## How relevance & quality are computed
+The matrix is generated — never hand-edit it. Column definitions, the tag
+namespace, and the validator rules are in `docs/standards/review-layout.md`.
 
-For each paper x module in `config/modules.yaml`:
+## How coverage is computed
 
-| Signal | Method | Weight |
-|--------|--------|--------|
-| Semantic relevance | BERT document embedding vs module query (`all-MiniLM-L6-v2`, local CPU) | 0.5 |
-| Lexical relevance | TF-IDF cosine similarity | 0.3 |
-| Lexical ranking | BM25 | 0.2 |
+There is no scoring. A paper is assigned to zero or more taxonomy modules during
+extraction, and the coverage tables count those assignments:
 
-Quality is rule-based: sample size, national-source mention (FIES/PSA/BSP), recency, page count, and designation (local/algorithm-specific). Near-duplicate papers are clustered by embedding cosine similarity.
+| Question | Answer |
+| :--- | :--- |
+| How many papers support `sarima`? | Count rows in `review/data/themes.csv` |
+| Which papers are in `model_algorithm_integration`? | `papers` / `paper_ids` in `themes.csv`, or `data/screening.csv` |
+| What does a paper report? | `review/notes/{stem}.md` |
+| What are the exact figures? | `review/data/effects.csv` |
+| What did they say, verbatim? | `review/data/quotes.csv` |
+
+No relevance score, weight, tier, or priority exists anywhere in the pipeline. A
+module with no papers is a gap in the corpus, not a reason to loosen assignment.
 
 ## Adapting when the thesis changes
 
@@ -110,26 +120,40 @@ The design rule is: **edits go in `config/`, never in code.**
 
 | Change | What to do |
 |--------|-----------|
-| New/renamed/removed module, or new query wording | Edit `config/modules.yaml` -> `python3 scripts/score.py` |
-| Thresholds (crucial/supporting, redundancy) | Edit `config/modules.yaml` -> `python3 scripts/score.py` |
-| A conversion or new paper added/changed | `python3 scripts/embed.py` -> `python3 scripts/score.py` -> `python3 scripts/build_matrix.py` |
+| New/renamed/removed module | Edit `config/taxonomy.yaml` -> `python3 scripts/build_matrix.py` |
 | A paper summarized or re-read | `python3 scripts/build_matrix.py` |
-| Topics now come from a different outline | Replace the `modules:` block in `config/modules.yaml` |
+| A conversion added or changed | `python3 scripts/build_matrix.py` |
+| A bibliographic correction | Edit `literature/conversions/metadata.json` -> `python3 scripts/build_matrix.py` |
+| Topics come from a different outline | Replace `config/taxonomy.yaml`, then re-tag existing summaries' `modules[]` |
 
-## Scores reference
+Renaming a module is not a free operation: the ids are stored inside every
+`_summarized.json`, so a rename leaves the corpus reporting the old namespace
+until the summaries are retagged. `--check` reports retired vocabulary as a gap
+rather than an error so you can see the scale of the retag first.
 
-- `scores/index.json` — per-paper x module scores, best module, tier, quality, redundancy info
-- `scores/report.md` — per-module ranked tables, prime cull candidates, near-duplicate clusters
-- `scores/redundancy.json` — duplicate clusters with `keep`/`cull` decisions
-- `scores/validation.md` — sanity check of automated scores vs existing annotations
-- `scores/quotes.json`, `scores/effects.json` — long evidence tables extracted per paper
-- `scores/matrix-validation.md` — matrix validation errors and informational gaps
-- `docs/literature-review-matrix.md` — generated 17-column index over the corpus
+## Generated reference
+
+| File | Purpose |
+| :--- | :--- |
+| `review/literature-review-matrix.md` | Generated 15-column index over the corpus |
+| `review/data/papers.csv` | The same 15 columns plus a controlled `tags` column |
+| `review/data/screening.csv` | Intake triage: status, module count, DOI and venue completeness |
+| `review/data/quotes.csv` | One row per extracted quotation |
+| `review/data/effects.csv` | One row per statistical result |
+| `review/data/themes.csv` | Per-module coverage tally |
+| `review/notes/{stem}.md` | One readable note per paper |
+| `review/validation.md` | Errors and informational gaps from the last build |
 
 ## Notes
 
-- Generated scores are committed so the scored corpus is browsable without running anything.
-- `cache/` is gitignored (regenerable). Only ~101 MB of markdown is committed.
-- Batch structure is by intake run, not by topic. Re-organize when the topical outline is finalized.
+- The generated tree is committed so the corpus is browsable without running anything.
+- Only `review/data/*.csv` is force-tracked; other `*.csv` outputs stay ignored.
+- Batch structure is by intake run, not by topic. Re-organize by topic when the topical outline is finalized.
 - Bibliographic metadata lives in `literature/conversions/metadata.json` (page-1 verified) and overrides conversion frontmatter. There is no `refs.bib`.
-- Old topic codes (`1.A`-`14.C`) in summaries follow the previous thesis outline. Module definitions in `config/modules.yaml` supersede them for scoring.
+- Old topic codes (`1.A`-`14.C`) and the retired `topic_tags` / `topic_relevance` fields predate `config/taxonomy.yaml`. `scripts/build_matrix.py` reports them as a gap to retag; do not write them.
+
+## Navigation
+
+See [INDEX.md](INDEX.md) for the full repository index, and
+[docs/standards/rrl-workflow.md](docs/standards/rrl-workflow.md) for the
+step-by-step processing workflow.

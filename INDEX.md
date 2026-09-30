@@ -11,16 +11,16 @@
 | Need | Go to |
 | :--- | :--- |
 | Project overview, setup, and pipeline | `README.md` |
-| Relevance scoring module definitions (the source of truth) | `config/modules.yaml` |
+| Module namespace — the source of truth | `config/taxonomy.yaml` |
 | Curated paper corpus | `literature/conversions/` |
-| Literature review matrix (generated) | `docs/literature-review-matrix.md` |
+| Literature review matrix (generated) | `review/literature-review-matrix.md` |
+| Per-module coverage (read before requesting new sources) | `review/data/themes.csv` |
 | RRL processing workflow | `docs/standards/rrl-workflow.md` |
 | Structured summary JSON schema | `docs/standards/summary-format.md` |
-| Matrix columns and validation rules | `docs/standards/matrix-format.md` |
+| Matrix columns, tag namespace, validator rules | `docs/standards/review-layout.md` |
 | Extraction contract for agents | `skills/literature-review-summarizer.md` |
 | Corpus file naming rules | `docs/standards/rrl-naming-conventions.md` |
 | Pipeline scripts | `scripts/` |
-| Generated scores (ranked report) | `scores/report.md` |
 | Thesis documentation (system spec, PRD, chapters) | **BUDI-Base** |
 | ML service and training pipeline | **BUDI-ML** |
 
@@ -33,10 +33,10 @@
 | `AGENTS.md` | Agent navigation guide, standards, and repository conventions. |
 | `INDEX.md` | This file. Master navigation index. |
 | `README.md` | Project overview, setup, and pipeline. |
-| `config/` | Relevance module definitions (single source of truth). |
-| `scripts/` | Fetch, convert, embed, and score pipeline. |
+| `config/` | Module namespace (single source of truth). |
+| `scripts/` | Fetch, convert, and matrix generation. |
 | `literature/` | Corpus: conversions, bucket (intake), papers (gitignored). |
-| `scores/` | Generated, committed outputs. |
+| `review/` | Generated matrix, CSV tables, per-paper notes, and hand-written synthesis. |
 | `docs/` | Standards and workflow documentation. |
 | `skills/` | Agent-facing contracts for corpus processing. |
 
@@ -48,7 +48,7 @@ Contracts handed to an agent that does the work. They describe the output shape,
 
 | File | Purpose |
 | :--- | :--- |
-| `literature-review-summarizer.md` | How to extract one paper into `{stem}_summarized.json`. Supersedes the retired 56-column matrix inserter. |
+| `literature-review-summarizer.md` | How to extract one paper into `{stem}_summarized.json`, including the `modules[]` assignment rules. Supersedes the retired 56-column matrix inserter. |
 
 ---
 
@@ -56,7 +56,11 @@ Contracts handed to an agent that does the work. They describe the output shape,
 
 | File | Purpose |
 | :--- | :--- |
-| `modules.yaml` | Relevance module definitions, scoring weights, and tier thresholds. The single source of truth for what is "relevant." |
+| `taxonomy.yaml` | The 20 module ids across the 5 Topical Outline V4 sections, with leaf structure and provenance. The single source of truth for what modules exist. |
+
+Replaced `modules.yaml` (weights, query wording, tier thresholds) on 2026-09-30.
+There are no weights and no tiers: a paper's modules are assigned during
+extraction, and coverage is a count of assignments.
 
 ---
 
@@ -68,10 +72,7 @@ Contracts handed to an agent that does the work. They describe the output shape,
 | `prepare_pdf.py` | Convert PDFs to Markdown with metadata and page-aware extraction. |
 | `count_pdf_pages.py` | List PDFs with page counts. |
 | `check_dupe_pdfs.py` | Find duplicate PDFs by hash cascade. |
-| `embed.py` | Build/cache text, BERT embeddings, TF-IDF, BM25. |
-| `score.py` | Score corpus against module queries. |
-| `manifest.py` | Build corpus manifest from conversions. |
-| `build_matrix.py` | Build the generated review matrix, quote/effect tables, and validation report. |
+| `build_matrix.py` | Build the generated review tree, long tables, and validation report. |
 | `common.py` | Shared helpers (corpus paths, text cleaning, frontmatter parsing). |
 
 ---
@@ -82,40 +83,63 @@ The curated corpus. Each curated paper has up to three files (see `docs/standard
 
 | Path | Purpose |
 | :--- | :--- |
-| `literature/conversions/` | Committed corpus: `{stem}_marked.md` and `{stem}_summarized.json` per batch. |
+| `literature/conversions/` | Committed corpus: `{stem}_marked.md` and `{stem}_summarized.json` per paper, plus `metadata.json`. |
+| `literature/conversions/metadata.json` | Bibliographic sidecar: verified titles, authors, venues, DOIs, keyed by source-PDF SHA-256. |
 | `literature/bucket/` | Raw candidate PDFs awaiting intake (gitignored). |
-| `literature/papers/` | Fetched source PDFs, organized by local/international and algorithm-specific (gitignored). |
+| `literature/papers/` | Fetched source PDFs (gitignored). |
 
 ---
 
-## scores/
+## review/
 
-Generated, committed outputs. All are browsable without running the pipeline.
-
-| File | Purpose |
-| :--- | :--- |
-| `index.json` | Per-paper x module scores. |
-| `report.md` | Human-readable ranked report by module. |
-| `manifest.json` | Corpus manifest of all papers. |
-| `redundancy.json` | Near-duplicate clusters with keep/cull decisions. |
-| `validation.md` | Sanity check of automated scores vs existing annotations. |
-| `quotes.json` | Generated: one record per extracted quotation. |
-| `effects.json` | Generated: one record per statistical result. |
-| `matrix-validation.md` | Generated: matrix validation errors and informational gaps. |
-
----
-
-## docs/
+Generated from `metadata.json`, the `_summarized.json` files, and
+`config/taxonomy.yaml`. Everything here except `synthesis/` is overwritten by
+`scripts/build_matrix.py` — never hand-edit it.
 
 | Path | Purpose |
 | :--- | :--- |
-| `docs/standards/rrl-workflow.md` | Full processing workflow (fetch → convert → summarize → score). |
-| `docs/standards/summary-format.md` | JSON schema for `_summarized.json` files. |
+| `review/literature-review-matrix.md` | Generated 15-column index over the whole corpus. |
+| `review/validation.md` | Generated validation errors and informational gaps. |
+| `review/data/papers.csv` | The 15 matrix columns plus a controlled `tags` column. |
+| `review/data/screening.csv` | Intake triage: status, module count, DOI and venue completeness. |
+| `review/data/quotes.csv` | Generated: one record per extracted quotation. |
+| `review/data/effects.csv` | Generated: one record per statistical result. |
+| `review/data/themes.csv` | Generated: per-module coverage tally. |
+| `review/notes/{stem}.md` | Generated: one readable note per paper. |
+| `review/synthesis/` | **Hand-written** cross-paper synthesis. Not generated; the only authored part of `review/`. |
+
+---
+
+## docs/ — live standards
+
+| Path | Purpose |
+| :--- | :--- |
+| `docs/standards/rrl-workflow.md` | Full processing workflow (fetch → convert → summarize → build → verify). |
+| `docs/standards/summary-format.md` | JSON schema for `_summarized.json` files, including `modules[]`. |
+| `docs/standards/review-layout.md` | Generated `review/` tree, matrix columns, tag namespace, validator rules. |
 | `docs/standards/rrl-naming-conventions.md` | Corpus file naming rules. |
-| `docs/standards/matrix-format.md` | Generated matrix columns, tag namespace, and validator rules. |
-| `docs/standards/migration-workflow.md` | Cross-repository migration workflow from BUDI-Base. |
-| `docs/NEW-SCOPE-SOURCES.md` | Download checklist for new-scope literature sources. |
 | `docs/standards/documentation-format.md` | Shared documentation formatting rules. |
+| `docs/NEW-SCOPE-SOURCES.md` | Download checklist for new-scope sources. Prioritization predates the current taxonomy and needs a re-pass. |
+
+---
+
+## docs/ — historical records
+
+Dated records of work already done. Kept for rationale and audit; **not** current
+specs. They describe the retired scoring pipeline or completed intake runs, and
+their module names and column layouts do not match `config/taxonomy.yaml`.
+
+| Path | What it records |
+| :--- | :--- |
+| `docs/standards/matrix-format_OLD.md` | The 17-column matrix layout, `scores/` inputs, and tag namespace. Superseded by `docs/standards/review-layout.md`. |
+| `docs/OUTLINE-V4-COVERAGE_OLD.md` | Hand-maintained per-leaf coverage for the retired 22-module taxonomy. Superseded by `review/data/themes.csv`. |
+| `docs/notes-to-improve-lrm.md` | The 2026-09-30 proposal that shaped the generated-matrix approach. |
+| `docs/standards/migration-workflow.md` | Deprecated: the 518-PDF cross-repository migration. |
+| `docs/standards/bucket-bucket-triage.md` | Triage of the 26-PDF intake batch. |
+| `docs/standards/batch-1..6-algorithm-screening.md` | Screening of the first six intake batches. |
+
+Per `docs/standards/documentation-format.md`, superseded documents are kept for
+audit trails rather than deleted; they carry a deprecation notice at the top.
 
 ---
 
@@ -125,4 +149,4 @@ Generated, committed outputs. All are browsable without running the pipeline.
 | :--- | :--- |
 | Thesis documents (system spec, PRD, chapters) | **BUDI-Base** |
 | ML service and training pipeline | **BUDI-ML** |
-| Migration of papers from BUDI-Base | `docs/standards/migration-workflow.md` |
+| Migration of papers from BUDI-Base | `docs/standards/migration-workflow.md` (deprecated) |

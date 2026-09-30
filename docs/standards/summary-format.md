@@ -12,7 +12,8 @@ Reference for the structured JSON summary schema. Summaries are produced in `lit
   "authors": "string — 'Last, F.; Last, F.' or 'Unknown'",
   "year": 0,
   "venue": "string — full name or 'Unknown'",
-  "topic_tags": ["string — topic codes, max 20"],
+  "modules": ["string — module ids from config/taxonomy.yaml, max 20"],
+  "module_rationale": { "<module id>": "string — one clause naming the section/table/figure that shows the fit" },
   "tldr": "string — one sentence, max 50 words, no 'This paper' start",
   "problem_and_motivation": "string — max 3 sentences, no methodology",
   "approach": ["string — each <=50 words, max 10 items"],
@@ -30,20 +31,6 @@ Reference for the structured JSON summary schema. Summaries are produced in `lit
       "role": "methodology | finding | baseline | critique | context"
     }
   ],
-  "topic_relevance": {
-    "topics": [
-      {
-        "code": "string",
-        "name": "string",
-        "relevance": "high | medium | low | contextual",
-        "justification": "string"
-      }
-    ],
-    "contribution_to_field": "string — 3-5 sentences",
-    "directly_justifies": ["string — citable claims, <=30 words each"],
-    "limits": ["string — or 'None identified.'"],
-    "topic_mapping_rationale": "string — paragraph"
-  },
   "limitations": ["string — use '[unacknowledged]' suffix if needed"],
   "remember_this": ["string — key takeaways, <=20 words, 3-5 items"],
   "study_design": "string — design label as the paper states it, e.g. 'Systematic review'",
@@ -58,7 +45,7 @@ Reference for the structured JSON summary schema. Summaries are produced in `lit
     {
       "text": "string — verbatim, <=40 words",
       "locator": "string — 'p. 7', 'Abstract', 'Table 3'",
-      "theme": "string — module id from config/modules.yaml"
+      "module": "string — module id from config/taxonomy.yaml"
     }
   ],
   "effects": [
@@ -95,14 +82,38 @@ Reference for the structured JSON summary schema. Summaries are produced in `lit
    - **Yes**: `local`
    - **No**: `international`
 
-## Relevance Levels
+## Module Assignment
 
-| Level | Definition |
-|-------|-----------|
-| `high` | Directly addresses the core concern of the topic |
-| `medium` | Provides supporting evidence or contextual example |
-| `low` | Tangentially related, mentions topic in passing |
-| `contextual` | Background framing only, no actionable insight |
+`config/taxonomy.yaml` is the single source of truth: 20 module ids across the 5
+outline sections `pfm`, `pfm_apps`, `algorithms`, `methodology`, `evaluation`.
+
+| Field | Rule |
+| :--- | :--- |
+| `modules[]` | Every module the paper genuinely studies. Ids copied verbatim from the taxonomy; an invented id is a validation error. |
+| `module_rationale` | One clause per assigned id, citing the section, table, or figure that shows the fit. |
+| `quotes[].module` | Same id namespace, so quotes and paper assignments stay comparable. |
+
+There is **no relevance score, weight, tier, or priority** anywhere in the
+schema. Module assignment is a routing decision — where the paper sits in the
+outline — not a verdict on the paper's quality or importance. The four BUDGIE
+algorithms are first-class modules (`sarima`, `rule_based_classification`,
+`linear_programming`, `interquartile_range`); a paper implementing one of them
+always gets that module, plus `model_algorithm_integration` if it also wires the
+algorithm into a system.
+
+Full decision rules and worked examples: `skills/literature-review-summarizer.md` §5a.
+
+### Retired Fields
+
+| Retired | Replaced by |
+| :--- | :--- |
+| `topic_tags` | `modules[]` |
+| `topic_relevance` (`topics[]`, `relevance`, `contribution_to_field`, `directly_justifies`, `limits`, `topic_mapping_rationale`) | `modules[]` + `module_rationale` |
+| `quotes[].theme` | `quotes[].module` |
+
+`scripts/build_matrix.py` still *reads* these keys so the two summaries written
+before the taxonomy change are not lost, and it reports any that it finds as an
+informational gap telling you to re-tag the paper. Do not write them.
 
 ## Citation Roles
 
@@ -121,32 +132,37 @@ Reference for the structured JSON summary schema. Summaries are produced in `lit
 - `approach`: Each item <=50 words, ends with period. Max 10 items.
 - `findings`: Prefix quantitative results with `"num: "`. Max 10 items.
 - `remember_this`: 3-5 items, each <=20 words. No emojis, no numbering.
-- `topic_relevance.topic_mapping_rationale`: Must explicitly state that all topic domains were systematically scanned.
 - `citations`: Maximum 15 entries. Each `claim` must be specific and <=30 words.
+- `module_rationale`: Keyed by module id; one clause per entry in `modules[]`.
 - `summarization_metadata.conversion_reference`: Populated from the YAML frontmatter of the source `_marked.md` file.
 
 ## Extraction Fields
 
 Added 2026-09-30 so the generated matrix
-(`docs/literature-review-matrix.md`, schema in `docs/standards/matrix-format.md`)
-can be built without a 56-column table. **All of these keys are optional.** A
-summary written before this revision stays valid, and a summary may omit any of
-them; the builder then renders `Not reported` for that column.
+(`review/literature-review-matrix.md`, schema in `docs/standards/review-layout.md`)
+can be built from these summaries instead of a 56-column table. **All of these
+keys are optional except `modules[]` and `module_rationale`.** A summary written
+before this revision stays readable — the builder renders `Not reported` for a
+missing column — but a new extraction must assign modules.
 
 | Key | Feeds matrix column | Notes |
 | :--- | :--- | :--- |
-| `study_design` | `design` | Use the paper's own label. Normalize to `method/<slug>` in the matrix tag. |
+| `modules[]` | `modules`, `section` | Required. Ids from `config/taxonomy.yaml`. |
+| `module_rationale` | — | Required. One clause per id. |
+| `study_design` | `design` | Use the paper's own label. |
 | `sample` | `sample` | N and unit together, as reported. |
+| `tldr` | `key_finding` | One-sentence result statement. |
+| `limitations[0]` | `gap` | The paper's own most significant acknowledged limitation. |
 | `context` | — | Retained for synthesis; not a matrix column. |
 | `software` | — | Retained for reproducibility checks. |
-| `quotes[]` | `scores/quotes.json` | One verbatim quotation per record, not a run-on cell. |
-| `effects[]` | `scores/effects.json` | One statistical result per record. |
+| `quotes[]` | `review/data/quotes.csv` | One verbatim quotation per record, not a run-on cell. |
+| `effects[]` | `review/data/effects.csv` | One statistical result per record. |
 
 ### Field Rules for Extraction Fields
 
 - `quotes[].text` is verbatim, `<=40` words, in straight double quotes. Every
-  quote carries a `locator`. `theme` must be a module id that exists in
-  `config/modules.yaml`; an invented id is a validation error.
+  quote carries a `locator`. `module` must be an id that exists in
+  `config/taxonomy.yaml`; an invented id is a validation error.
 - `effects[].value` reproduces the printed number exactly. Do not round,
   recompute, or convert units. `ci` and `p` are omitted rather than guessed.
 - **One record per result.** A paper reporting two accuracy figures for two
@@ -161,11 +177,16 @@ them; the builder then renders `Not reported` for that column.
 ## Summary File Naming
 
 ```
-{stem}_summarized.json
+{stem}_summarized.json}
 ```
 
-Example: `Cabalfin et al_summarized.json`
+Example: `literature/conversions/A--Abdullahi-2025_summarized.json` — prefix,
+bibliographic first author, year, per `docs/standards/rrl-naming-conventions.md`.
 
 ## Legacy Formats
 
-YAML (`.yaml`) and Markdown (`.md`) summaries were removed with the `literature/archive/` migration; all summaries are produced as JSON.
+YAML (`.yaml`) and Markdown (`.md`) summaries were removed with the
+`literature/archive/` migration; all summaries are produced as JSON. The
+17-column JSON schema and the scoring-oriented fields that accompanied it were
+retired on 2026-09-30 when `config/modules.yaml` was replaced by
+`config/taxonomy.yaml`.

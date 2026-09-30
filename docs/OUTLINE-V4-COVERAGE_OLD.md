@@ -1,3 +1,14 @@
+> **Deprecated.** This document is superseded by `review/data/themes.csv` and the
+> coverage table in `review/literature-review-matrix.md`.
+> Retained for historical reference only.
+>
+> The per-leaf counts below were computed by scoring the corpus against
+> `config/modules.yaml` (22 modules, weights, crucial/supporting tiers). Both the
+> module namespace and the scoring stage are retired. Coverage is now a count of
+> the `modules[]` assignments made during extraction, and `themes.csv` regenerates
+> that view on every build, so this file could only ever be stale. The counts
+> below describe the corpus as of 2026-09-30 under the old taxonomy.
+
 # Outline V4 Coverage Analysis
 
 Originally generated 2026-09-26 by re-scoring the corpus against

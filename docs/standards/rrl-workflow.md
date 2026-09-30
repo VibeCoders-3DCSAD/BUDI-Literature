@@ -4,6 +4,10 @@ Workflow for adding and processing literature in the Review of Related Literatur
 
 All steps happen within **BUDI-Literature**. No cross-repo transfers required.
 
+Six steps: fetch, convert, summarize, build, verify, adapt. There is no scoring
+step — module coverage is decided during summarization (step 3), not computed
+afterwards from text similarity.
+
 ## Steps
 
 ### 1. Fetch PDFs
@@ -39,13 +43,16 @@ Run the PDF-to-Markdown converter:
 python3 scripts/prepare_pdf.py literature/papers/ --page-aware
 ```
 
-Produces `{stem}_marked.md` with YAML frontmatter (conversion metadata, SHA-256 hash, page count) and an empty `{stem}_summarized.json`.
+Produces `{stem}_marked.md` with YAML frontmatter (conversion metadata, SHA-256
+hash, page count) and an empty `{stem}_summarized.json`.
 
 Options:
+
 - `--page-aware`: Add `<!-- PAGE N -->` markers extracted via pdfminer.six
 - `--json-sidecar`: Write a separate `{stem}_conversion_meta.json`
 
-Move the converted pair into the corpus root:
+Assign the canonical stem per `docs/standards/rrl-naming-conventions.md`
+(`{Prefix}--{AuthorLastName}-{Year}`), then move the pair into the corpus root:
 
 ```bash
 mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
@@ -55,59 +62,85 @@ mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
 The corpus is flat; do not create per-intake subdirectories. See
 `docs/standards/rrl-naming-conventions.md`.
 
+Verify the stem against page 1 of the PDF before committing: source filenames
+often name a later author rather than the first, and the stem is what
+`metadata.json` is keyed by.
+
 ### 3. Summarize
 
-Use an AI agent to fill `{stem}_summarized.json` with a structured summary. Feed the agent the corresponding `_marked.md` file.
+Use an AI agent to fill `{stem}_summarized.json` with a structured summary. Feed
+the agent the corresponding `_marked.md` file.
 
-The summarizer is **objective and unbiased** — it describes what the paper says without application-specific framing. Page and paragraph references are included in structured `citations` objects.
+The summarizer is **objective and unbiased** — it describes what the paper says
+without application-specific framing. Page and paragraph references are included
+in structured `citations` objects.
 
 See `docs/standards/summary-format.md` for the JSON schema, and
-`skills/literature-review-summarizer.md` for the output contract: the extraction
-fields (`study_design`, `sample`, `context`, `software`, `quotes[]`, `effects[]`)
-that step 5 builds the matrix from, and the rule for a paper that reports
-contradictory figures.
+`skills/literature-review-summarizer.md` for the output contract.
+
+Two fields carry the weight of the whole pipeline:
+
+- **`modules[]`** — the ids from `config/taxonomy.yaml` this paper genuinely
+  covers, each with a `module_rationale` clause. Every coverage count in the
+  matrix is a tally of these assignments. A summary with an empty `modules[]`
+  is an incomplete extraction.
+- **`effects[]` / `quotes[]`** — one record per statistical result and per
+  quotation. A paper that reports the same measurement twice with different
+  numbers keeps **both** records with their locators and states the discrepancy
+  in `limitations`; never reconcile silently.
 
 Bibliographic fields (`title`, `authors`, `year`, `venue`, `doi`) are copied from
 `literature/conversions/metadata.json`, the page-1-verified citation authority.
 The agent does not re-derive them.
 
-### 4. Score
-
-Compute embeddings and scores:
+### 4. Build the review matrix
 
 ```bash
-python3 scripts/embed.py        # rebuild caches when conversions change
-python3 scripts/score.py        # relevance/quality tiers, redundancy, validation
-```
-
-`score.py` ranks every paper against the thesis modules (BERT 0.5 / TF-IDF 0.3 / BM25 0.2) and assigns tiers: **crucial** (>=0.45), **supporting** (>=0.30), **cull** (<0.30). Redundant near-duplicates are flagged (threshold 0.98). Outputs land in `scores/`.
-
-### 5. Build the Matrix
-
-Regenerate the literature review matrix from the three sources:
-
-```bash
-python3 scripts/build_matrix.py           # build matrix + long tables + validation
+python3 scripts/build_matrix.py           # build the whole review/ tree
 python3 scripts/build_matrix.py --check   # validate only, exit 1 on any error
 ```
 
-Inputs, in order of authority: `metadata.json` (bibliographic), `scores/index.json`
-(relevance), `{stem}_summarized.json` (extraction). Outputs:
+Inputs: `metadata.json` (bibliographic authority), every `_summarized.json`
+(extraction), and `config/taxonomy.yaml` (module namespace). Outputs:
 
 | File | Contents |
 |------|----------|
-| `docs/literature-review-matrix.md` | 17-column index, one row per corpus paper, plus a theme-count view. |
-| `scores/quotes.json` | One record per extracted quotation. |
-| `scores/effects.json` | One record per statistical result. |
-| `scores/matrix-validation.md` | Validation errors and informational gaps. |
+| `review/literature-review-matrix.md` | 15-column index, one row per corpus paper, plus a per-module coverage view. |
+| `review/data/papers.csv` | The 15 columns plus a controlled `tags` column. |
+| `review/data/screening.csv` | Intake triage: status, module count, DOI and venue completeness. |
+| `review/data/quotes.csv` | One record per extracted quotation. |
+| `review/data/effects.csv` | One record per statistical result. |
+| `review/data/themes.csv` | Per-module coverage tally. |
+| `review/notes/{stem}.md` | One readable note per paper. |
+| `review/validation.md` | Validation errors and informational gaps. |
 
-**Never hand-edit the matrix.** Fix the source and rebuild. Column definitions,
-the tag namespace, and every validation rule are in
-`docs/standards/matrix-format.md`.
+**Never hand-edit anything under `review/` except `review/synthesis/`.** Fix the
+source and rebuild. Column definitions, the tag namespace, and every validation
+rule are in `docs/standards/review-layout.md`.
+
+### 5. Verify
+
+```bash
+python3 scripts/build_matrix.py --check
+```
+
+Read the gap list before requesting new sources — a module showing zero papers is
+the evidence for what to go and find. Gaps are informational and never fail the
+build; **errors** mean the corpus contradicts itself and must be fixed.
+
+The per-module tally to read is `review/data/themes.csv`; the intake queue is
+`review/data/screening.csv`.
 
 ### 6. Adapt to Thesis Changes
 
-The thesis outline, architecture, and algorithm selections change often. When they do, edit **only** `config/modules.yaml` (module queries, weights, tier thresholds, redundancy threshold), then re-run `score.py` followed by `build_matrix.py`. No code changes needed.
+The thesis outline, architecture, and algorithm selections change often. When the
+outline changes, edit **only** `config/taxonomy.yaml` and re-tag the summaries'
+`modules[]`; no code changes are needed.
+
+Renaming a module is not free: ids are stored inside every `_summarized.json`, so
+after a rename the corpus keeps reporting the old namespace until the summaries
+are retagged. `--check` reports retired vocabulary as an informational gap rather
+than an error precisely so you can see the scale of the retag first.
 
 ## Python Dependencies
 
@@ -124,82 +157,39 @@ pip install -r requirements.txt
 | `pypdf` | `count_pdf_pages.py`, `prepare_pdf.py` (--page-aware) |
 | `PyPDF2` | `check_dupe_pdfs.py` |
 | `pdfminer.six` | `prepare_pdf.py` (--page-aware) |
-| `numpy` | `embed.py`, `score.py` |
-| `scikit-learn` | `embed.py` (TF-IDF) |
-| `rank-bm25` | `embed.py` (BM25) |
-| `sentence-transformers` | `embed.py`, `score.py` (BERT) |
-| `PyYAML` | `score.py` |
-| `joblib` | `embed.py`, `score.py` |
+| `PyYAML` | `build_matrix.py` (reads `config/taxonomy.yaml`) |
 
-## Intake Runbook — Batch 7 (17 verified papers)
+`scripts/check_dupe_pdfs.py` also uses PyMuPDF, Pillow, and ImageHash for its
+perceptual-hash tier. They are optional: the script falls back to a SHA-256 +
+text-similarity cascade when they are not installed. Uncomment them in
+`requirements.txt` to enable the visual tier.
 
-Concrete, ready-to-run steps for the current intake (the 17 PDFs staged in
-`literature/papers/`). Execute these only when processing actually starts.
+## Intake Runbook
 
-### 0. Prerequisite (done during prep)
-
-- PDFs are already staged flat in `literature/papers/` (moved from `bucket/`).
-- Dependencies installed from `requirements.txt` (includes `markitdown[pdf]`).
-- Destination `literature/conversions/` is the flat corpus root.
-
-### 1. Convert
+Repeatable checklist for a batch of staged PDFs. Run it per batch.
 
 ```bash
-python3 scripts/prepare_pdf.py literature/papers/ --page-aware
-```
-
-Produces `{stem}_marked.md` + empty `{stem}_summarized.json` for all 17 PDFs.
-Preview page counts first if useful:
-```bash
+# 0. PDFs staged flat in literature/papers/ (moved from bucket/)
+# 1. inspect
 python3 scripts/count_pdf_pages.py literature/papers/
+python3 scripts/check_dupe_pdfs.py literature/papers/ --cascade
+# 2. convert + move
+python3 scripts/prepare_pdf.py literature/papers/ --page-aware
+mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
+   literature/conversions/
+# 3. summarize each pair (agent; modules[] is required)
+# 4. rebuild
+python3 scripts/build_matrix.py
+# 5. verify
+python3 scripts/build_matrix.py --check
 ```
 
 > Note: `prepare_pdf.py` scans only the flat `literature/papers/` top level for
 > `.pdf`. The `international/` and `local/` subdirectories are reserved for future
 > designation-based categorization and are intentionally left out of conversion.
 
-### 2. Rename & move into the corpus
-
-Assign canonical stems per `docs/standards/rrl-naming-conventions.md`
-(`{Prefix}--{AuthorLastName}-{Year}`), then move each `_marked.md` +
-`_summarized.json` pair into `literature/conversions/`.
-
-```bash
-# rename + move each pair; e.g.
-mv "literature/papers/I--Hajj-2023_marked.md" \
-   "literature/papers/I--Hajj-2023_summarized.json" \
-   literature/conversions/
-```
-
-### 3. Summarize (AI agent)
-
-Fill each `{stem}_summarized.json` using the corresponding `_marked.md` as input.
-Schema + field rules: `docs/standards/summary-format.md`.
-
-### 4. Score
-
-```bash
-python3 scripts/embed.py --force   # rebuild caches (conversions changed)
-python3 scripts/score.py           # relevance tiers, redundancy, validation
-```
-
-Regenerates `scores/`. This replaces the stale 518-paper scoring outputs.
-
-### 5. Manifest
-
-```bash
-python3 scripts/manifest.py        # refresh scores/manifest.json
-```
-
-### 6. Matrix
-
-```bash
-python3 scripts/build_matrix.py    # refresh the matrix and long tables
-```
-
-Run this after any step that changes a score, a stem, or a summary.
-
----
+Run step 4 after anything that changes a stem, a conversion, or a summary. The
+build is idempotent, so re-running it is always safe.
 
 ## Script Reference
 
@@ -209,8 +199,5 @@ Run this after any step that changes a score, a stem, or a summary.
 | `scripts/prepare_pdf.py` | Convert PDFs to Markdown with metadata |
 | `scripts/count_pdf_pages.py` | List PDFs with page counts |
 | `scripts/check_dupe_pdfs.py` | Find duplicate PDFs by hash cascade |
-| `scripts/embed.py` | Build/cache text, BERT embeddings, TF-IDF, BM25 |
-| `scripts/score.py` | Score corpus against module queries |
-| `scripts/manifest.py` | Build corpus manifest from conversions |
-| `scripts/build_matrix.py` | Build the generated review matrix, long tables, and validation report |
+| `scripts/build_matrix.py` | Build the generated review tree, long tables, and validation report |
 | `scripts/common.py` | Shared helpers (corpus paths, text cleaning, frontmatter parsing) |

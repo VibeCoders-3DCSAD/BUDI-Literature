@@ -1,3 +1,11 @@
+> **Deprecated.** This document is superseded by `docs/standards/review-layout.md`.
+> Retained for historical reference only.
+>
+> The 17-column layout, the `scores/` inputs, and the weighted `config/modules.yaml`
+> namespace described below no longer exist. The generated matrix now lives at
+> `review/literature-review-matrix.md`, is built from `metadata.json`, the
+> `_summarized.json` files, and `config/taxonomy.yaml`, and has 15 columns.
+
 # Literature Review Matrix Format
 
 `docs/literature-review-matrix.md` is a **generated view**, not a database. It is

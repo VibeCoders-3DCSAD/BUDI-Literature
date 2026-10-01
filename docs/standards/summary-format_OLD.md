@@ -1,3 +1,11 @@
+> **Deprecated.** This document is superseded by `docs/standards/note-format.md`.
+> Retained for historical reference only.
+>
+> The `_summarized.json` extraction schema described below no longer exists. The
+> schema here is still the source of truth for `modules[]` and
+> `module_rationale`, which carried over unchanged into note frontmatter; every
+> other key belongs to a file format that was removed on 2026-09-30.
+
 # RRL Summary Format
 
 Reference for the structured JSON summary schema. Summaries are produced in `literature/` (intake) and stored with their `_marked.md` pair in **BUDI-Literature** (`literature/conversions/`).

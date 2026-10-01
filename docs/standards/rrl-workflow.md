@@ -4,8 +4,8 @@ Workflow for adding and processing literature in the Review of Related Literatur
 
 All steps happen within **BUDI-Literature**. No cross-repo transfers required.
 
-Six steps: fetch, convert, summarize, build, verify, adapt. There is no scoring
-step — module coverage is decided during summarization (step 3), not computed
+Six steps: fetch, convert, extract, build, verify, adapt. There is no scoring
+step — module coverage is decided during extraction (step 3), not computed
 afterwards from text similarity.
 
 ## Steps
@@ -44,7 +44,7 @@ python3 scripts/prepare_pdf.py literature/papers/ --page-aware
 ```
 
 Produces `{stem}_marked.md` with YAML frontmatter (conversion metadata, SHA-256
-hash, page count) and an empty `{stem}_summarized.json`.
+hash, page count).
 
 Options:
 
@@ -52,11 +52,11 @@ Options:
 - `--json-sidecar`: Write a separate `{stem}_conversion_meta.json`
 
 Assign the canonical stem per `docs/standards/rrl-naming-conventions.md`
-(`{Prefix}--{AuthorLastName}-{Year}`), then move the pair into the corpus root:
+(`{Prefix}--{AuthorLastName}-{Year}`), then move the conversion into the corpus
+root:
 
 ```bash
-mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
-   literature/conversions/
+mv literature/papers/{stem}_marked.md literature/conversions/
 ```
 
 The corpus is flat; do not create per-intake subdirectories. See
@@ -66,32 +66,33 @@ Verify the stem against page 1 of the PDF before committing: source filenames
 often name a later author rather than the first, and the stem is what
 `metadata.json` is keyed by.
 
-### 3. Summarize
+### 3. Extract into a note
 
-Use an AI agent to fill `{stem}_summarized.json` with a structured summary. Feed
-the agent the corresponding `_marked.md` file.
+Use an AI agent to write `review/notes/{stem}.md`, the authored extraction record
+for the paper. Feed the agent the corresponding `_marked.md` file.
 
-The summarizer is **objective and unbiased** — it describes what the paper says
+The extractor is **objective and unbiased** — it describes what the paper says
 without application-specific framing. Page and paragraph references are included
-in structured `citations` objects.
+as locators.
 
-See `docs/standards/summary-format.md` for the JSON schema, and
+See `docs/standards/note-format.md` for the note schema, and
 `skills/literature-review-summarizer.md` for the output contract.
 
 Two fields carry the weight of the whole pipeline:
 
-- **`modules[]`** — the ids from `config/taxonomy.yaml` this paper genuinely
-  covers, each with a `module_rationale` clause. Every coverage count in the
-  matrix is a tally of these assignments. A summary with an empty `modules[]`
-  is an incomplete extraction.
-- **`effects[]` / `quotes[]`** — one record per statistical result and per
-  quotation. A paper that reports the same measurement twice with different
-  numbers keeps **both** records with their locators and states the discrepancy
-  in `limitations`; never reconcile silently.
+- **`modules[]`** — the frontmatter ids from `config/taxonomy.yaml` this paper
+  genuinely covers, each with a `module_rationale` clause. Every coverage count
+  in the matrix is a tally of these assignments. A note with an empty
+  `modules[]` is an incomplete extraction.
+- **`## Statistical Evidence` / `## Quotes`** — one record per statistical result
+  and per quotation. A paper that reports the same measurement twice with
+  different numbers keeps **both** records with their locators and states the
+  discrepancy in `## Limitations and Gaps`; never reconcile silently.
 
 Bibliographic fields (`title`, `authors`, `year`, `venue`, `doi`) are copied from
 `literature/conversions/metadata.json`, the page-1-verified citation authority.
-The agent does not re-derive them.
+The agent does not re-derive them. The builder never overwrites a note that
+already exists; it creates a stub only for a paper that has none.
 
 ### 4. Build the review matrix
 
@@ -100,7 +101,7 @@ python3 scripts/build_matrix.py           # build the whole review/ tree
 python3 scripts/build_matrix.py --check   # validate only, exit 1 on any error
 ```
 
-Inputs: `metadata.json` (bibliographic authority), every `_summarized.json`
+Inputs: `metadata.json` (bibliographic authority), every `review/notes/*.md`
 (extraction), and `config/taxonomy.yaml` (module namespace). Outputs:
 
 | File | Contents |
@@ -111,12 +112,12 @@ Inputs: `metadata.json` (bibliographic authority), every `_summarized.json`
 | `review/data/quotes.csv` | One record per extracted quotation. |
 | `review/data/effects.csv` | One record per statistical result. |
 | `review/data/themes.csv` | Per-module coverage tally. |
-| `review/notes/{stem}.md` | One readable note per paper. |
+| `review/notes/{stem}.md` | A stub for each paper that has no note; authored notes are left untouched. |
 | `review/validation.md` | Validation errors and informational gaps. |
 
-**Never hand-edit anything under `review/` except `review/synthesis/`.** Fix the
-source and rebuild. Column definitions, the tag namespace, and every validation
-rule are in `docs/standards/review-layout.md`.
+**Never hand-edit the matrix, the CSVs, or `validation.md`, and never overwrite an
+authored note.** Fix the source and rebuild. Column definitions, the tag
+namespace, and every validation rule are in `docs/standards/review-layout.md`.
 
 ### 5. Verify
 
@@ -134,13 +135,13 @@ The per-module tally to read is `review/data/themes.csv`; the intake queue is
 ### 6. Adapt to Thesis Changes
 
 The thesis outline, architecture, and algorithm selections change often. When the
-outline changes, edit **only** `config/taxonomy.yaml` and re-tag the summaries'
-`modules[]`; no code changes are needed.
+outline changes, edit **only** `config/taxonomy.yaml` and re-tag the notes'
+frontmatter `modules[]`; no code changes are needed.
 
-Renaming a module is not free: ids are stored inside every `_summarized.json`, so
-after a rename the corpus keeps reporting the old namespace until the summaries
-are retagged. `--check` reports retired vocabulary as an informational gap rather
-than an error precisely so you can see the scale of the retag first.
+Renaming a module is not free: ids are stored in every note's frontmatter
+`modules[]` and in the `Module` column of each `## Quotes` table, so after a
+rename the corpus keeps reporting the old namespace until the notes are
+retagged.
 
 ## Python Dependencies
 
@@ -175,9 +176,8 @@ python3 scripts/count_pdf_pages.py literature/papers/
 python3 scripts/check_dupe_pdfs.py literature/papers/ --cascade
 # 2. convert + move
 python3 scripts/prepare_pdf.py literature/papers/ --page-aware
-mv literature/papers/{stem}_marked.md literature/papers/{stem}_summarized.json \
-   literature/conversions/
-# 3. summarize each pair (agent; modules[] is required)
+mv literature/papers/{stem}_marked.md literature/conversions/
+# 3. extract each conversion into a note (agent; modules[] is required)
 # 4. rebuild
 python3 scripts/build_matrix.py
 # 5. verify
@@ -188,8 +188,8 @@ python3 scripts/build_matrix.py --check
 > `.pdf`. The `international/` and `local/` subdirectories are reserved for future
 > designation-based categorization and are intentionally left out of conversion.
 
-Run step 4 after anything that changes a stem, a conversion, or a summary. The
-build is idempotent, so re-running it is always safe.
+Run step 4 after anything that changes a stem, a conversion, bibliographic
+metadata, or a note. The build is idempotent, so re-running it is always safe.
 
 ## Script Reference
 
@@ -199,5 +199,5 @@ build is idempotent, so re-running it is always safe.
 | `scripts/prepare_pdf.py` | Convert PDFs to Markdown with metadata |
 | `scripts/count_pdf_pages.py` | List PDFs with page counts |
 | `scripts/check_dupe_pdfs.py` | Find duplicate PDFs by hash cascade |
-| `scripts/build_matrix.py` | Build the generated review tree, long tables, and validation report |
+| `scripts/build_matrix.py` | Build the generated matrix, long tables, and validation report, and write note stubs for papers that have no note |
 | `scripts/common.py` | Shared helpers (corpus paths, text cleaning, frontmatter parsing) |

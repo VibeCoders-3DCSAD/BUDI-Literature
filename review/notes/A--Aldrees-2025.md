@@ -4,18 +4,20 @@ first_author: "Aldrees"
 year: 2025
 title: "Behavioral Patterns in Micro-lending: Enhancing Credit Risk Assessment with Collaborative Filtering and Federated Learning"
 venue: "International Journal of Computing and Intelligent Systems"
-doi: "10.1007/s44196-025-00776-w"
-type: Not reported
-designation: algorithm
-section: "Not reported"
-modules: []
+doi: 10.1007/s44196-025-00776-w
+type: journal-article
+designation: international-algorithm-specific
 status: extracted
-generated-by: scripts/build_matrix.py
+modules: [model_algorithm_integration, model_performance_evaluation, rule_based_classification]
+module_rationale:
+  model_algorithm_integration: "Sect. 4 combines collaborative filtering over lending patterns with federated learning (FedAvg/FedProx) into one CFM-LPA pipeline in which the behaviour factor of one repayment period conditions the next period's credit risk."
+  model_performance_evaluation: "Table 3 reports holdout accuracy (95.21% CFM-LPA vs 80.12-90.32% baselines) and return rate (0.97 vs 0.81-0.92) against three published models, with 95% CIs and a paired t-test at p < 0.05."
+  rule_based_classification: "Sect. 3 bounds the behaviour factor with a credit-period threshold rule that assigns Cperiod to its maximum or minimum branch when the credit-score-to-history ratio crosses a fixed threshold, and Sect. 4 uses an Arisk max/min filter plus riskdetect(t) to classify each borrower."
 ---
 
 # Behavioral Patterns in Micro-lending: Enhancing Credit Risk Assessment with Collaborative Filtering and Federated Learning
 
-`A--Aldrees-2025` — Aldrees (2025), *International Journal of Computing and Intelligent Systems*
+`A--Aldrees-2025` — Aldrees (2025), *International Journal of Computing and Intelligent Systems* \[10.1007/s44196-025-00776-w]
 
 ## Summary
 
@@ -29,7 +31,8 @@ Micro-lending platforms struggle to assess credit risk because borrower data are
 
 **Design.** Computational method-development study with comparative benchmark evaluation against three published models; the authors state no formal design label.
 **Sample.** n = 32,581 loan records (public Kaggle credit-risk dataset by user laotse, 12 features, one record per loan application)
-**Context.** geography: Not reported (no country stated; the dataset is a public international loan dataset); population: Micro-lending borrowers aged 20-45 with incomes of 4K-2039K, employment tenure of 1-31 years, loan grades A-D and loan amounts of 0.5K-35K; setting: Virtual/computational: offline simulation of micro-lending credit risk assessment on an NVIDIA A100 with WEKA and Python 3.9; no live lending platform was involved
+**Context.** geography: Not reported (no country stated; the dataset is a public international loan dataset); population: Micro-lending borrowers aged 20-45 with incomes of 4K-2039K, employment tenure of 1-31 years, loan grades A-D and loan amounts of 0.5K-35K; setting: Virtual/computational: offline simulation of micro-lending credit risk assessment on an NVIDIA A100 with WEKA and Python 3.9; no live lending platform was involved.
+
 - Use the public Kaggle credit-risk dataset (32,581 records, 12 features) and split it into an initial input block (return + response) and a behaviour pattern block.
 - Derive a behaviour factor from return rate, prompt return, credit limit, credit history, default rate, liability and economic conditions, then update it at every repayment period.
 - Apply collaborative filtering over lending patterns, matching new borrowers to similar borrowers through user- and item-based filtering to generate risk ratings from repayment history.
@@ -146,84 +149,22 @@ Micro-lending platforms struggle to assess credit risk because borrower data are
 
 ## Quotes
 
-> "This article introduces a Collaborative Filtering Method using Lending Pattern Analysis (CFM-LPA)."
->
-> — Abstract, p. 1 — `ml_algorithms`
-
-> "The proposed method enhances risk detection accuracy by 14.03% and improves return rate analysis by 13.28% across financed amounts."
->
-> — Abstract, p. 1 — `ml_algorithms`
-
-> "The proposed method improves the risk detection analysis by 14.82% and return rate analysis by 13.63% for the different interest rates."
->
-> — Sec. 6 Conclusion, p. 21 — `ml_algorithms`
-
-> "Data shortage, borrower variety, and privacy issues contribute to micro-lending platforms’ ongoing struggles with proper credit risk assessment."
->
-> — Sec. 1.1 Research Gap, p. 2 — `debt_management`
-
-> "Due to security concerns and a lack of flexibility for changing financial patterns, traditional credit scoring algorithms often depend on centralized data collecting."
->
-> — Sec. 1.1 Research Gap, p. 2 — `privacy_security`
-
-> "The above data are provided for 32,581 record sets as collected from the dataset."
->
-> — Sec. 3 Data Description, p. 6 — `ml_algorithms`
-
-> "Research on the combination of federated learning with collaborative filtering for customized credit risk prediction is still in its early stages, but it provides a privacy-preserving option."
->
-> — Sec. 2 Related Works, p. 6 — `privacy_security`
-
-> "CFM enhances lending decisions through federated learning without exchanging borrower-specific data directly to maintain privacy."
->
-> — Sec. 4.1 Collaborative Filtering, p. 10 — `privacy_security`
-
-> "A borrower with irregular repayment and behaviour patterns leads to abnormal patterns and indicates a potential risk during lending."
->
-> — Sec. 4.1 Collaborative Filtering, p. 12 — `behavioral_insights`
-
-> "One possible source of bias in the dataset is the difference between Group A (the majority) and Group B (the minority)."
->
-> — Sec. 5 Results and Discussion, p. 19 — `ml_algorithms`
-
-> "A borrower with predictable and stable financial behaviour will have a low occurrence of new risk"
->
-> — Sec. 5 Results and Discussion, p. 20 — `anomaly_detection`
-
-> "As data distributions vary over time, a phenomenon known as model drift occurs, and the prediction performance continues to decline."
->
-> — Sec. 5 Results and Discussion, p. 20 — `ml_algorithms`
-
-> "However, the model’s reliance on collaborative filtering may introduce biases if the available lending data is sparse or imbalanced, potentially leading to inaccurate risk predictions for new or underrepresented borrowers."
->
-> — Sec. 6 Conclusion, pp. 21-22 — `ml_algorithms`
-
-> "Federated learning ensures data privacy; it requires significant computational resources and robust synchronization across multiple lending institutions, which may pose scalability challenges."
->
-> — Sec. 6 Conclusion, p. 22 — `privacy_security`
-
-## Relevance to BUDGIE
-
-- `ml_algorithms` — high: Supplies the core algorithm, a collaborative filtering plus federated learning risk model benchmarked against SMOTE-ENN, LightGBM-GAN and FEEM-VO, with accuracy reported in Table 3.
-- `debt_management` — high: Micro-lending, repayment behaviour, default rate, credit limit and credit risk are the paper's entire subject, expressed through return rate and credit stability terms.
-- `behavioral_insights` — high: The behaviour factor is built from repayment consistency, peer influence, financial adaptability and loan purpose, making borrower psychology the model's signal.
-- `privacy_security` — high: Decentralized federated training is proposed explicitly as the remedy for centralized data collection, with poisoning, inference attacks and differential privacy discussed.
-- `anomaly_detection` — medium: New-risk detection, filtering ratio and abnormal repayment patterns are operationalised through Arisk and riskdetect(t) rather than classical outlier methods.
-- `synthetic_data_mlops` — medium: GAN and SMOTE based synthetic oversampling appear in the baselines, and the paper discusses drift-aware aggregation, model upgrades and serving concerns.
-- `financial_wellbeing` — low: Credit stability and repayment consistency are treated as financial stability indicators of borrowers, but no well-being instrument or measure is used.
-- `forecasting` — low: Period-to-period updating and drift monitoring (FedProx, ADWIN, Kolmogorov–Smirnov) are discussed, but no time series forecast or seasonality is modelled.
-- `pfms_systems` — low: Lending-platform credit scoring is adjacent to finance applications, but no personal finance app, dashboard or interface is built or evaluated.
-- `filipino_context` — low: No Philippine institution, data source or population appears; the study is international and uses a public non-Filipino loan dataset.
-
-The paper packages credit risk scoring for micro-lending as a privacy problem rather than purely a predictive one, proposing that lenders share federated model updates instead of borrower records. It shows how a behaviour factor derived from return rate, credit limit, credit history and economic conditions can be refreshed every repayment period and filtered to isolate newly emerging risks. Empirically, the proposed CFM-LPA reports the best values among three published baselines on a 32,581-record public loan dataset. The contribution is therefore conceptual and architectural; the reported gains are large but rest on a single offline dataset with internally inconsistent headline numbers, which limits how far the result generalises.
-
-- Justifies: Privacy-preserving credit scoring can be achieved by exchanging federated model updates across lenders instead of raw borrower records.
-
-- Justifies: Recomputing a behaviour factor every repayment period lets a model filter new credit risks that centralised batch scoring misses.
-
-- Justifies: CFM-LPA reported 95.21% new risk detection on 32,581 public loan records, above SMOTE-ENN, LightGBM-GAN and FEEM-VO.
-
-- Justifies: Collaborative filtering over lending patterns generalises risk ratings to new borrowers with sparse individual repayment history.
+| Text | Locator | Module |
+| :--- | :--- | :--- |
+| "This article introduces a Collaborative Filtering Method using Lending Pattern Analysis (CFM-LPA)." | Abstract, p. 1 | model_algorithm_integration |
+| "The proposed method enhances risk detection accuracy by 14.03% and improves return rate analysis by 13.28% across financed amounts." | Abstract, p. 1 | model_algorithm_integration |
+| "The proposed method improves the risk detection analysis by 14.82% and return rate analysis by 13.63% for the different interest rates." | Sec. 6 Conclusion, p. 21 | model_algorithm_integration |
+| "Data shortage, borrower variety, and privacy issues contribute to micro-lending platforms’ ongoing struggles with proper credit risk assessment." | Sec. 1.1 Research Gap, p. 2 | savings_debt_management |
+| "Due to security concerns and a lack of flexibility for changing financial patterns, traditional credit scoring algorithms often depend on centralized data collecting." | Sec. 1.1 Research Gap, p. 2 | model_algorithm_integration |
+| "The above data are provided for 32,581 record sets as collected from the dataset." | Sec. 3 Data Description, p. 6 | model_algorithm_integration |
+| "Research on the combination of federated learning with collaborative filtering for customized credit risk prediction is still in its early stages, but it provides a privacy-preserving option." | Sec. 2 Related Works, p. 6 | model_algorithm_integration |
+| "CFM enhances lending decisions through federated learning without exchanging borrower-specific data directly to maintain privacy." | Sec. 4.1 Collaborative Filtering, p. 10 | model_algorithm_integration |
+| "A borrower with irregular repayment and behaviour patterns leads to abnormal patterns and indicates a potential risk during lending." | Sec. 4.1 Collaborative Filtering, p. 12 | rule_based_classification |
+| "One possible source of bias in the dataset is the difference between Group A (the majority) and Group B (the minority)." | Sec. 5 Results and Discussion, p. 19 | model_algorithm_integration |
+| "A borrower with predictable and stable financial behaviour will have a low occurrence of new risk" | Sec. 5 Results and Discussion, p. 20 | rule_based_classification |
+| "As data distributions vary over time, a phenomenon known as model drift occurs, and the prediction performance continues to decline." | Sec. 5 Results and Discussion, p. 20 | model_algorithm_integration |
+| "However, the model’s reliance on collaborative filtering may introduce biases if the available lending data is sparse or imbalanced, potentially leading to inaccurate risk predictions for new or underrepresented borrowers." | Sec. 6 Conclusion, pp. 21-22 | model_algorithm_integration |
+| "Federated learning ensures data privacy; it requires significant computational resources and robust synchronization across multiple lending institutions, which may pose scalability challenges." | Sec. 6 Conclusion, p. 22 | model_algorithm_integration |
 
 ## Remember This
 
@@ -235,22 +176,21 @@ The paper packages credit risk scoring for micro-lending as a privacy problem ra
 
 ## Cited Works
 
-- Zhuang, Y.; Wei, H. (2024) (baseline) — GAN-LightGBM model uses generative adversarial networks for data imbalance and LightGBM to estimate credit risk in fintech. [3 1]
-- Aruleba, I.; Sun, Y. (2024) (baseline) — Ensemble of Random Forest, adaptive boosting and XGBoost with SMOTE-ENN plus SHAP improves interpretability and class balance. [3 2]
-- Yang, D.; Xiao, B. (2024) (baseline) — Multi-stage ensemble model combines behavioural and non-financial data with bagging-based oversampling for SME credit risk. [3 3]
-- Gamba-Santamaria, S.; Melo-Velandia, L. F.; Orozco-Vanegas, C. (2023) (context) — Intrinsic estimators with penalized regression split loan risk into payment capacity and risk-taking components, handling multicollinearity. [3 4]
-- Wang, F.; Ding, L.; Yu, H.; Zhao, Y. (2020) (methodology) — Nonlinear least squares SVM builds an index system for credit risk classification in online supply chains. [4 1]
-- Rao, C.; Liu, Y.; Goh, M. (2023) (methodology) — Particle swarm optimisation tunes XGBoost hyperparameters for auto loan credit risk while lowering computational cost. [4 2]
-- Shetabi, M. (2024) (context) — Evolutionary ensemble feature selection adapts to changing risk factors in FinTech lending. [4 3]
-- Xia, H.; Liu, J.; Zhang, Z. J. (2024) (context) — Machine learning classification over platform Q&A text identifies harmful behaviour on online loan platforms. [4 3]
-- Sinkey, J. F., Jr.; Greenawalt, M. B. (1991) (context) — Statistical analysis of loan-loss experience and risk-taking at large commercial banks informs lending strategy. [4 4]
-- Li, Z.; Liang, S.; Pan, X.; Pang, M. (2024) (context) — Loan profit forecast combining financial and non-financial information improves SME credit risk prediction. [4 4]
-- Wang, Y.; Zhang, Y.; Liang, M.; Yuan, R.; Feng, J.; Wu, J. (2023) (baseline) — Heterogeneous ensemble learning with SHAP corrects class imbalance for national student loan default prediction. [4 5]
-- Zhang, R.; Lin, C.; Tong, Z. (2021) (context) — Visual early warning system analyses danger indicators in real time for college net loan credit risk. [4 5]
-- Liu, P.; Shao, Y. (2013) (context) — Loan securitization and risk-sharing systems reduce revenue volatility for small enterprises. [4 6]
-- laotse (Kaggle) () (methodology) — Public Kaggle credit-risk dataset supplies the 32,581 records and 12 features used for all experiments. [6 1]
-- Aiello, M. A.; Angelico, C. (2023) (context) — Carbon tax exposure affects business loan default rates at Italian banks, motivating risk-factor based credit assessment. [2 1]
+- Zhuang, Y.; Wei, H. (2024) (baseline) — GAN-LightGBM model uses generative adversarial networks for data imbalance and LightGBM to estimate credit risk in fintech. [p. 3]
+- Aruleba, I.; Sun, Y. (2024) (baseline) — Ensemble of Random Forest, adaptive boosting and XGBoost with SMOTE-ENN plus SHAP improves interpretability and class balance. [p. 3]
+- Yang, D.; Xiao, B. (2024) (baseline) — Multi-stage ensemble model combines behavioural and non-financial data with bagging-based oversampling for SME credit risk. [p. 3]
+- Gamba-Santamaria, S.; Melo-Velandia, L. F.; Orozco-Vanegas, C. (2023) (context) — Intrinsic estimators with penalized regression split loan risk into payment capacity and risk-taking components, handling multicollinearity. [p. 3]
+- Wang, F.; Ding, L.; Yu, H.; Zhao, Y. (2020) (methodology) — Nonlinear least squares SVM builds an index system for credit risk classification in online supply chains. [p. 4]
+- Rao, C.; Liu, Y.; Goh, M. (2023) (methodology) — Particle swarm optimisation tunes XGBoost hyperparameters for auto loan credit risk while lowering computational cost. [p. 4]
+- Shetabi, M. (2024) (context) — Evolutionary ensemble feature selection adapts to changing risk factors in FinTech lending. [p. 4]
+- Xia, H.; Liu, J.; Zhang, Z. J. (2024) (context) — Machine learning classification over platform Q&A text identifies harmful behaviour on online loan platforms. [p. 4]
+- Sinkey, J. F., Jr.; Greenawalt, M. B. (1991) (context) — Statistical analysis of loan-loss experience and risk-taking at large commercial banks informs lending strategy. [p. 4]
+- Li, Z.; Liang, S.; Pan, X.; Pang, M. (2024) (context) — Loan profit forecast combining financial and non-financial information improves SME credit risk prediction. [p. 4]
+- Wang, Y.; Zhang, Y.; Liang, M.; Yuan, R.; Feng, J.; Wu, J. (2023) (baseline) — Heterogeneous ensemble learning with SHAP corrects class imbalance for national student loan default prediction. [p. 4]
+- Zhang, R.; Lin, C.; Tong, Z. (2021) (context) — Visual early warning system analyses danger indicators in real time for college net loan credit risk. [p. 4]
+- Liu, P.; Shao, Y. (2013) (context) — Loan securitization and risk-sharing systems reduce revenue volatility for small enterprises. [p. 4]
+- laotse (Kaggle) (0) (methodology) — Public Kaggle credit-risk dataset supplies the 32,581 records and 12 features used for all experiments. [p. 6]
+- Aiello, M. A.; Angelico, C. (2023) (context) — Carbon tax exposure affects business loan default rates at Italian banks, motivating risk-factor based credit assessment. [p. 2]
 
 ---
-
-Conversion: [`A--Aldrees-2025_marked.md`](../../literature/conversions/A--Aldrees-2025_marked.md) · Summary: [`A--Aldrees-2025_summarized.json`](../../literature/conversions/A--Aldrees-2025_summarized.json)
+Conversion: [`A--Aldrees-2025_marked.md`](../../literature/conversions/A--Aldrees-2025_marked.md)

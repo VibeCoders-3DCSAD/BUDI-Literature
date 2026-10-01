@@ -8,14 +8,14 @@ Personal Financial Management Apps,pfm_apps_features,Features of Personal Financ
 Personal Financial Management Apps,pfm_apps_problems,Problems in Personal Financial Management Apps,0,Not reported
 Personal Financial Management Apps,pfm_apps_importance,Importance of PFM Applications in Financial Planning,0,Not reported
 Models and Algorithms,sarima,Seasonal Auto-Regressive Integrated Moving Average,0,Not reported
-Models and Algorithms,rule_based_classification,Rule-Based Classification,0,Not reported
+Models and Algorithms,rule_based_classification,Rule-Based Classification,1,A--Aldrees-2025
 Models and Algorithms,linear_programming,Linear Programming,0,Not reported
 Models and Algorithms,interquartile_range,Inter-Quartile Range,0,Not reported
-Models and Algorithms,model_algorithm_integration,Integration of Models and Algorithms,0,Not reported
+Models and Algorithms,model_algorithm_integration,Integration of Models and Algorithms,2,A--Abdullahi-2025; A--Aldrees-2025
 System Methodology,development_methodology,Development Methodology,0,Not reported
 System Methodology,data_collection,Data Collection,0,Not reported
 System Methodology,model_development,Model Development,0,Not reported
 System Methodology,system_development,System Development,0,Not reported
 System Evaluation,software_quality_evaluation,Software Quality Evaluation,0,Not reported
-System Evaluation,model_performance_evaluation,Model Performance Evaluation,0,Not reported
+System Evaluation,model_performance_evaluation,Model Performance Evaluation,2,A--Abdullahi-2025; A--Aldrees-2025
 System Evaluation,system_performance_evaluation,System Performance Evaluation,0,Not reported

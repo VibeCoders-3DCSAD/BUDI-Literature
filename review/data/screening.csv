@@ -21,8 +21,8 @@ L--BangkoSentral-2026b,Bangko Sentral ng Pilipinas,2026,local,report,not extract
 L--Cruz-2026,Dela Cruz,2026,local,Not reported,not extracted,0,Not reported,no,yes,yes
 L--Erno-2026,Erno,2026,local,Not reported,not extracted,0,Not reported,no,yes,yes
 L--Francisco-2026,Francisco,2026,local,Not reported,not extracted,0,Not reported,no,no,yes
-A--Abdullahi-2025,Abdullahi,2025,algorithm,Not reported,extracted,0,Not reported,yes,yes,yes
-A--Aldrees-2025,Aldrees,2025,algorithm,Not reported,extracted,0,Not reported,yes,yes,yes
+A--Abdullahi-2025,Abdullahi,2025,algorithm,journal-article,extracted,2,model_algorithm_integration; model_performance_evaluation,yes,yes,yes
+A--Aldrees-2025,Aldrees,2025,algorithm,journal-article,extracted,3,rule_based_classification; model_algorithm_integration; model_performance_evaluation,yes,yes,yes
 A--Ayari-2025,Ayari,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
 A--Bader-2025,Bader,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
 A--Begum-2025,Begum,2025,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes

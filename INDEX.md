@@ -2,7 +2,7 @@
 
 - **Project:** Development of BUDI: A Personalized Intelligent Finance Management Application for Filipinos Using Classification, Forecasting, Optimization, and Anomaly Detection Models for Improving Savings and Debt
 - **Institution:** University of Makati | Group 4, III-DCSAD
-- **Last indexed:** 2026-09-30
+- **Last indexed:** 2026-10-01
 
 ---
 
@@ -16,7 +16,7 @@
 | Literature review matrix (generated) | `review/literature-review-matrix.md` |
 | Per-module coverage (read before requesting new sources) | `review/data/themes.csv` |
 | RRL processing workflow | `docs/standards/rrl-workflow.md` |
-| Structured summary JSON schema | `docs/standards/summary-format.md` |
+| Note schema for `review/notes/{stem}.md` | `docs/standards/note-format.md` |
 | Matrix columns, tag namespace, validator rules | `docs/standards/review-layout.md` |
 | Extraction contract for agents | `skills/literature-review-summarizer.md` |
 | Corpus file naming rules | `docs/standards/rrl-naming-conventions.md` |
@@ -36,7 +36,7 @@
 | `config/` | Module namespace (single source of truth). |
 | `scripts/` | Fetch, convert, and matrix generation. |
 | `literature/` | Corpus: conversions, bucket (intake), papers (gitignored). |
-| `review/` | Generated matrix, CSV tables, per-paper notes, and hand-written synthesis. |
+| `review/` | Generated matrix, CSV tables, and validation; authored `notes/` and `synthesis/`. |
 | `docs/` | Standards and workflow documentation. |
 | `skills/` | Agent-facing contracts for corpus processing. |
 
@@ -48,7 +48,7 @@ Contracts handed to an agent that does the work. They describe the output shape,
 
 | File | Purpose |
 | :--- | :--- |
-| `literature-review-summarizer.md` | How to extract one paper into `{stem}_summarized.json`, including the `modules[]` assignment rules. Supersedes the retired 56-column matrix inserter. |
+| `literature-review-summarizer.md` | How to extract one paper into an authored note at `review/notes/{stem}.md`, including the `modules[]` assignment rules. Supersedes the retired 56-column matrix inserter. |
 
 ---
 
@@ -79,11 +79,13 @@ extraction, and coverage is a count of assignments.
 
 ## literature/
 
-The curated corpus. Each curated paper has up to three files (see `docs/standards/rrl-naming-conventions.md`).
+The curated corpus. Each curated paper has up to three files — the fetched PDF,
+the conversion, and the extraction note (see
+`docs/standards/rrl-naming-conventions.md`).
 
 | Path | Purpose |
 | :--- | :--- |
-| `literature/conversions/` | Committed corpus: `{stem}_marked.md` and `{stem}_summarized.json` per paper, plus `metadata.json`. |
+| `literature/conversions/` | Committed corpus: one `{stem}_marked.md` per paper, plus `metadata.json`. The extraction note lives under `review/notes/`. |
 | `literature/conversions/metadata.json` | Bibliographic sidecar: verified titles, authors, venues, DOIs, keyed by source-PDF SHA-256. |
 | `literature/bucket/` | Raw candidate PDFs awaiting intake (gitignored). |
 | `literature/papers/` | Fetched source PDFs (gitignored). |
@@ -92,9 +94,10 @@ The curated corpus. Each curated paper has up to three files (see `docs/standard
 
 ## review/
 
-Generated from `metadata.json`, the `_summarized.json` files, and
-`config/taxonomy.yaml`. Everything here except `synthesis/` is overwritten by
-`scripts/build_matrix.py` — never hand-edit it.
+Generated from `metadata.json`, the authored notes in `review/notes/*.md`, and
+`config/taxonomy.yaml`. `review/notes/` and `review/synthesis/` are authored and
+never overwritten; the matrix, `data/*.csv`, and `validation.md` are regenerated
+by `scripts/build_matrix.py` on every full build.
 
 | Path | Purpose |
 | :--- | :--- |
@@ -105,8 +108,8 @@ Generated from `metadata.json`, the `_summarized.json` files, and
 | `review/data/quotes.csv` | Generated: one record per extracted quotation. |
 | `review/data/effects.csv` | Generated: one record per statistical result. |
 | `review/data/themes.csv` | Generated: per-module coverage tally. |
-| `review/notes/{stem}.md` | Generated: one readable note per paper. |
-| `review/synthesis/` | **Hand-written** cross-paper synthesis. Not generated; the only authored part of `review/`. |
+| `review/notes/{stem}.md` | **Authored**: one extraction note per paper — the source of truth for everything but the bibliographic block. A paper with no note gets a generated stub. |
+| `review/synthesis/` | **Authored** cross-paper synthesis. Nothing overwrites it. |
 
 ---
 
@@ -114,9 +117,9 @@ Generated from `metadata.json`, the `_summarized.json` files, and
 
 | Path | Purpose |
 | :--- | :--- |
-| `docs/standards/rrl-workflow.md` | Full processing workflow (fetch → convert → summarize → build → verify). |
-| `docs/standards/summary-format.md` | JSON schema for `_summarized.json` files, including `modules[]`. |
-| `docs/standards/review-layout.md` | Generated `review/` tree, matrix columns, tag namespace, validator rules. |
+| `docs/standards/rrl-workflow.md` | Full processing workflow (fetch → convert → extract → build → verify). |
+| `docs/standards/note-format.md` | Schema for `review/notes/{stem}.md`, including `modules[]` and `module_rationale`. |
+| `docs/standards/review-layout.md` | The `review/` tree, matrix columns, tag namespace, validator rules. |
 | `docs/standards/rrl-naming-conventions.md` | Corpus file naming rules. |
 | `docs/standards/documentation-format.md` | Shared documentation formatting rules. |
 | `docs/NEW-SCOPE-SOURCES.md` | Download checklist for new-scope sources. Prioritization predates the current taxonomy and needs a re-pass. |
@@ -132,6 +135,7 @@ their module names and column layouts do not match `config/taxonomy.yaml`.
 | Path | What it records |
 | :--- | :--- |
 | `docs/standards/matrix-format_OLD.md` | The 17-column matrix layout, `scores/` inputs, and tag namespace. Superseded by `docs/standards/review-layout.md`. |
+| `docs/standards/summary-format_OLD.md` | The retired `_summarized.json` extraction schema. The JSON files are gone; `docs/standards/note-format.md` replaces them. |
 | `docs/OUTLINE-V4-COVERAGE_OLD.md` | Hand-maintained per-leaf coverage for the retired 22-module taxonomy. Superseded by `review/data/themes.csv`. |
 | `docs/notes-to-improve-lrm.md` | The 2026-09-30 proposal that shaped the generated-matrix approach. |
 | `docs/standards/migration-workflow.md` | Deprecated: the 518-PDF cross-repository migration. |

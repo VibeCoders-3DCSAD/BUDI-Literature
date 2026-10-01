@@ -1,7 +1,7 @@
 ---
 document-type: matrix
 generated-by: scripts/build_matrix.py
-generated: 2026-09-30T10:59:45.496218+00:00
+generated: 2026-10-01T03:15:23.311078+00:00
 ---
 
 # Literature Review Matrix of BUDGIE
@@ -11,7 +11,7 @@ generated: 2026-09-30T10:59:45.496218+00:00
 - Corpus: **93** papers | **2** extracted, **91** not extracted
 - Bibliographic source: `literature/conversions/metadata.json` (page-1 verified)
 - Taxonomy: `config/taxonomy.yaml` — 20 modules in 5 outline sections
-- Extraction source: `literature/conversions/{stem}_summarized.json`
+- Extraction source: `review/notes/{stem}.md` (authored)
 - Column definitions and validation rules: `docs/standards/review-layout.md`
 
 Long tables: [`data/papers.csv`](data/papers.csv) | [`data/screening.csv`](data/screening.csv) | [`data/quotes.csv`](data/quotes.csv) (34) | [`data/effects.csv`](data/effects.csv) (44) | [`data/themes.csv`](data/themes.csv) | [`validation.md`](validation.md)
@@ -20,7 +20,7 @@ Per-paper notes: [`notes/`](notes/). Hand-written synthesis: [`synthesis/`](synt
 
 ## Coverage by Module
 
-Counted from the `modules[]` assignment in each summary. A module with no papers is a
+Counted from the `modules[]` assignment in each note. A module with no papers is a
 gap in the corpus, not a gap in the taxonomy.
 
 | Section | Module | Papers |
@@ -34,16 +34,16 @@ gap in the corpus, not a gap in the taxonomy.
 | Personal Financial Management Apps | `pfm_apps_problems` | 0 |
 | Personal Financial Management Apps | `pfm_apps_importance` | 0 |
 | Models and Algorithms | `sarima` | 0 |
-| Models and Algorithms | `rule_based_classification` | 0 |
+| Models and Algorithms | `rule_based_classification` | 1 |
 | Models and Algorithms | `linear_programming` | 0 |
 | Models and Algorithms | `interquartile_range` | 0 |
-| Models and Algorithms | `model_algorithm_integration` | 0 |
+| Models and Algorithms | `model_algorithm_integration` | 2 |
 | System Methodology | `development_methodology` | 0 |
 | System Methodology | `data_collection` | 0 |
 | System Methodology | `model_development` | 0 |
 | System Methodology | `system_development` | 0 |
 | System Evaluation | `software_quality_evaluation` | 0 |
-| System Evaluation | `model_performance_evaluation` | 0 |
+| System Evaluation | `model_performance_evaluation` | 2 |
 | System Evaluation | `system_performance_evaluation` | 0 |
 
 ## All Papers
@@ -72,8 +72,8 @@ gap in the corpus, not a gap in the taxonomy.
 | L--Cruz-2026 | Dela Cruz | 2026 | Dependence of Filipino Young Professionals' Well-being on their Investing Years and Income in the National Capital Region | Review of Integrative Business and Economics Research | Not reported | Not reported | local | Not reported | Not reported | Not reported | Not reported | Not reported | Not reported | not extracted |
 | L--Erno-2026 | Erno | 2026 | Behavioral and Psychological Drivers of Sustainable Saving and Financial Resilience among Community Households | Journal of Daoist Studies | Not reported | Not reported | local | Not reported | Not reported | Not reported | Not reported | Not reported | Not reported | not extracted |
 | L--Francisco-2026 | Francisco | 2026 | Causes of Salary Loan Dependency: Basis for Strengthening Financial Literacy Program | International Journal of Multidisciplinary Educational Research and Innovatio... (Unverified) | Not reported | Not reported | local | Not reported | Not reported | Not reported | Not reported | Not reported | Not reported | not extracted |
-| A--Abdullahi-2025 | Abdullahi | 2025 | A Systematic Literature Review of Concept Drift Mitigation in Time-Series Applications | IEEE Access | 10.1109/access.2025.3587231 | Not reported | algorithm | Not reported | Not reported | Systematic literature review (SLR) following the PRISMA 2020 statement and Kitchenham-Charters guidelines: a secondary, non-experimental synthesis of 60 published studies, plus a proposed non-execu... | Primary (the review's own corpus): n = 60 included studies, unit = published journal article or conference paper published 2013–2024, drawn from 183 unique records screened with 123 excluded (eight... | A PRISMA 2020 systematic review of 60 studies (2013–2024) finds SVM the most effective learner for detecting and adapting concept drift in time-series classification and regression tasks, and maps... | Search-criteria restriction acknowledged by the authors: only English-language journal and conference papers published between 2013 and 2024 in SCOPUS, ScienceDirect, IEEE Xplore, Web of Science, M... | extracted |
-| A--Aldrees-2025 | Aldrees | 2025 | Behavioral Patterns in Micro-lending: Enhancing Credit Risk Assessment with Collaborative Filtering and Federated Learning | International Journal of Computing and Intelligent Systems | 10.1007/s44196-025-00776-w | Not reported | algorithm | Not reported | Not reported | Computational method-development study with comparative benchmark evaluation against three published models; the authors state no formal design label. | n = 32,581 loan records (public Kaggle credit-risk dataset by user laotse, 12 features, one record per loan application) | A privacy-preserving credit risk method for micro-lending, CFM-LPA, combines collaborative filtering over lending patterns with federated learning, updating a behaviour factor each repayment period... | Headline results are internally inconsistent and not reproducible: the Abstract reports 14.03% better risk detection accuracy and 13.28% better return rate analysis across financed amounts, while S... | extracted |
+| A--Abdullahi-2025 | Abdullahi | 2025 | A Systematic Literature Review of Concept Drift Mitigation in Time-Series Applications | IEEE Access | 10.1109/access.2025.3587231 | journal-article | algorithm | Models and Algorithms; System Evaluation | model_algorithm_integration; model_performance_evaluation | Systematic literature review (SLR) following the PRISMA 2020 statement and Kitchenham-Charters guidelines: a secondary, non-experimental synthesis of 60 published studies, plus a proposed non-execu... | Primary (the review's own corpus): n = 60 included studies, unit = published journal article or conference paper published 2013–2024, drawn from 183 unique records screened with 123 excluded (eight... | A PRISMA 2020 systematic review of 60 studies (2013–2024) finds SVM the most effective learner for detecting and adapting concept drift in time-series classification and regression tasks, and maps... | Search-criteria restriction acknowledged by the authors: only English-language journal and conference papers published between 2013 and 2024 in SCOPUS, ScienceDirect, IEEE Xplore, Web of Science, M... | extracted |
+| A--Aldrees-2025 | Aldrees | 2025 | Behavioral Patterns in Micro-lending: Enhancing Credit Risk Assessment with Collaborative Filtering and Federated Learning | International Journal of Computing and Intelligent Systems | 10.1007/s44196-025-00776-w | journal-article | algorithm | Models and Algorithms; System Evaluation | rule_based_classification; model_algorithm_integration; model_performance_evaluation | Computational method-development study with comparative benchmark evaluation against three published models; the authors state no formal design label. | n = 32,581 loan records (public Kaggle credit-risk dataset by user laotse, 12 features, one record per loan application) | A privacy-preserving credit risk method for micro-lending, CFM-LPA, combines collaborative filtering over lending patterns with federated learning, updating a behaviour factor each repayment period... | Headline results are internally inconsistent and not reproducible: the Abstract reports 14.03% better risk detection accuracy and 13.28% better return rate analysis across financed amounts, while S... | extracted |
 | A--Ayari-2025 | Ayari | 2025 | Machine learning powered financial credit scoring: a systematic literature review | Artificial Intelligence Review | 10.1007/s10462-025-11416-2 | Not reported | algorithm | Not reported | Not reported | Not reported | Not reported | Not reported | Not reported | not extracted |
 | A--Bader-2025 | Bader | 2025 | Bridging AI and Emotion: Enhanced Models for Personal Finance Manager Applications | International Journal of Computing and Digital Systems | 10.12785/ijcds/1571107231 | Not reported | algorithm | Not reported | Not reported | Not reported | Not reported | Not reported | Not reported | not extracted |
 | A--Begum-2025 | Begum | 2025 | Machine Learning in Financial Risk and Behavior Analysis: Predictive Insights on Bankruptcy, Fraud, and Consumer Trends in the USA | Not reported | Not reported | Not reported | algorithm | Not reported | Not reported | Not reported | Not reported | Not reported | Not reported | not extracted |

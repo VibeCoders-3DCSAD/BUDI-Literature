@@ -26,14 +26,15 @@ Each paper has up to three files, distinguished by suffix:
 |--------|---------|----------|
 | `.pdf` | Source paper PDF | `literature/papers/` (fetched, gitignored) |
 | `_marked.md` | Markdown conversion with YAML frontmatter | `literature/conversions/` |
-| `_summarized.json` | Structured JSON summary | `literature/conversions/` (same folder as `_marked.md`) |
+| `.md` (no suffix) | Authored extraction note | `review/notes/` (same `{stem}` as the conversion) |
 
 ### Legacy Suffixes
 
-The following suffixes are still supported for reading but should not be produced for new files:
+The following suffixes are retired and should not be produced for new files:
 
 | Suffix | Legacy Meaning |
 |--------|---------------|
+| `_summarized.json` | Structured JSON summary, retired 2026-10-01 in favour of the note |
 | `_summarized.yaml` | YAML summary (pre-v6.0) |
 | `_summarized.md` | Markdown summary (pre-v6.0) |
 
@@ -50,14 +51,15 @@ Examples:
 
 The `LetterSuffix` (a, b, c...) is used when multiple papers share the same author and year.
 
-## Summary File Naming
+## Extraction Note Naming
+
+A note takes the same stem as the conversion, with a plain `.md` extension in a
+different directory:
 
 ```
-{stem}_summarized.json
+literature/conversions/{stem}_marked.md   ->   review/notes/{stem}.md
 ```
 
-Example: `Cabalfin et al_summarized.json`
+Example: `review/notes/A--Cuevas-2023.md`
 
-## Legacy Formats
-
-YAML (`.yaml`) and Markdown (`.md`) summaries were removed; all summaries are produced as JSON. See `docs/standards/summary-format.md` for the schema.
+The note grammar is specified in `docs/standards/note-format.md`.

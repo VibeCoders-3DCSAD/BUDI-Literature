@@ -6,8 +6,12 @@ Usage: python3 prepare_pdf.py [target_directory]
 
 Scans the target directory for PDF files, converts each to Markdown via
 MarkItDown, adds YAML frontmatter with conversion metadata, optionally
-extracts page-aware text with paragraph detection via pdfminer.six,
-and creates empty summary placeholder files.
+and extracts page-aware text with paragraph detection via pdfminer.six.
+
+It no longer creates empty `_summarized.json` placeholders. Extraction now
+lives in an authored note at `review/notes/{stem}.md` (see
+`docs/standards/note-format.md`); `scripts/build_matrix.py` writes a note stub
+for any paper that has none, so the conversion step has nothing to seed.
 """
 
 import argparse
@@ -167,16 +171,6 @@ def main():
         help="Suffix for the converted Markdown file (default: '_marked.md')",
     )
     parser.add_argument(
-        "--summary-suffix",
-        default="_summarized.json",
-        help="Suffix for the empty summary file (default: '_summarized.json')",
-    )
-    parser.add_argument(
-        "--no-summary",
-        action="store_true",
-        help="Do not create empty summary files",
-    )
-    parser.add_argument(
         "--no-frontmatter",
         action="store_true",
         help="Do not add YAML frontmatter to the markdown output",
@@ -223,7 +217,6 @@ def main():
     for idx, pdf_path in enumerate(pdf_files, start=1):
         stem = pdf_path.stem
         marked_path = target_dir / f"{stem}{args.suffix}"
-        summary_path = target_dir / f"{stem}{args.summary_suffix}"
         sidecar_path = target_dir / f"{stem}_conversion_meta.json"
 
         logging.info(f"[{idx}/{len(pdf_files)}] Converting: {pdf_path.name}")
@@ -288,10 +281,6 @@ def main():
         except Exception as e:
             logging.error(f"  Failed to convert {pdf_path.name}: {e}")
             continue
-
-        if not args.no_summary:
-            summary_path.touch()
-            logging.debug(f"  -> Created empty summary {summary_path.name}")
 
         success_count += 1
 

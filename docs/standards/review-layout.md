@@ -1,11 +1,12 @@
 # Literature Review Layout
 
-`review/` is a **generated view** of the corpus, not a database. Everything in it
-except `review/synthesis/` is rebuilt by `scripts/build_matrix.py` and must never
-be hand-edited.
+`review/` mixes an authored surface with a generated one. `review/notes/` and
+`review/synthesis/` are **authored**: the builder never overwrites a note that
+exists. The matrix, `review/data/*.csv`, and `review/validation.md` are
+**generated** by `scripts/build_matrix.py` and must never be hand-edited.
 
 ```bash
-python3 scripts/build_matrix.py           # rebuild review/
+python3 scripts/build_matrix.py           # rebuild the generated review/ files
 python3 scripts/build_matrix.py --check   # validate only, exit 1 on any error
 ```
 
@@ -13,8 +14,8 @@ The rebuild reads exactly three sources:
 
 | Source | Role |
 | :--- | :--- |
-| `literature/conversions/metadata.json` | Bibliographic authority. Page-1 verified; overrides conversion frontmatter. |
-| `literature/conversions/{stem}_summarized.json` | Extraction. Supplies every non-bibliographic column. |
+| `literature/conversions/metadata.json` | Bibliographic authority. Page-1 verified; overrides note frontmatter. |
+| `review/notes/*.md` | Authored extraction. Supplies every non-bibliographic column. |
 | `config/taxonomy.yaml` | Module namespace. Defines the valid `modules[]` ids. |
 
 Nothing else feeds the matrix. In particular there is no score file, no
@@ -36,8 +37,8 @@ review/
     effects.csv                 one row per statistical result
     themes.csv                  per-module coverage tally
   notes/
-    {stem}.md                   one note per paper
-  synthesis/                    hand-written — the only authored part of review/
+    {stem}.md                   authored — one extraction note per paper (stub if none)
+  synthesis/                    authored — hand-written cross-paper synthesis
 ```
 
 `review/data/*.csv` is the machine-readable surface; the matrix is the human
@@ -60,12 +61,12 @@ surface. They are generated together, so they never disagree.
 | `type` | `metadata.json` | Publication type, or `Not reported`. |
 | `designation` | stem prefix | Derived from the `L--` / `I--` / `A--` prefix, never from content. |
 | `section` | `taxonomy.yaml` | Human-readable outline section(s) implied by `modules`. |
-| `modules` | summary `modules[]` | Ids joined with `; `, ordered by taxonomy order. |
-| `design` | summary `study_design` | The paper's own label. |
-| `sample` | summary `sample` | N and unit together. |
-| `key_finding` | summary `tldr` | One sentence. |
-| `gap` | summary `limitations[0]` | The paper's own most significant limitation. |
-| `status` | derived | `extracted` or `not extracted`. |
+| `modules` | note frontmatter `modules[]` | Ids joined with `; `, ordered by taxonomy order. |
+| `design` | note `**Design.**` line | The paper's own label. |
+| `sample` | note `**Sample.**` line | N and unit together. |
+| `key_finding` | note `## Summary` | One sentence. |
+| `gap` | note `## Limitations and Gaps` (first bullet) | The paper's own most significant limitation. |
+| `status` | note frontmatter `status` | `extracted` or `not extracted`. |
 
 Every empty cell renders as `Not reported`, never blank and never `N/A`.
 
@@ -78,27 +79,29 @@ Every empty cell renders as `Not reported`, never blank and never `N/A`.
 
 Coverage is a count of assignments, nothing else:
 
-- `modules[]` in a summary holds ids copied verbatim from `config/taxonomy.yaml`.
+- `modules[]` in a note's frontmatter holds ids copied verbatim from `config/taxonomy.yaml`.
 - `data/themes.csv` and the matrix's coverage table tally papers per module.
 - A module with zero papers is a **gap in the corpus**, not a defect in the
   taxonomy and not a reason to loosen assignment.
 - There is no relevance score, weight, tier, or priority. A paper appearing in a
   module is a routing fact, not a quality judgement.
 
-Assignment rules: `docs/standards/summary-format.md` §Module Assignment.
+Assignment rules: `docs/standards/note-format.md` §Frontmatter.
 
 ---
 
 ## Per-paper notes
 
-`review/notes/{stem}.md` is the readable form of one summary: frontmatter, then
-`tldr`, problem, method, software, key findings, a statistical-evidence table,
-limitations, and links back to the conversion and summary JSON. Unextracted
-papers get a stub that says so and links to the extraction contract.
+`review/notes/{stem}.md` is the authored extraction record for one paper:
+frontmatter, then a summary, problem, method, software, key findings, a
+statistical-evidence table, limitations, and a link back to the conversion. The
+builder reads the note and never rewrites it: it writes a stub only for a paper
+that has no note, and that stub says so and links to the extraction contract.
 
-Notes are generated, so they stay in step with the JSON. Prose that belongs to a
-human — cross-paper comparison, argument, narrative — goes in
-`review/synthesis/`, which nothing overwrites.
+Because notes are authored, they are the source that the generated matrix and
+CSVs are derived from — fix a note, not the matrix. Prose that belongs to a human
+— cross-paper comparison, argument, narrative — goes in `review/synthesis/`, which
+nothing overwrites.
 
 ---
 
@@ -111,10 +114,10 @@ retained topic-independent rules are:
 
 | Error | Meaning |
 | :--- | :--- |
-| Unknown stem | A summary or conversion has no `metadata.json` entry. |
-| Bibliographic mismatch | Summary title/authors/year/venue/DOI disagree with the sidecar. |
-| Invented module | A tag or `quotes[].module` id is absent from `config/taxonomy.yaml`. |
-| Discrepancy not recorded | A figure named in a `limitations` entry is missing from `effects[]`. |
+| Unknown stem | A note or conversion has no `metadata.json` entry. |
+| Bibliographic mismatch | Note title/authors/year/venue/DOI disagree with the sidecar. |
+| Invented module | A `modules[]` or `## Quotes` `Module` id is absent from `config/taxonomy.yaml`. |
+| Discrepancy not recorded | A figure named in a `## Limitations and Gaps` entry is missing from `## Statistical Evidence`. |
 
 **Gaps** are informational and never fail the build: unassigned modules,
 unassigned papers, missing DOIs, unverified venues, absent publication types,
@@ -128,18 +131,20 @@ papers are extracted.
 ## Regeneration guarantees
 
 - Two consecutive builds are byte-identical apart from the `generated`
-  timestamp. CSV and note output is byte-identical with no exceptions.
-- The builder creates `review/data/` and `review/notes/` if missing and removes
-  note files whose stem has left the corpus, so the tree cannot drift.
+  timestamp. CSV and generated-stub output is byte-identical with no exceptions.
+- The builder creates `review/data/` and `review/notes/` if missing. It writes a
+  stub for a paper with no note, never overwrites an existing note, and removes a
+  note whose stem has left the corpus, so the tree cannot drift.
 - `--check` performs no writes.
 
 ## Changing a value
 
-Fix the source, then rebuild. Never edit `review/` directly.
+Fix the source, then rebuild. Never edit a generated file under `review/`
+directly; edit the note it is derived from and let the build regenerate the rest.
 
 | To change | Edit |
 | :--- | :--- |
 | A bibliographic value | `literature/conversions/metadata.json` |
-| A finding, gap, or module | `literature/conversions/{stem}_summarized.json` |
+| A finding, gap, or module | `review/notes/{stem}.md` (authored) |
 | The set of modules | `config/taxonomy.yaml` |
 | A column definition | this file, and the constants in `scripts/build_matrix.py` |

@@ -1632,27 +1632,7 @@
       "notes": "Journal name is taken from the running footer on later pages, not from page 1, which prints only E-ISSN 2980-4760. The article carries a 2025 copyright line while the issue is dated February 2026. Venue from running footer; page 1 prints ISSNs only."
     },
     "L--BangkoSentral-2023a": {
-      "stem": "L--BangkoSentral-2023",
-      "designation": "L",
-      "source_pdf": "Bangko Sentral ng Pilipinas, 2023a.pdf",
-      "source_pdf_sha256": "d8e9fc0149ef75bbef7223c2ed9bf44ce3b1d90140c33616fcd469e6f20b9983",
-      "page_count": 9,
-      "converted_at": "2026-09-07T10:14:25Z",
-      "title": "Financial Inclusion in the Philippines: Dashboard, As of Fourth Quarter 2023",
-      "authors": [
-        "Bangko Sentral ng Pilipinas"
-      ],
-      "first_author": "Bangko Sentral ng Pilipinas",
-      "year": "2023",
-      "venue": "Bangko Sentral ng Pilipinas",
-      "note": "Statistical dashboard, not a journal article: no volume, issue, pages, or DOI. Publisher/series is the Bangko Sentral ng Pilipinas. FILENAME RECONCILED 2026-10-08: the financial-inclusion dashboard sits in '2023a.pdf' (was keyed to a missing '2023.pdf'); the on-disk '2023a.pdf'/'2023b.pdf' pair had been swapped and is now restored to 9-page (2023a) / 69-page (2023b).",
-      "metadata_source": "verified from PDF page 1 on 2026-09-29",
-      "venue_unverified": false,
-      "publication_type": "institutional dashboard",
-      "notes": "Publisher is the issuing agency; institutional series, not a journal."
-    },
-    "L--BangkoSentral-2023b": {
-      "stem": "L--BangkoSentral-2023b",
+      "stem": "L--BangkoSentral-2023a",
       "designation": "L",
       "source_pdf": "Bangko Sentral ng Pilipinas, 2023b.pdf",
       "source_pdf_sha256": "32a066b364c03a18063e60ad2c5af169c678f302b4bea2f4f8b82320ec47422e",
@@ -1669,6 +1649,26 @@
       "metadata_source": "verified from PDF page 1 on 2026-09-29",
       "venue_unverified": false,
       "publication_type": "institutional report",
+      "notes": "Publisher is the issuing agency; institutional series, not a journal."
+    },
+    "L--BangkoSentral-2023b": {
+      "stem": "L--BangkoSentral-2023b",
+      "designation": "L",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2023a.pdf",
+      "source_pdf_sha256": "d8e9fc0149ef75bbef7223c2ed9bf44ce3b1d90140c33616fcd469e6f20b9983",
+      "page_count": 9,
+      "converted_at": "2026-09-07T10:14:25Z",
+      "title": "Financial Inclusion in the Philippines: Dashboard, As of Fourth Quarter 2023",
+      "authors": [
+        "Bangko Sentral ng Pilipinas"
+      ],
+      "first_author": "Bangko Sentral ng Pilipinas",
+      "year": "2023",
+      "venue": "Bangko Sentral ng Pilipinas",
+      "note": "Statistical dashboard, not a journal article: no volume, issue, pages, or DOI. Publisher/series is the Bangko Sentral ng Pilipinas. FILENAME RECONCILED 2026-10-08: the financial-inclusion dashboard sits in '2023a.pdf' (was keyed to a missing '2023.pdf'); the on-disk '2023a.pdf'/'2023b.pdf' pair had been swapped and is now restored to 9-page (2023a) / 69-page (2023b).",
+      "metadata_source": "verified from PDF page 1 on 2026-09-29",
+      "venue_unverified": false,
+      "publication_type": "institutional dashboard",
       "notes": "Publisher is the issuing agency; institutional series, not a journal."
     },
     "L--BangkoSentral-2025": {
@@ -1692,27 +1692,7 @@
       "notes": "Publisher is the issuing agency; institutional series, not a journal."
     },
     "L--BangkoSentral-2026a": {
-      "stem": "L--BangkoSentral-2026",
-      "designation": "L",
-      "source_pdf": "Bangko Sentral ng Pilipinas, 2026a.pdf",
-      "source_pdf_sha256": "af94e03704ccecdc0f305447034de000a7fa15b4b3abaac88a8690c8a01886da",
-      "page_count": 24,
-      "converted_at": "2026-09-07T10:20:03Z",
-      "title": "Consumer Expectations Survey Report: 2nd Quarter 2026",
-      "authors": [
-        "Bangko Sentral ng Pilipinas"
-      ],
-      "first_author": "Bangko Sentral ng Pilipinas",
-      "year": "2026",
-      "venue": "Bangko Sentral ng Pilipinas",
-      "note": "Institutional author. Cited in Chapter 2 V3 as 'The Bangko Sentral ng Pilipinas (2026)'. FILENAME RECONCILED 2026-10-08: the CES Q2 2026 report sits in '2026a.pdf' (was keyed to a missing '2026.pdf'); the on-disk '2026a.pdf'/'2026b.pdf' pair had been swapped and is now restored to 24-page (2026a) / 72-page (2026b).",
-      "metadata_source": "verified from PDF page 1 on 2026-09-29",
-      "publication_type": "institutional report",
-      "venue_unverified": false,
-      "notes": "Publisher is the issuing agency; the department name is an issuing unit, not a venue."
-    },
-    "L--BangkoSentral-2026b": {
-      "stem": "L--BangkoSentral-2026b",
+      "stem": "L--BangkoSentral-2026a",
       "designation": "L",
       "source_pdf": "Bangko Sentral ng Pilipinas, 2026b.pdf",
       "source_pdf_sha256": "c70dbfe5e93ceaf5c54d899d890734749d900997f56328a96cdb6d1970fe1cce",
@@ -1730,6 +1710,26 @@
       "venue_unverified": false,
       "publication_type": "institutional report",
       "notes": "Publisher is the issuing agency; institutional series, not a journal."
+    },
+    "L--BangkoSentral-2026b": {
+      "stem": "L--BangkoSentral-2026b",
+      "designation": "L",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2026a.pdf",
+      "source_pdf_sha256": "af94e03704ccecdc0f305447034de000a7fa15b4b3abaac88a8690c8a01886da",
+      "page_count": 24,
+      "converted_at": "2026-09-07T10:20:03Z",
+      "title": "Consumer Expectations Survey Report: 2nd Quarter 2026",
+      "authors": [
+        "Bangko Sentral ng Pilipinas"
+      ],
+      "first_author": "Bangko Sentral ng Pilipinas",
+      "year": "2026",
+      "venue": "Bangko Sentral ng Pilipinas",
+      "note": "Institutional author. Cited in Chapter 2 V3 as 'The Bangko Sentral ng Pilipinas (2026)'. FILENAME RECONCILED 2026-10-08: the CES Q2 2026 report sits in '2026a.pdf' (was keyed to a missing '2026.pdf'); the on-disk '2026a.pdf'/'2026b.pdf' pair had been swapped and is now restored to 24-page (2026a) / 72-page (2026b).",
+      "metadata_source": "verified from PDF page 1 on 2026-09-29",
+      "publication_type": "institutional report",
+      "venue_unverified": false,
+      "notes": "Publisher is the issuing agency; the department name is an issuing unit, not a venue."
     },
     "L--Bulan-2025": {
       "stem": "L--Bulan-2025",

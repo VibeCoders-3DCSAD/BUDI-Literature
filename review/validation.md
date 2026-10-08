@@ -1,6 +1,6 @@
 # Literature Review Matrix Validation
 
-- Generated: **2026-10-08T07:50:58.542436+00:00**
+- Generated: **2026-10-08T11:29:16.293432+00:00**
 - Papers: **97** | extracted: **97** | not extracted: **0**
 - Errors: **0** | informational gaps: **56**
 
@@ -88,8 +88,8 @@ None. Every rule passed.
 - `I--Hajj-2023` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 0.001, 0.001, 0.001, 0.001, 0.001, 3.1, 3.1, 3.2, 3.2, 3.2, 3.2. Either restore them or stop claiming a discrepancy.
 - `I--Sapiri-2023` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 4.2, 4.3, 4.3, 998.789. Either restore them or stop claiming a discrepancy.
 - `I--WangLy-2023` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 0.1, 0.1, 3.2.2, 5.2.2, 6.2, 7.1, 7.1, 7.1, 7.2. Either restore them or stop claiming a discrepancy.
-- `L--BangkoSentral-2023a` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 10,000, 27.92, 28.32, 71.11%, 78.5. Either restore them or stop claiming a discrepancy.
-- `L--BangkoSentral-2023b` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 5,000, 502,208.75. Either restore them or stop claiming a discrepancy.
+- `L--BangkoSentral-2023a` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 5,000, 502,208.75. Either restore them or stop claiming a discrepancy.
+- `L--BangkoSentral-2023b` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 10,000, 27.92, 28.32, 71.11%, 78.5. Either restore them or stop claiming a discrepancy.
 - 1 papers have no module assignment yet.
 - 45 entries have no DOI in metadata.json.
 - 5 entries carry an unverified venue: A--DSouza-2026, L--Abila-2026, L--Francisco-2026, I--Yoganandham-2025, L--Atento-2025.

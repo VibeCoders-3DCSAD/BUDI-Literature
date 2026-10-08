@@ -4,7 +4,6 @@ first_author: D'Souza
 year: 2026
 title: "A Comprehensive Review of Machine Learning Techniques for Intelligent Personal Finance Management Systems"
 venue: "P.E.S Modern College of Engineering, Pune, India"
-doi: 10.2139/ssrn.6351098
 designation: algorithm
 status: extracted
 modules: [financial_planning, budgeting, pfm_apps_overview, pfm_apps_features, pfm_apps_problems, sarima, rule_based_classification, model_algorithm_integration, model_performance_evaluation, system_performance_evaluation]

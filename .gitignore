@@ -4,11 +4,11 @@ __pycache__/
 .venv/
 
 # Corpus markdown and summaries — committed
-!literature/conversions/
-!literature/conversions/**/
+!literature/paper-markdowns/
+!literature/paper-markdowns/**/
 
 # PDFs — fetched, not committed (use scripts/fetch_pdfs.py)
-literature/papers/
+literature/paper-pdfs/
 *.pdf
 
 # Intake bucket

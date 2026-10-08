@@ -193,4 +193,4 @@ Micro-lending platforms struggle to assess credit risk because borrower data are
 - Aiello, M. A.; Angelico, C. (2023) (context) — Carbon tax exposure affects business loan default rates at Italian banks, motivating risk-factor based credit assessment. [p. 2]
 
 ---
-Conversion: [`A--Aldrees-2025_marked.md`](../../literature/conversions/A--Aldrees-2025_marked.md)
+Conversion: [`A--Aldrees-2025_marked.md`](../../literature/paper-markdowns/A--Aldrees-2025_marked.md)

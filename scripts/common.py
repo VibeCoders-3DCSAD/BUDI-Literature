@@ -19,7 +19,7 @@ from pathlib import Path
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_CORPUS = REPO_ROOT / "literature" / "conversions"
+DEFAULT_CORPUS = REPO_ROOT / "literature" / "paper-markdowns"
 DEFAULT_REVIEW = REPO_ROOT / "review"
 DEFAULT_NOTES = DEFAULT_REVIEW / "notes"
 DEFAULT_CONFIG = REPO_ROOT / "config" / "taxonomy.yaml"
@@ -155,6 +155,26 @@ def _bullets(text: str) -> list[str]:
     return [m.group(1).strip() for m in _BULLET_RE.finditer(text)]
 
 
+_ABSENCE_RE = re.compile(
+    r"not (?:reported|applicable)\b|no outcome statistics\b|"
+    r"reports? no (?:statistic|result|outcome|quantitative)",
+    re.IGNORECASE,
+)
+
+
+def _declares_absence(text: str) -> bool:
+    """True when a table-less section explicitly states that it has no records.
+
+    `docs/standards/note-format.md` requires `## Statistical Evidence` and
+    `## Quotes` to state absence rather than be dropped, so a note that writes
+    `Not reported.` has answered the question the section exists to answer. The
+    declaration has to be prose, not an empty section: a missing section and an
+    empty one are different claims, and only the second is a stated absence.
+    """
+    head = " ".join(ln.strip() for ln in text.strip().splitlines() if ln.strip())[:400]
+    return bool(head) and bool(_ABSENCE_RE.search(head))
+
+
 def _table(text: str, columns: tuple[str, ...], label: str) -> tuple[list[dict], list[str]]:
     """Parse the first markdown table under `text` and check its header exactly."""
     errors: list[str] = []
@@ -165,6 +185,8 @@ def _table(text: str, columns: tuple[str, ...], label: str) -> tuple[list[dict],
 
     header_idx = next((i for i, ln in enumerate(lines) if ln.startswith("|")), None)
     if header_idx is None:
+        if _declares_absence(text):
+            return [], []
         return [], [f"`{label}` has no table; write `Not reported.` if there are no records"]
 
     def cells(line: str) -> list[str]:

@@ -1,7 +1,7 @@
 # New-Scope Source Requests
 
 Papers and datasets the researchers must download manually. Once fetched, place PDFs in
-`literature/bucket/` and follow `docs/standards/rrl-workflow.md`.
+`bucket/` (at the repository root) and follow `docs/standards/rrl-workflow.md`.
 
 **Re-prioritised 2026-09-26 against Topical Outline V4.** The previous ordering was derived
 against Outline V3 and no longer reflects where the corpus is weak. Priorities now come from
@@ -19,11 +19,21 @@ document is admissible on its nature rather than its date:
 | Government and regulatory reports | Bangko Sentral, Federal Reserve |
 | Standards and laws | ISO/IEC 25010:2023 |
 | A measurement instrument's originating publication | Brooke (1996) for the SUS, cited as the definition of the instrument rather than as a literature finding. Flagged inline wherever it appears. |
+| Method, instrument, or benchmark origin works (extended **2026-10-08**) | The chapter cites several works for the method or benchmark they originate, not for current-domain findings. These are admitted on the same logic as Brooke and restricted to a closed list (below). Each is flagged inline at the point of citation. |
+
+**Extended-window closed list (added 2026-10-08):** Box and Jenkins (1970, SARIMA/ARIMA
+origin), Dantzig (1963, LP founding), Tukey (1977, IQR/boxplot origin and the 1.5 multiplier),
+Hyndman and Kostenko (2007, seasonal-sample-size method), Bangor et al. (2008, SUS benchmark),
+Lewis (2018, standardised usability questionnaires), Adams et al. (2022, Fed note — also a
+government-report exception), He and Zhou (2022, financial-vulnerability framework), Arfani et
+al. (2022, Agile/Scrum method), Hnatkowska et al. (2022, Scrum/Kanban taxonomy). These are the
+only pre-2023 scholarly works the chapters may hold; a later chapter must request an extension
+before citing any other pre-2023 work.
 
 Anything outside 2023 that is not one of the above is **not** citable. Two candidates were cut
 for this reason during verification; see "Corrections to the previous list" below.
 
-Status: `[ ]` = not downloaded, `[x]` = downloaded + in `literature/bucket/`.
+Status: `[ ]` = not downloaded, `[x]` = downloaded + in `bucket/`.
 
 ## Verification status
 
@@ -88,22 +98,54 @@ cited as the instrument's definition under the window exception, with the 2025 s
 carrying the substantive properties. This is the one place the chapter steps outside 2023+, and
 it is flagged inline at the point of citation rather than buried here.
 
-### P0.4 Sources cited in Chapter 2 that the corpus does not hold
+### P0.4 Sources cited in the chapters that the corpus does not hold
 
-Found by the provenance audit of 2026-09-27, not by an outline-coverage gap. All six are cited in
-the chapter, were inherited from Chapter 2 V3, and resolve to no file in `conversions/`, `papers/`,
-or `bucket/`. **A reference is not verified until the file is held.** In acquisition order:
+Found by the provenance audit of 2026-09-27 (refreshed 2026-10-08 by
+`docs/citation-audit-2026-10-08.md`), not by an outline-coverage gap. These resolve to no file in
+`paper-markdowns/`, `paper-pdfs/`, or `bucket/`. **A reference is not verified until the file is
+held.**
 
-- [ ] **verified** — Brooke, J. (1996). SUS: A "quick and dirty" usability scale. In *Usability Evaluation in Industry*, 189-194. — the canonical System Usability Scale source, load-bearing for *Software Quality Evaluation*, and the chapter's only pre-2023 window exception. One page; the cheapest item on this list and the most cited-per-page.
-- [ ] **verified** — Philippine Statistics Authority (2023). *Family Income and Expenditure Survey.* — annual income, expense, household-size, and distributional inputs to the Conceptual Model.
-- [ ] **verified** — Philippine Statistics Authority (2026). *Household Final Consumption Expenditure* series. — seasonal proportions for the temporal disaggregation. `L--Dasmarinas-2024` is a partial substitute (it analyses Philippine quarterly consumption 2001–2021) but is an academic study of an aggregate series, not the official statistical release the design names.
-- [ ] **verified** — Ariningsih, P., & Muhammad, A. H. (2024). *Quality evaluation of Indonesian sharia fintech.* — PFM feature comparison.
-- [ ] **verified** — Lianto, M. E., Primasari, C. H., Marsella, E., Wibisono, Y., et al. (2023). Budgeting-app study. — PFM feature comparison.
-- [ ] **verified** — Lim, P. C., Lim, Y. L., Rajah, R., & Zainal, H. (2025). *Usability* study. — PFM features and the usability argument.
+Four formerly-unheld works were converted and held on **2026-10-08** and are no longer on this
+list: PSA (2025) → `L--PSA-2025`, PSA (2026) → `L--PSA-2026`, Board of Governors (2024) →
+`I--FederalReserve-2024`, Guo et al. (2024) → `A--Guo-2024`.
+
+The **25 remaining works** split into three groups. `DOWNLOAD` = in-window (2023+), acquire, hold,
+convert, and add a note. `EXTENDED` = in the extended-window closed list above; acquire, hold,
+convert, and flag inline at the point of citation like Brooke. `STANDARD` = admissible without a
+corpus file.
+
+| # | Citation | Chapter(s) | Verdict | Basis |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Simonse et al., 2024 | 1, 2 | DOWNLOAD | Financial stress / household finances |
+| 2 | Hamid et al., 2023 | 1, 2 | DOWNLOAD | Financial stress components |
+| 3 | Bunyi, 2024 | 1, 2 | DOWNLOAD | Financial resilience among Filipinos |
+| 4 | FSCC, 2024 | 1, 2 | DOWNLOAD | Financial Stability Coordination Council report (government-report exception) |
+| 5 | BSP, 2024a | 1 | DOWNLOAD | Consumer Expectations Survey quarterly — official series |
+| 6 | BSP, 2024b | 1 | DOWNLOAD | Consumer Expectations Survey quarterly — official series |
+| 7 | BSP, 2024c | 1 | DOWNLOAD | Consumer Expectations Survey quarterly — official series |
+| 8 | BSP, 2024d | 1 | DOWNLOAD | Consumer Expectations Survey quarterly — official series |
+| 9 | Bhutta et al., 2023 | 2, 3 | DOWNLOAD | SCF savings / financial literacy |
+| 10 | Ariningsih & Muhammad, 2024 | 2 | DOWNLOAD | ISO 25010 evaluation (P0.3) |
+| 11 | Lianto et al., 2023 | 2 | DOWNLOAD | ISO 25010 evaluation (P0.3) |
+| 12 | Lim et al., 2025 | 2 | DOWNLOAD | SUS usability review (P0.3) |
+| 13 | Laaber et al., 2024 | 2 | DOWNLOAD | DMFT/PTM lifecycle instruments |
+| 14 | Sathe & Panse, 2023 | 2 | DOWNLOAD | Agile constraints (P0.2) |
+| 15 | Brooke, 1996 | 2 | DOWNLOAD | SUS instrument — existing window exception |
+| 16 | Box & Jenkins, 1970 | 2 | EXTENDED | SARIMA/ARIMA origin |
+| 17 | Dantzig, 1963 | 2 | EXTENDED | LP founding |
+| 18 | Tukey, 1977 | 2, 3 | EXTENDED | IQR/boxplot origin, 1.5 multiplier |
+| 19 | Hyndman & Kostenko, 2007 | 2 | EXTENDED | Seasonal-sample-size method |
+| 20 | Bangor et al., 2008 | 2 | EXTENDED | SUS benchmark |
+| 21 | Lewis, 2018 | 2 | EXTENDED | Standardised usability questionnaires |
+| 22 | Adams et al., 2022 | 2, 3 | EXTENDED | Fed note / revolver categories (also government-report exception) |
+| 23 | He & Zhou, 2022 | 2, 3 | EXTENDED | Financial-vulnerability framework (DSTI 40% boundary) |
+| 24 | Arfani et al., 2022 | 2 | EXTENDED | Agile/Scrum method |
+| 25 | Hnatkowska et al., 2022 | 2 | EXTENDED | Scrum/Kanban taxonomy |
+| — | ISO/IEC 25010, 2023 | 2 | STANDARD | No corpus file required |
 
 Two Chapter 2 references are legitimately outside the corpus and are not on this list:
-International Organization for Standardization (2023) is a standard, and Group 4 (2026) is the
-team's own PUEPS instrument, which lives in `BUDI-Base/questionnaires/`.
+International Organization for Standardization (2023) is the standard above, and Group 4 (2026) is
+the team's own PUEPS instrument, which lives in `BUDI-Base/questionnaires/`.
 
 ## P1 — topic gaps in well-covered leaves
 
@@ -113,11 +155,11 @@ partially (3-6 crucial papers against a target of 5+ per subtopic).
 ### Financial classification (rule-based saver/borrower)
 
 - [ ] **verified** — Bhutta, N., Blair, J., & Dettling, L. J. (2023). The smart money is in cash? Financial literacy and liquid savings among U.S. families. *Journal of Accounting and Public Policy, 42*(2), 107000. https://doi.org/10.1016/j.jaccpubpol.2022.107000
-- [ ] **outside window** — He, L., & Zhou, S. (2022). Household financial vulnerability to income and medical expenditure shocks. *International Journal of Environmental Research and Public Health, 19*(8), 4480. — 2022, not admissible.
-- [ ] **outside window** — Adams, R. M., Bord, V. M., & Katcher, B. (2022). Credit card profitability. *FEDS Notes*. — 2022. Would qualify under the government-report exception if the panel accepts a Fed note as regulatory reporting rather than commentary; ask before using.
+- [ ] **extended-window (see ruling)** — He, L., & Zhou, S. (2022). Household financial vulnerability to income and medical expenditure shocks. *International Journal of Environmental Research and Public Health, 19*(8), 4480. — 2022, admitted 2026-10-08 as a financial-vulnerability framework; flag inline at the citation point.
+- [ ] **extended-window (see ruling)** — Adams, R. M., Bord, V. M., & Katcher, B. (2022). Credit card profitability. *FEDS Notes*. — 2022, admitted 2026-10-08 as a Fed note (government-report exception) and for the revolver categories; flag inline.
 - [x] **government report, admissible** — Bangko Sentral ng Pilipinas. (2025). *2025 consumer finance and inclusion survey*.
-- [x] **government report, admissible** — Board of Governors of the Federal Reserve System. (2024). *Report on the economic well-being of U.S. households in 2023*.
-- [x] **verified, volume/pages pending** — Guo, X., Okamura, H., & Dohi, T. (2024). Optimal test case generation for boundary value analysis. *Software Quality Journal*. https://doi.org/10.1007/s11219-023-09659-9 — authors, title, journal, year, and DOI confirmed via dBLP, Springer, and the authors' own record (accepted 21 Dec 2023, © 2024). Cite volume and pages only after checking the PDF; the publisher issues it as 2/2024 and dBLP carries no page range.
+- [x] **held** — Board of Governors of the Federal Reserve System. (2024). *Report on the economic well-being of U.S. households in 2023*. Converted 2026-10-08 → `I--FederalReserve-2024`.
+- [x] **held** — Guo, X., Okamura, H., & Dohi, T. (2024). Optimal test case generation for boundary value analysis. *Software Quality Journal, 32*, 543-566. https://doi.org/10.1007/s11219-023-09659-9 — volume and pages confirmed against the PDF (2026-10-08); converted → `A--Guo-2024`.
 - [x] **verified, surname pending** — Hernández, M., Epelde, G., Alberdi, A., Cilla, R., & Rankin, D. (2023). Synthetic tabular data evaluation in the health domain: Covering resemblance, utility, and privacy dimensions. *Methods of Information in Medicine, 62*(S01), e19-e38. https://doi.org/10.1055/s-0042-1760247 — journal, year, volume, issue, pages, and DOI confirmed via PubMed Central (PMID 36623830) and Ulster's institutional record. Two things need the page: the subtitle above was dropped from an earlier revision of this file, and some indexes render the first author as "Hernández Jiménez" while PubMed Central shows "Hernandez". Do not write the surname until page 1 settles it.
 
 ### Anomaly detection (IQR, unusual expense)
@@ -138,9 +180,9 @@ Now a first-class leaf under V4 rather than a subtopic. The corpus supports it b
 module (7 crucial), so this is the lowest-urgency group, but it is the concept the title is built
 on.
 
-- [x] Asebedo, 2025 — present in `literature/bucket/`, not yet converted. Personal financial planning scoping review; directly serves Definition, Importance, and Process.
-- [x] Khashadourian & Harrison, 2024 — present in `literature/bucket/`, not yet converted.
-- [ ] Schwartz — present in `literature/bucket/temp/`, not yet triaged.
+- [x] Asebedo, 2025 — present in `bucket/`, not yet converted. Personal financial planning scoping review; directly serves Definition, Importance, and Process.
+- [x] Khashadourian & Harrison, 2024 — present in `bucket/`, not yet converted.
+- [ ] Schwartz — present in `bucket/temp/`, not yet triaged.
 
 ## P2 — dropped from the previous list
 
@@ -175,6 +217,6 @@ verified, and the verification state is recorded per entry above.
 
 - BSP CFIS 2025 is cited in both classification and budget methodologies.
 - `HiGHS` (budget solver) is software, not a download candidate.
-- The 91 `_summarized.json` files in the corpus are still empty placeholders, so
-  `scores/validation.md` reports 0/91 annotated and its correlations are `nan`. Threshold
-  calibration is blocked on summarising the corpus; see `scores/validation.md`.
+- The retired `_summarized.json` summarisation pipeline was dropped 2026-10-01 in favour of the
+  per-paper notes in `review/notes/`; the corpus requirement for a paper is now a page-1-verified
+  conversion in `paper-markdowns/` and a completed note.

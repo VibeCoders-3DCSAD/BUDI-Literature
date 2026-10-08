@@ -44,7 +44,7 @@ BUDI-Literature/
   requirements.txt       # Python dependencies
   config/                # taxonomy.yaml — module namespace (single source of truth)
   scripts/               # fetch, convert, and matrix generation
-  literature/            # Corpus: conversions, bucket, papers (gitignored)
+  literature/            # Corpus: paper-markdowns, paper-pdfs (bucket/ lives at repo root)
   review/                # Generated matrix, data/*.csv, validation.md; authored notes/, synthesis/
   docs/                  # Standards and documentation
   skills/                # Agent-facing extraction contracts
@@ -62,7 +62,7 @@ BUDI-Literature/
 | `docs/standards/review-layout.md` | The `review/` tree, matrix columns, tag namespace, validator rules |
 | `docs/standards/rrl-naming-conventions.md` | File naming rules for the corpus |
 | `docs/standards/documentation-format.md` | Shared documentation formatting rules |
-| `literature/conversions/metadata.json` | Bibliographic sidecar: verified titles, authors, venues, DOIs, keyed by source-PDF SHA-256 |
+| `literature/paper-markdowns/metadata.json` | Bibliographic sidecar: verified titles, authors, venues, DOIs, keyed by source-PDF SHA-256 |
 | `review/literature-review-matrix.md` | **Generated** 15-column index over the whole corpus — never hand-edit |
 | `review/data/themes.csv` | **Generated** per-module coverage tally — read before requesting new sources |
 | `review/data/screening.csv` | **Generated** intake triage queue |
@@ -84,12 +84,12 @@ Every curated paper has up to three files:
 
 | File | Location |
 |------|----------|
-| `{stem}.pdf` | `literature/papers/` (fetched, gitignored) |
-| `{stem}_marked.md` | `literature/conversions/` |
+| `{stem}.pdf` | `literature/paper-pdfs/` (fetched, gitignored) |
+| `{stem}_marked.md` | `literature/paper-markdowns/` |
 | `{stem}.md` | `review/notes/` — the authored extraction note |
 
-Plus one corpus-wide file: `literature/conversions/metadata.json`. The retired
-`literature/conversions/{stem}_summarized.json` files are gone; the note replaced
+Plus one corpus-wide file: `literature/paper-markdowns/metadata.json`. The retired
+`literature/paper-markdowns/{stem}_summarized.json` files are gone; the note replaced
 them.
 
 ### File Prefix Convention
@@ -99,7 +99,7 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 
 ### Corpus Layout
 
-Conversions live flat in `literature/conversions/`, one `{stem}_marked.md` per
+Conversions live flat in `literature/paper-markdowns/`, one `{stem}_marked.md` per
 paper, named by its bibliographically correct first author. Do not reintroduce
 per-intake subdirectories: `scripts/common.py` discovers the corpus with
 `rglob("*_marked.md")`, and a nested layout only obscures the corpus (93 papers as of 2026-09-30) when
@@ -129,9 +129,9 @@ python3 scripts/fetch_pdfs.py --source remote --url https://example.com/papers.z
 ### 2. Convert
 
 ```bash
-python3 scripts/prepare_pdf.py literature/papers/ --page-aware
+python3 scripts/prepare_pdf.py literature/paper-pdfs/ --page-aware
 # Then move the conversion into the corpus root:
-mv literature/papers/{stem}_marked.md literature/conversions/
+mv literature/paper-pdfs/{stem}_marked.md literature/paper-markdowns/
 ```
 
 ### 3. Extract into a note
@@ -196,7 +196,7 @@ pip install -r requirements.txt
 - **PDFs are not committed.** Use `scripts/fetch_pdfs.py` to obtain them. The matrix build operates entirely on markdown conversions and notes — PDFs are only needed for conversion.
 - **`review/notes/` and `review/synthesis/` are authored.** Never hand-edit the matrix, the CSVs, or `validation.md`: `scripts/build_matrix.py` overwrites them from `metadata.json`, the `review/notes/*.md` files, and `config/taxonomy.yaml`. The builder never overwrites a note you wrote; it writes a stub only for a paper that has no note. To change a value, fix the source and rebuild. Run `build_matrix.py --check` after any extraction; it exits 1 on an error.
 - **A rename is cheap now, a module rename is not.** Corpus stems are keys in `metadata.json`; renaming one means editing the sidecar too. Renaming or removing a *module* id is worse: the ids live in every note's frontmatter `modules[]` and in the `Module` column of each `## Quotes` table, so the corpus keeps reporting the old namespace until the notes are retagged.
-- **Stems name the first author, but source PDF filenames often do not.** Seven corpus stems were built from filenames and turned out to name a later author. Each was corrected on 2026-09-26 after reading page 1. Verify any stem against the PDF before citing it. `literature/conversions/metadata.json` is the citation authority and records verification per entry (all 93 entries verified from page 1 as of 2026-09-30; the file wraps them under an `entries` key, so count there, not at the top level).
+- **Stems name the first author, but source PDF filenames often do not.** Seven corpus stems were built from filenames and turned out to name a later author. Each was corrected on 2026-09-26 after reading page 1. Verify any stem against the PDF before citing it. `literature/paper-markdowns/metadata.json` is the citation authority and records verification per entry (all 93+ entries verified from page 1 as of 2026-10-08; the file wraps them under an `entries` key, so count there, not at the top level).
 - **A paper that contradicts itself is not an extraction bug.** `A--Aldrees-2025` reports different headline figures in its abstract and its conclusion. Keep both rows with their locators in `## Statistical Evidence` and record the discrepancy in `## Limitations and Gaps`; the validator flags the conflict and deliberately does not choose.
 - **Never score or rank a paper.** Assigning a module says where the paper sits in the outline, not how good it is. `high`/`medium`/`low` relevance, weights, and tiers were all retired with `config/modules.yaml`.
 - **Batch structure is by intake run**, not by topic. Re-organize by topic when the topical outline is finalized.

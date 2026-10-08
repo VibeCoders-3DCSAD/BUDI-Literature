@@ -328,6 +328,30 @@
       "venue": "Journal of Applied Data Sciences, 6(4), 3075-3088",
       "metadata_source": "verified from PDF page 1 on 2026-09-26"
     },
+    "A--Guo-2024": {
+      "stem": "A--Guo-2024",
+      "designation": "A",
+      "source_pdf": "Guo et al., 2024.pdf",
+      "source_pdf_sha256": "54f14d7bdd5f234e59bd2ae5ed6d124882680d90374672fa36e851c9bf64af28",
+      "page_count": 24,
+      "converted_at": "2026-10-08T07:11:44Z",
+      "title": "Optimal test case generation for boundary value analysis",
+      "authors": [
+        "Guo, X.",
+        "Okamura, H.",
+        "Dohi, T."
+      ],
+      "first_author": "Guo",
+      "year": "2024",
+      "venue": "Software Quality Journal",
+      "volume": "32",
+      "pages": "543–566",
+      "doi": "10.1007/s11219-023-09659-9",
+      "note": "BVA test-input generation via boundary coverage distance (BCD), evaluated on mutation fault detection. Accepted 21 December 2023, published online 13 February 2024.",
+      "metadata_source": "verified from PDF page 1 on 2026-10-08",
+      "venue_unverified": false,
+      "publication_type": "journal article"
+    },
     "A--Hamdare-2025": {
       "stem": "A--Hamdare-2025",
       "designation": "A",
@@ -1140,6 +1164,25 @@
       "venue_unverified": true,
       "notes": "Page 1 prints ISSN 2089-6271 / e-ISSN 2338-4565 and Vol 18 No 1 but no journal name. The DOI 10.21632/irjbs points to a different journal prefix than the printed ISSNs, so the venue could not be resolved from the PDF. Journal name absent from page 1; printed ISSNs and the DOI prefix disagree."
     },
+    "I--FederalReserve-2024": {
+      "stem": "I--FederalReserve-2024",
+      "designation": "I",
+      "source_pdf": "Federal Reserve, 2024.pdf",
+      "source_pdf_sha256": "bb2f214641ac2907027d8203db412178e1a710d1005695c3ba4522d04c49421a",
+      "page_count": 82,
+      "converted_at": "2026-10-08T07:13:55Z",
+      "title": "Economic Well-Being of U.S. Households in 2023",
+      "authors": [
+        "Board of Governors of the Federal Reserve System"
+      ],
+      "first_author": "Board of Governors of the Federal Reserve System",
+      "year": "2024",
+      "venue": "Board of Governors of the Federal Reserve System",
+      "note": "82-page SHED (Survey of Household Economics and Decisionmaking) report, fielded October 2023, published May 2024. Institutional report, not a journal article: no volume, issue, pages, or DOI.",
+      "metadata_source": "verified from PDF page 1 on 2026-10-08",
+      "venue_unverified": false,
+      "publication_type": "institutional report"
+    },
     "I--Gan-2025": {
       "stem": "I--Gan-2025",
       "designation": "I",
@@ -1397,7 +1440,7 @@
       "doi": "10.55041/ISJEM06330",
       "metadata_source": "verified from PDF page 1 on 2026-09-29"
     },
-    "I--Yang-2024": {
+    "I--Yang-2024a": {
       "stem": "I--Yang-2024",
       "designation": "I",
       "source_pdf": "J. Yang, 2024.pdf",
@@ -1588,10 +1631,10 @@
       "pages": "Article 11",
       "notes": "Journal name is taken from the running footer on later pages, not from page 1, which prints only E-ISSN 2980-4760. The article carries a 2025 copyright line while the issue is dated February 2026. Venue from running footer; page 1 prints ISSNs only."
     },
-    "L--BangkoSentral-2023": {
+    "L--BangkoSentral-2023a": {
       "stem": "L--BangkoSentral-2023",
       "designation": "L",
-      "source_pdf": "Bangko Sentral ng Pilipinas, 2023.pdf",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2023a.pdf",
       "source_pdf_sha256": "d8e9fc0149ef75bbef7223c2ed9bf44ce3b1d90140c33616fcd469e6f20b9983",
       "page_count": 9,
       "converted_at": "2026-09-07T10:14:25Z",
@@ -1602,7 +1645,7 @@
       "first_author": "Bangko Sentral ng Pilipinas",
       "year": "2023",
       "venue": "Bangko Sentral ng Pilipinas",
-      "note": "Statistical dashboard, not a journal article: no volume, issue, pages, or DOI. Publisher/series is the Bangko Sentral ng Pilipinas.",
+      "note": "Statistical dashboard, not a journal article: no volume, issue, pages, or DOI. Publisher/series is the Bangko Sentral ng Pilipinas. FILENAME RECONCILED 2026-10-08: the financial-inclusion dashboard sits in '2023a.pdf' (was keyed to a missing '2023.pdf'); the on-disk '2023a.pdf'/'2023b.pdf' pair had been swapped and is now restored to 9-page (2023a) / 69-page (2023b).",
       "metadata_source": "verified from PDF page 1 on 2026-09-29",
       "venue_unverified": false,
       "publication_type": "institutional dashboard",
@@ -1648,10 +1691,10 @@
       "publication_type": "institutional report",
       "notes": "Publisher is the issuing agency; institutional series, not a journal."
     },
-    "L--BangkoSentral-2026": {
+    "L--BangkoSentral-2026a": {
       "stem": "L--BangkoSentral-2026",
       "designation": "L",
-      "source_pdf": "Bangko Sentral ng Pilipinas, 2026.pdf",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2026a.pdf",
       "source_pdf_sha256": "af94e03704ccecdc0f305447034de000a7fa15b4b3abaac88a8690c8a01886da",
       "page_count": 24,
       "converted_at": "2026-09-07T10:20:03Z",
@@ -1662,7 +1705,7 @@
       "first_author": "Bangko Sentral ng Pilipinas",
       "year": "2026",
       "venue": "Bangko Sentral ng Pilipinas",
-      "note": "Institutional author. Cited in Chapter 2 V3 as 'The Bangko Sentral ng Pilipinas (2026)'.",
+      "note": "Institutional author. Cited in Chapter 2 V3 as 'The Bangko Sentral ng Pilipinas (2026)'. FILENAME RECONCILED 2026-10-08: the CES Q2 2026 report sits in '2026a.pdf' (was keyed to a missing '2026.pdf'); the on-disk '2026a.pdf'/'2026b.pdf' pair had been swapped and is now restored to 24-page (2026a) / 72-page (2026b).",
       "metadata_source": "verified from PDF page 1 on 2026-09-29",
       "publication_type": "institutional report",
       "venue_unverified": false,
@@ -1852,6 +1895,44 @@
       "year": "2024",
       "venue": "TWIST, 19(2), 92-97",
       "metadata_source": "verified from PDF page 1 on 2026-09-26"
+    },
+    "L--PSA-2025": {
+      "stem": "L--PSA-2025",
+      "designation": "L",
+      "source_pdf": "L--PSA-2025.pdf",
+      "source_pdf_sha256": "5819a09eb3c8bb005703759dd896eb978907ebf0ef688261d4fe8097a1d19f83",
+      "page_count": 12,
+      "converted_at": "2026-10-08T07:14:24Z",
+      "title": "Household Final Consumption Expenditure (HFCE) — 2025 quarterly press releases (Q1–Q4)",
+      "authors": [
+        "Philippine Statistics Authority"
+      ],
+      "first_author": "Philippine Statistics Authority",
+      "year": "2025",
+      "venue": "Philippine Statistics Authority",
+      "note": "Series entry (the citing unit ‘PSA 2025’), not an individual release. The conversion concatenates the four 2025 quarterly HFCE press releases, which live separately in paper-pdfs as ‘Philippine Statistics Authority, 2025a–d.pdf’; the duplicates ‘Philippine Statistics Authority, 2025.pdf’ is identical to 2025d (Q4). Institutional statistical series: no volume, issue, pages, or DOI.",
+      "metadata_source": "verified from PDF page 1 on 2026-10-08",
+      "venue_unverified": false,
+      "publication_type": "institutional statistics"
+    },
+    "L--PSA-2026": {
+      "stem": "L--PSA-2026",
+      "designation": "L",
+      "source_pdf": "L--PSA-2026.pdf",
+      "source_pdf_sha256": "1e682aae0e50f03eaf2d4bf076d4b1f766d3e8e136afe90e8714ea1ce92bcf12",
+      "page_count": 5,
+      "converted_at": "2026-10-08T07:14:35Z",
+      "title": "Household Final Consumption Expenditure (HFCE) — 2026 quarterly press releases (Q1–Q2)",
+      "authors": [
+        "Philippine Statistics Authority"
+      ],
+      "first_author": "Philippine Statistics Authority",
+      "year": "2026",
+      "venue": "Philippine Statistics Authority",
+      "note": "Series entry (the citing unit ‘PSA 2026’). The conversion concatenates the 2026 quarterly HFCE press releases available so far (Q1, Q2), living separately in paper-pdfs as ‘Philippine Statistics Authority, 2026a–b.pdf’. Institutional statistical series: no volume, issue, pages, or DOI.",
+      "metadata_source": "verified from PDF page 1 on 2026-10-08",
+      "venue_unverified": false,
+      "publication_type": "institutional statistics"
     },
     "L--Pinca-2024": {
       "stem": "L--Pinca-2024",

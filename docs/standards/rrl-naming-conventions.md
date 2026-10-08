@@ -1,6 +1,6 @@
 # RRL Naming Conventions
 
-File naming rules for the curated corpus in `literature/conversions/`.
+File naming rules for the curated corpus in `literature/paper-markdowns/`.
 
 ## Source Prefixes
 
@@ -24,8 +24,8 @@ Each paper has up to three files, distinguished by suffix:
 
 | Suffix | Meaning | Location |
 |--------|---------|----------|
-| `.pdf` | Source paper PDF | `literature/papers/` (fetched, gitignored) |
-| `_marked.md` | Markdown conversion with YAML frontmatter | `literature/conversions/` |
+| `.pdf` | Source paper PDF | `literature/paper-pdfs/` (fetched, gitignored) |
+| `_marked.md` | Markdown conversion with YAML frontmatter | `literature/paper-markdowns/` |
 | `.md` (no suffix) | Authored extraction note | `review/notes/` (same `{stem}` as the conversion) |
 
 ### Legacy Suffixes
@@ -57,7 +57,7 @@ A note takes the same stem as the conversion, with a plain `.md` extension in a
 different directory:
 
 ```
-literature/conversions/{stem}_marked.md   ->   review/notes/{stem}.md
+literature/paper-markdowns/{stem}_marked.md   ->   review/notes/{stem}.md
 ```
 
 Example: `review/notes/A--Cuevas-2023.md`

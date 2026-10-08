@@ -1,94 +1,98 @@
 paper_id,first_author,year,designation,type,status,module_count,modules,has_doi,venue_verified,converted
-A--Chahar-2026,Chahar,2026,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Chikoore-2026,Chikoore,2026,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--DSouza-2026,D'Souza,2026,algorithm,Not reported,not extracted,0,Not reported,no,no,yes
-A--Jayaprakashnarayan-2026,Jayaprakashnarayan,2026,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Olabintan-2026,Olabintan,2026,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--PatelSingh-2026,Patel,2026,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Patra-2026,Patra,2026,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Sarkar-2026,Sarkar,2026,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Sireesha-2026,Sireesha,2026,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Vinitha-2026,Vinitha,2026,algorithm,journal-article,not extracted,0,Not reported,no,yes,yes
-A--ZhangHou-2026,Zhang,2026,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-I--Cumaio-2026,Cumaio,2026,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Samli-2026,Samli,2026,international,Not reported,not extracted,0,Not reported,no,yes,yes
-I--Sohilauw-2026,Sohilauw,2026,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Yadav-2026,Yadav,2026,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--ZhangLu-2026,Zhang,2026,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-L--Abila-2026,Abila,2026,local,Not reported,not extracted,0,Not reported,no,no,yes
-L--BangkoSentral-2026,Bangko Sentral ng Pilipinas,2026,local,report,not extracted,0,Not reported,no,yes,yes
-L--BangkoSentral-2026b,Bangko Sentral ng Pilipinas,2026,local,report,not extracted,0,Not reported,no,yes,yes
-L--Cruz-2026,Dela Cruz,2026,local,Not reported,not extracted,0,Not reported,no,yes,yes
-L--Erno-2026,Erno,2026,local,Not reported,not extracted,0,Not reported,no,yes,yes
-L--Francisco-2026,Francisco,2026,local,Not reported,not extracted,0,Not reported,no,no,yes
-A--Abdullahi-2025,Abdullahi,2025,algorithm,journal-article,extracted,2,model_algorithm_integration; model_performance_evaluation,yes,yes,yes
+A--Chahar-2026,Chahar,2026,algorithm,Not reported,extracted,13,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; model_algorithm_integration; model_development; system_development; software_quality_evaluation; model_performance_evaluation,no,yes,yes
+A--Chikoore-2026,Chikoore,2026,algorithm,Not reported,extracted,4,savings_debt_management; model_algorithm_integration; model_development; model_performance_evaluation,yes,yes,yes
+A--DSouza-2026,D'Souza,2026,algorithm,Not reported,extracted,10,financial_planning; budgeting; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; sarima; rule_based_classification; model_algorithm_integration; model_performance_evaluation; system_performance_evaluation,no,no,yes
+A--Jayaprakashnarayan-2026,Jayaprakashnarayan,2026,algorithm,Not reported,extracted,13,budgeting; income_expense_management; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; rule_based_classification; model_algorithm_integration; data_collection; model_development; system_development; software_quality_evaluation; model_performance_evaluation; system_performance_evaluation,yes,yes,yes
+A--Olabintan-2026,Olabintan,2026,algorithm,Not reported,extracted,5,model_algorithm_integration; data_collection; model_development; system_development; model_performance_evaluation,no,yes,yes
+A--PatelSingh-2026,Patel,2026,algorithm,Not reported,extracted,13,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; rule_based_classification; model_algorithm_integration; data_collection; system_development; software_quality_evaluation,no,yes,yes
+A--Patra-2026,Patra,2026,algorithm,Not reported,extracted,12,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; model_algorithm_integration; data_collection; model_development; model_performance_evaluation,yes,yes,yes
+A--Sarkar-2026,Sarkar,2026,algorithm,Not reported,extracted,3,model_algorithm_integration; data_collection; model_performance_evaluation,yes,yes,yes
+A--Sireesha-2026,Sireesha,2026,algorithm,Not reported,extracted,10,budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; rule_based_classification; model_algorithm_integration; model_performance_evaluation; system_performance_evaluation,no,yes,yes
+A--Vinitha-2026,Vinitha,2026,algorithm,journal-article,extracted,11,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; model_algorithm_integration; model_development; system_development; model_performance_evaluation,no,yes,yes
+A--ZhangHou-2026,Zhang,2026,algorithm,Not reported,extracted,4,rule_based_classification; data_collection; model_development; model_performance_evaluation,no,yes,yes
+I--Cumaio-2026,Cumaio,2026,international,journal-article,extracted,3,financial_planning; savings_debt_management; income_expense_management,yes,yes,yes
+I--Samli-2026,Samli,2026,international,journal-article,extracted,3,financial_planning; budgeting; savings_debt_management,no,yes,yes
+I--Sohilauw-2026,Sohilauw,2026,international,Not reported,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,yes,yes,yes
+I--Yadav-2026,Yadav,2026,international,Not reported,extracted,14,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; rule_based_classification; linear_programming; model_algorithm_integration; data_collection; model_development; system_development,yes,yes,yes
+I--ZhangLu-2026,Zhang,2026,international,Not reported,extracted,8,pfm_apps_overview; pfm_apps_problems; model_algorithm_integration; data_collection; model_development; software_quality_evaluation; model_performance_evaluation; system_performance_evaluation,yes,yes,yes
+L--Abila-2026,Abila,2026,local,Not reported,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,no,no,yes
+L--BangkoSentral-2026a,Bangko Sentral ng Pilipinas,2026,local,report,extracted,2,budgeting; savings_debt_management,no,yes,yes
+L--BangkoSentral-2026b,Bangko Sentral ng Pilipinas,2026,local,report,extracted,2,savings_debt_management; income_expense_management,no,yes,yes
+L--Cruz-2026,Dela Cruz,2026,local,Not reported,extracted,3,financial_planning; savings_debt_management; income_expense_management,no,yes,yes
+L--Erno-2026,Erno,2026,local,Not reported,extracted,5,financial_planning; budgeting; savings_debt_management; income_expense_management; data_collection,no,yes,yes
+L--Francisco-2026,Francisco,2026,local,journal-article,extracted,4,financial_planning; budgeting; savings_debt_management; data_collection,no,no,yes
+L--PSA-2026,Philippine Statistics Authority,2026,local,dataset,extracted,2,data_collection; model_development,no,yes,yes
+A--Abdullahi-2025,Abdullahi,2025,algorithm,Not reported,extracted,3,sarima; model_algorithm_integration; model_performance_evaluation,yes,yes,yes
 A--Aldrees-2025,Aldrees,2025,algorithm,journal-article,extracted,3,rule_based_classification; model_algorithm_integration; model_performance_evaluation,yes,yes,yes
-A--Ayari-2025,Ayari,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Bader-2025,Bader,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Begum-2025,Begum,2025,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Bhavana-2025,Bhavana,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--ChenTan-2025,Chen,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--DeyArefin-2025,Dey,2025,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Ghonaim-2025,Ghonaim,2025,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Gulbakyt-2025,Gulbakyt,2025,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Hamdare-2025,Hamdare,2025,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Huang-2025,Huang,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--John-2025,John,2025,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--KaraSenguler-2025,Kara,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Khan-2025,Khan,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Lu-2025,Lu,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Pretnar-2025,Pretnar,2025,algorithm,preprint,not extracted,0,Not reported,yes,yes,yes
-A--Sankaewtong-2025,Sankaewtong,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Shaha-2025,Shaha,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--SinghU-2025,Singh,2025,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Sujon-2025,Sujon,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Thakur-2025,Thakur,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Veldurthi-2025,Veldurthi,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Yachamaneni-2025,Yachamaneni,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Zhong-2025,Zhong,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Zlobin-2025,Zlobin,2025,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Andresen-2025,Andresen,2025,international,working-paper,not extracted,0,Not reported,no,yes,yes
-I--Dheepiga-2025,Dheepiga,2025,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Gan-2025,Gan,2025,international,Not reported,not extracted,0,Not reported,no,yes,yes
-I--Ganong-2025,Ganong,2025,international,working-paper,not extracted,0,Not reported,no,yes,yes
-I--RSingh-2025,Sai Sanhosh R,2025,international,journal-article,not extracted,0,Not reported,no,yes,yes
-I--Yoganandham-2025,Yoganandham,2025,international,Not reported,not extracted,0,Not reported,no,no,yes
-I--Yuttama-2025,Yuttama,2025,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Zhao-2025,Zhao,2025,international,conference-paper,not extracted,0,Not reported,yes,yes,yes
-L--Atento-2025,Atento,2025,local,Not reported,not extracted,0,Not reported,no,no,yes
-L--BangkoSentral-2025,Bangko Sentral ng Pilipinas,2025,local,report,not extracted,0,Not reported,no,yes,yes
-L--Bulan-2025,Bulan,2025,local,Not reported,not extracted,0,Not reported,yes,yes,yes
-L--Claro-2025,Claro,2025,local,Not reported,not extracted,0,Not reported,no,yes,yes
-L--Esperanza-2025,Esperanza,2025,local,Not reported,not extracted,0,Not reported,no,yes,yes
-L--Santiago-2025,Santiago,2025,local,Not reported,not extracted,0,Not reported,yes,yes,yes
-L--Vecina-2025,Vecina,2025,local,Not reported,not extracted,0,Not reported,no,yes,yes
-A--ChenJ-2024,Chen,2024,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--DeZarza-2024,de Zarza,2024,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Pratama-2024,Pratama,2024,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Sappa-2024,Sappa,2024,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Shuryhin-2024,Shuryhin,2024,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Siswara-2024,Siswara,2024,algorithm,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Song-2024,Song,2024,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Vijayanand-2024,Vijayanand,2024,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Danahy-2024,Danahy,2024,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Prakoso-2024,Prakoso,2024,international,journal-article,not extracted,0,Not reported,yes,yes,yes
-I--Rane-2024,Rane,2024,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Yang-2024,Yang,2024,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Yang-2024b,Yang,2024,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-L--Dasmarinas-2024,Dasmariñas,2024,local,Not reported,not extracted,0,Not reported,yes,yes,yes
-L--LaspinasMurcia-2024,Laspinas,2024,local,Not reported,not extracted,0,Not reported,no,yes,yes
-L--Pinca-2024,Pinca,2024,local,Not reported,not extracted,0,Not reported,yes,yes,yes
-L--Reyes-2024,Reyes,2024,local,Not reported,not extracted,0,Not reported,yes,yes,yes
-L--Salvador-2024,Salvador,2024,local,Not reported,not extracted,0,Not reported,no,yes,yes
-A--Alenazi-2023,Alenazi,2023,algorithm,Not reported,not extracted,0,Not reported,yes,yes,yes
-A--Hu-2023,Hu,2023,algorithm,conference-paper,not extracted,0,Not reported,no,yes,yes
-A--Sonkavde-2023,Sonkavde,2023,algorithm,journal-article,not extracted,0,Not reported,yes,yes,yes
-A--ZhangEtAl-2023,Zhang,2023,algorithm,journal-article,not extracted,0,Not reported,yes,yes,yes
-I--Bai-2023,Bai,2023,international,journal-article,not extracted,0,Not reported,yes,yes,yes
-I--Hajj-2023,El Hajj,2023,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Salminen-2023,Salminen,2023,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-I--Sapiri-2023,Sapiri,2023,international,Not reported,not extracted,0,Not reported,no,yes,yes
-I--WangLy-2023,Wang-Ly,2023,international,working-paper,not extracted,0,Not reported,no,yes,yes
-I--Yeo-2023,Yeo,2023,international,Not reported,not extracted,0,Not reported,yes,yes,yes
-L--BangkoSentral-2023,Bangko Sentral ng Pilipinas,2023,local,dashboard,not extracted,0,Not reported,no,yes,yes
-L--BangkoSentral-2023b,Bangko Sentral ng Pilipinas,2023,local,report,not extracted,0,Not reported,no,yes,yes
+A--Ayari-2025,Ayari,2025,algorithm,Not reported,extracted,3,rule_based_classification; model_algorithm_integration; model_performance_evaluation,yes,yes,yes
+A--Bader-2025,Bader,2025,algorithm,Not reported,extracted,14,financial_planning; budgeting; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; model_algorithm_integration; data_collection; model_development; system_development; software_quality_evaluation; model_performance_evaluation; system_performance_evaluation,yes,yes,yes
+A--Begum-2025,Begum,2025,algorithm,Not reported,extracted,7,savings_debt_management; sarima; interquartile_range; model_algorithm_integration; data_collection; model_development; model_performance_evaluation,no,yes,yes
+A--Bhavana-2025,Bhavana,2025,algorithm,Not reported,extracted,14,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; model_algorithm_integration; data_collection; model_development; software_quality_evaluation; model_performance_evaluation; system_performance_evaluation,yes,yes,yes
+A--ChenTan-2025,Chen,2025,algorithm,Not reported,extracted,4,model_algorithm_integration; data_collection; model_development; model_performance_evaluation,yes,yes,yes
+A--DeyArefin-2025,Dey,2025,algorithm,journal-article,extracted,9,financial_planning; budgeting; savings_debt_management; income_expense_management; rule_based_classification; data_collection; model_development; system_development; model_performance_evaluation,no,yes,yes
+A--Ghonaim-2025,Ghonaim,2025,algorithm,journal-article,extracted,12,budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; model_algorithm_integration; data_collection; model_development; system_development; software_quality_evaluation; model_performance_evaluation,no,yes,yes
+A--Gulbakyt-2025,Gulbakyt,2025,algorithm,journal-article,extracted,5,financial_planning; budgeting; linear_programming; data_collection; model_performance_evaluation,no,yes,yes
+A--Hamdare-2025,Hamdare,2025,algorithm,Not reported,extracted,5,income_expense_management; model_algorithm_integration; data_collection; model_development; model_performance_evaluation,no,yes,yes
+A--Huang-2025,Huang,2025,algorithm,journal-article,extracted,3,model_algorithm_integration; model_performance_evaluation; system_performance_evaluation,yes,yes,yes
+A--John-2025,John,2025,algorithm,Not reported,extracted,3,model_algorithm_integration; model_development; model_performance_evaluation,no,yes,yes
+A--KaraSenguler-2025,Kara,2025,algorithm,Not reported,extracted,4,budgeting; model_algorithm_integration; data_collection; model_performance_evaluation,yes,yes,yes
+A--Khan-2025,Khan,2025,algorithm,Not reported,extracted,2,model_algorithm_integration; model_performance_evaluation,yes,yes,yes
+A--Lu-2025,Lu,2025,algorithm,journal-article,extracted,5,budgeting; sarima; linear_programming; model_algorithm_integration; model_performance_evaluation,yes,yes,yes
+A--Pretnar-2025,Pretnar,2025,algorithm,preprint,extracted,8,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_problems; pfm_apps_importance; data_collection,yes,yes,yes
+A--Sankaewtong-2025,Sankaewtong,2025,algorithm,Not reported,extracted,5,sarima; rule_based_classification; model_algorithm_integration; data_collection; model_performance_evaluation,yes,yes,yes
+A--Shaha-2025,Shaha,2025,algorithm,Not reported,extracted,5,model_algorithm_integration; data_collection; model_development; model_performance_evaluation; system_performance_evaluation,yes,yes,yes
+A--SinghU-2025,Singh,2025,algorithm,Not reported,extracted,5,financial_planning; model_algorithm_integration; data_collection; model_development; model_performance_evaluation,no,yes,yes
+A--Sujon-2025,Sujon,2025,algorithm,Not reported,extracted,4,model_algorithm_integration; data_collection; model_development; model_performance_evaluation,yes,yes,yes
+A--Thakur-2025,Thakur,2025,algorithm,journal-article,extracted,9,budgeting; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; model_algorithm_integration; model_development; system_development; model_performance_evaluation,yes,yes,yes
+A--Veldurthi-2025,Veldurthi,2025,algorithm,Not reported,extracted,6,rule_based_classification; model_algorithm_integration; data_collection; model_development; model_performance_evaluation; system_performance_evaluation,yes,yes,yes
+A--Yachamaneni-2025,Yachamaneni,2025,algorithm,Not reported,extracted,3,model_algorithm_integration; model_development; model_performance_evaluation,yes,yes,yes
+A--Zhong-2025,Zhong,2025,algorithm,conference-paper,extracted,4,rule_based_classification; model_algorithm_integration; model_development; model_performance_evaluation,yes,yes,yes
+A--Zlobin-2025,Zlobin,2025,algorithm,Not reported,extracted,5,budgeting; pfm_apps_features; pfm_apps_importance; model_algorithm_integration; model_performance_evaluation,yes,yes,yes
+I--Andresen-2025,Andresen,2025,international,working-paper,extracted,2,savings_debt_management; income_expense_management,no,yes,yes
+I--Dheepiga-2025,Dheepiga,2025,international,Not reported,extracted,3,financial_planning; budgeting; savings_debt_management,yes,yes,yes
+I--Gan-2025,Gan,2025,international,Not reported,extracted,3,financial_planning; savings_debt_management; income_expense_management,no,yes,yes
+I--Ganong-2025,Ganong,2025,international,working-paper,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,no,yes,yes
+I--RSingh-2025,Sai Sanhosh R,2025,international,journal-article,extracted,7,budgeting; pfm_apps_features; model_algorithm_integration; data_collection; model_development; system_development; model_performance_evaluation,no,yes,yes
+I--Yoganandham-2025,Yoganandham,2025,international,Not reported,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,no,no,yes
+I--Yuttama-2025,Yuttama,2025,international,Not reported,extracted,9,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; data_collection; model_performance_evaluation,yes,yes,yes
+I--Zhao-2025,Zhao,2025,international,conference-paper,extracted,4,financial_planning; pfm_apps_features; pfm_apps_problems; model_algorithm_integration,yes,yes,yes
+L--Atento-2025,Atento,2025,local,Not reported,extracted,4,financial_planning; savings_debt_management; income_expense_management; data_collection,no,no,yes
+L--BangkoSentral-2025,Bangko Sentral ng Pilipinas,2025,local,report,extracted,4,financial_planning; savings_debt_management; income_expense_management; data_collection,no,yes,yes
+L--Bulan-2025,Bulan,2025,local,Not reported,extracted,3,financial_planning; savings_debt_management; data_collection,yes,yes,yes
+L--Claro-2025,Claro,2025,local,journal-article,extracted,1,savings_debt_management,no,yes,yes
+L--Esperanza-2025,Esperanza,2025,local,Not reported,extracted,4,financial_planning; budgeting; savings_debt_management; data_collection,no,yes,yes
+L--PSA-2025,Philippine Statistics Authority,2025,local,dataset,extracted,2,data_collection; model_development,no,yes,yes
+L--Santiago-2025,Santiago,2025,local,journal-article,extracted,8,budgeting; income_expense_management; model_algorithm_integration; development_methodology; data_collection; system_development; software_quality_evaluation; model_performance_evaluation,yes,yes,yes
+L--Vecina-2025,Vecina,2025,local,journal-article,extracted,8,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; data_collection,no,yes,yes
+A--ChenJ-2024,Chen,2024,algorithm,Not reported,extracted,4,model_algorithm_integration; data_collection; model_development; model_performance_evaluation,yes,yes,yes
+A--DeZarza-2024,de Zarza,2024,algorithm,Not reported,extracted,6,financial_planning; budgeting; savings_debt_management; income_expense_management; linear_programming; model_algorithm_integration,no,yes,yes
+A--Guo-2024,Guo,2024,algorithm,journal-article,extracted,2,rule_based_classification; model_performance_evaluation,yes,yes,yes
+A--Pratama-2024,Pratama,2024,algorithm,Not reported,extracted,5,income_expense_management; model_algorithm_integration; data_collection; model_development; model_performance_evaluation,no,yes,yes
+A--Sappa-2024,Sappa,2024,algorithm,Not reported,extracted,6,model_algorithm_integration; data_collection; model_development; system_development; model_performance_evaluation; system_performance_evaluation,no,yes,yes
+A--Shuryhin-2024,Shuryhin,2024,algorithm,Not reported,extracted,7,financial_planning; budgeting; income_expense_management; pfm_apps_features; model_algorithm_integration; model_development; system_development,yes,yes,yes
+A--Siswara-2024,Siswara,2024,algorithm,Not reported,extracted,0,Not reported,no,yes,yes
+A--Song-2024,Song,2024,algorithm,Not reported,extracted,2,model_algorithm_integration; model_performance_evaluation,yes,yes,yes
+A--Vijayanand-2024,Vijayanand,2024,algorithm,Not reported,extracted,4,rule_based_classification; model_algorithm_integration; data_collection; model_performance_evaluation,yes,yes,yes
+I--Danahy-2024,Danahy,2024,international,Not reported,extracted,1,savings_debt_management,yes,yes,yes
+I--FederalReserve-2024,Board of Governors of the Federal Reserve System,2024,international,report,extracted,2,financial_planning; savings_debt_management,no,yes,yes
+I--Prakoso-2024,Prakoso,2024,international,journal-article,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,yes,yes,yes
+I--Rane-2024,Rane,2024,international,Not reported,extracted,2,pfm_apps_overview; pfm_apps_features,yes,yes,yes
+I--Yang-2024a,Yang,2024,international,Not reported,extracted,5,model_algorithm_integration; data_collection; model_development; system_development; model_performance_evaluation,yes,yes,yes
+I--Yang-2024b,Yang,2024,international,Not reported,extracted,3,model_algorithm_integration; model_development; model_performance_evaluation,yes,yes,yes
+L--Dasmarinas-2024,Dasmariñas,2024,local,journal-article,extracted,3,sarima; data_collection; model_performance_evaluation,yes,yes,yes
+L--LaspinasMurcia-2024,Laspinas,2024,local,journal-article,extracted,1,model_performance_evaluation,no,yes,yes
+L--Pinca-2024,Pinca,2024,local,Not reported,extracted,4,financial_planning; budgeting; savings_debt_management; data_collection,yes,yes,yes
+L--Reyes-2024,Reyes,2024,local,Not reported,extracted,1,model_performance_evaluation,yes,yes,yes
+L--Salvador-2024,Salvador,2024,local,Not reported,extracted,3,data_collection; model_development; model_performance_evaluation,no,yes,yes
+A--Alenazi-2023,Alenazi,2023,algorithm,conference-paper,extracted,5,budgeting; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems,yes,yes,yes
+A--Hu-2023,Hu,2023,algorithm,conference-paper,extracted,4,linear_programming; model_algorithm_integration; model_development; model_performance_evaluation,no,yes,yes
+A--Sonkavde-2023,Sonkavde,2023,algorithm,journal-article,extracted,5,sarima; model_algorithm_integration; data_collection; model_development; model_performance_evaluation,yes,yes,yes
+A--ZhangEtAl-2023,Zhang,2023,algorithm,journal-article,extracted,3,model_algorithm_integration; data_collection; model_performance_evaluation,yes,yes,yes
+I--Bai-2023,Bai,2023,international,journal-article,extracted,7,financial_planning; budgeting; savings_debt_management; income_expense_management; data_collection; model_development; model_performance_evaluation,yes,yes,yes
+I--Hajj-2023,El Hajj,2023,international,Not reported,extracted,2,savings_debt_management; data_collection,yes,yes,yes
+I--Salminen-2023,Salminen,2023,international,Not reported,extracted,4,model_algorithm_integration; data_collection; model_development; model_performance_evaluation,yes,yes,yes
+I--Sapiri-2023,Sapiri,2023,international,Not reported,extracted,2,financial_planning; savings_debt_management,no,yes,yes
+I--WangLy-2023,Wang-Ly,2023,international,working-paper,extracted,2,financial_planning; savings_debt_management,no,yes,yes
+I--Yeo-2023,Yeo,2023,international,journal-article,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,yes,yes,yes
+L--BangkoSentral-2023a,Bangko Sentral ng Pilipinas,2023,local,dashboard,extracted,3,financial_planning; savings_debt_management; data_collection,no,yes,yes
+L--BangkoSentral-2023b,Bangko Sentral ng Pilipinas,2023,local,report,extracted,3,savings_debt_management; income_expense_management; data_collection,no,yes,yes

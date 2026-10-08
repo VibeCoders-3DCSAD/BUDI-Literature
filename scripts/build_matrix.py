@@ -6,7 +6,7 @@
 `review/literature-review-matrix.md` is a generated view, not a database. It is
 rebuilt from three sources, in this order of authority:
 
-    literature/conversions/metadata.json      bibliographic metadata (page-1 verified)
+    literature/paper-markdowns/metadata.json   bibliographic metadata (page-1 verified)
     review/notes/{stem}.md                    extraction, including module assignment
     config/taxonomy.yaml                      the module namespace
 
@@ -719,7 +719,7 @@ def render_matrix(rows: list[dict], quotes: list[dict], effects: list[dict], gen
         "",
         f"- Corpus: **{len(rows)}** papers | **{sum(1 for r in rows if r['status'] == 'extracted')}** extracted, "
         f"**{sum(1 for r in rows if r['status'] != 'extracted')}** not extracted",
-        "- Bibliographic source: `literature/conversions/metadata.json` (page-1 verified)",
+        "- Bibliographic source: `literature/paper-markdowns/metadata.json` (page-1 verified)",
         f"- Taxonomy: `config/taxonomy.yaml` — {len(module_of)} modules in {len(section_name)} outline sections",
         "- Extraction source: `review/notes/{stem}.md` (authored)",
         "- Column definitions and validation rules: `docs/standards/review-layout.md`",
@@ -797,7 +797,7 @@ def render_note_stub(row: dict) -> str:
         "file as a full note per `docs/standards/note-format.md`. This stub will not be",
         "rewritten by the builder, so replace it rather than editing it in place.",
         "",
-        f"Conversion: [`{row['paper_id']}_marked.md`](../../literature/conversions/{row['paper_id']}_marked.md)",
+        f"Conversion: [`{row['paper_id']}_marked.md`](../../literature/paper-markdowns/{row['paper_id']}_marked.md)",
         "",
     ]
     return "\n".join(out)

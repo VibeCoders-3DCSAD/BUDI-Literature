@@ -211,3 +211,7 @@ Young investors have come to dominate the Indonesian capital market, with invest
 - Cude et al. (2006) — Knowledge is needed in managing finances (Sect. 5, p. 51).
 - Andrew and Linawati (2014) — Higher financial knowledge tends toward wise financial behavior (Sect. 5, p. 51).
 - Remund (2010) — Financial literacy comprises knowledge and budgeting skills, savings, loans, and investments (Sect. 5, p. 51).
+
+---
+
+Conversion: [`Awaluddin, 2023_marked.md`](../../literature/mds/Awaluddin, 2023_marked.md)

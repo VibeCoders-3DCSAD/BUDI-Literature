@@ -217,4 +217,4 @@ The authors argue that most existing budgeting applications lack Arabic-language
 
 ---
 
-Conversion: [`A--Ghonaim-2025_marked.md`](../../literature/paper-markdowns/A--Ghonaim-2025_marked.md)
+Conversion: [`Ghonaim & El-Sharawy, 2025_marked.md`](../../literature/mds/Ghonaim & El-Sharawy, 2025_marked.md)

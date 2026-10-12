@@ -175,4 +175,4 @@ Micro, small and medium enterprises in the Philippines face financing constraint
 
 ---
 
-Conversion: [`L--Vecina-2025_marked.md`](../../literature/paper-markdowns/L--Vecina-2025_marked.md)
+Conversion: [`Encarnacion & Vecina, 2025_marked.md`](../../literature/mds/Encarnacion & Vecina, 2025_marked.md)

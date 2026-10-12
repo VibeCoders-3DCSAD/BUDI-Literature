@@ -361,3 +361,7 @@ The paper uses two main datasets. The primary dataset comes from a payroll proce
 - Sorkin, I. (2018) — Ranking firms using revealed preference; job amenities literature. [p. 3]
 - Zhang, C. Y., Sussman, A. B., Wang-Ly, N., and Lyu, J. K. (2022) — How consumers budget; household budgeting at monthly horizon. [p. 5]
 - Ziliak, J. P., Hardy, B., and Bollinger, C. (2011) — Earnings volatility in America: evidence from matched CPS; linked datasets. [p. 1]
+
+---
+
+Conversion: [`Ganong et al., 2025_marked.md`](../../literature/mds/Ganong et al., 2025_marked.md)

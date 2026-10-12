@@ -252,3 +252,7 @@ No train/test split, no cross-validation, no random seed, no hyperparameter tabl
 - Chen, Y.; Lin, C.; Zhao, Y.; Xie, X.; Zhang, M. (2022) (methodology) — Modelling evolving user preferences for sequential recommendation with credit card transactions, arXiv preprint. [Sect. 4.2, p. 15; reference 31, p. 20]
 - Mittal, S.; Tyagi, S. (2019) (context) — Performance evaluation of ML algorithms for credit card fraud detection. [Sect. 2, p. 3; reference 19, p. 20]
 - Makki, S.; Assaghir, Z.; Taher, Y.; Haque, R.; Hacid, M.; Zeineddine, H. (2019) (context) — Experimental study with imbalanced classification approaches for credit card fraud detection. [Sect. 2, p. 3; reference 20, p. 20]
+
+---
+
+Conversion: [`Agrawal et al., 2025_marked.md`](../../literature/mds/Agrawal et al., 2025_marked.md)

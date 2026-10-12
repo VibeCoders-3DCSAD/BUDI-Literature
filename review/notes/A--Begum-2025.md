@@ -207,3 +207,7 @@ The paper contains **no numbered tables**. All results are reported in prose or 
 - Zarei et al. (2024) — Social media opinion mining: techniques and business applications (context). [19]
 - Zhang et al. (2023) — Machine learning for customer credit risk prediction: a comparative study (context). [20]
 - Zhou et al. (2020) — Machine learning on big data: opportunities and challenges; cited for the importance of nonlinear models in financial risk prediction (methodology). [21]
+
+---
+
+Conversion: [`Begum, 2025_marked.md`](../../literature/mds/Begum, 2025_marked.md)

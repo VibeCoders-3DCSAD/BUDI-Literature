@@ -225,4 +225,4 @@ Rising household indebtedness, wider access to credit and increasingly complex f
 
 ---
 
-Conversion: [`I--Samli-2026_marked.md`](../../literature/paper-markdowns/I--Samli-2026_marked.md)
+Conversion: [`Samli et al., 2026_marked.md`](../../literature/mds/Samli et al., 2026_marked.md)

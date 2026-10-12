@@ -144,4 +144,4 @@ Filipino households face inadequate savings — only 30% hold sufficient savings
 
 ---
 
-Conversion: [`L--Claro-2025_marked.md`](../../literature/paper-markdowns/L--Claro-2025_marked.md)
+Conversion: [`Claro & Noval, 2025_marked.md`](../../literature/mds/Claro & Noval, 2025_marked.md)

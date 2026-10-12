@@ -409,3 +409,7 @@ Credit scoring has become a cornerstone of modern lending, enabling banks and fi
 - ElKelish, W.W. (2021) (context) — IFRS 9 financial instruments, information quality, and stock returns. [p. 2]
 - Bhatore, S.; Mohan, L.; Reddy, Y.R. (2020) (context) — Systematic literature review of ML techniques for credit risk evaluation. [p. 2]
 ```
+
+---
+
+Conversion: [`Ayari et al., 2025_marked.md`](../../literature/mds/Ayari et al., 2025_marked.md)

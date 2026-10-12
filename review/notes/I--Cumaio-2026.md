@@ -187,4 +187,4 @@ Financial literacy and behavioural finance developed largely independently and w
 
 ---
 
-Conversion: [`I--Cumaio-2026_marked.md`](../../literature/paper-markdowns/I--Cumaio-2026_marked.md)
+Conversion: [`Cumaio et al., 2026_marked.md`](../../literature/mds/Cumaio et al., 2026_marked.md)

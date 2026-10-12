@@ -214,3 +214,7 @@ Conventional financial services face accessibility, personalisation, reachabilit
 - Wan, H.; Yu, S. (2023) (methodology) — Recommendation system based on an adaptive learning cognitive map model. [p. 2]
 - Leung, M.F.; Jawaid, A.; Ip, S.W.; Kwok, C.H.; Yan, S. (2023) (context) — Portfolio recommendation using machine learning and big-data analytics, linked to financial literacy gains. [p. 1]
 - Datta, N. (2022) (methodology) — Kaggle "Finance data analysis" dataset (Version 1.0) supplying the financial profile data used in Table 1 and the interaction matrices. [p. 4]
+
+---
+
+Conversion: [`J. Yang, 2024_marked.md`](../../literature/mds/J. Yang, 2024_marked.md)

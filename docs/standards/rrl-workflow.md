@@ -15,8 +15,8 @@ afterwards from text similarity.
 Obtain source PDFs from a local archive or remote source:
 
 ```bash
-# From a sibling directory (e.g. BUDI-Base/archived-literature/paper-pdfs/):
-python3 scripts/fetch_pdfs.py --source local --path ../BUDI-Base/archived-literature/paper-pdfs/
+# From a sibling directory (e.g. BUDI-Base/archived-literature/pdfs/):
+python3 scripts/fetch_pdfs.py --source local --path ../BUDI-Base/archived-literature/pdfs/
 
 # From a .zip archive:
 python3 scripts/fetch_pdfs.py --source local --path /path/to/pdf-archives/
@@ -25,14 +25,14 @@ python3 scripts/fetch_pdfs.py --source local --path /path/to/pdf-archives/
 python3 scripts/fetch_pdfs.py --source remote --url https://example.com/papers.zip
 ```
 
-PDFs are placed in `literature/paper-pdfs/` (gitignored). The script computes SHA-256 hashes for each PDF.
+PDFs are placed in `literature/pdfs/` (gitignored). The script computes SHA-256 hashes for each PDF.
 
 Optional: inspect fetched PDFs before converting:
 
 ```bash
-python3 scripts/count_pdf_pages.py literature/paper-pdfs/
-python3 scripts/count_pdf_pages.py literature/paper-pdfs/ --lte 20   # only short papers
-python3 scripts/check_dupe_pdfs.py literature/paper-pdfs/ --cascade  # find duplicates
+python3 scripts/count_pdf_pages.py literature/pdfs/
+python3 scripts/count_pdf_pages.py literature/pdfs/ --lte 20   # only short papers
+python3 scripts/check_dupe_pdfs.py literature/pdfs/ --cascade  # find duplicates
 ```
 
 ### 2. Convert
@@ -40,31 +40,29 @@ python3 scripts/check_dupe_pdfs.py literature/paper-pdfs/ --cascade  # find dupl
 Run the PDF-to-Markdown converter:
 
 ```bash
-python3 scripts/prepare_pdf.py literature/paper-pdfs/ --page-aware
+python3 scripts/prepare_pdf.py literature/pdfs/ --page-aware
 ```
 
-Produces `{stem}_marked.md` with YAML frontmatter (conversion metadata, SHA-256
-hash, page count).
-
-Options:
-
-- `--page-aware`: Add `<!-- PAGE N -->` markers extracted via pdfminer.six
-- `--json-sidecar`: Write a separate `{stem}_conversion_meta.json`
-
-Assign the canonical stem per `docs/standards/rrl-naming-conventions.md`
-(`{Prefix}--{AuthorLastName}-{Year}`), then move the conversion into the corpus
-root:
+Produces `{pdf-name}_marked.md` (the PDF name plus `_marked.md`) with YAML
+frontmatter (conversion metadata, SHA-256 hash, page count). Move it into the
+corpus root:
 
 ```bash
-mv literature/paper-pdfs/{stem}_marked.md literature/paper-markdowns/
+mv literature/pdfs/{pdf-name}_marked.md literature/mds/
 ```
 
-The corpus is flat; do not create per-intake subdirectories. See
+Options: `--page-aware` adds `<!-- PAGE N -->` markers via pdfminer.six;
+`--json-sidecar` writes a separate `{stem}_conversion_meta.json`. The corpus is
+flat; do not create per-intake subdirectories. See
 `docs/standards/rrl-naming-conventions.md`.
 
-Verify the stem against page 1 of the PDF before committing: source filenames
-often name a later author rather than the first, and the stem is what
-`metadata.json` is keyed by.
+The conversion is named after the PDF, not the stem, so it is the **sidecar** that
+binds them. For each new paper, verify the first author and year against page 1 of
+the PDF (source filenames often name a later author), choose the canonical stem
+`{Prefix}--{AuthorLastName}-{Year}`, and add an entry to
+`literature/mds/metadata.json` keyed by that stem, recording `source_pdf`,
+`source_pdf_path`, and `conversion_md`. The builder resolves every paper through
+those fields; a conversion the sidecar does not list is ignored.
 
 ### 3. Extract into a note
 
@@ -90,7 +88,7 @@ Two fields carry the weight of the whole pipeline:
   discrepancy in `## Limitations and Gaps`; never reconcile silently.
 
 Bibliographic fields (`title`, `authors`, `year`, `venue`, `doi`) are copied from
-`literature/paper-markdowns/metadata.json`, the page-1-verified citation authority.
+`literature/mds/metadata.json`, the page-1-verified citation authority.
 The agent does not re-derive them. The builder never overwrites a note that
 already exists; it creates a stub only for a paper that has none.
 
@@ -170,23 +168,22 @@ text-similarity cascade when they are not installed. Uncomment them in
 Repeatable checklist for a batch of staged PDFs. Run it per batch.
 
 ```bash
-# 0. PDFs staged flat in literature/paper-pdfs/ (moved from bucket/)
+# 0. PDFs staged flat in literature/pdfs/ (moved from bucket/)
 # 1. inspect
-python3 scripts/count_pdf_pages.py literature/paper-pdfs/
-python3 scripts/check_dupe_pdfs.py literature/paper-pdfs/ --cascade
+python3 scripts/count_pdf_pages.py literature/pdfs/
+python3 scripts/check_dupe_pdfs.py literature/pdfs/ --cascade
 # 2. convert + move
-python3 scripts/prepare_pdf.py literature/paper-pdfs/ --page-aware
-mv literature/paper-pdfs/{stem}_marked.md literature/paper-markdowns/
-# 3. extract each conversion into a note (agent; modules[] is required)
+python3 scripts/prepare_pdf.py literature/pdfs/ --page-aware
+mv literature/pdfs/{pdf-name}_marked.md literature/mds/
+# 3. add a metadata.json entry per new paper, then extract each conversion into a note (agent; modules[] is required)
 # 4. rebuild
 python3 scripts/build_matrix.py
 # 5. verify
 python3 scripts/build_matrix.py --check
 ```
 
-> Note: `prepare_pdf.py` scans only the flat `literature/paper-pdfs/` top level for
-> `.pdf`. The `international/` and `local/` subdirectories are reserved for future
-> designation-based categorization and are intentionally left out of conversion.
+> Note: `prepare_pdf.py` scans only the flat `literature/pdfs/` top level for
+> `.pdf`. Keep PDFs there directly, not in subdirectories, or they will be skipped.
 
 Run step 4 after anything that changes a stem, a conversion, bibliographic
 metadata, or a note. The build is idempotent, so re-running it is always safe.

@@ -187,3 +187,7 @@ A further stated motivation is the gap between research innovation and real-worl
 - No confidence interval and no p-value appears anywhere in the paper; every CI and p cell in the evidence table is `—`.
 - The Discussion repeats its opening paragraph verbatim, and the Findings report theme-level citation counts that are not reconciled with one another — both `[unacknowledged]` in this extraction.
 - The review supplies no enumeration of the 27 included studies, no per-study metrics and no geographic or publication-year breakdown of its evidence base.
+
+---
+
+Conversion: [`Sarkar & Usa, 2026_marked.md`](../../literature/mds/Sarkar & Usa, 2026_marked.md)

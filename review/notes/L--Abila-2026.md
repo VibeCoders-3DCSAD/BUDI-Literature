@@ -193,3 +193,7 @@ Existing research on financial resilience has largely focused on salaried worker
 - Lipura, M. S. (2025) — The digital gig economy explodes, and so do the taxes. The Manila Times. [p. 131]
 - Philippine Institute for Development Studies (2024) — Growing online gig economy prompts closer inspection of social protection for online workers. [p. 131]
 - Sarmiento, A. (2025) — VAT on digital services: The other side of the coin. P&A Grant Thornton. [p. 131]
+
+---
+
+Conversion: [`Abila & Ulibas, 2026_marked.md`](../../literature/mds/Abila & Ulibas, 2026_marked.md)

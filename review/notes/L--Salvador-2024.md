@@ -246,3 +246,7 @@ A specific gap is identified: only a limited number of Philippine poverty studie
 - [16] Li, Yu, Échevin, Fan (2022) — Is poverty predictable with machine learning? A study of DHS data from Kyrgyzstan; source for the underutilization of boosting in poverty prediction. [p. 3]
 - [17] Usmanova, Aziz, Rakhmonov, Osamy (2022) — Utilities of artificial intelligence in poverty prediction: a review; source for the 14% XGBoost usage rate. [p. 3]
 - [18] Bentéjac, Csörgő, Martínez-Muñoz (2021) — A comparative analysis of gradient boosting algorithms; source for the expansion of the boosting family. [p. 3]
+
+---
+
+Conversion: [`Salvador, 2024_marked.md`](../../literature/mds/Salvador, 2024_marked.md)

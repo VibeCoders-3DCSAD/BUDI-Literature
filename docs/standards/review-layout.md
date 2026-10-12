@@ -14,7 +14,7 @@ The rebuild reads exactly three sources:
 
 | Source | Role |
 | :--- | :--- |
-| `literature/conversions/metadata.json` | Bibliographic authority. Page-1 verified; overrides note frontmatter. |
+| `literature/mds/metadata.json` | Bibliographic authority. Page-1 verified; overrides note frontmatter. |
 | `review/notes/*.md` | Authored extraction. Supplies every non-bibliographic column. |
 | `config/taxonomy.yaml` | Module namespace. Defines the valid `modules[]` ids. |
 
@@ -144,7 +144,7 @@ directly; edit the note it is derived from and let the build regenerate the rest
 
 | To change | Edit |
 | :--- | :--- |
-| A bibliographic value | `literature/conversions/metadata.json` |
+| A bibliographic value | `literature/mds/metadata.json` |
 | A finding, gap, or module | `review/notes/{stem}.md` (authored) |
 | The set of modules | `config/taxonomy.yaml` |
 | A column definition | this file, and the constants in `scripts/build_matrix.py` |

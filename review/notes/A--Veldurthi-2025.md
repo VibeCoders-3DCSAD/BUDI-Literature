@@ -142,3 +142,7 @@ Not reported. The paper is a qualitative review of AI and machine learning in fr
 - Makridakis, S. et al. (2018) — Statistical and Machine Learning forecasting methods: Concerns and ways forward. [p. 771]
 - Chandola, V. et al. (2010) — Anomaly Detection for Discrete Sequences: A Survey. [p. 771]
 - Xin, Y. et al. (2018) — Machine Learning and Deep Learning Methods for Cybersecurity. [p. 771]
+
+---
+
+Conversion: [`Veldurthi, 2025_marked.md`](../../literature/mds/Veldurthi, 2025_marked.md)

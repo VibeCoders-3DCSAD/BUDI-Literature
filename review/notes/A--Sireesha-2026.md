@@ -152,3 +152,7 @@ The paper reports no numbered tables or figures. Its results section contains se
 - Park, Y.; Lee, K. (2022) — "Reinforcement learning-based financial decision support systems", IEEE Trans. Syst. Man Cybern., vol. 52, no. 4, pp. 2450–2462. [p. 310]
 - Das, S. (2022) — "User-centric dashboards for AI-powered finance applications", IEEE Comput. Graph. Appl., vol. 42, no. 5, pp. 95–103. [p. 311]
 - Mahapatra, P.; Rao, R. (2023) — "Secure integration of AI financial systems with blockchain", IEEE Blockchain, pp. 584–592. [p. 311]
+
+---
+
+Conversion: [`Sireesha et al., 2026_marked.md`](../../literature/mds/Sireesha et al., 2026_marked.md)

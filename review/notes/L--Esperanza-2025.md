@@ -313,3 +313,7 @@ The stated gap is behavioural and structural: existing fintech models, in the au
 - Liu, Y.; Yang, M.; Wang, Y.; Li, Y.; Xiong, T.; Li, A. (2022) (context) — Machine learning for default probability in the online credit market; cited for integrating behavioural dimensions into fintech evaluation. [p. 118]
 - Macchi, E. (2023) (context) — Experimental evidence on the benefits of obesity in low-income countries; cited alongside Putri for trust and clarity in fintech adoption. [p. 118]
 - Hughes, J. P.; Jagtiani, J.; Moon, C. G. (2022) (context) — Consumer lending efficiency: commercial banks versus a fintech lender; listed in the reference list but not cited in the body text. [pp. 125]
+
+---
+
+Conversion: [`Esperanza et al., 2025_marked.md`](../../literature/mds/Esperanza et al., 2025_marked.md)

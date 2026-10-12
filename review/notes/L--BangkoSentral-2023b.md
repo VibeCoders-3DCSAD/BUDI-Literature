@@ -341,3 +341,7 @@ The dashboard contains no numbered figures or tables. Its reporting blocks, with
 - Statista — Digital Market Outlook, source of the alternative finance (crowdfunding, crowdinvesting, crowdlending) data. [footnote 20, p. 9]
 - BSP PERA Technical Working Group and Capital Markets and Trust Supervision Department (CMTSD) — source of the investment (PERA and UITF) data. [footnote 13, p. 9]
 - World Bank Findex — the international demand-side survey supplying the Formal Account, Other Financial Services, Financial Resilience and part of the Credit indicators. [pp. 4-5, footnote 21, p. 9]
+
+---
+
+Conversion: [`Bangko Sentral ng Pilipinas, 2023a_marked.md`](../../literature/mds/Bangko Sentral ng Pilipinas, 2023a_marked.md)

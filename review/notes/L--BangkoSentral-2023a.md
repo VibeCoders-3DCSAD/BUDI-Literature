@@ -221,3 +221,7 @@ This is the Bangko Sentral ng Pilipinas's annual *Report on Regional Economic De
 - The report documents household savings and debt behaviour, and OFW remittance-allocation behaviour, from the Consumer Expectations Survey.
 - The report's data sources are PSA, BSP-DES, BSP-DSA and DBM administrative data, plus the BES and CES.
 - The report is descriptive only: no confidence intervals, no p-values, no causal estimates, no seasonal or monthly series.
+
+---
+
+Conversion: [`Bangko Sentral ng Pilipinas, 2023b_marked.md`](../../literature/mds/Bangko Sentral ng Pilipinas, 2023b_marked.md)

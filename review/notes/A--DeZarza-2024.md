@@ -7,13 +7,13 @@ venue: "AI, 5, 91-114"
 doi: Not reported
 designation: algorithm
 status: extracted
-modules: [financial_planning, budgeting, savings_debt_management, income_expense_management, linear_programming, model_algorithm_integration]
+modules: [financial_planning, budgeting, savings_debt_management, income_expense_management, mixed_integer_linear_programming, model_algorithm_integration]
 module_rationale:
   financial_planning: "The paper's stated purpose is to propose novel methodologies for individual and cooperative financial budgeting, aiming to maximize savings through optimization (Abstract, p. 1)."
   budgeting: "Individual and cooperative budget allocation models are constructed, with constraints ensuring expenses do not exceed income (Section 3, pp. 4-5)."
   savings_debt_management: "The objective function for both individual and household models is to maximize savings, and the LLM recommendations allocate specific amounts to savings, debt payments, and emergency funds (Section 3, pp. 4-5)."
   income_expense_management: "The models allocate monthly income across various expense categories such as rent, groceries, utility bills, and entertainment (Section 3, p. 4)."
-  linear_programming: "A linear optimization model distributes monthly income across expense categories while maximizing savings, with LLM recommendations serving as bounds (Section 6, p. 13)."
+  mixed_integer_linear_programming: "MILP formulation/model distributes monthly income across expense categories while maximizing savings, with LLM recommendations serving as bounds (Section 6, p. 13)."
   model_algorithm_integration: "The paper integrates LLM recommendations with econometric optimization models, using LLM outputs as initial feasible solutions or as bounds for the optimization (Abstract, p. 1; Section 3, p. 5)."
 ---
 
@@ -191,3 +191,7 @@ The paper develops two optimization models. The individual financial recommendat
 - A simulation with ten synthetic households compares original savings, LLM-recommended savings, and optimized savings, but no statistical significance tests are reported.
 - The paper claims LLM recommendations align with traditional financial planning advice, but no ground-truth comparison, real-user evaluation, or accuracy metric is provided.
 - The paper acknowledges AI risks such as hallucinations and proposes RAG and expert validation as mitigations, but neither is empirically implemented or tested.
+
+---
+
+Conversion: [`De Zarzà et al., 2023_marked.md`](../../literature/mds/De Zarzà et al., 2023_marked.md)

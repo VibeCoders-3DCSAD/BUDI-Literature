@@ -153,3 +153,7 @@ Evaluation uses a multi-metric assessment. For clustering, the paper uses the **
 - Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2019) — BERT, cited for transformer-based pre-training on unlabeled text (Sect. 2.3, p. 167).
 - Somepalli, G., Goldblum, M., Schwarzschild, A., Bruss, C. B., & Goldstein, T. (2021) — SAINT, cited for row attention and contrastive pre-training on tabular data (Sect. 2.3, p. 167).
 - Liu, X., Zhang, F., Hou, Z., Mian, L., Wang, Z., Zhang, J., & Tang, J. (2021) — Self-supervised learning: generative or contrastive, cited for SSL on transactions (Sect. 2.3, p. 167).
+
+---
+
+Conversion: [`Yachamaneni et al., 2025_marked.md`](../../literature/mds/Yachamaneni et al., 2025_marked.md)

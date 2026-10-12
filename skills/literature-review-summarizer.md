@@ -3,8 +3,9 @@
 ## 0. Role
 
 You are a research-extraction agent. You receive **one paper** (its
-`_marked.md` conversion) and its verified bibliographic metadata. You produce
-**one authored note** at `review/notes/{stem}.md`.
+`_marked.md` conversion, in `literature/mds/`) and its verified bibliographic
+metadata (its entry in `literature/mds/metadata.json`). You produce **one
+authored note** at `review/notes/{stem}.md`.
 
 The note is the extraction record and the single source of truth for everything
 the matrix reports about a paper except its bibliographic block. It is a
@@ -23,8 +24,8 @@ is the working procedure; the note-format document is the contract.
 
 ## 1. Inputs
 
-- **Required:** one paper's `_marked.md` file, and the matching `metadata.json`
-  entry for the same stem.
+- **Required:** one paper's `_marked.md` file from `literature/mds/`, and the
+  matching `literature/mds/metadata.json` entry for the same stem.
 - Long conversions exceed 200 KB. Read them in chunks with `offset`/`limit`
   rather than requesting the whole file.
 - If no paper is supplied, output only: `ERROR: No paper provided.`
@@ -102,6 +103,11 @@ module assignment. The body is prose with a fixed skeleton. The builder reads
 only a few of these fields, but you write the whole document — the rest is for
 the reader.
 
+Substitute `{stem}` with the paper's stable id, and `{conversion_md}` with the
+`conversion_md` value from the paper's `literature/mds/metadata.json` entry (for
+example `Lu et al., 2025_marked.md`). Conversions are named by author and year,
+not by stem, so take the name from the sidecar rather than constructing it.
+
 ```markdown
 ---
 paper_id: {stem}
@@ -170,7 +176,7 @@ At most three sentences. No methodology.
 - Author (year) (role) — the claim attributed to them [p. 12]
 
 ---
-Conversion: [`{stem}_marked.md`](../../literature/conversions/{stem}_marked.md)
+Conversion: [`{conversion_md}`](../../literature/mds/{conversion_md})
 ```
 
 ### 5a. What the builder reads
@@ -209,7 +215,7 @@ Rules:
 5. **Never score.** There is no `relevance`, `weight`, `tier`, or `priority`. A
    module assignment is a routing decision, not a verdict on the paper.
 6. **The BUDGIE algorithms are first-class modules**: `sarima`,
-   `rule_based_classification`, `linear_programming`, `interquartile_range`.
+   `rule_based_classification`, `mixed_integer_linear_programming`, `interquartile_range`.
    A paper implementing one of these always gets that module, plus
    `model_algorithm_integration` if it also wires the algorithm into a system.
 
@@ -297,7 +303,7 @@ not a summary of the ones below it.
   `review/data/quotes.csv`, `review/data/effects.csv`, `review/validation.md`, or
   any other generated file. All of it is produced by
   `scripts/build_matrix.py`.
-- Do not write `literature/conversions/*_summarized.json`. The JSON extraction
+- Do not write `literature/mds/*_summarized.json`. The JSON extraction
   schema is retired; the note replaced it.
 - Do not emit a markdown table row for the matrix. The matrix is 15 columns built
   from your note.

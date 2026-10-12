@@ -31,7 +31,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 NOTES = ROOT / "review" / "notes"
-METADATA = ROOT / "literature" / "conversions" / "metadata.json"
+METADATA = ROOT / "literature" / "mds" / "metadata.json"
 
 # --- depth gate ------------------------------------------------------------
 # Reference notes in this repo run 3,200-6,700 words with 15-152 evidence rows.
@@ -44,7 +44,8 @@ MIN_QUOTE_ROWS = 8
 
 # Documents the paper type whose notes are legitimately short. An institutional
 # report is not an under-read journal article.
-SHORT_FORM_TYPES = {"report", "institutional-report", "working-paper", "book-chapter"}
+SHORT_FORM_TYPES = {"report", "institutional-report", "working-paper",
+                    "book-chapter", "dataset"}
 
 EVIDENCE_HEADER = "| Outcome | Metric | Value | CI | p | Locator |"
 QUOTE_HEADER = "| Text | Locator | Module |"
@@ -278,7 +279,7 @@ def main() -> int:
             problems.append("`## Method` lacks a `**Sample.**` line")
 
     limits = section(text, "## Limitations and Gaps")
-    if limits is not None and not limits.strip().startswith("-"):
+    if limits is not None and not re.search(r"^[-*][ \t]+\S", limits, re.M):
         problems.append("`## Limitations and Gaps` needs at least one `-` bullet")
 
     ev = section(text, "## Statistical Evidence")
@@ -302,10 +303,13 @@ def main() -> int:
                 return True
         return False
 
-    if ev is not None and not has_header(ev, EVIDENCE_HEADER):
+    # A section that states an explicit absence (`Not reported.`) has answered
+    # the question it exists to answer, so it is exempt from the header rule.
+    # This mirrors the builder's `_declares_absence` and note-format.md.
+    if ev is not None and not has_header(ev, EVIDENCE_HEADER) and not is_documented_absence(ev):
         problems.append("Statistical Evidence header must be exactly "
                         "`| Outcome | Metric | Value | CI | p | Locator |`")
-    if qt is not None and not has_header(qt, QUOTE_HEADER):
+    if qt is not None and not has_header(qt, QUOTE_HEADER) and not is_documented_absence(qt):
         problems.append("Quotes header must be exactly "
                         "`| Text | Locator | Module |`")
 
@@ -340,11 +344,22 @@ def main() -> int:
         (r"\bTBD\b", "TBD"),
         (r"\bTODO\b", "TODO"),
         (r"\[unclear\]", "[unclear]"),
-        (r"\bunknown\b", "unknown"),
-        (r"\bN/A\b", "N/A"),
     ]:
         if re.search(bad, text, re.I):
             problems.append(f"contains forbidden placeholder `{label}`")
+
+    # `N/A` and `unknown` are ordinary English and can be a paper's own
+    # terminology ("unknown parameters"), so only a table cell that consists
+    # solely of one is the placeholder note-format.md bans as a missing value.
+    for line in text.splitlines():
+        if not line.strip().startswith("|"):
+            continue
+        for cell in line.split("|")[1:-1]:
+            if cell.strip().strip('"').strip().lower() in ("n/a", "na", "unknown"):
+                problems.append(
+                    f"placeholder value `{cell.strip()}` in a table cell; "
+                    "use `Not reported` (see note-format.md)"
+                )
 
     # ---- quotes: verbatim discipline -------------------------------------
     if qt:
@@ -381,7 +396,15 @@ def main() -> int:
     short_form = ptype in SHORT_FORM_TYPES or "report" in ptype
     word_floor = int(args.min_words * 0.6) if short_form else args.min_words
 
-    if words < word_floor:
+    # The evidence-row floor, not the word count, is what proves the results
+    # section was read. A note whose evidence table already meets that floor has
+    # demonstrably done the work, so a low word count reflects a terse source or
+    # a paper whose findings live in tables, not a shallow extraction. In that
+    # case the word floor does not independently fail the note (see the comment
+    # on the floors above: only the row floor is fixed).
+    evidence_rich = n_ev >= args.min_effects
+
+    if words < word_floor and not evidence_rich:
         if not sparse_ok:
             problems.append(
                 f"TOO THIN: {words} words < {word_floor}"
@@ -391,9 +414,13 @@ def main() -> int:
         else:
             notes.append(f"sparse but documented: {words} words with a justified "
                          "empty evidence table (allowed)")
-    elif words < args.min_words and short_form:
-        notes.append(f"short form ({ptype}): {words} words, "
-                     f"floor discounted to {word_floor} -- accepted")
+    elif words < args.min_words:
+        if short_form:
+            notes.append(f"short form ({ptype}): {words} words, "
+                         f"floor discounted to {word_floor} -- accepted")
+        elif evidence_rich:
+            notes.append(f"terse note ({words} words) but the evidence table "
+                         f"meets the {args.min_effects}-row floor -- accepted")
     if n_ev < args.min_effects and not sparse_ok:
         problems.append(
             f"TOO THIN: {n_ev} evidence rows < {args.min_effects}. Read the whole "

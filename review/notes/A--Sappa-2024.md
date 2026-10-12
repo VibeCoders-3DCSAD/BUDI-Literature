@@ -212,3 +212,7 @@ The paper argues that AI enables real-time analysis of asset value changes along
 - Krauss, C., Do, X. A., Huck, N. (2017) — Deep neural networks, gradient-boosted trees, random forests. [p. 6]
 - Cerrada, M., et al. (2022) — AutoML for feature selection and model tuning. [p. 7]
 - Jiang, M., et al. (2020) — An improved Stacking framework for stock index prediction. [p. 7]
+
+---
+
+Conversion: [`Sappa, 2024_marked.md`](../../literature/mds/Sappa, 2024_marked.md)

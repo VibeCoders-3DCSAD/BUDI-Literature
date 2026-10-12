@@ -343,3 +343,7 @@ The experimental section compares model prediction accuracy (Sect. 6.4.1), inves
 - Goodfellow et al. (2014) — Generative Adversarial Networks. [p. 5]
 - Zhang et al. (2022) — TDformer with first de-trend then attend. [p. 5]
 - Yun et al. (2019) — DLinear with linear layer forecasting. [p. 5]
+
+---
+
+Conversion: [`Song et al., 2024_marked.md`](../../literature/mds/Song et al., 2024_marked.md)

@@ -223,3 +223,7 @@ Additional method detail:
 - Morris, T., Maillet, S., & Koffi, V. (2022) (context) — Financial knowledge, financial confidence and learning capacity on financial behavior (Canada). [p. 104]
 - Al Rahahleh, N. (2022) (context) — Financial literacy levels among Saudi citizens; initiatives should be maintained but investment and insurance education needs more focus. [p. 104]
 - Bai, R. (2023) (methodology) — Impact of financial literacy, mental budgeting and self-control on financial wellbeing: mediating impact of investment decision making. [p. 104]
+
+---
+
+Conversion: [`Dheepiga & Sivakumar, 2025_marked.md`](../../literature/mds/Dheepiga & Sivakumar, 2025_marked.md)

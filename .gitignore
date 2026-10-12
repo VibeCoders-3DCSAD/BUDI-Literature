@@ -3,16 +3,16 @@ __pycache__/
 *.pyc
 .venv/
 
-# Corpus markdown and summaries — committed
-!literature/paper-markdowns/
-!literature/paper-markdowns/**/
+# Corpus markdown and sidecar — committed (conversions live flat in literature/mds/)
+!literature/mds/
+!literature/mds/**/
 
 # PDFs — fetched, not committed (use scripts/fetch_pdfs.py)
-literature/paper-pdfs/
+literature/pdfs/
 *.pdf
 
-# Intake bucket
-literature/bucket/
+# Intake bucket — staged downloads, triaged into literature/pdfs/
+bucket/
 
 # Derived heavy artifacts (regenerable, if a stage ever needs them)
 cache/

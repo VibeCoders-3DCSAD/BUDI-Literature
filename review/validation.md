@@ -1,8 +1,8 @@
 # Literature Review Matrix Validation
 
-- Generated: **2026-10-08T11:29:16.293432+00:00**
-- Papers: **97** | extracted: **97** | not extracted: **0**
-- Errors: **0** | informational gaps: **56**
+- Generated: **2026-10-12T14:33:37.264719+00:00**
+- Papers: **108** | extracted: **101** | not extracted: **7**
+- Errors: **0** | informational gaps: **57**
 
 Regenerate with `python3 scripts/build_matrix.py --check` (exit 1 on any error).
 Rules are defined in `docs/standards/review-layout.md`.
@@ -25,10 +25,10 @@ Rules are defined in `docs/standards/review-layout.md`.
 | `unrecorded_discrepancies` | 44 |
 | `modules_covered` | 20 |
 | `modules_total` | 20 |
-| `papers_unassigned` | 1 |
-| `extracted` | 97 |
-| `not_extracted` | 0 |
-| `no_doi` | 45 |
+| `papers_unassigned` | 7 |
+| `extracted` | 101 |
+| `not_extracted` | 7 |
+| `no_doi` | 51 |
 | `unverified_venue` | 5 |
 | `no_type` | 58 |
 
@@ -39,9 +39,10 @@ None. Every rule passed.
 ## Informational Gaps
 
 - Same first author and year (zhang|2026): A--ZhangHou-2026, I--ZhangLu-2026 — check for a re-entry.
-- Same first author and year (bangkosentralngpilipinas|2026): L--BangkoSentral-2026a, L--BangkoSentral-2026b — check for a re-entry.
+- Same first author and year (bangkosentralngpilipinas|2026): L--BangkoSentral-2026a, L--BangkoSentral-2026b, L--BangkoSentral-2026c, L--BangkoSentral-2026d — check for a re-entry.
 - Same first author and year (yang|2024): I--Yang-2024a, I--Yang-2024b — check for a re-entry.
 - Same first author and year (bangkosentralngpilipinas|2023): L--BangkoSentral-2023a, L--BangkoSentral-2023b — check for a re-entry.
+- Same first author and year (bangkosentralngpilipinas|2021): L--BangkoSentral-2021a, L--BangkoSentral-2021b — check for a re-entry.
 - `A--Alenazi-2023` reports apps as 27 / 398 for the same outcome — keep both with their locators and note it in `limitations`. This is a discrepancy in the paper, not in the extraction.
 - `A--Alenazi-2023` reports apps as 533 / 94 for the same outcome — keep both with their locators and note it in `limitations`. This is a discrepancy in the paper, not in the extraction.
 - `A--Gulbakyt-2025` reports iterations to convergence as 100 iterations / under 100 iterations for the same outcome — keep both with their locators and note it in `limitations`. This is a discrepancy in the paper, not in the extraction.
@@ -72,7 +73,6 @@ None. Every rule passed.
 - `L--Atento-2025` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 3.8, 3.8, 3.8, 3.8, 3.8. Either restore them or stop claiming a discrepancy.
 - `L--Bulan-2025` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 0.05, 0.05, 3.1, 3.1, 3.2, 3.2, 3.4, 3.4, 3.4, 3.5, 3.5, 3.5. Either restore them or stop claiming a discrepancy.
 - `L--Esperanza-2025` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 0.121, 0.179, 0.245, 0.302, 5.2%, 6.1%, 75,000, 9.4%. Either restore them or stop claiming a discrepancy.
-- `L--PSA-2025` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 74.7, 74.7%. Either restore them or stop claiming a discrepancy.
 - `A--ChenJ-2024` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 2.2, 3.6, 3.6, 3.6, 3.6, 3.6, 4.1, 4.1, 4.1, 4.1, 4.2, 4.2, 4.2. Either restore them or stop claiming a discrepancy.
 - `A--Sappa-2024` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 3.1, 4.1, 5.1, 5.2, 5.3, 5.3, 6.1, 6.2. Either restore them or stop claiming a discrepancy.
 - `A--Siswara-2024` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 2.5%, 2.5%. Either restore them or stop claiming a discrepancy.
@@ -81,6 +81,7 @@ None. Every rule passed.
 - `I--Danahy-2024` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 10,000, 2.1, 2.1, 2.1, 2.2, 2.2, 2.2, 3.1. Either restore them or stop claiming a discrepancy.
 - `I--Prakoso-2024` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 3.1, 3.6. Either restore them or stop claiming a discrepancy.
 - `I--Rane-2024` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 3.1, 3.5, 3.6, 3.7. Either restore them or stop claiming a discrepancy.
+- `I--Simonse-2024` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 0.097, 0.484, 0.609, 0.694, 0.797, 4.2, 5.1, 5.1, 5.1, 5.1. Either restore them or stop claiming a discrepancy.
 - `I--Yang-2024b` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 2.1, 2.5, 3.2, 3.2, 3.2, 3.3, 3.3, 3.3. Either restore them or stop claiming a discrepancy.
 - `L--Salvador-2024` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 2.2, 2.4, 2.4. Either restore them or stop claiming a discrepancy.
 - `A--ZhangEtAl-2023` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 1.1, 4.1, 4.1.2, 4.2.2, 4.2.5, 4.3.5. Either restore them or stop claiming a discrepancy.
@@ -90,8 +91,8 @@ None. Every rule passed.
 - `I--WangLy-2023` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 0.1, 0.1, 3.2.2, 5.2.2, 6.2, 7.1, 7.1, 7.1, 7.2. Either restore them or stop claiming a discrepancy.
 - `L--BangkoSentral-2023a` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 5,000, 502,208.75. Either restore them or stop claiming a discrepancy.
 - `L--BangkoSentral-2023b` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 10,000, 27.92, 28.32, 71.11%, 78.5. Either restore them or stop claiming a discrepancy.
-- 1 papers have no module assignment yet.
-- 45 entries have no DOI in metadata.json.
+- 7 papers have no module assignment yet.
+- 51 entries have no DOI in metadata.json.
 - 5 entries carry an unverified venue: A--DSouza-2026, L--Abila-2026, L--Francisco-2026, I--Yoganandham-2025, L--Atento-2025.
 - 58 entries have no publication type recorded.
 
@@ -99,13 +100,14 @@ None. Every rule passed.
 
 | Year | Papers |
 | :--- | ---: |
-| 2026 | 23 |
+| 2026 | 25 |
 | 2025 | 42 |
-| 2024 | 20 |
-| 2023 | 12 |
+| 2024 | 25 |
+| 2023 | 14 |
+| 2021 | 2 |
 
 | Designation | Papers |
 | :--- | ---: |
 | algorithm | 50 |
-| international | 25 |
-| local | 22 |
+| international | 30 |
+| local | 28 |

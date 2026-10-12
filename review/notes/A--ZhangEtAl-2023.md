@@ -184,3 +184,7 @@ values below are the quantities the paper states in prose, each as printed.
 - Senin, Lin, Wang, Oates, Gandhi, Boedihardjo, Chen & Frankenstein (2018) — GrammarViz 3.0, interactive discovery of variable-length time series patterns via grammar induction. [p. 486]
 - Hochenbaum, Vallis & Kejariwal (2017) — SHESD, automatic anomaly detection in the cloud via statistical learning, extending ESD with STL decomposition and robust median/MAD. [p. 486]
 - Ting, Liu, Zhang & Zhu (2022) — IDK, a new distributional treatment for time series using the Isolation Distributional Kernel. [p. 486
+
+---
+
+Conversion: [`A. Zhang et al., 2023_marked.md`](../../literature/mds/A. Zhang et al., 2023_marked.md)

@@ -184,3 +184,7 @@ Business success depends on understanding customers, and customer segmentation i
 - Lee, Y., and S. Cho. 2021 — Leuven algorithm with 10 segments validated by expert. [p. 10]
 - Böttcher, M., et al. 2009 — Outlier study with 1209 and 8984 segments. [Fig. 5 caption, p. 5]
 - Fernández-Delgado, M., et al. 2014 — "Do we need hundreds of classifiers?" cited in discussion. [p. 13]
+
+---
+
+Conversion: [`Salminen et al., 2023_marked.md`](../../literature/mds/Salminen et al., 2023_marked.md)

@@ -206,4 +206,4 @@ Conventional econometric models depend on linear associations and a limited fact
 
 ---
 
-Conversion: [`L--LaspinasMurcia-2024_marked.md`](../../literature/paper-markdowns/L--LaspinasMurcia-2024_marked.md)
+Conversion: [`Laspiñas & Murcia, 2024_marked.md`](../../literature/mds/Laspiñas & Murcia, 2024_marked.md)

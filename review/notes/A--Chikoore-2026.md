@@ -195,3 +195,7 @@ Not reported. The paper names the four algorithms (CART, Naive Bayes, Random For
 - Museba, T. (2022) (context) — Adaptive particle swarm optimised XGBoost ensemble for online credit scoring; cited for limitations of windowed models in capturing long-term behavioural shifts. [p. 90372]
 - Abadifard, S.; Bakhshi, S.; Gheibuni, S.; Can, F. (2023) (context) — DynED, dynamic ensemble diversification for data stream classification. [p. 90372]
 - Ren, S.; Liao, B.; Zhu, W.; Li, W. (2018) (context) — Knowledge-Maximized Ensemble for different types of concept drift; reported at 85%–95% accuracy on synthetic datasets. [p. 90372]
+
+---
+
+Conversion: [`Chikoore et al., 2026_marked.md`](../../literature/mds/Chikoore et al., 2026_marked.md)

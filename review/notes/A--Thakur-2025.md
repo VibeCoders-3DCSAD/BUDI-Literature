@@ -230,4 +230,4 @@ Most individuals on fixed incomes need to keep expenditures within budget, yet e
 
 ---
 
-Conversion: [`A--Thakur-2025_marked.md`](../../literature/paper-markdowns/A--Thakur-2025_marked.md)
+Conversion: [`Thakur, 2025_marked.md`](../../literature/mds/Thakur, 2025_marked.md)

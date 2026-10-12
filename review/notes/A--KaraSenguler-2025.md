@@ -193,3 +193,7 @@ Budget forecasts are strategic instruments of fiscal management, shaping resourc
 - MAPE, RMSE, and MAE dominate evaluation, while directional errors are neglected.
 - Average forecasting horizons are longest for AR (14.3 years) and MA (12 years), shortest for LSTM (3.3 years).
 - The authors advocate for pluralistic, context-sensitive, and hybrid/ensemble approaches.
+
+---
+
+Conversion: [`Kara & Şengüler, 2025_marked.md`](../../literature/mds/Kara & Şengüler, 2025_marked.md)

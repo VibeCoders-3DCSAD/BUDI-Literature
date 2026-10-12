@@ -13,13 +13,19 @@ a note and a retired `_summarized.json` are interchangeable to callers.
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 from pathlib import Path
 
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_CORPUS = REPO_ROOT / "literature" / "paper-markdowns"
+# Conversions live flat in `literature/mds/`, named by their bibliographically
+# correct author and year (`{Author, Year}_marked.md`). The stem -> conversion
+# mapping is not derivable from the filename alone, so it is read from the
+# sidecar `metadata.json` in the same directory (see `corpus_paths`).
+DEFAULT_CORPUS = REPO_ROOT / "literature" / "mds"
+DEFAULT_METADATA = DEFAULT_CORPUS / "metadata.json"
 DEFAULT_REVIEW = REPO_ROOT / "review"
 DEFAULT_NOTES = DEFAULT_REVIEW / "notes"
 DEFAULT_CONFIG = REPO_ROOT / "config" / "taxonomy.yaml"
@@ -35,6 +41,24 @@ REQUIRED_SECTIONS = (
 ANCHORS = ("Design", "Sample")
 
 
+def load_metadata(corpus_dir: str | Path | None = None) -> dict:
+    """Load the bibliographic sidecar (`metadata.json`) from the corpus directory.
+
+    Returns the `entries` mapping (stem -> record), or an empty dict when the
+    sidecar is absent or unreadable, so a corpus without one still scans.
+    """
+    root = Path(corpus_dir) if corpus_dir else DEFAULT_CORPUS
+    path = root / "metadata.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    entries = data.get("entries") if isinstance(data, dict) else None
+    return entries if isinstance(entries, dict) else {}
+
+
 def corpus_paths(
     corpus_dir: str | Path | None = None, notes_dir: str | Path | None = None
 ) -> list[tuple[str, Path, Path | None]]:
@@ -43,12 +67,23 @@ def corpus_paths(
     Notes live outside the corpus, in `review/notes/`, so a paper is the union of
     its conversion and its note. A conversion with no note is an unextracted
     paper, not a broken corpus.
+
+    Conversions are named by author and year, not by stem, so each filename is
+    mapped back to its stem through the sidecar's `conversion_md` field. An
+    unrecognized conversion (one the sidecar does not list) falls back to its
+    filename stem; it will not match a note or a metadata entry and is ignored
+    by the builder, which is the desired treatment for a stray conversion.
     """
     root = Path(corpus_dir) if corpus_dir else DEFAULT_CORPUS
     note_root = Path(notes_dir) if notes_dir else DEFAULT_NOTES
+    stem_by_conversion = {
+        entry["conversion_md"]: stem
+        for stem, entry in load_metadata(root).items()
+        if entry.get("conversion_md")
+    }
     papers = []
-    for md in sorted(root.rglob("*_marked.md")):
-        stem = md.name[: -len("_marked.md")]
+    for md in sorted(root.glob("*_marked.md")):
+        stem = stem_by_conversion.get(md.name, md.name[: -len("_marked.md")])
         note_path = note_root / f"{stem}.md"
         papers.append((stem, md, note_path if note_path.exists() else None))
     return papers

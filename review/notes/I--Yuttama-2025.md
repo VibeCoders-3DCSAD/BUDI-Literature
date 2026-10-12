@@ -276,3 +276,7 @@ Acknowledged by the authors:
 - Henseler, J.; Ringle, C. M.; Sarstedt, M. (2015) (methodology) — HTMT criterion for discriminant validity, and the source of the t > 1.96 decision rule. [pp. 364, 365]
 - Krueger, R. A. (2014) (methodology) — *Focus Groups: A Practical Guide for Applied Research*; justifies the expert FGD. [p. 364]
 - Presser, S. et al. (2004) (methodology) — methods for testing and evaluating survey questions; justifies the pre-test. [p. 364]
+
+---
+
+Conversion: [`Yuttama, 2025_marked.md`](../../literature/mds/Yuttama, 2025_marked.md)

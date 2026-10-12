@@ -272,7 +272,7 @@ For the decomposition of ΔCV_i, the authors use a second-order Taylor approxima
 | "More broadly, our evidence emphasizes that earnings volatility is not just an annual phenomenon but a monthly reality for workers and families" | Sect. 5, p. 34 | income_expense_management |
 | "random household volatility is substantially lower than individual volatility" | Sect. 4.2, p. 25 | savings_debt_management |
 | "maximum possible household volatility is over three times higher than minimum possible household volatility" | Sect. 4.2, p. 25 | savings_debt_management |
-| "If such higher frequency earnings fluctuations are easily smoothed through mechanisms such as savings or high-frequency transfers (e.g., safety net programs or informal insurance from family and friends), then it is no surprise that individuals do not necessarily choose partners or labor supply with monthly volatility in mind." | Sect. 1, p. 4 | savings_debt_management |
+| "If such higher frequency earnings fluctuations are easily smoothed through mechanisms such as savings or high-frequency transfers (e.g., safety net programs or informal insurance from family and friends), then it is no surprise that individuals do not necessarily choose partners..." | Sect. 1, p. 4 | savings_debt_management |
 | "variability in monthly income causes financial hardship and other adverse outcomes for some families, particularly low-income families" | Sect. 1, p. 5 | savings_debt_management |
 | "an examination of the consequences of monthly volatility on consumption and welfare is beyond the scope of this paper" | Sect. 1, p. 5 | savings_debt_management |
 
@@ -313,3 +313,7 @@ For the decomposition of ΔCV_i, the authors use a second-order Taylor approxima
 - Fadlon, I.; Nielsen, T. H. (2021) — "Family labor supply responses to severe health shocks", American Economic Journal: Applied Economics. [p. 24]
 - Persson, P. (2020) — "Social insurance and the marriage market", Journal of Political Economy. [p. 24]
 - Lachowska, M.; Mas, A.; Saggio, R.; Woodbury, S. A. (2022) — "Wage Posting or Wage Bargaining? A Test Using Dual Jobholders", Journal of Labor Economics. [p. 19]
+
+---
+
+Conversion: [`Andresen et al., 2025_marked.md`](../../literature/mds/Andresen et al., 2025_marked.md)

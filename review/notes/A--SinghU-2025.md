@@ -162,3 +162,7 @@ The paper identifies three gaps in the existing literature: most studies focus o
 - The paper claims comparison against ARIMA and linear regression but reports no quantitative baseline results anywhere.
 - Dataset size, country of data origin, and final hyperparameter values are not reported.
 - The framework is a five-module pipeline (ingestion, preprocessing, model selection, prediction engine, evaluation) implemented in Python with TensorFlow and Keras on Google Colab.
+
+---
+
+Conversion: [`Singh et al., 2025_marked.md`](../../literature/mds/Singh et al., 2025_marked.md)

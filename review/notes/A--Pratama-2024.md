@@ -162,3 +162,7 @@ Financial institutions increasingly rely on transaction data to optimise service
 - Chen, Q. (2024) — Application of K-Means algorithm in marketing [25].
 - Eckhardt, C. M., et al. (2022) — Unsupervised machine learning methods and emerging applications in healthcare [26].
 - Adeniran, I. A., et al. (2024) — Data-driven approaches to improve customer experience in banking [6].
+
+---
+
+Conversion: [`Pratama, 2024_marked.md`](../../literature/mds/Pratama, 2024_marked.md)

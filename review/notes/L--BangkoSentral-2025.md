@@ -339,3 +339,7 @@ The report is organized into three pillars of central banking (price stability, 
 ```text
 CLAIM AUDIT
 1. [NOT SUPPORTED] The Philippine evidence summarized in Chapter I places these findings in context. Savings buffers are thin and expenditures track income closely (Bangko Sentral ng Pilipinas [BSP], 2026b; Financial Sector Forum [FSCC], 2024), and income level and saving behavior predict financial resilience among Filipinos (Bunyi, 2024).
+
+---
+
+Conversion: [`Bangko Sentral ng Pilipinas, 2025_marked.md`](../../literature/mds/Bangko Sentral ng Pilipinas, 2025_marked.md)

@@ -214,3 +214,7 @@ Observed but not flagged by the authors:
 - Aristei, D., & Gallo, M. (2021) (evidence) — sustained saving behaviour correlates with economic stability and confidence in managing risk. [Results]
 - Yeo, K. H. K., Lim, W. M., & Yii, K. J. (2024) (evidence) — resilience depends on preventive financial behaviour rather than crisis response. [Results]
 - Tatad, J. et al. (2024) (evidence) — financial literacy and budgeting skills affect financial wellbeing among students. [Results]
+
+---
+
+Conversion: [`Erno & Grefalde, 2026_marked.md`](../../literature/mds/Erno & Grefalde, 2026_marked.md)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch PDFs from a local directory or remote source into literature/papers/.
+Fetch PDFs from a local directory or remote source into literature/pdfs/.
 
 Usage:
     # From a sibling directory containing PDFs:
@@ -12,7 +12,7 @@ Usage:
     # From a remote URL (must serve a .zip file):
     python3 scripts/fetch_pdfs.py --source remote --url https://example.com/papers.zip
 
-PDFs are placed in literature/papers/ (gitignored). SHA-256 hashes are printed
+PDFs are placed in literature/pdfs/ (gitignored). SHA-256 hashes are printed
 for each fetched file to support frontmatter metadata in downstream conversion.
 """
 
@@ -27,7 +27,7 @@ import zipfile
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_OUTPUT = REPO_ROOT / "literature" / "papers"
+DEFAULT_OUTPUT = REPO_ROOT / "literature" / "pdfs"
 
 
 def compute_sha256(file_path: Path) -> str:
@@ -136,7 +136,7 @@ def fetch_from_remote(url: str, output_dir: Path) -> dict:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Fetch PDFs into literature/papers/.")
+    ap = argparse.ArgumentParser(description="Fetch PDFs into literature/pdfs/.")
     ap.add_argument(
         "--source",
         choices=["local", "remote"],

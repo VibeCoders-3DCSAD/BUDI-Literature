@@ -309,3 +309,7 @@ Procedure as printed:
 - Zhan, M. (2022) — Financial stress and hardship among young adults: the role of student loan debt; cited alongside Babiarz and Robb for the negative-behaviour association. [p. 703]
 - Addo, F. R. (2014) — Debt, cohabitation, and marriage in young adulthood; cited for delayed marriage among borrowers. [p. 693]
 - Walsemann, K. M.; Ailshire, J. A. (2017) — Student debt spans generations; cited for overextended family finances into retirement. [p. 693]
+
+---
+
+Conversion: [`Danahy et al., 2024_marked.md`](../../literature/mds/Danahy et al., 2024_marked.md)

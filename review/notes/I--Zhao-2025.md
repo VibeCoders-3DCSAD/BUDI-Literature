@@ -230,3 +230,7 @@ The dialogue flow progresses through four phases: Rational Initialization (the A
 - Wu, S. et al. (2023) — BloombergGPT: A Large Language Model for Finance. arXiv:2303.17564. [p. 2]
 - Xiao, Y. et al. (2024) — TradingAgents: Multi-Agents LLM Financial Trading Framework. arXiv:2412.20138. [p. 2]
 - Yu, Y. et al. (2024) — Fincon: A synthesized llm multi-agent system with conceptual verbal reinforcement for enhanced financial decision making. Advances in Neural Information Processing Systems 37, 137010–137045. [p. 2]
+
+---
+
+Conversion: [`R. Huang et al., 2025_marked.md`](../../literature/mds/R. Huang et al., 2025_marked.md)

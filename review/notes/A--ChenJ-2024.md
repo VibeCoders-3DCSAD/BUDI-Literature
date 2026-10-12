@@ -290,3 +290,7 @@ The method proceeds in five movements:
 - Gers, F. A., Schmidhuber, J., & Cummin, S. F. (2000) (context) — "Learning to forget: Continual prediction with LSTM," cited for the manual configuration burden of traditional statistical models. [p. 141, p. 156]
 - Durbin, J., & Koopman, S. J. (2012) (context) — "Time series analysis by state space methods," cited alongside Gers et al. for AR/SVM limitations. [p. 141, p. 156]
 - Eslin, G. P., & Agon, C. (2012) (context) — "Time-series data mining," cited for the breadth of application domains for time series analysis. [p. 141, p. 156]
+
+---
+
+Conversion: [`J. Chen et al., 2024_marked.md`](../../literature/mds/J. Chen et al., 2024_marked.md)

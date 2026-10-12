@@ -274,3 +274,7 @@ Additional details:
 - Stanton, J. M. (2001) — linear regression history. [p. 907]
 - Mandigma, M. B. (2021) — risk aversion of investors. [p. 909]
 - Arena, C. M., et al. (2023) — multiple regression model building. [p. 911]
+
+---
+
+Conversion: [`Cruz et al., 2026_marked.md`](../../literature/mds/Cruz et al., 2026_marked.md)

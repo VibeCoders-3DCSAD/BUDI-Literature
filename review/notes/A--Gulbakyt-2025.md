@@ -8,9 +8,9 @@ doi: "Not reported"
 type: journal-article
 designation: algorithm
 status: extracted
-modules: [linear_programming, budgeting, financial_planning, model_performance_evaluation, data_collection]
+modules: [mixed_integer_linear_programming, budgeting, financial_planning, model_performance_evaluation, data_collection]
 module_rationale:
-  linear_programming: "Sec. 3 formulates the district allocation as a quadratic program (Eqs. 1-7) solved by Sequential Quadratic Programming through MATLAB's fmincon, and Sec. 4 benchmarks it against a simplex linear-programming baseline that maximises citizen satisfaction (Table 5)."
+  mixed_integer_linear_programming: "Sec. 3 formulates the district allocation as a quadratic program (Eqs. 1-7) solved by Sequential Quadratic Programming through MATLAB's fmincon, and Sec. 4 benchmarks it against a simplex linear-programming baseline that maximises citizen satisfaction (Table 5)."
   budgeting: "Table 4 reports the numeric budget allocated to each district and activity area, and Eqs. 3, 5-7 impose the budget ceiling, minimum floors and maximum caps the allocation must respect."
   financial_planning: "Eq. 4 combines four competing criteria - citizen satisfaction, strategic priorities, basic needs and urbanization - into one weighted objective for dividing a finite budget, which is the allocation-under-competing-needs problem the module describes."
   model_performance_evaluation: "Table 5 and Table 6 compare the proposed model and the two solvers against level-balance and linear-programming baselines on objective value, convergence, constraint handling and applicability, with Gini 0.223 and standard deviation 5.69% as fairness scores."
@@ -186,21 +186,21 @@ Regional funds in Kazakhstan are distributed by maslikhats, the district represe
 
 | Text | Locator | Module |
 | :--- | :--- | :--- |
-| "This research introduces a dynamic multi-criteria optimization framework for fair budget distribution across four districts in Kazakhstan's Almaty region." | Abstract, p. 3075 | linear_programming |
-| "The minimal difference of 135.15 thousand tenge (0.0007% of the budget) underscores the reliability of both methods." | Abstract, p. 3075 | linear_programming |
+| "This research introduces a dynamic multi-criteria optimization framework for fair budget distribution across four districts in Kazakhstan's Almaty region." | Abstract, p. 3075 | mixed_integer_linear_programming |
+| "The minimal difference of 135.15 thousand tenge (0.0007% of the budget) underscores the reliability of both methods." | Abstract, p. 3075 | mixed_integer_linear_programming |
 | "Finding a solution that concurrently meets multiple (sometimes conflicting) criteria is the goal of multi-criteria optimization." | Sec. 2 Theoretical Basis, p. 3076 | financial_planning |
 | "This approach was adopted in the absence of actual participatory budgeting records. The model is designed to simulate citizen preferences in a representative manner, serving as a proof-of-concept." | Sec. 3 Methodology, p. 3079 | data_collection |
 | "These values are normalized and scaled based on their relative importance in the model, as determined by the assigned weights." | Sec. 3 Methodology, p. 3080 | financial_planning |
 | "While these coefficients align with practical priorities, they lack grounding in formal sensitivity analysis." | Sec. 3 Methodology, p. 3080 | financial_planning |
 | "Although strategic priority multipliers varied from 1.0 to 2.1 across activity areas and districts, their specific quantitative influence on budget allocation was not distinctly isolated in this study." | Sec. 3 Methodology, p. 3080 | model_performance_evaluation |
 | "The standard deviation of the distribution was 5.69%, and the coefficient of variation stood at 0.398, suggesting moderate variability across sectors." | Sec. 4 Results and Discussion, p. 3081 | model_performance_evaluation |
-| "Nevertheless, the absence of objective function optimization restricts the efficient use of resources." | Sec. 4 Results and Discussion, p. 3083 | linear_programming |
-| "During the optimization process, the solver identified a non-zero constraint violation at the final iteration, approximately 865,100 ₸" | Sec. 4 Results and Discussion, p. 3083 | linear_programming |
+| "Nevertheless, the absence of objective function optimization restricts the efficient use of resources." | Sec. 4 Results and Discussion, p. 3083 | mixed_integer_linear_programming |
+| "During the optimization process, the solver identified a non-zero constraint violation at the final iteration, approximately 865,100 ₸" | Sec. 4 Results and Discussion, p. 3083 | mixed_integer_linear_programming |
 | "a quantitative assessment using performance metrics (e.g., RMSE, MAE) could not be performed due to the lack of detailed, disaggregated budget data" | Sec. 4 Results and Discussion, p. 3084 | model_performance_evaluation |
 | "Government-reported allocations are typically aggregated, hindering direct alignment with the model's framework." | Sec. 4 Results and Discussion, p. 3084 | data_collection |
 | "enabling the calculation of accuracy metrics such as prediction error and budget deviation" | Sec. 4 Results and Discussion, p. 3084 | model_performance_evaluation |
 | "All categories received funding, with healthcare accounting for 22.05% and transport for 21.11% securing the largest shares" | Sec. 4 Results and Discussion, p. 3084 | budgeting |
-| "GA is excellent at examining trade-offs between goals and demonstrates resilience in situations involving a lot of uncertainty." | Sec. 4 Results and Discussion, p. 3085 | linear_programming |
+| "GA is excellent at examining trade-offs between goals and demonstrates resilience in situations involving a lot of uncertainty." | Sec. 4 Results and Discussion, p. 3085 | mixed_integer_linear_programming |
 | "although the proposed model exhibits significant potential for practical use, especially in participatory and multi-criteria regional budget allocation, it remains at the conceptual phase" | Sec. 5 Conclusion, p. 3086 | financial_planning |
 
 ## Remember This
@@ -231,4 +231,4 @@ Regional funds in Kazakhstan are distributed by maslikhats, the district represe
 
 ---
 
-Conversion: [`A--Gulbakyt-2025_marked.md`](../../literature/paper-markdowns/A--Gulbakyt-2025_marked.md)
+Conversion: [`Gulbakyt, 2025_marked.md`](../../literature/mds/Gulbakyt, 2025_marked.md)

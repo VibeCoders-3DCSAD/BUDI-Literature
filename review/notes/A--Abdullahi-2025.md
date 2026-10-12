@@ -227,3 +227,7 @@ The review answers four research questions (Table 2, p. 119385). For RQ1, ensemb
 - Disabato, S.; Roveri, M. (2024) (methodology) — Tiny Machine Learning for concept drift (TML-CD) integrating k-NN, SVM and NN learners with a hybrid adaptation module for gradual drift. [p. 119398]
 - Rahmani, K. et al. (2023) (context) — Assessment of data drift effects on clinical sepsis prediction models using real electronic health records, motivating continuous model monitoring. [p. 119381]
 - Lima, M.; Neto, M.; Filho, T. S.; Fagundes, R. A. De A. (2022) (context) — Systematic literature review of learning under concept drift for regression, also the source of the synonyms for 'Concept Drift' used in the search strategy. [p. 119385]
+
+---
+
+Conversion: [`Abdullahi et al., 2025_marked.md`](../../literature/mds/Abdullahi et al., 2025_marked.md)

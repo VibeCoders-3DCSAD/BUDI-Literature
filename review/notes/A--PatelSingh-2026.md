@@ -159,3 +159,7 @@ Not reported. The Results section (Sec. 5, pp. 779–780) and Table 2 (p. 780) r
 - Hand, D. J. (2007) (methodology) — Principles of data mining, Drug Safety 30(7), 621–622; cited for data cleaning and normalisation. [p. 783]
 - Han, J.; Kamber, M.; Pei, J. (2012) (methodology) — Data mining: concepts and techniques; cited for ambiguous transaction patterns and third-party AI reliability. [p. 783]
 - Whitetaker, K. (2025) (context) — Role of big data analytics in behavioural finance: consumer spending and saving, SSRN 5413835. [p. 783]
+
+---
+
+Conversion: [`Patel & Singh, 2026_marked.md`](../../literature/mds/Patel & Singh, 2026_marked.md)

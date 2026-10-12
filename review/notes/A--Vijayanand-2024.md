@@ -256,3 +256,7 @@ The literature survey (Sect 2, pp. 53-54) reviews work on bank fraud, insurance 
 - Muna, R. K.; Hossain, M. I.; Alam, M. G. R.; et al. (2023) (context) — explainable-AI demystification of machine learning models for massive IoT attack detection in smart cities. [Sect 3, p. 55]
 - Loh, H. W.; Ooi, C. P.; Seoni, S.; et al. (2022) (methodology) — systematic review of explainable AI in healthcare, cited for the Shapley-value axioms of efficiency, symmetry, dummy and additivity. [Sect 5, p. 63]
 - Van den Broeck, G.; Lykov, A.; Schleich, M.; et al. (2022) (methodology) — tractability of SHAP explanations, cited for treating SHAP as a feature-attribution method. [Sect 5, p. 63]
+
+---
+
+Conversion: [`Vijayanand & Smrithy, 2024_marked.md`](../../literature/mds/Vijayanand & Smrithy, 2024_marked.md)

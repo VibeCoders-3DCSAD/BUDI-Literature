@@ -169,4 +169,4 @@ Not reported. The paper is a qualitative literature survey and comparative analy
 - Chen, Z.; Li, C.; Sun, W. (2020) — Bitcoin Price Prediction using Machine Learning: An Approach to Sample Dimension Engineering, Journal of Computational and Applied Mathematics, vol. 365. [p. 18]
 
 ---
-Conversion: [`A--DSouza-2026_marked.md`](../../literature/paper-markdowns/A--DSouza-2026_marked.md)
+Conversion: [`DSouza et al., 2026_marked.md`](../../literature/mds/DSouza et al., 2026_marked.md)

@@ -325,3 +325,7 @@ Acknowledged by the authors:
 - Jiang, W. (2021) (context) — Applications of deep learning in stock market prediction: recent progress; cited in the trend-analysis future direction. [p. 18]
 - Nikou, M.; Mansourfar, G.; Bagherzadeh, J. (2019) (baseline) — Stock price prediction using deep learning compared with machine learning algorithms. [p. 18]
 - Obthong, M.; Tantisantiwong, N.; Jeamwatthanachai, W.; Wills, G. (2020) (context) — Survey on machine learning for stock price prediction: algorithms and techniques. [p. 1]
+
+---
+
+Conversion: [`Sonkavde et al., 2023_marked.md`](../../literature/mds/Sonkavde et al., 2023_marked.md)

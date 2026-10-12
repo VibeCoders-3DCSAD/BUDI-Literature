@@ -273,3 +273,7 @@ Motivation for the forecasting component comes from the observation that statist
 - [38] Yang, H. et al. (2025) (methodology) — FinRobot: generative business process AI agents for enterprise resource planning in finance. [p. 15]
 - [39] Jahid, M. S. R. (2025) (context) — AI-driven optimisation and risk modelling in strategic economic zone development. [p. 15]
 - [40] De Zarzà, I. et al. (2023) (methodology) — optimised financial planning integrating individual and cooperative budgeting models with LLM recommendations. [p. 15]
+
+---
+
+Conversion: [`Patra et al., 2026_marked.md`](../../literature/mds/Patra et al., 2026_marked.md)

@@ -276,3 +276,7 @@ Acknowledged by the authors:
 - Yang J, Wu Y, Yuan Y, Xue H, Bourouis S, Mahmoud, et al. (2025) (context) — LLM-AE-MP: web attack detection using a large language model with autoencoder and multilayer perceptron; cited as proof of deep learning effectiveness in complex pattern recognition. [p. 2]
 - Yuan F, Lin Z, Tian Z, et al. (2025) (methodology) — Bio-inspired hybrid path planning for efficient and smooth robotic navigation; the paper states it draws on this work's advanced concepts. [p. 2]
 </details>
+
+---
+
+Conversion: [`S. Chen & Tan, 2025_marked.md`](../../literature/mds/S. Chen & Tan, 2025_marked.md)

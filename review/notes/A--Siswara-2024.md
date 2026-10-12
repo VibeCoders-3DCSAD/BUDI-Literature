@@ -2,14 +2,25 @@
 paper_id: A--Siswara-2024
 first_author: Siswara
 year: 2024
-title: "Classification Modeling with RNN-based, Random Forest, and XGBoost for Imbalanced Data: A Case of Early Crash Detection in ASEAN-5 Stock Markets"
-venue: "Scientific Journal of Informatics"
+title: 'Classification Modeling with RNN-based, Random Forest, and XGBoost for Imbalanced
+  Data: A Case of Early Crash Detection in ASEAN-5 Stock Markets'
+venue: Scientific Journal of Informatics
 doi: Not reported
 designation: algorithm
 status: extracted
-modules: []
-module_rationale: {}
+modules:
+- model_algorithm_integration
+- model_development
+- model_performance_evaluation
+module_rationale:
+  model_algorithm_integration: Compares multiple algorithms (RNN variants, Random
+    Forest, XGBoost) for early crash detection (Methods and Results).
+  model_development: Describes data preprocessing, feature engineering, time-step
+    expansion, SMOTE-ENN, TSCV, and hyperparameter tuning (Methods).
+  model_performance_evaluation: Reports balanced accuracy, hit rate, false alarm rate,
+    PRC score across 15 datasets (Table 5, Results).
 ---
+
 
 # A--Siswara-2024
 
@@ -312,3 +323,7 @@ Early crash detection in financial markets is critical for risk management and i
 - Marcham, F. (1929) (methodology) — Tensorflow: Large-scale Machine Learning on Heterogeneous Distributed Systems. [p. 574]
 - Pedregosa, F.; Varoquaux, G.; Gramfort, A.; Michel, V.; Thirion, B. (2011) (methodology) — Scikit-learn: Machine Learning in Python. [p. 574]
 - Yahoo Finance (methodology) — Data source for all stock market datasets. [p. 570]
+
+---
+
+Conversion: [`Siswara et al., 2024_marked.md`](../../literature/mds/Siswara et al., 2024_marked.md)

@@ -425,3 +425,7 @@ This paper presents a comprehensive, statistically rigorous evaluation of five p
 - Owusu-Adjei, M.; Hayfron-Acquah, J.B.; et al. (2023) (context) — Imbalanced class distribution and performance evaluation metrics in healthcare systems. [p. 41]
 - Wardhani, N.W.S.; Rochayani, M.Y.; et al. (2019) (context) — Cross-validation metrics for evaluating classification performance on imbalanced data. [p. 41]
 - Mokhtari, K.E.; Higdon, B.P.; Başar, A. (2019) (context) — Interpreting financial time series with SHAP values. [p. 41]
+
+---
+
+Conversion: [`Sujon et al., 2025_marked.md`](../../literature/mds/Sujon et al., 2025_marked.md)

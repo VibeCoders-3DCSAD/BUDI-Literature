@@ -145,7 +145,7 @@ Despite the Bangko Sentral ng Pilipinas (BSP) consistently emphasizing its twin 
 | :--- | :--- | :--- |
 | "This study investigates Filipino students' awareness, perceptions, and financial behaviors related to monetary policy, focusing on how demographic factors and academic background influence economic literacy." | Abstract, p. 1 | financial_planning |
 | "Results reveal that overall awareness of monetary policy is moderate, with graduate and business/economics students exhibiting significantly higher levels of understanding than senior high and non-business peers." | Abstract, p. 1 | financial_planning |
-| "Correlation analysis indicates that awareness is positively associated with perceptions of monetary policy effectiveness (r = 0.48, p < .001), saving behavior (r = 0.31, p < .001), and investment behavior (r = 0.24, p = .001), but shows no significant relationship with spending behavior (r = –0.07, p = .310)." | Abstract, p. 1 | savings_debt_management |
+| "Correlation analysis indicates that awareness is positively associated with perceptions of monetary policy effectiveness (r = 0.48, p < .001), saving behavior (r = 0.31, p < .001), and investment behavior (r = 0.24, p = .001)..." | Abstract, p. 1 | savings_debt_management |
 | "Regression results confirm that awareness and perceptions significantly predict saving (R² = .22) and investment (R² = .15) behaviors but not spending (R² = .04)." | Abstract, p. 1 | savings_debt_management |
 | "The study underscores the need for integrating monetary policy literacy across curricula, enhancing financial education initiatives, and strengthening the Bangko Sentral ng Pilipinas' communication strategies." | Abstract, p. 1 | data_collection |
 | "A central assumption of modern monetary policy frameworks is that expectations matter." | Sec. 1.1.3, p. 2 | financial_planning |
@@ -248,3 +248,7 @@ Despite the Bangko Sentral ng Pilipinas (BSP) consistently emphasizing its twin 
 - Ramirez, R. (2021) (context) — Filipino students demonstrate low levels of financial literacy compared to peers in other ASEAN countries. [Sec. 1.1.4, p. 3]
 - OECD (2017) (context) — Financial literacy among Filipino students low compared to other ASEAN countries. [Sec. 1.1.4, p. 3]
 - Indian Journal of Economics and Development (2022) (context) — Higher interest rates constrained investment in Vietnam; access to foreign capital mitigated effect. [Sec. 2.4, p. 7]
+
+---
+
+Conversion: [`Espelita et al., 2025_marked.md`](../../literature/mds/Espelita et al., 2025_marked.md)

@@ -299,3 +299,7 @@ Access to formal credit remains constrained for much of the African population d
 - Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., and others (2011) (methodology) — Scikit-learn: Machine learning in Python. [p. 8]
 - van Buuren, S. (2018) (methodology) — Flexible Imputation of Missing Data. [p. 7]
 - Zhang, Y. and Long, J. (2021) (context) — Fairness-aware learning with missing attributes. [p. 18]
+
+---
+
+Conversion: [`Olabintan, 2026_marked.md`](../../literature/mds/Olabintan, 2026_marked.md)

@@ -300,4 +300,4 @@ Global losses attributed to payment fraud are placed at more than USD 45 billion
 
 ---
 
-Conversion: [`A--Huang-2025_marked.md`](../../literature/paper-markdowns/A--Huang-2025_marked.md)
+Conversion: [`Huang et al., 2025_marked.md`](../../literature/mds/Huang et al., 2025_marked.md)

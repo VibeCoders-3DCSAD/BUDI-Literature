@@ -283,3 +283,7 @@ Acknowledged by the authors:
 - Satsios, N.; Hadjidakis, S. (2018) (context) — Application of the Theory of Planned Behaviour to saving behaviour of Pomak households; also cited for the two-action definition of savings behaviour. [p. 3, p. 5]
 - Middlewood, B. et al. (2018) (context) — Financial constraints will more convincingly outweigh the plans of consumers with higher doer preferences. [p. 3]
 - Calderone, M. et al. (2018) (context) — Saving behaviour can be influenced by external factors such as environmental stimuli or interactions with others. [p. 3]
+
+---
+
+Conversion: [`Bulan & Nemino, 2025_marked.md`](../../literature/mds/Bulan & Nemino, 2025_marked.md)

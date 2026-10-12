@@ -66,7 +66,7 @@ Not reported.
 ## Limitations and Gaps
 
 - The report is an institutional consumer expectations survey focused on near-term sentiment and economic indicators; it does not present an academic study design, hypotheses, or inferential statistical tests beyond reported percentages/diffusion indices.
-- The Chapter 2 claim that this paper reports "savings buffers are thin and expenditures track income closely (Bangko Sentral ng Pilipinas [BSP], 2026b; Financial Sector Forum [FSCC], 2024)" is not supported by this Q2 2026 report (L--BangkoSentral-2026). The report does not contain explicit text stating households have "thin savings buffers" as a measured construct in that phrasing, and while it notes "expenditures track income closely" is cited via BSP 2026b in the thesis text, this specific document (2026) focuses on consumer expectations/sentiment rather than reporting household savings buffer measures in that form.
+- The Chapter 2 claim that this paper reports "savings buffers are thin and expenditures track income closely (Bangko Sentral ng Pilipinas [BSP], 2026a; Financial Sector Forum [FSCC], 2024)" is not supported by this Q2 2026 report (L--BangkoSentral-2026b). The report does not contain explicit text stating households have "thin savings buffers" as a measured construct in that phrasing, and while it notes "expenditures track income closely" is cited in the thesis text, this specific document (2026b) focuses on consumer expectations/sentiment rather than reporting household savings buffer measures in that form.
 - [unacknowledged] The report notes methodological change starting Q1 2025: only forward-looking questions on household savings retained and the savings outlook question refined to better capture intention to save (Table 10 footnote 2). Comparisons across periods are affected by this change.
 
 ## Definitions
@@ -129,4 +129,4 @@ Not reported.
 Not reported (this is the primary institutional report).
 
 ---
-Conversion: [`L--BangkoSentral-2026_marked.md`](../../literature/paper-markdowns/L--BangkoSentral-2026_marked.md)
+Conversion: [`Bangko Sentral ng Pilipinas, 2026a_marked.md`](../../literature/mds/Bangko Sentral ng Pilipinas, 2026a_marked.md)

@@ -6,7 +6,7 @@
 `review/literature-review-matrix.md` is a generated view, not a database. It is
 rebuilt from three sources, in this order of authority:
 
-    literature/paper-markdowns/metadata.json   bibliographic metadata (page-1 verified)
+    literature/mds/metadata.json              bibliographic metadata (page-1 verified)
     review/notes/{stem}.md                    extraction, including module assignment
     config/taxonomy.yaml                      the module namespace
 
@@ -46,6 +46,7 @@ from pathlib import Path
 from common import (
     DEFAULT_CONFIG,
     DEFAULT_CORPUS,
+    DEFAULT_METADATA,
     DEFAULT_NOTES,
     DEFAULT_REVIEW,
     REPO_ROOT,
@@ -53,8 +54,6 @@ from common import (
     corpus_paths,
     load_note,
 )
-
-DEFAULT_METADATA = DEFAULT_CORPUS / "metadata.json"
 
 NOT_REPORTED = "Not reported"
 NOT_APPLICABLE = "Not applicable"
@@ -719,7 +718,7 @@ def render_matrix(rows: list[dict], quotes: list[dict], effects: list[dict], gen
         "",
         f"- Corpus: **{len(rows)}** papers | **{sum(1 for r in rows if r['status'] == 'extracted')}** extracted, "
         f"**{sum(1 for r in rows if r['status'] != 'extracted')}** not extracted",
-        "- Bibliographic source: `literature/paper-markdowns/metadata.json` (page-1 verified)",
+        "- Bibliographic source: `literature/mds/metadata.json` (page-1 verified)",
         f"- Taxonomy: `config/taxonomy.yaml` — {len(module_of)} modules in {len(section_name)} outline sections",
         "- Extraction source: `review/notes/{stem}.md` (authored)",
         "- Column definitions and validation rules: `docs/standards/review-layout.md`",
@@ -797,10 +796,15 @@ def render_note_stub(row: dict) -> str:
         "file as a full note per `docs/standards/note-format.md`. This stub will not be",
         "rewritten by the builder, so replace it rather than editing it in place.",
         "",
-        f"Conversion: [`{row['paper_id']}_marked.md`](../../literature/paper-markdowns/{row['paper_id']}_marked.md)",
+        _stub_conversion_footer(meta, row["paper_id"]),
         "",
     ]
     return "\n".join(out)
+
+
+def _stub_conversion_footer(meta: dict, stem: str) -> str:
+    conversion = meta.get("conversion_md") or f"{stem}_marked.md"
+    return f"Conversion: [`{conversion}`](../../literature/mds/{conversion})"
 
 
 def render_validation(rows: list[dict], f: Findings, stats: dict, generated: str) -> str:

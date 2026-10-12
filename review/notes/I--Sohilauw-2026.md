@@ -273,3 +273,7 @@ Note on significance markers: Table E1 and Table E2 print asterisks (`***`) rath
 - Warmath, D.; Elizabeth O'Connor, G.; Wong, N.; Newmeyer, C. (2022) (context) — Social psychological factors in vulnerability to financial hardship. [p. 2]
 - Mannell, K.; Boyle, E.; Kennedy, J.; Holcombe-James, I. (2025) (context) — How low-income families experience and negotiate digital dis/connections. [p. 2]
 - Bandi, V.; Dagadu, S.; Dal, V.; Rautela, G.; Kale, M. N. (2025) (context) — Optimum finance: personal finance management using LLM; the only cited work touching personal financial management software. [p. 11]
+
+---
+
+Conversion: [`Sohilauw et al., 2026_marked.md`](../../literature/mds/Sohilauw et al., 2026_marked.md)

@@ -290,3 +290,7 @@ Data reliability analysis (Table 2) produced Cronbach's alpha coefficients of .8
 - Yıldırım, M., Bayram, F., & Gunay, G. (2017) (context) — Financial literacy level of individuals and its relationships to demographic variables. [p. 93]
 - Yuniningsih & Taufiq, M. (2019) (context) — Investor behavior in determining investment on real asset. [p. 99]
 - Zhang, S. (2021) (context) — Comparison of different investment decisions linked with discount rate. [p. 98]
+
+---
+
+Conversion: [`Pinca et al., 2024_marked.md`](../../literature/mds/Pinca et al., 2024_marked.md)

@@ -247,3 +247,7 @@ Acknowledged by the authors:
 - The paper distinguishes model-performance metrics from explainability metrics (fidelity, consistency, sparsity).
 - Nine categories of MA-XAI limitations are itemised, and six remedy directions (hybrid XAI, domain adaptation, distillation, real-time optimisation, regulatory alignment, fairness) are proposed.
 - The review reports no inter-rater reliability, no risk-of-bias assessment, and no meta-analytic synthesis; all findings are descriptive tabulation.
+
+---
+
+Conversion: [`Khan et al., 2025_marked.md`](../../literature/mds/Khan et al., 2025_marked.md)

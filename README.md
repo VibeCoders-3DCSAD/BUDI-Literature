@@ -13,11 +13,11 @@ and the matrix is a count of those assignments.
 | Directory / File | Purpose |
 | :--- | :--- |
 | `config/taxonomy.yaml` | **The single source of truth** for the module namespace: 20 modules across the 5 Topical Outline V4 sections |
-| `literature/conversions/` | The curated corpus, flat, one `{stem}_marked.md` per paper, plus `metadata.json`, the page-1 verified bibliographic authority |
+| `literature/mds/` | The curated corpus, flat, one `{Author, Year}_marked.md` conversion per paper, plus `metadata.json`, the page-1 verified bibliographic authority |
 | `review/notes/` | **Authored** one extraction note per paper, `review/notes/{stem}.md` — the source of truth for everything except the bibliographic block |
 | `review/` | **Generated** matrix, CSV tables, and `validation.md`; `review/notes/` and `review/synthesis/` are authored |
-| `literature/bucket/` | Raw candidate PDFs for intake |
-| `literature/papers/` | Fetched source PDFs (gitignored; use `scripts/fetch_pdfs.py`) |
+| `bucket/` | Raw candidate PDFs for intake (repo root) |
+| `literature/pdfs/` | Source PDFs, named by author and year (gitignored; use `scripts/fetch_pdfs.py`) |
 | `scripts/` | Fetch, convert, and matrix generation |
 | `skills/` | Agent-facing extraction contract for the note at `review/notes/{stem}.md` |
 | `docs/standards/` | Naming conventions, note schema, review layout, workflow documentation |
@@ -52,26 +52,26 @@ python3 scripts/fetch_pdfs.py --source local --path /path/to/pdf-archives/
 python3 scripts/fetch_pdfs.py --source remote --url https://example.com/papers.zip
 ```
 
-PDFs land in `literature/papers/` (gitignored). SHA-256 hashes are printed for each file.
+PDFs land in `literature/pdfs/` (gitignored). SHA-256 hashes are printed for each file.
 
 Optional inspection before converting:
 
 ```bash
-python3 scripts/count_pdf_pages.py literature/papers/
-python3 scripts/check_dupe_pdfs.py literature/papers/ --cascade
+python3 scripts/count_pdf_pages.py literature/pdfs/
+python3 scripts/check_dupe_pdfs.py literature/pdfs/ --cascade
 ```
 
 ### 2. Convert
 
 ```bash
-python3 scripts/prepare_pdf.py literature/papers/ --page-aware
+python3 scripts/prepare_pdf.py literature/pdfs/ --page-aware
 ```
 
-Produces `{stem}_marked.md` (with metadata frontmatter). Move it into the corpus
-root:
+Produces `{Author, Year}_marked.md` (with metadata frontmatter). Move it into the
+corpus root:
 
 ```bash
-mv literature/papers/{stem}_marked.md literature/conversions/
+mv literature/pdfs/{Author, Year}_marked.md literature/mds/
 ```
 
 ### 3. Extract into a note
@@ -126,7 +126,7 @@ The design rule is: **edits go in `config/`, never in code.**
 | New/renamed/removed module | Edit `config/taxonomy.yaml` -> `python3 scripts/build_matrix.py` |
 | A paper extracted or re-read | Rewrite `review/notes/{stem}.md` -> `python3 scripts/build_matrix.py` |
 | A conversion added or changed | `python3 scripts/build_matrix.py` |
-| A bibliographic correction | Edit `literature/conversions/metadata.json` -> `python3 scripts/build_matrix.py` |
+| A bibliographic correction | Edit `literature/mds/metadata.json` -> `python3 scripts/build_matrix.py` |
 | Topics come from a different outline | Replace `config/taxonomy.yaml`, then re-tag the `modules[]` frontmatter of existing notes |
 
 Renaming a module is not a free operation: the ids are stored in every note's
@@ -154,7 +154,7 @@ per paper) and `review/synthesis/`.
 - The generated tree is committed so the corpus is browsable without running anything.
 - Only `review/data/*.csv` is force-tracked; other `*.csv` outputs stay ignored.
 - Batch structure is by intake run, not by topic. Re-organize by topic when the topical outline is finalized.
-- Bibliographic metadata lives in `literature/conversions/metadata.json` (page-1 verified) and overrides note frontmatter. There is no `refs.bib`.
+- Bibliographic metadata lives in `literature/mds/metadata.json` (page-1 verified) and overrides note frontmatter. There is no `refs.bib`.
 - Old topic codes (`1.A`-`14.C`) and the retired `topic_tags` / `topic_relevance` fields predate `config/taxonomy.yaml` and the note pipeline. Do not write them.
 
 ## Navigation

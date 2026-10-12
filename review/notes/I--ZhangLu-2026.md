@@ -207,3 +207,7 @@ Not applicable. The paper is a review article and reports no equations.
 | "The dynamic and stringent regulatory landscape presents an ongoing technical challenge for AI adoption in fintech." | Sec. 4, p. 16 | system_performance_evaluation |
 | "Table 2 clarified that artificial intelligence models in fintech were not interchangeable, because each model class offered different technical strengths and matched different financial tasks." | Sec. 2.3, p. 8 | model_algorithm_integration |
 | "Overall, the choice of artificial intelligence model in fintech was task dependent rather than universal." | Sec. 2.3, p. 9 | model_algorithm_integration |
+
+---
+
+Conversion: [`Z. Zhang & Lu, 2026_marked.md`](../../literature/mds/Z. Zhang & Lu, 2026_marked.md)

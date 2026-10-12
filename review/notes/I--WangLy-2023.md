@@ -332,3 +332,7 @@ All analyses were Bayesian with default priors, reporting BF10 or its inverse BF
 - Wang-Ly, N., & Newell, B. R. (2022) (context) — Allowing early access to retirement savings: lessons from Australia; COVID-19 income disruption motivation. [p. 3]
 - Weatherly, J. N., Terrell, H. K., & Derenne, A. (2010) (methodology) — Delay discounting of different commodities; prior use of the fill-in-the-blank measure. [p. 8]
 - West, C., Whillans, A., & DeVoe, S. (2020) (baseline) — Income volatility increases financial impatience; Kenyan cash transfer income spikes increased smaller-sooner choices. [pp. 3, 4, 12]
+
+---
+
+Conversion: [`Wang-Ly & Newell, 2023_marked.md`](../../literature/mds/Wang-Ly & Newell, 2023_marked.md)

@@ -242,3 +242,7 @@ The paper does not print LightGBM hyperparameter values (no learning rate, numbe
 - Sharma, Mehta, Sharma (2024) (context) — Role of artificial intelligence and machine learning in fraud detection and prevention, in Risks and Challenges of AI-Driven Finance: Bias, Ethics, and Security, IGI Global, pp. 90–120. [p. 12]
 - Theodorakopoulos, Theodoropoulou, Stamatiou (2024) (context) — A state-of-the-art review in big data management engineering: real-life case studies, challenges, and future research directions, Eng 5(3), 1266–1297. [p. 12]
 - Takyar (2024) (context) — Financial fraud detection using machine learning models, LeewayHertz. [p. 12]
+
+---
+
+Conversion: [`Shaha & Gavekar, 2025_marked.md`](../../literature/mds/Shaha & Gavekar, 2025_marked.md)

@@ -197,3 +197,7 @@ The stated gap is comparative rather than methodological: the paper says existin
 - Zvarikova K., Machova V., Nica E. (2022) (context) — Cognitive AI algorithms, movement and behaviour tracking, and customer identification in metaverse commerce; cited alongside ref. 9 for gradient boosting. [ref. 10, p. 2]
 - GhorbanTanhaei H., Boozary P., Sheykhan S., et al. (2024) (context) — Predictive analytics in customer behaviour for anticipating trends and preferences; cited for LSTM and its variants on behavioural sequences. [ref. 11, p. 2]
 - Xu Z., Zhu G., Metawa N., et al. (2022) (context) — Machine-learning customer brand-equity analysis for marketing behaviour evaluation; cited for deep reinforcement learning in sequential decision-making. [ref. 12, p. 2]
+
+---
+
+Conversion: [`H. Zhang & Hou, 2026_marked.md`](../../literature/mds/H. Zhang & Hou, 2026_marked.md)

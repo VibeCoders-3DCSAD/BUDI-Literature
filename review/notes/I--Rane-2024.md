@@ -162,3 +162,7 @@ Not reported. I read the Abstract, Sect. 2 (Methodology), Sect. 3.1 through Sect
 - Bahrammirzaee, A. (2010) — Comparative survey of AI applications in finance: neural networks, expert systems and hybrid intelligent systems, cited on ethical and bias concerns. [ref. 68]
 - Palanivelu, V. R., & Vasanthi, B. (2020) — Role of AI in business transformation, cited on ethical and bias concerns. [ref. 69]
 - A substantial set of references by the same author team (Rane and co-authors, 2024a–2024l; Paramesha, Rane and Rane, 2024a–2024d) is cited throughout for claims about AI, machine learning, deep learning, big data and blockchain; these are self-citations that frame the review's supporting literature. [refs. 28, 29, 30, 35, 38, 41, 43, 47, 50, 53, 54, 55, 61, 62, 63, 64]
+
+---
+
+Conversion: [`Rane et al., 2024_marked.md`](../../literature/mds/Rane et al., 2024_marked.md)

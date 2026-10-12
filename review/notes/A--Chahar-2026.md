@@ -175,3 +175,7 @@ Managing personal finance has become increasingly complex because of evolving in
 - S. Galperti, "A theory of personal budgeting," Theor. Econ., vol. 14, no. 1, pp. 173–210, 2019. [13] — cited on theoretic connections between consumption-saving biases and budgeting, and on predictive analytics. [p. 4, 8]
 - G. Paliwal, A. Kumar, K. P. Sharma, D. Bhargava, and V. M. Shrimal, "Transformative impact of explainable artificial intelligence: bridging complexity and trust," Discov. Artif. Intell., vol. 5, no. 1, p. 51, May 2025. [14] — cited on trust and explainability as barriers to AI adoption. [p. 10]
 - W. Ruan, M. Xu, W. Fang, L. Wang, L. Wang, and W. Han, "Private, Efficient, and Accurate: Protecting Models Trained by Multi-party Learning with Differential Privacy," IEEE S&P, May 2023, pp. 1926–1943. [15] — cited on privacy-preserving machine learning. [p. 11]
+
+---
+
+Conversion: [`Chahar et al., 2026_marked.md`](../../literature/mds/Chahar et al., 2026_marked.md)

@@ -252,3 +252,7 @@ Not reported. The paper contains no results tables, no performance metrics, no a
 - Milano, S.; Taddeo, M.; Floridi, L. (2020) (context) — Recommender systems and their ethical challenges; ethical impacts immediate or future. [p. 5]
 - Karakolis, E.; Oikonomidis, P. F.; Askounis, D. (2022) (context) — Identifying and addressing ethical challenges in recommender systems; privacy, personal data, fairness, transparency, identity, society. [p. 5]
 - Shuryhin, K. A.; Zinovatna, S. L. (2024) (methodology) — Architecture of the financial manager system using AI technologies; Build-Train-Deploy pattern with AWS SageMaker. [p. 7]
+
+---
+
+Conversion: [`Shuryhin & Zinovatna, 2024_marked.md`](../../literature/mds/Shuryhin & Zinovatna, 2024_marked.md)

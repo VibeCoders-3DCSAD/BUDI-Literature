@@ -33,7 +33,7 @@
 # The previous vocabulary was keyed to a different axis — generic feature
 # buckets such as `ml_algorithms`, `financial_literacy`, `privacy_security` and
 # `synthetic_data_mlops`. It had no module at all for three of BUDGIE's four
-# algorithms: `linear_programming`, `interquartile_range` and
+# algorithms: `mixed_integer_linear_programming`, `interquartile_range` and
 # `rule_based_classification` were absent, so literature on three quarters of
 # the thesis's technical contribution had nowhere to be recorded.
 
@@ -154,14 +154,14 @@ modules:
     keywords: [rule-based classification, rule-based algorithm, rule-based system, if-then rules, decision list, profile classification]
     outline_leaves: [Rule-Based Classification, Rule-Based Classification in Savings and Debt Profile Classification, Rule-Based Classification Performance Metrics]
 
-  - id: linear_programming
+  - id: mixed_integer_linear_programming
     section: algorithms
-    name: Linear Programming
+    name: Mixed-Integer Linear Programming (MILP)
     definition: >-
-      LP as an optimisation method for allocating constrained resources, applied
-      to budget generation, and its evaluation.
-    keywords: [linear programming, LP, optimisation, constrained allocation, resource allocation, knapsack, simplex, integer programming]
-    outline_leaves: [Linear Programming (LP), Overview of Linear Programming, Linear Programming in Optimization, Linear Programming Performance Metrics]
+      MILP as an optimisation method for allocating constrained resources with integer
+      variables, applied to budget generation, and its evaluation.
+    keywords: [mixed integer linear programming, MILP, linear programming, LP, optimisation, constrained allocation, resource allocation, knapsack, branch and bound, integer programming]
+    outline_leaves: [Mixed-Integer Linear Programming (MILP), Overview of Mixed-Integer Linear Programming, Mixed-Integer Linear Programming in Budget Recommendation, Mixed-Integer Linear Programming Performance Metrics]
 
   - id: interquartile_range
     section: algorithms
@@ -259,6 +259,6 @@ modules:
 metric_leaves:
   sarima: [mae, smape, mda, rmse]
   rule_based_classification: [rule_coverage, boundary_value_analysis, equivalence_partitioning, expected_output_agreement, test_case_pass_rate]
-  linear_programming: [constraint_satisfaction_rate, budget_utilization_rate, deviation_from_user_preferences]
+  mixed_integer_linear_programming: [constraint_satisfaction_rate, budget_utilization_rate, deviation_from_user_preferences]
   interquartile_range: [accuracy, precision, recall, f1_score]
   system_performance_evaluation: [savings_rate, savings_progress, alert_frequency, debt_progress, plan_adherence]

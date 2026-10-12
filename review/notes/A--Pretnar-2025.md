@@ -284,3 +284,7 @@ Details of the modelling and estimation procedure:
 - Shefrin, H.; Thaler, R. (1981) (theory) — Planner/doer self-control model that motivates the paper's two-selves structure. [pp. 5, 7, 9]
 - Gabaix, X. (2014) (theory) — Sparse-max model of bounded rationality, the basis for the paper's sparse budget re-evaluation. [pp. 3, 5, 13]
 - Ko˝szegi, B.; Matˇejka, F. (2020) (theory
+
+---
+
+Conversion: [`Pretnar et al., 2025_marked.md`](../../literature/mds/Pretnar et al., 2025_marked.md)

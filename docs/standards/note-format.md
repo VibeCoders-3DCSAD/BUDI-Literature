@@ -12,7 +12,7 @@ exists; it only creates a stub for a paper that has none.
 
 | Field group | Authority |
 | :--- | :--- |
-| `paper_id`, `title`, `authors`, `year`, `venue`, `doi` | `literature/conversions/metadata.json` — page-1 verified |
+| `paper_id`, `title`, `authors`, `year`, `venue`, `doi` | `literature/mds/metadata.json` — page-1 verified |
 | designation | the stem prefix |
 | everything else | the note |
 
@@ -93,8 +93,14 @@ At most three sentences. No methodology.
 - Author (year) (role) — the claim attributed to them [locator]
 
 ---
-Conversion: [`A--Aldrees-2025_marked.md`](../../literature/conversions/A--Aldrees-2025_marked.md)
+Conversion: [`Aldrees et al., 2025_marked.md`](../../literature/mds/Aldrees et al., 2025_marked.md)
 ```
+
+The `Conversion` footer links to the note's PDF conversion. Conversions are stored
+flat in `literature/mds/`, named by author and year rather than by stem, so the
+exact filename for a stem is the `conversion_md` field in
+`literature/mds/metadata.json` (for example `A--Aldrees-2025` maps to
+`Aldrees et al., 2025_marked.md`).
 
 ## Frontmatter
 

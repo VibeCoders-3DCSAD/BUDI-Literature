@@ -184,3 +184,7 @@ The paper reports these quantities and no others. There is no baseline compariso
 - Mhlanga, D. (2020) (context) — Impact of AI on digital financial inclusion. [p. 462]
 - Bayakhmetova, A.; Rudenko, L.; Krylova, L.; Suleimenova, B.; Niyazbekova, S.; Nurpeisova, A. (year not reported) (context) — Bibliometric analysis of AI in financial behaviour; reports a 13.34% annual growth rate in publications. [p. 463]
 - Liu, L.X.; Sun, Z.; Xu, K.; Chen, C. (2024) (context) — ChatGPT-4o financial reasoning capabilities and challenges. [p. 463]
+
+---
+
+Conversion: [`Vinitha et al., 2026_marked.md`](../../literature/mds/Vinitha et al., 2026_marked.md)

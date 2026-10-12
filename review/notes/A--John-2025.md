@@ -229,3 +229,7 @@ Reference-list numbers are given as printed in the paper's final list. The paper
 - [23] Widmer, G.; Kubat, M. (1996) — origin of the concept drift description used in the introduction: relationships learned from past data stop holding once underlying patterns move. [Sect. 1.1]
 - [24] Zhang, Z.; Chen, L. (2022) — survey of explainable credit risk modelling outlining four challenges: interpretability versus predictive power, measuring explanation stability, fairness under changing data, and interpretability in live systems. [Sect. 2.1]
 - [25] Žliobaitė, I. (2010) — argues drift adaptation should go beyond retraining and include systems that keep explanations stable over time. [Sect. 2.2]
+
+---
+
+Conversion: [`John, 2025_marked.md`](../../literature/mds/John, 2025_marked.md)

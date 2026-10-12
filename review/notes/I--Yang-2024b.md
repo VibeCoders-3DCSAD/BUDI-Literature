@@ -194,3 +194,7 @@ The paper reports no outcome statistics — no accuracy, precision, recall, F1, 
 CLAIM AUDIT
 1. [NOT SUPPORTED] The Philippine evidence summarized in Chapter I places these findings in context. Savings buffers are thin and expenditures track income closely (Bangko Sentral ng Pilipinas [BSP], 2026b; Financial Sector Forum [FSCC], 2024), and income level and saving behavior predict financial resilience among Filipinos (Bunyi, 2024). — The paper does not mention the Philippines, savings buffers, income level, saving behavior, or Filipino financial resilience. It is about AI and big data in financial services, credit risk modeling, and bank portfolio classification using XGBoost (Sect. 1-4, pp. 53-60). None of the cited claims appear in the paper.
 ```
+
+---
+
+Conversion: [`Yang et al., 2024b_marked.md`](../../literature/mds/Yang et al., 2024b_marked.md)

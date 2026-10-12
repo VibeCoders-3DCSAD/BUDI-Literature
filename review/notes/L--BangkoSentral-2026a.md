@@ -14,7 +14,7 @@ module_rationale:
   income_expense_management: "Reports household inflows and outflows by category — remittance inflows of US$7.9 billion supporting consumption (Sect. II.D.1, pp. 26-27) and spending on food, transport, clothing and furnishings (Sect. II.A.1, p. 7; Table 1a)."
 ---
 
-# L--BangkoSentral-2026b — Q1 2026 Report on Economic and Financial Developments
+# L--BangkoSentral-2026a — Q1 2026 Report on Economic and Financial Developments
 
 ## Summary
 
@@ -341,3 +341,7 @@ The report is a monitoring document rather than a hypothesis-testing study: it e
 - SEC Memorandum Circular No. 11, Series of 2026 — tiered minimum public ownership framework. [Annex B, p. 34]
 - SEC Memorandum Circular No. 12, Series of 2026 — guidelines on the issuance and disclosure of Sukuk. [Annex B, p. 34]
 - Bureau of the Treasury data releases, Philippine Statistics Authority national accounts and CPI releases, Philippine Stock Exchange and PDEx data, and Bloomberg market data, used throughout the statistical tables. [Tables 1–15]
+
+---
+
+Conversion: [`Bangko Sentral ng Pilipinas, 2026b_marked.md`](../../literature/mds/Bangko Sentral ng Pilipinas, 2026b_marked.md)

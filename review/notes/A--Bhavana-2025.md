@@ -219,3 +219,7 @@ The paper's own results (Sect. 3.7, p. 6) are presented as a bulleted list, not 
 - Davis, F. D., et al. (1989) (context) — Technology Adoption Model explained why users accept or reject AI tools and highlighted the importance of simplicity. [p. 3]
 - Goodfellow, I., et al. (2016) (context) — Deep learning principles underpinned modern financial forecasting models. [p. 3]
 - Global Financial Literacy Survey (GFLEC, 2023) (context) — Reported that more than 60% of adults worldwide lack understanding of fundamental financial concepts. [p. 1]
+
+---
+
+Conversion: [`Bhavana et al., 2025_marked.md`](../../literature/mds/Bhavana et al., 2025_marked.md)

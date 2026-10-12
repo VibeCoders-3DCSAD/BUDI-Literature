@@ -240,3 +240,7 @@ Contemporary financial advisory tools are described as relying on fixed structur
 - Chandola, V.; Banerjee, A.; Kumar, V. (2009) (methodology) — Anomaly detection: a survey. [p. 19]
 - El Abaji, M.; Haraty, R. A. (2025) (context) — Enhancing bitcoin forecast accuracy by integrating AI, sentiment analysis, and financial models. [p. 19]
 - Haraty, R. A.; Sobeh, S. (2024) (context) — Unveiling insights from unstructured wealth: a comparative analysis of clustering techniques on blockchain cryptocurrency data. [p. 19]
+
+---
+
+Conversion: [`Haraty & Bader, 2025_marked.md`](../../literature/mds/Haraty & Bader, 2025_marked.md)

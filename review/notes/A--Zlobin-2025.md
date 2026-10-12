@@ -268,3 +268,7 @@ The review's own workflow, as printed:
 - Li, X.; Li, Y.; Liu, X. Y.; Wang, C. D. (2019) (context) — Risk management via anomaly circumvent: mnemonic deep learning for midterm stock prediction; cited in the volatility-forecasting paragraph. [ref. 39]
 - Wang, B.; Dong, Y.; Yao, J.; Qin, H.; Wang, J. (2024) (methodology) — Anomaly detection and risk assessment in financial markets using deep neural networks; source of the GRU and GRU-CA RMSE figures (13.28/13.27/13.29 versus 9.76/9.78/9.74) and the 70/30 S&P 500 split. [ref. 40]
 - Salehi, M.; Rashidi, L. (2018) (methodology) — Survey on anomaly detection in evolving data; source of the GMM, clustering-based (BIRCH, CluStream, DenStream, DStream), and nearest-neighbor (k-NN, LOF, iLOF) categorisation. [ref. 41]
+
+---
+
+Conversion: [`Zlobin & Bazylevych, 2025_marked.md`](../../literature/mds/Zlobin & Bazylevych, 2025_marked.md)

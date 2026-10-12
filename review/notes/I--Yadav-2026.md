@@ -8,7 +8,7 @@ doi: 10.55041/ISJEM06330
 
 designation: international
 status: extracted
-modules: [pfm_apps_overview, pfm_apps_features, pfm_apps_problems, pfm_apps_importance, financial_planning, budgeting, savings_debt_management, income_expense_management, rule_based_classification, linear_programming, model_algorithm_integration, data_collection, model_development, system_development]
+modules: [pfm_apps_overview, pfm_apps_features, pfm_apps_problems, pfm_apps_importance, financial_planning, budgeting, savings_debt_management, income_expense_management, rule_based_classification, mixed_integer_linear_programming, model_algorithm_integration, data_collection, model_development, system_development]
 module_rationale:
   pfm_apps_overview: "Sec. I.A and Sec. II.A trace PFM tooling from spreadsheets and web banking to mobile trackers, defining the class of applications the paper addresses (pp. 1-2)."
   pfm_apps_features: "Sec. III.A.3 specifies the proposed feature set — real-time expense categorization, smart budgeting, anomaly alerts, personalized recommendations — and Sec. IV names dashboards, goal tracking and nudges (pp. 4-5)."
@@ -19,7 +19,7 @@ module_rationale:
   savings_debt_management: "Sec. III.A.3 and Sec. IV.C name saving plans, effective savings paths, debt management and goal-progress tracking as system outputs (pp. 4, 5-6)."
   income_expense_management: "Sec. II.C and Sec. III.B.4 describe automatic transaction import plus a detailed, customizable income and expense classification structure with user corrections (pp. 3, 5)."
   rule_based_classification: "Sec. II.C and Sec. II.D.2 describe rule-based transaction classification and rule-coded expert guidance, and Sec. III.C.1 proposes rule-based classifiers as the first expense-categorization step (pp. 3, 5)."
-  linear_programming: "Sec. III.C.2 names linear programming among the optimization tools used to calculate budget resources against user objectives (p. 5)."
+  mixed_integer_linear_programming: "Sec. III.C.2 names linear programming among the optimization tools used to calculate budget resources against user objectives (p. 5)."
   model_algorithm_integration: "Sec. III.A.3 assembles the AI and Analytics Engine from four coupled modules, and Sec. III.C.2 chains time-series forecasting into optimization and reinforcement learning (pp. 4, 5)."
   data_collection: "Sec. III.B states that training uses aggregated, anonymized transaction datasets narrowed with user-consented personal data, then tokenized, normalized and imputed (p. 5)."
   model_development: "Sec. III.B and Sec. III.C give the preprocessing steps and the algorithm-selection and training approach for categorization, budgeting/forecasting and anomaly detection (p. 5)."
@@ -162,7 +162,7 @@ Not reported. Section IV ("Result") presents only projected effects in modal lan
 | "This component relies on predictive analytics and optimization methods to come up with individual budget recommendations." | Sec. III.A.3, p. 4 | pfm_apps_features |
 | "The system is trained with aggregated and anonymized datasets of transactions in the first place, and further narrowed down with user-consented personal data to facilitate individualized recommendations." | Sec. III.B, p. 5 | data_collection |
 | "Models like ARIMA, Prophet, and neural networks like LSTMs can be used to forecast future income and spending trends based on the time-series forecasting techniques." | Sec. III.C.2, p. 5 | pfm_apps_features |
-| "These trends justify optimization tools, including linear programming and genetic algorithms, to calculate budget resources which can be used to meet user objectives and anticipated financial performance." | Sec. III.C.2, p. 5 | linear_programming |
+| "These trends justify optimization tools, including linear programming and genetic algorithms, to calculate budget resources which can be used to meet user objectives and anticipated financial performance." | Sec. III.C.2, p. 5 | mixed_integer_linear_programming |
 | "The users would be in a higher position to make timely decisions instead of looking back on monthly reports, which would suit their budgets and financial targets." | Sec. V.A.1, p. 6 | pfm_apps_importance |
 | "In order to secure sensitive financial data, the system will include powerful encryption tools, tokenization procedures and multi-factor authentication services." | Sec. V.B.1, p. 6 | system_development |
 | "Risk AI systems that have been trained on small or imbalanced datasets can be used to strengthen the current financial biases, therefore, leading to unfair advice or even discriminatory suggestions." | Sec. V.C, p. 7 | pfm_apps_problems |
@@ -201,3 +201,7 @@ CLAIM AUDIT
 1. [PARTIAL] Digital tools now organize a user's income, transactions, expenses, savings goals, and debt obligations in one place, and analytical components can use that information to estimate future expenses and help users allocate their funds (Yadav et al., 2026; D'Souza et al., 2026).
 Locator: The paper describes these as design intentions of a system that was never built or tested, not as an established present-tense property of digital tools. What it does say: the proposed IPFMS "is able to aggregate real-time financial transaction data to provide a real-time snapshot of financial conditions" (Abstract, p. 1); its Data Processing and Storage Layer maintains "User profiles, defined financial goals as well as past spending records" (Sec. III.A.2, p. 4); the Personalized Recommendation Engine covers "debt management, investment planning and how to prepare to a big event in life" (Sec. IV.C, p. 6); and predictive capability "enable[s] individuals to estimate the financial needs in the future and possible deficit so as to plan in advance on how to spend or save money" (Sec. IV.B, pp. 5-6). However the paper's own review says existing tools do not do this — "Most of these applications are however limited and still represent a static image of financial health, and do not offer much support in depicting financial optimization through prediction, personalization, or real-time financial integration" (Sec. I.A, p. 1) — and every capability is stated in projected rather than demonstrated form, with no implementation, deployment or evaluation reported.
 ```
+
+---
+
+Conversion: [`Yadav et al, 2026_marked.md`](../../literature/mds/Yadav et al, 2026_marked.md)

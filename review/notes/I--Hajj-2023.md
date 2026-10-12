@@ -241,3 +241,7 @@ The paper contains no numbered figures.
 - Mittelstadt, B. D.; Allo, P.; Taddeo, M.; Wachter, S.; Floridi, L. (2016) (context) — Mapping the ethics of algorithms debate; cited for algorithmic bias and fairness concerns. [p. 11]
 - OECD (2021) (context) — Artificial intelligence, machine learning and big data in finance: opportunities, challenges and implications for policy makers; source for the robo-advisor claim. [p. 4]
 - World Economic Forum (2018) (context) — The new physics of financial services; source of the projection that financial-sector integration could add a trillion dollars of value by 2025. [p. 1]
+
+---
+
+Conversion: [`Hajj & Hammoud, 2023_marked.md`](../../literature/mds/Hajj & Hammoud, 2023_marked.md)

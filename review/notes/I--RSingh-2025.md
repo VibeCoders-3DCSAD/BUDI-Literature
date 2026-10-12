@@ -200,3 +200,7 @@ Conventional financial decision-making systems rely on generalized models using 
 CLAIM AUDIT
 1. [NOT SUPPORTED] Boundary Value Analysis and Equivalence Partitioning construct test cases across representative input classes and around the thresholds where outcomes change. Boundary value analysis focuses on values at and immediately around decision boundaries (Guo et al., 2024), while equivalence partitioning divides the input domain into groups expected to produce equivalent behavior (Arfani et al., 2022).
 ```
+
+---
+
+Conversion: [`R & Singh, 2025_marked.md`](../../literature/mds/R & Singh, 2025_marked.md)

@@ -88,6 +88,36 @@ Not reported (survey reporting, no model equations).
 | Largest emergency expense handleable with savings under $100 | percent | 18% | — | — | page 37 |
 | Largest emergency expense handleable with savings $100–$499 | percent | 14% | — | — | page 37 |
 | Could pay expense of at least $500 using current savings | percent | 68% | — | — | page 37 |
+| Spent less than income in prior month, 2023 | percent | 48% | — | — | Income section, page 19 |
+| Spent more than income in prior month | percent | 19% | — | — | Income section, page 19 |
+| Spent about the same as income | percent | 32% | — | — | Income section, page 19 |
+| Spent less than income, family income under $25,000 | percent | 30% | — | — | Income section, page 19 |
+| Spent less than income, family income $100,000 or more | percent | 65% | — | — | Income section, page 19 |
+| Family monthly income increased, 2023 | percent | 34% | — | — | Income section, page 18 |
+| Monthly spending increased, 2023 | percent | 38% | — | — | Income section, page 18 |
+| Income varied at least occasionally month to month | percent | 28% | — | — | Income section, page 19 |
+| Reported no financial challenges or concerns | percent | 31% | — | — | Overall Financial Well-Being section, page 14 |
+| Emergency savings for three months of expenses, 2023 | percent | 54% | — | — | Expenses section, page 37 |
+| Emergency savings for three months of expenses, 2021 (high) | percent | 59% | — | — | Expenses section, page 37 |
+| Could cover three months of expenses by borrowing, selling, or other savings | percent | 15% | — | — | Expenses section, page 38 |
+| Could not cover three months of expenses by any means | percent | 31% | — | — | Expenses section, page 38 |
+| Unable to pay a $400 expense by any means | percent | 13% | — | — | Expenses section, page 37 |
+| Largest emergency expense handleable with savings of $2,000 or more | percent | 48% | — | — | Expenses section, page 37 |
+| Outstanding medical debt | percent | 17% | — | — | Health-Care Expenses section, page 35 |
+| Went without medical care because they could not afford it | percent | 27% | — | — | Health-Care Expenses section, page 35 |
+| Unbanked | percent | 6% | — | — | Banking and Credit section, page 39 |
+| Paid an overdraft fee in the prior year (among banked adults) | percent | 12% | — | — | Banking and Credit section, page 39 |
+| Had a credit card | percent | 82% | — | — | Banking and Credit section, page 44 |
+| Carried a credit card balance at least once in the prior year (among all adults) | percent | 39% | — | — | Banking and Credit section, page 44 |
+| Used Buy Now, Pay Later (BNPL) in the prior 12 months | percent | 14% | — | — | Banking and Credit section, page 45 |
+| Used a payday, pawn, auto title, or tax refund anticipation loan in the prior 12 months | percent | 6% | — | — | Banking and Credit section, page 46 |
+| Owned their home | percent | 64% | — | — | Housing section, page 49 |
+| Median monthly rent payment, 2023 | dollars | $1,100 | — | — | Housing section, page 50 |
+| Renters behind on rent at some point in the prior year | percent | 19% | — | — | Housing section, page 52 |
+| Non-retirees who thought their retirement savings plan was on track, 2023 | percent | 34% | — | — | Retirement and Investments section, page 72 |
+| Tapped retirement savings in the prior 12 months (non-retired) | percent | 10% | — | — | Retirement and Investments section, page 71 |
+| Comfortable choosing and managing investments | percent | 45% | — | — | Retirement and Investments section, page 72 |
+| Retirees doing at least okay financially | percent | 80% | — | — | Executive Summary, page 8 |
 
 ## Quotes
 
@@ -98,6 +128,11 @@ Not reported (survey reporting, no model equations).
 | "Sixty-five percent of adults said that changes in the prices they paid compared with the prior year had made their financial situation worse, including 19 percent who said price changes had made their situation much worse." | page 6 | financial_planning |
 | "Eighteen percent of adults said the largest emergency expense they could handle right now using only savings was under $100, and 14 percent said they could handle an expense of $100 to $499." | page 37 | savings_debt_management |
 | "Sixty-eight percent of adults said they could pay an expense of at least $500 using only their current savings (table 17), unchanged from 2022." | page 37 | savings_debt_management |
+| "In October 2023, 48 percent of adults reported spending less than their income in the past month, similar to the share in 2022 but down from highs reached in 2020 and 2021." | Income section, page 19 | financial_planning |
+| "Thirty percent of adults with family income less than $25,000 said their spending was less than their income, compared with 65 percent of adults with income of $100,000 or more." | Income section, page 19 | financial_planning |
+| "In 2023, 54 percent of adults said they had set aside money for three months of expenses in an emergency savings or 'rainy day' fund—unchanged from 2022 but down from a high of 59 percent of adults in 2021." | Expenses section, page 37 | savings_debt_management |
+| "Fifteen percent of all adults said that they could have covered three months of expenses in this way. Thirty-one percent of adults indicated they could not cover three months of expenses by any means." | Expenses section, page 38 | savings_debt_management |
+| "Forty-five percent of adults said they were mostly or very comfortable choosing and managing their investments, while 55 percent of adults said they were not comfortable or only slightly comfortable." | Retirement and Investments section, page 72 | financial_planning |
 
 ## Remember This
 
@@ -110,4 +145,4 @@ Not reported (survey reporting, no model equations).
 Not reported (this is the primary institutional report).
 
 ---
-Conversion: [`I--FederalReserve-2024_marked.md`](../../literature/paper-markdowns/I--FederalReserve-2024_marked.md)
+Conversion: [`Federal Reserve, 2024_marked.md`](../../literature/mds/Federal Reserve, 2024_marked.md)

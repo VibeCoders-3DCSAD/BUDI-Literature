@@ -250,4 +250,4 @@ Many people find budgeting tedious and complex, which the paper links to overspe
 
 ---
 
-Conversion: [`A--DeyArefin-2025_marked.md`](../../literature/paper-markdowns/A--DeyArefin-2025_marked.md)
+Conversion: [`Dey & Arefin, 2025_marked.md`](../../literature/mds/Dey & Arefin, 2025_marked.md)

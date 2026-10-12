@@ -388,3 +388,7 @@ Cryptoasset networks now settle hundreds of billions of dollars each day and und
 - Zhou, L., Qin, K., Torres, C. F., Le, D. V., and Gervais, A. (2021) — High-frequency trading on decentralized on-chain exchanges, finding a single attacker can achieve ~$3,414 daily revenue on Uniswap. [p. 21]
 - Mansourifar, H., Chen, L., and Shi, W. (2020) — Hybrid cryptocurrency pump and dump detection. [p. 21]
 - Fratrič, P., Sileno, G., Klous, S., and van Engers, T. (2022) — Manipulation of the Bitcoin market: an agent-based study. [p. 21]
+
+---
+
+Conversion: [`Sankaewtong et al., 2025_marked.md`](../../literature/mds/Sankaewtong et al., 2025_marked.md)

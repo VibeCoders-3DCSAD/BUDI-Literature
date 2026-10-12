@@ -317,3 +317,7 @@ Uncertainty quantification computes token-level entropy over the tag distributio
 - Nagarajan, C.; Madheswaran, M. (2011, 2012) and others (context) — Power-electronics articles on series parallel resonant converters, CLL-T converters and BLDC machines, printed in the reference block as "Fig. 1" to "Fig. 11" and unrelated to this paper's subject. [pp. 1159-1160]
 - Tamilselvi, S.; Prakash, R.; Nagarajan, C. (2025, 2026) (context) — Smart grid ANN control and multilevel inverter sliding mode control, also printed under the figure block and unrelated to this paper. [p. 1159]
 - Mullainathan, S.; Natarajan, R. (2025) and Suganthi, M.; Ramesh, N. (2022) (context) — Ceramic-materials quality assessment and zeolite membrane water filtration, also printed under the figure block and unrelated to this paper. [p. 1160]
+
+---
+
+Conversion: [`Jayaprakashnarayan et al., 2026_marked.md`](../../literature/mds/Jayaprakashnarayan et al., 2026_marked.md)

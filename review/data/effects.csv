@@ -3414,183 +3414,215 @@ L--Atento-2025,Statistical power for ANOVA,f,0.20–0.25,,,"Sec. 3.2.3, p. 9"
 L--Atento-2025,Effect size assumption for power analysis,f²,0.04,,,"Sec. 3.2.3, p. 9"
 L--Atento-2025,Significance level,α,.05,,,"Sec. 3.2.3, p. 9"
 L--Atento-2025,Power,1–β,0.80,,,"Sec. 3.2.3, p. 9"
-L--BangkoSentral-2025,"Household account ownership, 2024",percent,74.0,,,p. 64
-L--BangkoSentral-2025,"Household account ownership, 2025",percent,85.0,,,p. 64
-L--BangkoSentral-2025,"Share of households setting aside savings, 2024",percent,29.6,,,"p. 7, footnote 12"
-L--BangkoSentral-2025,"Share of households setting aside savings, 2025",percent,45.2,,,"p. 7, footnote 12"
-L--BangkoSentral-2025,"Saving intentions index, Q4 2025",index turning positive,first time since 2013,,,"p. 7, footnote 12"
-L--BangkoSentral-2025,"Household final consumption expenditure growth, 2024",percent,4.9,,,p. 6
-L--BangkoSentral-2025,"Household final consumption expenditure growth, 2025",percent,4.5,,,p. 6
-L--BangkoSentral-2025,"HFCE contribution to real GDP growth, 2025",percentage points,3.3,,,p. 6
-L--BangkoSentral-2025,"HFCE share of total output, 2025",percent,72.6,,,p. 6
-L--BangkoSentral-2025,"Essential items spending growth, 2024",percent,3.2,,,"p. 7, footnote 11"
-L--BangkoSentral-2025,"Essential items spending growth, 2025",percent,4.1,,,"p. 7, footnote 11"
-L--BangkoSentral-2025,"Non-essential spending growth, 2024",percent,7.0,,,"p. 7, footnote 11"
-L--BangkoSentral-2025,"Non-essential spending growth, 2025",percent,5.2,,,"p. 7, footnote 11"
-L--BangkoSentral-2025,"Consumer sentiment, 2024",percent,-14.5,,,p. 7
-L--BangkoSentral-2025,"Consumer sentiment, 2025",percent,-14.7,,,p. 7
-L--BangkoSentral-2025,"Share of households intending to apply for a loan, Q4 2024",percent,13.7,,,"p. 31, footnote 40"
-L--BangkoSentral-2025,"Share of households intending to apply for a loan, Q4 2025",percent,17.8,,,"p. 31, footnote 40"
-L--BangkoSentral-2025,"Basic deposit accounts, 2024",millions,25.8,,,p. 64
-L--BangkoSentral-2025,"Basic deposit accounts, 2025",millions,27.6,,,p. 64
-L--BangkoSentral-2025,"Banks offering basic deposit accounts, 2025",count,170,,,p. 64
-L--BangkoSentral-2025,"Microfinance loans, 2025",billion pesos,36.9,,,p. 65
-L--BangkoSentral-2025,"Microfinance borrowers, 2025",millions,2.0,,,p. 65
-L--BangkoSentral-2025,"Participating banks in microfinance, 2025",count,126,,,p. 65
-L--BangkoSentral-2025,"Microfinance operations coverage of LGUs, 2025",percent,92.2,,,p. 65
-L--BangkoSentral-2025,"Microfinance operations coverage of unbanked areas, 2025",percent,62.5,,,p. 65
-L--BangkoSentral-2025,"Credit Surety Fund cooperatives, 2025",count,50,,,p. 65
-L--BangkoSentral-2025,"Credit Surety Fund released loans, 2025",billion pesos,9.2,,,p. 65
-L--BangkoSentral-2025,"Paleng-QR Ph Plus coverage, 2025",LGUs,over 900,,,p. 66
-L--BangkoSentral-2025,"Economic and financial learning sessions, 2025",count,"1,692",,,p. 67
-L--BangkoSentral-2025,"Economic and financial learning participants, 2025",count,"125,826",,,p. 67
-L--BangkoSentral-2025,"Partner-led financial education reach, 2025",individuals,"11,262,351",,,p. 68
-L--BangkoSentral-2025,"BSP E-Learning Academy module enrollments, 2025",count,"102,764",,,p. 69
-L--BangkoSentral-2025,"TESDA partnership additional enrollments, 2025",count,"94,221",,,p. 69
-L--BangkoSentral-2025,"Total e-learning participation, 2025",count,"196,985",,,p. 69
-L--BangkoSentral-2025,"Consumer complaints received, 2024",count,"70,112",,,p. 72
-L--BangkoSentral-2025,"Consumer complaints received, 2025",count,"over 120,000",,,p. 72
-L--BangkoSentral-2025,"Consumer complaint rise, 2024–2025",percent,72.6,,,p. 72
-L--BangkoSentral-2025,"Consumer complaints received, 2021",count,"19,181",,,p. 72
-L--BangkoSentral-2025,"Mediation referrals, 2024",count,710,,,p. 72
-L--BangkoSentral-2025,"Mediation referrals, 2025",count,"1,057",,,p. 72
-L--BangkoSentral-2025,"Mediation referral rise, 2024–2025",percent,48.9,,,p. 72
-L--BangkoSentral-2025,"Mediation cases handled, 2025",count,"1,188",,,p. 72
-L--BangkoSentral-2025,"Mediation cases carried over from previous year, 2025",count,131,,,p. 72
-L--BangkoSentral-2025,"Concluded mediation cases, 2025",count,876,,,p. 72
-L--BangkoSentral-2025,"Successful mediation cases, 2025",count,409,,,p. 72
-L--BangkoSentral-2025,"Failed mediation cases, 2025",count,144,,,p. 72
-L--BangkoSentral-2025,"Terminated mediation cases, 2025",count,323,,,p. 72
-L--BangkoSentral-2025,"Mediation success rate, 2024",percent,84.4,,,p. 72
-L--BangkoSentral-2025,"Mediation success rate, 2025",percent,74.0,,,p. 72
-L--BangkoSentral-2025,"Formal complaints handled, 2025",count,68,,,p. 72
-L--BangkoSentral-2025,Formal complaints carried over from 2024,count,12,,,p. 72
-L--BangkoSentral-2025,"Formal complaints decided, 2025",count,11,,,p. 72
-L--BangkoSentral-2025,"Formal complaints dismissed, 2025",count,20,,,p. 72
-L--BangkoSentral-2025,"Formal complaints pending, 2025",count,37,,,p. 72
-L--BangkoSentral-2025,"GDP growth, 2024",percent,5.7,,,p. 4
-L--BangkoSentral-2025,"GDP growth, 2025",percent,4.4,,,p. 4
-L--BangkoSentral-2025,"GNI growth, 2024",percent,7.7,,,p. 4
-L--BangkoSentral-2025,"GNI growth, 2025",percent,6.1,,,p. 4
-L--BangkoSentral-2025,"Inflation, 2025",percent,1.7,,,p. 11
-L--BangkoSentral-2025,"Core inflation, 2024",percent,3.0,,,p. 11
-L--BangkoSentral-2025,"Core inflation, 2025",percent,2.4,,,p. 11
-L--BangkoSentral-2025,"Unemployment rate, 2024",percent,3.8,,,p. 9
-L--BangkoSentral-2025,"Unemployment rate, 2025",percent,4.2,,,p. 9
-L--BangkoSentral-2025,"Underemployment rate, 2025",percent,11.9,,,p. 10
-L--BangkoSentral-2025,"Labor force participation rate, 2025",percent,64.1,,,p. 10
-L--BangkoSentral-2025,"Total employment, 2025",millions,49.0,,,p. 9
-L--BangkoSentral-2025,"Employment increase, 2025",count,"172,000",,,p. 9
-L--BangkoSentral-2025,"InstaPay transactions, 2025",billions,4.7,,,p. 42
-L--BangkoSentral-2025,"InstaPay value, 2025",trillion pesos,11.6,,,p. 42
-L--BangkoSentral-2025,"InstaPay volume growth, 2024–2025",percent,230.9,,,p. 42
-L--BangkoSentral-2025,"InstaPay value growth, 2024–2025",percent,57.3,,,p. 42
-L--BangkoSentral-2025,"QR Ph P2M transactions, 2025",billions,2.5,,,p. 42
-L--BangkoSentral-2025,"QR Ph P2M value, 2025",trillion pesos,1.2,,,p. 42
-L--BangkoSentral-2025,"InstaPay QR transactions, 2025",millions,183.3,,,p. 42
-L--BangkoSentral-2025,"InstaPay QR value, 2025",billion pesos,926.1,,,p. 42
-L--BangkoSentral-2025,"InstaPay QR volume growth, 2024–2025",percent,246.9,,,p. 42
-L--BangkoSentral-2025,"InstaPay QR value growth, 2024–2025",percent,211.3,,,p. 42
-L--BangkoSentral-2025,"PESONet transactions, 2025",millions,117.2,,,p. 42
-L--BangkoSentral-2025,"PESONet value, 2025",trillion pesos,13.2,,,p. 42
-L--BangkoSentral-2025,"PESONet volume growth, 2024–2025",percent,16.3,,,p. 42
-L--BangkoSentral-2025,"PESONet value growth, 2024–2025",percent,30.9,,,p. 42
-L--BangkoSentral-2025,"PhilPaSSplus efficiency rate, 2025",percent,99.957,,,p. 43
-L--BangkoSentral-2025,"PhilPaSSplus transactions, 2025",millions,1.7,,,p. 43
-L--BangkoSentral-2025,"PhilPaSSplus value, 2025",trillion pesos,601.3,,,p. 43
-L--BangkoSentral-2025,"PhilPaSSplus volume growth, 2024–2025",percent,9.0,,,p. 43
-L--BangkoSentral-2025,"PhilPaSSplus value growth, 2024–2025",percent,15.8,,,p. 44
-L--BangkoSentral-2025,"Banking system total assets, 2025",trillion pesos,29.9,,,p. 30
-L--BangkoSentral-2025,"Banking system asset growth, 2025",percent,8.9,,,p. 30
-L--BangkoSentral-2025,"Bank credit, 2025",trillion pesos,17.1,,,p. 31
-L--BangkoSentral-2025,"Bank credit growth, 2025",percent,11.7,,,p. 31
-L--BangkoSentral-2025,"Non-performing loan ratio, 2025",percent,3.1,,,p. 32
-L--BangkoSentral-2025,"NPL coverage ratio, 2025",percent,97.2,,,p. 32
-L--BangkoSentral-2025,"Deposits, 2025",trillion pesos,21.9,,,p. 33
-L--BangkoSentral-2025,"Deposit growth, 2025",percent,7.4,,,p. 33
-L--BangkoSentral-2025,"Capital adequacy ratio, solo, 2025",percent,15.8,,,p. 34
-L--BangkoSentral-2025,"Capital adequacy ratio, consolidated, 2025",percent,16.2,,,p. 34
-L--BangkoSentral-2025,"Common Equity Tier 1 ratio, solo, 2025",percent,14.8,,,p. 34
-L--BangkoSentral-2025,"Common Equity Tier 1 ratio, consolidated, 2025",percent,15.2,,,p. 34
-L--BangkoSentral-2025,"Net profit, 2025",billion pesos,405.6,,,p. 35
-L--BangkoSentral-2025,"Net profit growth, 2025",percent,3.6,,,p. 35
-L--BangkoSentral-2025,"Gross international reserves, end-December 2025",billion USD,110.8,,,p. 19
-L--BangkoSentral-2025,"External debt, end-December 2025",billion USD,147.7,,,p. 19
-L--BangkoSentral-2025,"External debt growth, 2025",percent,7.3,,,p. 19
-L--BangkoSentral-2025,"Balance of payments deficit, 2025",percent of GDP,1.2,,,p. 17
-L--BangkoSentral-2025,"Current account deficit, 2025",percent of GDP,3.3,,,p. 17
-L--BangkoSentral-2025,"Goods exports, 2025",billion USD,63.4,,,p. 17
-L--BangkoSentral-2025,"Goods imports, 2025",billion USD,130.1,,,p. 17
-L--BangkoSentral-2025,"Personal remittances, 2025",million USD,"39,619",,,"Table 7, p. 104"
-L--BangkoSentral-2025,"OFW cash remittances, 2025",million USD,"35,634",,,"Table 7, p. 104"
-L--BangkoSentral-2025,"Banknote withdrawals, 2025",million pesos,"1,567,566.4",,,"Table 1, p. 50"
-L--BangkoSentral-2025,"Banknote withdrawal volume, 2025",million pieces,"3,465.6",,,"Table 1, p. 50"
-L--BangkoSentral-2025,"Banknote withdrawal value growth, 2025",percent,6.2,,,"Table 1, p. 50"
-L--BangkoSentral-2025,"Banknote withdrawal volume growth, 2025",percent,12.9,,,"Table 1, p. 50"
-L--BangkoSentral-2025,"Coin withdrawals, 2025",million pesos,"8,398.0",,,"Table 1, p. 50"
-L--BangkoSentral-2025,"Coin withdrawal volume, 2025",million pieces,"1,798.8",,,"Table 1, p. 50"
-L--BangkoSentral-2025,"Coin withdrawal value growth, 2025",percent,-14.4,,,"Table 1, p. 50"
-L--BangkoSentral-2025,"Coin withdrawal volume growth, 2025",percent,1.4,,,"Table 1, p. 50"
-L--BangkoSentral-2025,"Mutilated paper banknotes examined, 2024",pieces,"71,141",,,"Table 2, p. 51"
-L--BangkoSentral-2025,"Mutilated paper banknotes examined, 2025",pieces,"53,234",,,"Table 2, p. 51"
-L--BangkoSentral-2025,"Mutilated polymer banknotes examined, 2024",pieces,"4,549",,,"Table 2, p. 51"
-L--BangkoSentral-2025,"Mutilated polymer banknotes examined, 2025",pieces,"10,282",,,"Table 2, p. 51"
-L--BangkoSentral-2025,"Mutilated New Generation Currency banknotes, 2024",pieces,"15,815",,,"Table 2, p. 51"
-L--BangkoSentral-2025,"Mutilated New Generation Currency banknotes, 2025",pieces,"15,382",,,"Table 2, p. 51"
-L--BangkoSentral-2025,"Mutilated BSP Coin Series coins, 2024",pieces,"35,640",,,"Table 2, p. 51"
-L--BangkoSentral-2025,"Mutilated BSP Coin Series coins, 2025",pieces,"22,823",,,"Table 2, p. 51"
-L--BangkoSentral-2025,"Counterfeit paper banknotes, 2024",pieces,"69,922",,,"Table 3, p. 52"
-L--BangkoSentral-2025,"Counterfeit paper banknotes, 2025",pieces,"56,587",,,"Table 3, p. 52"
-L--BangkoSentral-2025,"Counterfeit polymer banknotes, 2024",pieces,3,,,"Table 3, p. 52"
-L--BangkoSentral-2025,"Counterfeit polymer banknotes, 2025",pieces,"1,358",,,"Table 3, p. 52"
-L--BangkoSentral-2025,"Counterfeit BSP Coin Series coins, 2024",pieces,891,,,"Table 3, p. 52"
-L--BangkoSentral-2025,"Counterfeit BSP Coin Series coins, 2025",pieces,"1,505",,,"Table 3, p. 52"
-L--BangkoSentral-2025,"Scope 1 GHG emissions, 2025",tonnes CO₂e,940.90,,,"Table 4, p. 63"
-L--BangkoSentral-2025,"Scope 1 fuel stationary combustion, 2025",tonnes CO₂e,194.44,,,"Table 4, p. 63"
-L--BangkoSentral-2025,"Scope 1 fuel mobile combustion, 2025",tonnes CO₂e,746.46,,,"Table 4, p. 63"
-L--BangkoSentral-2025,"Scope 2 GHG emissions, 2025",tonnes CO₂e,"36,831.11",,,"Table 4, p. 63"
-L--BangkoSentral-2025,"Scope 3 GHG emissions, 2025",tonnes CO₂e,"1,027.17",,,"Table 4, p. 63"
-L--BangkoSentral-2025,"Scope 3 waste generated in operations, 2025",tonnes CO₂e,862.11,,,"Table 4, p. 63"
-L--BangkoSentral-2025,"Scope 3 water intake, 2025",tonnes CO₂e,165.06,,,"Table 4, p. 63"
-L--BangkoSentral-2025,"Total GHG emissions, 2025",tonnes CO₂e,"38,799.18",,,"Table 4, p. 63"
-L--BangkoSentral-2025,"Consumer price index, 2025 average",index (2018=100),128.2,,,"Table 1a, p. 89"
-L--BangkoSentral-2025,"Inflation, 2025 average",percent,1.7,,,"Table 1a, p. 89"
-L--BangkoSentral-2025,"M3, December 2025",million pesos,"20,151,093",,,"Table 2, p. 93"
-L--BangkoSentral-2025,"M3 growth, December 2025",percent,7.2,,,"Table 2, p. 93"
-L--BangkoSentral-2025,"M4, December 2025",million pesos,"23,585,220",,,"Table 2, p. 93"
-L--BangkoSentral-2025,"M4 growth, December 2025",percent,7.7,,,"Table 2, p. 93"
-L--BangkoSentral-2025,"NG revenues, 2025",million pesos,"4,453,432",,,"Table 3, p. 97"
-L--BangkoSentral-2025,"NG expenditures, 2025",million pesos,"6,030,274",,,"Table 3, p. 97"
-L--BangkoSentral-2025,"NG deficit, 2025",million pesos,"-1,576,842",,,"Table 3, p. 97"
-L--BangkoSentral-2025,"NG outstanding debt, December 2025",billion pesos,"17,708",,,"Table 4, p. 98"
-L--BangkoSentral-2025,"NG outstanding debt growth, 2025",percent,10.3,,,"Table 4, p. 98"
-L--BangkoSentral-2025,"NG outstanding debt to GDP, 2025",percent,63.2,,,"Table 4, p. 98"
-L--BangkoSentral-2025,"Unit value index for exports, 2025 average",index (2018=100),114.4,,,"Table 5, p. 99"
-L--BangkoSentral-2025,"Unit value index for imports, 2025 average",index (2018=100),123.6,,,"Table 5, p. 99"
-L--BangkoSentral-2025,"Exports total value, 2025",million USD,"84,439",,,"Table 6, p. 100"
-L--BangkoSentral-2025,"Imports total value, 2025",million USD,"134,073",,,"Table 6, p. 100"
-L--BangkoSentral-2025,"Current account balance, 2025",million USD,"-16,291",,,"Table 7, p. 104"
-L--BangkoSentral-2025,"Current account to GDP, 2025",percent,-3.3,,,"Table 7, p. 104"
-L--BangkoSentral-2025,"Overall BOP position, 2025",million USD,"-5,661",,,"Table 7, p. 104"
-L--BangkoSentral-2025,"Overall BOP to GDP, 2025",percent,-1.2,,,"Table 7, p. 104"
-L--BangkoSentral-2025,"GIR, December 2025",million USD,"110,833",,,"Table 8, p. 105"
-L--BangkoSentral-2025,"Net international reserves, December 2025",million USD,"110,814",,,"Table 8, p. 105"
-L--BangkoSentral-2025,"Import cover, December 2025",months,7.3,,,"Table 8, p. 105"
-L--BangkoSentral-2025,"Short-term external debt cover, December 2025",percent,414.4,,,"Table 8, p. 105"
-L--BangkoSentral-2025,"Total external debt, December 2025",million USD,"147,651",,,"Table 9, p. 106"
-L--BangkoSentral-2025,"External debt to GDP, Q4 2025",percent,30.31,,,"Table 10, p. 107"
-L--BangkoSentral-2025,"Debt service burden, Q4 2025",million USD,"3,038",,,"Table 10, p. 107"
-L--BangkoSentral-2025,"Banking system total assets, December 2025",billion pesos,"29,864.37",,,"Table 11, p. 110"
-L--BangkoSentral-2025,"Banking system total loan portfolio, December 2025",billion pesos,"16,607.30",,,"Table 11, p. 110"
-L--BangkoSentral-2025,"Banking system total investments, December 2025",billion pesos,"8,586.36",,,"Table 11, p. 110"
-L--BangkoSentral-2025,"Banking system savings deposits, December 2025",billion pesos,"9,357.71",,,"Table 11, p. 110"
-L--BangkoSentral-2025,"Banking system time deposits, December 2025",billion pesos,"6,541.95",,,"Table 11, p. 110"
-L--BangkoSentral-2025,"BSP total assets, December 2025",billion pesos,"8,003.2",,,"Table 12, p. 113"
-L--BangkoSentral-2025,"BSP total liabilities, December 2025",billion pesos,"7,642.7",,,"Table 12, p. 113"
-L--BangkoSentral-2025,"BSP net worth, December 2025",billion pesos,360.5,,,"Table 12, p. 113"
-L--BangkoSentral-2025,"BSP net income, 2025",billion pesos,130.1,,,"Table 13, p. 115"
-L--BangkoSentral-2025,"Outstanding public sector domestic debt, Q4 2025",billion pesos,"10,742",,,"Table 14, p. 116"
-L--BangkoSentral-2025,"Outstanding public sector domestic debt to GDP, Q4 2025",percent,40.6,,,"Table 14, p. 116"
+L--BangkoSentral-2025,"Individual formal account ownership, 2025",share of adults,half,,,"Account Ownership, p. 1"
+L--BangkoSentral-2025,"Individual formal account ownership, 2021",share of adults,56 percent,,,"Account Ownership, p. 1"
+L--BangkoSentral-2025,"E-money account ownership, 2025",share of adults,36 percent,,,"Account Ownership, p. 1"
+L--BangkoSentral-2025,"Bank account ownership, 2025",share of adults,23 percent,,,"Account Ownership, p. 1"
+L--BangkoSentral-2025,"Household account ownership, 2025",share of households,85 percent,,,"Account Ownership, p. 1"
+L--BangkoSentral-2025,"Cooperatives with credit operations, 2024",number of cooperatives,"7,706",,,"Account Ownership, p. 2"
+L--BangkoSentral-2025,"Cooperatives with credit operations, 2021",number of cooperatives,"9,650",,,"Account Ownership, p. 2"
+L--BangkoSentral-2025,"Outstanding loans, 2025",share of adults,25 percent,,,"Loans and Credit, p. 2"
+L--BangkoSentral-2025,"Adults perceiving that any loan is not a good idea, 2025",share of adults,seven (7) in ten,,,"Loans and Credit, p. 2"
+L--BangkoSentral-2025,"Financial literacy, 2025",share of adults answering at least half of six questions correctly,74 percent,,,"Financial Literacy and Capability, p. 8"
+L--BangkoSentral-2025,"Financial literacy, 2021",share of adults answering at least half of six questions correctly,69 percent,,,"Financial Literacy and Capability, p. 8"
+L--BangkoSentral-2025,"Satisfaction with current financial situation, 2025",share of adults,43 percent,,,"Financial Literacy and Capability, p. 8"
+L--BangkoSentral-2025,"Awareness of at least one formal financial product, 2025",share of adults,nearly nine (9) in ten,,,"Financial Literacy and Capability, p. 9"
+L--BangkoSentral-2025,"Awareness of loans, 2025",share of adults,73 percent,,,"Financial Literacy and Capability, p. 9"
+L--BangkoSentral-2025,"Awareness of insurance, 2025",share of adults,68 percent,,,"Financial Literacy and Capability, p. 9"
+L--BangkoSentral-2025,"Awareness of deposit accounts, 2025",share of adults,65 percent,,,"Financial Literacy and Capability, p. 9"
+L--BangkoSentral-2025,"Awareness of investments, 2025",share of adults,53 percent,,,"Financial Literacy and Capability, p. 9"
+L--BangkoSentral-2025,"Awareness of virtual assets and cryptocurrencies, 2025",share of adults,20 percent,,,"Financial Literacy and Capability, p. 9"
+L--BangkoSentral-2025,"Financial resilience, 2025",share of adults reporting current finances or savings would last,about 3 in 10,,,"Financial Health, p. 11"
+L--BangkoSentral-2025,Completed interviews,interviews,"8,784",,,"Scope and Coverage, p. v"
+L--BangkoSentral-2025,Eligible sample adults,eligible adults,"10,836",,,"Scope and Coverage, p. vi"
+L--BangkoSentral-2025,Response rate,share of eligible sample,81 percent,,,"Scope and Coverage, p. vi"
+L--BangkoSentral-2025,"Weighted adult population, 2020 CPH",adults,75.6 million,,,"Profile of Respondents, p. iv"
+L--BangkoSentral-2025,"Sampling margin of error, national level",margin of error,±1.0%,,,"Technical Notes, p. 19"
+L--BangkoSentral-2025,"Unemployment rate, October 2025",rate,5.0%,,,"The Philippines: An Overview, p. i"
+L--BangkoSentral-2025,"Poverty incidence of population, 2023",rate,15.5%,,,"The Philippines: An Overview, p. i"
+L--BangkoSentral-2025,"Average annual family income, 2023",peso,"PhP 353,230",,,"The Philippines: An Overview, p. i"
+L--BangkoSentral-2025,"GDP year-on-year growth, Q3 2025",rate,4.0%,,,"The Philippines: An Overview, p. i"
+L--BangkoSentral-2025,"Inflation rate, 2025",rate,1.6%,,,"The Philippines: An Overview, p. i"
+L--BangkoSentral-2025,"Adults with mobile phone, 2025",share of adults,90%,,,"The Philippines: An Overview, p. i"
+L--BangkoSentral-2025,"Adults using the internet, 2025",share of adults,89%,,,"The Philippines: An Overview, p. i"
+L--BangkoSentral-2025,"Emergency funds difficulty and liquidity coverage, 2025",distribution of adult responses,Not reported in the text layer; the values appear only as an image in Figure 23,,,"Financial Health, p. 11"
+L--BangkoSentral-2025a,"Household account ownership, 2024",percent,74.0,,,p. 64
+L--BangkoSentral-2025a,"Household account ownership, 2025",percent,85.0,,,p. 64
+L--BangkoSentral-2025a,"Share of households setting aside savings, 2024",percent,29.6,,,"p. 7, footnote 12"
+L--BangkoSentral-2025a,"Share of households setting aside savings, 2025",percent,45.2,,,"p. 7, footnote 12"
+L--BangkoSentral-2025a,"Saving intentions index, Q4 2025",index turning positive,first time since 2013,,,"p. 7, footnote 12"
+L--BangkoSentral-2025a,"Household final consumption expenditure growth, 2024",percent,4.9,,,p. 6
+L--BangkoSentral-2025a,"Household final consumption expenditure growth, 2025",percent,4.5,,,p. 6
+L--BangkoSentral-2025a,"HFCE contribution to real GDP growth, 2025",percentage points,3.3,,,p. 6
+L--BangkoSentral-2025a,"HFCE share of total output, 2025",percent,72.6,,,p. 6
+L--BangkoSentral-2025a,"Essential items spending growth, 2024",percent,3.2,,,"p. 7, footnote 11"
+L--BangkoSentral-2025a,"Essential items spending growth, 2025",percent,4.1,,,"p. 7, footnote 11"
+L--BangkoSentral-2025a,"Non-essential spending growth, 2024",percent,7.0,,,"p. 7, footnote 11"
+L--BangkoSentral-2025a,"Non-essential spending growth, 2025",percent,5.2,,,"p. 7, footnote 11"
+L--BangkoSentral-2025a,"Consumer sentiment, 2024",percent,-14.5,,,p. 7
+L--BangkoSentral-2025a,"Consumer sentiment, 2025",percent,-14.7,,,p. 7
+L--BangkoSentral-2025a,"Share of households intending to apply for a loan, Q4 2024",percent,13.7,,,"p. 31, footnote 40"
+L--BangkoSentral-2025a,"Share of households intending to apply for a loan, Q4 2025",percent,17.8,,,"p. 31, footnote 40"
+L--BangkoSentral-2025a,"Basic deposit accounts, 2024",millions,25.8,,,p. 64
+L--BangkoSentral-2025a,"Basic deposit accounts, 2025",millions,27.6,,,p. 64
+L--BangkoSentral-2025a,"Banks offering basic deposit accounts, 2025",count,170,,,p. 64
+L--BangkoSentral-2025a,"Microfinance loans, 2025",billion pesos,36.9,,,p. 65
+L--BangkoSentral-2025a,"Microfinance borrowers, 2025",millions,2.0,,,p. 65
+L--BangkoSentral-2025a,"Participating banks in microfinance, 2025",count,126,,,p. 65
+L--BangkoSentral-2025a,"Microfinance operations coverage of LGUs, 2025",percent,92.2,,,p. 65
+L--BangkoSentral-2025a,"Microfinance operations coverage of unbanked areas, 2025",percent,62.5,,,p. 65
+L--BangkoSentral-2025a,"Credit Surety Fund cooperatives, 2025",count,50,,,p. 65
+L--BangkoSentral-2025a,"Credit Surety Fund released loans, 2025",billion pesos,9.2,,,p. 65
+L--BangkoSentral-2025a,"Paleng-QR Ph Plus coverage, 2025",LGUs,over 900,,,p. 66
+L--BangkoSentral-2025a,"Economic and financial learning sessions, 2025",count,"1,692",,,p. 67
+L--BangkoSentral-2025a,"Economic and financial learning participants, 2025",count,"125,826",,,p. 67
+L--BangkoSentral-2025a,"Partner-led financial education reach, 2025",individuals,"11,262,351",,,p. 68
+L--BangkoSentral-2025a,"BSP E-Learning Academy module enrollments, 2025",count,"102,764",,,p. 69
+L--BangkoSentral-2025a,"TESDA partnership additional enrollments, 2025",count,"94,221",,,p. 69
+L--BangkoSentral-2025a,"Total e-learning participation, 2025",count,"196,985",,,p. 69
+L--BangkoSentral-2025a,"Consumer complaints received, 2024",count,"70,112",,,p. 72
+L--BangkoSentral-2025a,"Consumer complaints received, 2025",count,"over 120,000",,,p. 72
+L--BangkoSentral-2025a,"Consumer complaint rise, 2024–2025",percent,72.6,,,p. 72
+L--BangkoSentral-2025a,"Consumer complaints received, 2021",count,"19,181",,,p. 72
+L--BangkoSentral-2025a,"Mediation referrals, 2024",count,710,,,p. 72
+L--BangkoSentral-2025a,"Mediation referrals, 2025",count,"1,057",,,p. 72
+L--BangkoSentral-2025a,"Mediation referral rise, 2024–2025",percent,48.9,,,p. 72
+L--BangkoSentral-2025a,"Mediation cases handled, 2025",count,"1,188",,,p. 72
+L--BangkoSentral-2025a,"Mediation cases carried over from previous year, 2025",count,131,,,p. 72
+L--BangkoSentral-2025a,"Concluded mediation cases, 2025",count,876,,,p. 72
+L--BangkoSentral-2025a,"Successful mediation cases, 2025",count,409,,,p. 72
+L--BangkoSentral-2025a,"Failed mediation cases, 2025",count,144,,,p. 72
+L--BangkoSentral-2025a,"Terminated mediation cases, 2025",count,323,,,p. 72
+L--BangkoSentral-2025a,"Mediation success rate, 2024",percent,84.4,,,p. 72
+L--BangkoSentral-2025a,"Mediation success rate, 2025",percent,74.0,,,p. 72
+L--BangkoSentral-2025a,"Formal complaints handled, 2025",count,68,,,p. 72
+L--BangkoSentral-2025a,Formal complaints carried over from 2024,count,12,,,p. 72
+L--BangkoSentral-2025a,"Formal complaints decided, 2025",count,11,,,p. 72
+L--BangkoSentral-2025a,"Formal complaints dismissed, 2025",count,20,,,p. 72
+L--BangkoSentral-2025a,"Formal complaints pending, 2025",count,37,,,p. 72
+L--BangkoSentral-2025a,"GDP growth, 2024",percent,5.7,,,p. 4
+L--BangkoSentral-2025a,"GDP growth, 2025",percent,4.4,,,p. 4
+L--BangkoSentral-2025a,"GNI growth, 2024",percent,7.7,,,p. 4
+L--BangkoSentral-2025a,"GNI growth, 2025",percent,6.1,,,p. 4
+L--BangkoSentral-2025a,"Inflation, 2025",percent,1.7,,,p. 11
+L--BangkoSentral-2025a,"Core inflation, 2024",percent,3.0,,,p. 11
+L--BangkoSentral-2025a,"Core inflation, 2025",percent,2.4,,,p. 11
+L--BangkoSentral-2025a,"Unemployment rate, 2024",percent,3.8,,,p. 9
+L--BangkoSentral-2025a,"Unemployment rate, 2025",percent,4.2,,,p. 9
+L--BangkoSentral-2025a,"Underemployment rate, 2025",percent,11.9,,,p. 10
+L--BangkoSentral-2025a,"Labor force participation rate, 2025",percent,64.1,,,p. 10
+L--BangkoSentral-2025a,"Total employment, 2025",millions,49.0,,,p. 9
+L--BangkoSentral-2025a,"Employment increase, 2025",count,"172,000",,,p. 9
+L--BangkoSentral-2025a,"InstaPay transactions, 2025",billions,4.7,,,p. 42
+L--BangkoSentral-2025a,"InstaPay value, 2025",trillion pesos,11.6,,,p. 42
+L--BangkoSentral-2025a,"InstaPay volume growth, 2024–2025",percent,230.9,,,p. 42
+L--BangkoSentral-2025a,"InstaPay value growth, 2024–2025",percent,57.3,,,p. 42
+L--BangkoSentral-2025a,"QR Ph P2M transactions, 2025",billions,2.5,,,p. 42
+L--BangkoSentral-2025a,"QR Ph P2M value, 2025",trillion pesos,1.2,,,p. 42
+L--BangkoSentral-2025a,"InstaPay QR transactions, 2025",millions,183.3,,,p. 42
+L--BangkoSentral-2025a,"InstaPay QR value, 2025",billion pesos,926.1,,,p. 42
+L--BangkoSentral-2025a,"InstaPay QR volume growth, 2024–2025",percent,246.9,,,p. 42
+L--BangkoSentral-2025a,"InstaPay QR value growth, 2024–2025",percent,211.3,,,p. 42
+L--BangkoSentral-2025a,"PESONet transactions, 2025",millions,117.2,,,p. 42
+L--BangkoSentral-2025a,"PESONet value, 2025",trillion pesos,13.2,,,p. 42
+L--BangkoSentral-2025a,"PESONet volume growth, 2024–2025",percent,16.3,,,p. 42
+L--BangkoSentral-2025a,"PESONet value growth, 2024–2025",percent,30.9,,,p. 42
+L--BangkoSentral-2025a,"PhilPaSSplus efficiency rate, 2025",percent,99.957,,,p. 43
+L--BangkoSentral-2025a,"PhilPaSSplus transactions, 2025",millions,1.7,,,p. 43
+L--BangkoSentral-2025a,"PhilPaSSplus value, 2025",trillion pesos,601.3,,,p. 43
+L--BangkoSentral-2025a,"PhilPaSSplus volume growth, 2024–2025",percent,9.0,,,p. 43
+L--BangkoSentral-2025a,"PhilPaSSplus value growth, 2024–2025",percent,15.8,,,p. 44
+L--BangkoSentral-2025a,"Banking system total assets, 2025",trillion pesos,29.9,,,p. 30
+L--BangkoSentral-2025a,"Banking system asset growth, 2025",percent,8.9,,,p. 30
+L--BangkoSentral-2025a,"Bank credit, 2025",trillion pesos,17.1,,,p. 31
+L--BangkoSentral-2025a,"Bank credit growth, 2025",percent,11.7,,,p. 31
+L--BangkoSentral-2025a,"Non-performing loan ratio, 2025",percent,3.1,,,p. 32
+L--BangkoSentral-2025a,"NPL coverage ratio, 2025",percent,97.2,,,p. 32
+L--BangkoSentral-2025a,"Deposits, 2025",trillion pesos,21.9,,,p. 33
+L--BangkoSentral-2025a,"Deposit growth, 2025",percent,7.4,,,p. 33
+L--BangkoSentral-2025a,"Capital adequacy ratio, solo, 2025",percent,15.8,,,p. 34
+L--BangkoSentral-2025a,"Capital adequacy ratio, consolidated, 2025",percent,16.2,,,p. 34
+L--BangkoSentral-2025a,"Common Equity Tier 1 ratio, solo, 2025",percent,14.8,,,p. 34
+L--BangkoSentral-2025a,"Common Equity Tier 1 ratio, consolidated, 2025",percent,15.2,,,p. 34
+L--BangkoSentral-2025a,"Net profit, 2025",billion pesos,405.6,,,p. 35
+L--BangkoSentral-2025a,"Net profit growth, 2025",percent,3.6,,,p. 35
+L--BangkoSentral-2025a,"Gross international reserves, end-December 2025",billion USD,110.8,,,p. 19
+L--BangkoSentral-2025a,"External debt, end-December 2025",billion USD,147.7,,,p. 19
+L--BangkoSentral-2025a,"External debt growth, 2025",percent,7.3,,,p. 19
+L--BangkoSentral-2025a,"Balance of payments deficit, 2025",percent of GDP,1.2,,,p. 17
+L--BangkoSentral-2025a,"Current account deficit, 2025",percent of GDP,3.3,,,p. 17
+L--BangkoSentral-2025a,"Goods exports, 2025",billion USD,63.4,,,p. 17
+L--BangkoSentral-2025a,"Goods imports, 2025",billion USD,130.1,,,p. 17
+L--BangkoSentral-2025a,"Personal remittances, 2025",million USD,"39,619",,,"Table 7, p. 104"
+L--BangkoSentral-2025a,"OFW cash remittances, 2025",million USD,"35,634",,,"Table 7, p. 104"
+L--BangkoSentral-2025a,"Banknote withdrawals, 2025",million pesos,"1,567,566.4",,,"Table 1, p. 50"
+L--BangkoSentral-2025a,"Banknote withdrawal volume, 2025",million pieces,"3,465.6",,,"Table 1, p. 50"
+L--BangkoSentral-2025a,"Banknote withdrawal value growth, 2025",percent,6.2,,,"Table 1, p. 50"
+L--BangkoSentral-2025a,"Banknote withdrawal volume growth, 2025",percent,12.9,,,"Table 1, p. 50"
+L--BangkoSentral-2025a,"Coin withdrawals, 2025",million pesos,"8,398.0",,,"Table 1, p. 50"
+L--BangkoSentral-2025a,"Coin withdrawal volume, 2025",million pieces,"1,798.8",,,"Table 1, p. 50"
+L--BangkoSentral-2025a,"Coin withdrawal value growth, 2025",percent,-14.4,,,"Table 1, p. 50"
+L--BangkoSentral-2025a,"Coin withdrawal volume growth, 2025",percent,1.4,,,"Table 1, p. 50"
+L--BangkoSentral-2025a,"Mutilated paper banknotes examined, 2024",pieces,"71,141",,,"Table 2, p. 51"
+L--BangkoSentral-2025a,"Mutilated paper banknotes examined, 2025",pieces,"53,234",,,"Table 2, p. 51"
+L--BangkoSentral-2025a,"Mutilated polymer banknotes examined, 2024",pieces,"4,549",,,"Table 2, p. 51"
+L--BangkoSentral-2025a,"Mutilated polymer banknotes examined, 2025",pieces,"10,282",,,"Table 2, p. 51"
+L--BangkoSentral-2025a,"Mutilated New Generation Currency banknotes, 2024",pieces,"15,815",,,"Table 2, p. 51"
+L--BangkoSentral-2025a,"Mutilated New Generation Currency banknotes, 2025",pieces,"15,382",,,"Table 2, p. 51"
+L--BangkoSentral-2025a,"Mutilated BSP Coin Series coins, 2024",pieces,"35,640",,,"Table 2, p. 51"
+L--BangkoSentral-2025a,"Mutilated BSP Coin Series coins, 2025",pieces,"22,823",,,"Table 2, p. 51"
+L--BangkoSentral-2025a,"Counterfeit paper banknotes, 2024",pieces,"69,922",,,"Table 3, p. 52"
+L--BangkoSentral-2025a,"Counterfeit paper banknotes, 2025",pieces,"56,587",,,"Table 3, p. 52"
+L--BangkoSentral-2025a,"Counterfeit polymer banknotes, 2024",pieces,3,,,"Table 3, p. 52"
+L--BangkoSentral-2025a,"Counterfeit polymer banknotes, 2025",pieces,"1,358",,,"Table 3, p. 52"
+L--BangkoSentral-2025a,"Counterfeit BSP Coin Series coins, 2024",pieces,891,,,"Table 3, p. 52"
+L--BangkoSentral-2025a,"Counterfeit BSP Coin Series coins, 2025",pieces,"1,505",,,"Table 3, p. 52"
+L--BangkoSentral-2025a,"Scope 1 GHG emissions, 2025",tonnes CO₂e,940.90,,,"Table 4, p. 63"
+L--BangkoSentral-2025a,"Scope 1 fuel stationary combustion, 2025",tonnes CO₂e,194.44,,,"Table 4, p. 63"
+L--BangkoSentral-2025a,"Scope 1 fuel mobile combustion, 2025",tonnes CO₂e,746.46,,,"Table 4, p. 63"
+L--BangkoSentral-2025a,"Scope 2 GHG emissions, 2025",tonnes CO₂e,"36,831.11",,,"Table 4, p. 63"
+L--BangkoSentral-2025a,"Scope 3 GHG emissions, 2025",tonnes CO₂e,"1,027.17",,,"Table 4, p. 63"
+L--BangkoSentral-2025a,"Scope 3 waste generated in operations, 2025",tonnes CO₂e,862.11,,,"Table 4, p. 63"
+L--BangkoSentral-2025a,"Scope 3 water intake, 2025",tonnes CO₂e,165.06,,,"Table 4, p. 63"
+L--BangkoSentral-2025a,"Total GHG emissions, 2025",tonnes CO₂e,"38,799.18",,,"Table 4, p. 63"
+L--BangkoSentral-2025a,"Consumer price index, 2025 average",index (2018=100),128.2,,,"Table 1a, p. 89"
+L--BangkoSentral-2025a,"Inflation, 2025 average",percent,1.7,,,"Table 1a, p. 89"
+L--BangkoSentral-2025a,"M3, December 2025",million pesos,"20,151,093",,,"Table 2, p. 93"
+L--BangkoSentral-2025a,"M3 growth, December 2025",percent,7.2,,,"Table 2, p. 93"
+L--BangkoSentral-2025a,"M4, December 2025",million pesos,"23,585,220",,,"Table 2, p. 93"
+L--BangkoSentral-2025a,"M4 growth, December 2025",percent,7.7,,,"Table 2, p. 93"
+L--BangkoSentral-2025a,"NG revenues, 2025",million pesos,"4,453,432",,,"Table 3, p. 97"
+L--BangkoSentral-2025a,"NG expenditures, 2025",million pesos,"6,030,274",,,"Table 3, p. 97"
+L--BangkoSentral-2025a,"NG deficit, 2025",million pesos,"-1,576,842",,,"Table 3, p. 97"
+L--BangkoSentral-2025a,"NG outstanding debt, December 2025",billion pesos,"17,708",,,"Table 4, p. 98"
+L--BangkoSentral-2025a,"NG outstanding debt growth, 2025",percent,10.3,,,"Table 4, p. 98"
+L--BangkoSentral-2025a,"NG outstanding debt to GDP, 2025",percent,63.2,,,"Table 4, p. 98"
+L--BangkoSentral-2025a,"Unit value index for exports, 2025 average",index (2018=100),114.4,,,"Table 5, p. 99"
+L--BangkoSentral-2025a,"Unit value index for imports, 2025 average",index (2018=100),123.6,,,"Table 5, p. 99"
+L--BangkoSentral-2025a,"Exports total value, 2025",million USD,"84,439",,,"Table 6, p. 100"
+L--BangkoSentral-2025a,"Imports total value, 2025",million USD,"134,073",,,"Table 6, p. 100"
+L--BangkoSentral-2025a,"Current account balance, 2025",million USD,"-16,291",,,"Table 7, p. 104"
+L--BangkoSentral-2025a,"Current account to GDP, 2025",percent,-3.3,,,"Table 7, p. 104"
+L--BangkoSentral-2025a,"Overall BOP position, 2025",million USD,"-5,661",,,"Table 7, p. 104"
+L--BangkoSentral-2025a,"Overall BOP to GDP, 2025",percent,-1.2,,,"Table 7, p. 104"
+L--BangkoSentral-2025a,"GIR, December 2025",million USD,"110,833",,,"Table 8, p. 105"
+L--BangkoSentral-2025a,"Net international reserves, December 2025",million USD,"110,814",,,"Table 8, p. 105"
+L--BangkoSentral-2025a,"Import cover, December 2025",months,7.3,,,"Table 8, p. 105"
+L--BangkoSentral-2025a,"Short-term external debt cover, December 2025",percent,414.4,,,"Table 8, p. 105"
+L--BangkoSentral-2025a,"Total external debt, December 2025",million USD,"147,651",,,"Table 9, p. 106"
+L--BangkoSentral-2025a,"External debt to GDP, Q4 2025",percent,30.31,,,"Table 10, p. 107"
+L--BangkoSentral-2025a,"Debt service burden, Q4 2025",million USD,"3,038",,,"Table 10, p. 107"
+L--BangkoSentral-2025a,"Banking system total assets, December 2025",billion pesos,"29,864.37",,,"Table 11, p. 110"
+L--BangkoSentral-2025a,"Banking system total loan portfolio, December 2025",billion pesos,"16,607.30",,,"Table 11, p. 110"
+L--BangkoSentral-2025a,"Banking system total investments, December 2025",billion pesos,"8,586.36",,,"Table 11, p. 110"
+L--BangkoSentral-2025a,"Banking system savings deposits, December 2025",billion pesos,"9,357.71",,,"Table 11, p. 110"
+L--BangkoSentral-2025a,"Banking system time deposits, December 2025",billion pesos,"6,541.95",,,"Table 11, p. 110"
+L--BangkoSentral-2025a,"BSP total assets, December 2025",billion pesos,"8,003.2",,,"Table 12, p. 113"
+L--BangkoSentral-2025a,"BSP total liabilities, December 2025",billion pesos,"7,642.7",,,"Table 12, p. 113"
+L--BangkoSentral-2025a,"BSP net worth, December 2025",billion pesos,360.5,,,"Table 12, p. 113"
+L--BangkoSentral-2025a,"BSP net income, 2025",billion pesos,130.1,,,"Table 13, p. 115"
+L--BangkoSentral-2025a,"Outstanding public sector domestic debt, Q4 2025",billion pesos,"10,742",,,"Table 14, p. 116"
+L--BangkoSentral-2025a,"Outstanding public sector domestic debt to GDP, Q4 2025",percent,40.6,,,"Table 14, p. 116"
 L--Bulan-2025,"Level of self-control, anticipatory control",mean,4.26,,,"Table 1, p. 5"
 L--Bulan-2025,"Level of self-control, down-regulation of temptation",mean,4.20,,,"Table 1, p. 5"
 L--Bulan-2025,"Level of self-control, behavioral inhibition",mean,4.24,,,"Table 1, p. 5"

@@ -54,12 +54,14 @@ I--Andresen-2025,Andresen,2025,international,working-paper,extracted,2,savings_d
 I--Dheepiga-2025,Dheepiga,2025,international,Not reported,extracted,3,financial_planning; budgeting; savings_debt_management,yes,yes,yes
 I--Gan-2025,Gan,2025,international,Not reported,extracted,3,financial_planning; savings_debt_management; income_expense_management,no,yes,yes
 I--Ganong-2025,Ganong,2025,international,working-paper,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,no,yes,yes
+I--Lim-2025,Lim,2025,international,journal-article,extracted,1,software_quality_evaluation,yes,yes,yes
 I--RSingh-2025,Sai Sanhosh R,2025,international,journal-article,extracted,7,budgeting; pfm_apps_features; model_algorithm_integration; data_collection; model_development; system_development; model_performance_evaluation,no,yes,yes
 I--Yoganandham-2025,Yoganandham,2025,international,Not reported,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,no,no,yes
 I--Yuttama-2025,Yuttama,2025,international,Not reported,extracted,9,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; data_collection; model_performance_evaluation,yes,yes,yes
 I--Zhao-2025,Zhao,2025,international,conference-paper,extracted,4,financial_planning; pfm_apps_features; pfm_apps_problems; model_algorithm_integration,yes,yes,yes
 L--Atento-2025,Atento,2025,local,Not reported,extracted,4,financial_planning; savings_debt_management; income_expense_management; data_collection,no,no,yes
 L--BangkoSentral-2025,Bangko Sentral ng Pilipinas,2025,local,report,extracted,4,financial_planning; savings_debt_management; income_expense_management; data_collection,no,yes,yes
+L--BangkoSentral-2025a,Bangko Sentral ng Pilipinas,2025,local,report,extracted,4,financial_planning; savings_debt_management; income_expense_management; data_collection,no,yes,yes
 L--Bulan-2025,Bulan,2025,local,Not reported,extracted,3,financial_planning; savings_debt_management; data_collection,yes,yes,yes
 L--Claro-2025,Claro,2025,local,journal-article,extracted,1,savings_debt_management,no,yes,yes
 L--Esperanza-2025,Esperanza,2025,local,Not reported,extracted,4,financial_planning; budgeting; savings_debt_management; data_collection,no,yes,yes
@@ -75,9 +77,11 @@ A--Shuryhin-2024,Shuryhin,2024,algorithm,Not reported,extracted,7,financial_plan
 A--Siswara-2024,Siswara,2024,algorithm,Not reported,extracted,3,model_algorithm_integration; model_development; model_performance_evaluation,no,yes,yes
 A--Song-2024,Song,2024,algorithm,Not reported,extracted,2,model_algorithm_integration; model_performance_evaluation,yes,yes,yes
 A--Vijayanand-2024,Vijayanand,2024,algorithm,Not reported,extracted,4,rule_based_classification; model_algorithm_integration; data_collection; model_performance_evaluation,yes,yes,yes
+I--Ariningsih-2024,Ariningsih,2024,international,journal-article,extracted,1,software_quality_evaluation,yes,yes,yes
 I--Danahy-2024,Danahy,2024,international,Not reported,extracted,1,savings_debt_management,yes,yes,yes
 I--FederalReserve-2024,Board of Governors of the Federal Reserve System,2024,international,report,extracted,2,financial_planning; savings_debt_management,no,yes,yes
 I--Fenig-2024,Fenig,2024,international,working-paper,not extracted,0,Not reported,yes,yes,yes
+I--Laaber-2024,Laaber,2024,international,preprint,extracted,1,rule_based_classification,yes,yes,yes
 I--NIST-2024,National Institute of Standards and Technology,2024,international,report,not extracted,0,Not reported,yes,yes,yes
 I--Prakoso-2024,Prakoso,2024,international,journal-article,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,yes,yes,yes
 I--Rane-2024,Rane,2024,international,Not reported,extracted,2,pfm_apps_overview; pfm_apps_features,yes,yes,yes
@@ -98,12 +102,23 @@ A--ZhangEtAl-2023,Zhang,2023,algorithm,journal-article,extracted,3,model_algorit
 I--Bai-2023,Bai,2023,international,journal-article,extracted,7,financial_planning; budgeting; savings_debt_management; income_expense_management; data_collection; model_development; model_performance_evaluation,yes,yes,yes
 I--Hajj-2023,El Hajj,2023,international,Not reported,extracted,2,savings_debt_management; data_collection,yes,yes,yes
 I--Hamid-2023,Hamid,2023,international,journal-article,extracted,2,financial_planning; savings_debt_management,yes,yes,yes
+I--ISO-2023,International Organization for Standardization,2023,international,other,extracted,1,software_quality_evaluation,no,yes,yes
+I--Lianto-2023,Lianto,2023,international,journal-article,extracted,1,software_quality_evaluation,yes,yes,yes
 I--OECD-2023,Organisation for Economic Co-operation and Development,2023,international,report,not extracted,0,Not reported,yes,yes,yes
 I--Salminen-2023,Salminen,2023,international,Not reported,extracted,4,model_algorithm_integration; data_collection; model_development; model_performance_evaluation,yes,yes,yes
 I--Sapiri-2023,Sapiri,2023,international,Not reported,extracted,2,financial_planning; savings_debt_management,no,yes,yes
+I--Sathe-2023,Sathe,2023,international,journal-article,extracted,1,development_methodology,yes,yes,yes
 I--WangLy-2023,Wang-Ly,2023,international,working-paper,extracted,2,financial_planning; savings_debt_management,no,yes,yes
 I--Yeo-2023,Yeo,2023,international,journal-article,extracted,4,financial_planning; budgeting; savings_debt_management; income_expense_management,yes,yes,yes
 L--BangkoSentral-2023a,Bangko Sentral ng Pilipinas,2023,local,report,extracted,3,savings_debt_management; income_expense_management; data_collection,no,yes,yes
 L--BangkoSentral-2023b,Bangko Sentral ng Pilipinas,2023,local,dashboard,extracted,3,financial_planning; savings_debt_management; data_collection,no,yes,yes
+I--Arfani-2022,Arfani,2022,international,thesis,extracted,1,rule_based_classification,no,yes,yes
+I--Hnatkowska-2022,Hnatkowska,2022,international,conference-paper,not extracted,0,Not reported,yes,yes,no
 L--BangkoSentral-2021a,Bangko Sentral ng Pilipinas,2021,local,report,not extracted,0,Not reported,no,yes,yes
 L--BangkoSentral-2021b,Bangko Sentral ng Pilipinas,2021,local,report,not extracted,0,Not reported,no,yes,yes
+I--Lewis-2018,Lewis,2018,international,journal-article,extracted,1,software_quality_evaluation,yes,yes,yes
+I--Box-2015,Box,2015,international,book,extracted,1,sarima,no,yes,yes
+I--Bangor-2008,Bangor,2008,international,journal-article,not extracted,0,Not reported,yes,yes,no
+I--Hyndman-2007,Hyndman,2007,international,journal-article,extracted,1,sarima,no,yes,yes
+I--Brooke-1996,Brooke,1996,international,book-chapter,extracted,1,software_quality_evaluation,no,yes,yes
+I--Tukey-1977,Tukey,1977,international,book,extracted,1,interquartile_range,no,yes,yes

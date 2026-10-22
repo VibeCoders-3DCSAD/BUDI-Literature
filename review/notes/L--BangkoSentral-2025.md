@@ -2,7 +2,7 @@
 paper_id: L--BangkoSentral-2025
 first_author: Pilipinas
 year: 2025
-title: "Annual Report 2025"
+title: "2025 Consumer Finance and Inclusion Survey"
 venue: "Bangko Sentral ng Pilipinas"
 doi: Not reported
 
@@ -10,335 +10,150 @@ designation: local
 status: extracted
 modules: [savings_debt_management, income_expense_management, financial_planning, data_collection]
 module_rationale:
-  savings_debt_management: "The report documents household saving behaviour, including the rise in the share of households setting aside savings from 29.6 percent in 2024 to 45.2 percent in 2025 and saving intentions reaching their highest level since 2013 (p. 7, footnote 12), and flags rising household debt as an emerging challenge (p. 66)."
-  income_expense_management: "The report disaggregates household final consumption expenditure into essential and non-essential categories, reporting that essential spending accelerated from 3.2 percent in 2024 to 4.1 percent in 2025 while non-essential spending slowed from 7.0 percent to 5.2 percent (p. 7, footnote 11), and reports HFCE growth of 4.5 percent in 2025 (p. 6)."
-  financial_planning: "The report defines financial health as the ability of Filipinos to meet daily expenses, withstand financial shocks, plan for the future, and manage their finances with confidence, and elevates it as a Priority Economic Deliverable for the 2026 ASEAN Summit (p. 64; p. iv)."
-  data_collection: "The report draws on the Consumer Expectations Survey (CES) and household final consumption expenditure (HFCE) data to measure household account ownership, saving intentions, and spending patterns (p. 7, footnote 12; p. 64, footnote 62; p. 6)."
+  savings_debt_management: "The survey measures the household financial buffer directly, reporting that 25 percent of Filipino adults had outstanding loans in 2025, that seven in ten adults see borrowing as a bad idea, that only about three in ten adults say their current finances or savings would last, and that emergency preparedness remains a weak dimension of financial health (pp. 2, 11)."
+  income_expense_management: "The survey reports how households absorb income shocks and meet everyday living costs, and records that households prioritize emergency savings and family support when given extra funds, which the report links to limited capacity for formal saving (p. 7)."
+  financial_planning: "The survey shows that budgeting behaviour is now widespread, that most adults maintain a personal budget and plan ahead, and it defines financial health through four dimensions (daily obligations, shock absorption, long-term goals, and control over finances) that frame planning capability (pp. 7, 11)."
+  data_collection: "The CFIS is a nationally representative demand-side survey with a documented sampling design, response rate, and margin of error, which makes it the reference instrument for the project's own household survey design and for the population weights used in the forecasting and classification components (pp. iii, iv, 18, 19)."
 ---
 
 ## Summary
 
-The Bangko Sentral ng Pilipinas Annual Report 2025 is the central bank's institutional account of the Philippine economy and financial system for the year. It covers macroeconomic developments, monetary policy, financial supervision, payments and settlements, financial inclusion, consumer protection, and sustainability. For the project's purposes, the report provides national context on household financial behaviour: household account ownership rose from 74.0 percent in 2024 to 85.0 percent in 2025, the share of households setting aside savings increased from 29.6 percent in 2024 to 45.2 percent in 2025, and household final consumption expenditure eased to 4.5 percent growth, with essential spending accelerating and non-essential spending slowing. The report also documents the expansion of digital payments, financial inclusion initiatives, and consumer protection mechanisms.
+The 2025 Consumer Finance and Inclusion Survey (CFIS) is the Bangko Sentral ng Pilipinas' nationally representative survey of the financial condition of Filipino consumers, published in April 2026. It merges the two long-standing BSP demand-side instruments, the Consumer Finance Survey and the Financial Inclusion Survey, into one questionnaire with harmonised definitions. The 2025 fieldwork produced 8,784 completed interviews of adults aged 15 and above across all regions between 16 February and 24 July 2025, against 10,836 eligible sample adults, an 81 percent response rate, with a sampling margin of error of plus or minus 1.0 percent at the national level. For the project, the survey is the primary Philippine evidence on the thinness of household financial buffers: half of Filipino adults owned a formal financial account in 2025, down from 56 percent in 2021, 25 percent carried outstanding loans, only about three in ten adults report that their current finances or savings would last, and emergency preparedness is identified as a persistent weakness in financial health.
 
 ## Problem and Motivation
 
-The report does not state a research problem in the conventional sense; it is an annual institutional report. Its stated purpose is to account for the BSP's performance against its mandate: promoting price stability, maintaining financial system stability, and overseeing the payments and settlements system. The report frames financial health as "the ability of Filipinos to meet daily expenses, withstand financial shocks, plan for the future, and manage their finances with confidence" (p. 64) and positions it as the next frontier of financial inclusion. The BSP elevated financial health as a Priority Economic Deliverable for the 2026 ASEAN Summit, citing "emerging challenges such as rising household debt and the need for greater financial resilience" (p. 66).
+The CFIS exists because supply-side data alone cannot show whether consumers can use the financial system. The report states that the survey "complements available supply-side data to provide a more holistic view of consumer finance and inclusion in the country" and forms part of a "comprehensive and robust data framework for consumer finance, financial inclusion, and consumer empowerment" (p. iii). Its stated analytical purpose is to support the BSP "in identifying gaps, setting priorities, tracking progress, and formulating evidence-based policies to enhance financial health and inclusion in the Philippines" (p. iv). The unifying construct is financial health, defined as "the ability of an individual to meet financial obligations, absorb and recover from financial shocks, reach long-term goals, and develop a sense of control of their finances" (p. iv).
 
 ## Method
 
-**Design.** Institutional annual report; the authors state no formal research design label.
-**Sample.** Not applicable; the report covers the entire Philippine economy and financial system, with household-level statistics drawn from the Consumer Expectations Survey (quarterly, population-level weighted totals) and national accounts data (HFCE).
-**Context.** geography: Philippines; population: Filipino households, businesses, financial institutions, and government agencies; setting: national economy and financial system, with data collected through surveys, administrative reporting, and market monitoring.
-
-The report is organized into three pillars of central banking (price stability, financial system resilience, payments and settlements) plus operational highlights and statistical annexes. Household-level data come from the Consumer Expectations Survey (CES), which is described as a quarterly survey of households; annual indicators are computed by averaging quarterly weighted population-level totals before deriving annual rates (p. 64, footnote 62). Consumption data come from the Philippine Statistics Authority's national accounts, specifically household final consumption expenditure (HFCE). The report does not describe a sampling design, confidence intervals, or significance tests for household statistics.
+**Design.** Nationally representative cross-sectional household survey with a demand-side focus; the report states no formal research design label. The questionnaire is an enhancement and consolidation of the 2021 Consumer Finance Survey and 2021 Financial Inclusion Survey instruments, streamlining overlapping concepts and harmonising definitions (p. 18).
+**Sample.** 8,784 completed interviews of adult respondents aged 15 years and above, covering all regions of the Philippines, from 10,836 eligible sample adults at an 81 percent response rate; drawn from the Philippine Statistics Authority's 2023 Geo-enabled Master Sample Frame, built on the 2020 Census of Population and Housing with two-stage cluster sampling, and weighted to an adult population of 75.6 million (pp. iii, iv, vi).
+**Context.** geography: Philippines, national and regional estimates; population: Filipino adults aged 15 and above; setting: household finances and financial inclusion, with fieldwork conducted by the Philippine Survey and Research Center, Inc. (PSRC) using computer-assisted personal interviewing on tablets and smartphones, and analysis and reporting by the BSP Financial Inclusion Office (p. 18). The survey design and instrument were cleared by the PSA through the Statistical Survey Review and Clearance System on 26 September 2024, under PSA Approval No. 2024-296 (p. ii, footnote 7). The questionnaire was administered in six languages, Tagalog, English, Cebuano, Ilocano, Hiligaynon, and Waray, each with an English translation, and respondents received a BSP-signed letter explaining the objectives and assuring confidentiality (p. 10).
 
 ## Key Findings
 
-- Household account ownership among Filipino households increased from 74.0 percent in 2024 to 85.0 percent in 2025 (p. 64).
-- The share of households that set aside savings increased from 29.6 percent in 2024 to 45.2 percent in 2025, and saving intentions rose to their highest level since 2013, with the index turning positive for the first time in Q4 2025 (p. 7, footnote 12).
-- Household final consumption expenditure (HFCE) eased from 4.9 percent growth in 2024 to 4.5 percent in 2025, contributing 3.3 percentage points to real GDP growth and accounting for 72.6 percent of total output (p. 6).
-- Spending on essential items accelerated from 3.2 percent in 2024 to 4.1 percent in 2025, while non-essential spending slowed from 7.0 percent to 5.2 percent (p. 7, footnote 11).
-- Consumer sentiment was slightly more pessimistic at -14.7 percent in 2025 than -14.5 percent in 2024 (p. 7).
-- Basic deposit accounts (BDAs) reached 27.6 million in 2025, up from 25.8 million in 2024, with 170 banks offering BDAs (p. 64).
-- Microfinance loans reached ₱36.9 billion, benefiting 2.0 million borrowers across 126 participating banks, with operations covering 92.2 percent of local government units and 62.5 percent of unbanked areas (p. 65).
-- Digital payments expanded sharply: InstaPay processed 4.7 billion transactions worth ₱11.6 trillion in 2025, increases of 230.9 percent in volume and 57.3 percent in value from 2024 (p. 42).
-- QR Ph person-to-merchant posted 2.5 billion transactions amounting to ₱1.2 trillion, while InstaPay QR contributed 183.3 million transactions valued at ₱926.1 billion (p. 42).
-- PESONet processed 117.2 million transactions worth ₱13.2 trillion, marking increases of 16.3 percent in volume and 30.9 percent in value (p. 42).
-- Consumer complaints to the BSP rose 72.6 percent to over 120,000 in 2025 from 70,112 in 2024 (p. 72).
-- The mediation success rate declined from 84.4 percent in 2024 to 74.0 percent in 2025 (p. 72).
+- Half of Filipino adults owned a formal financial account in 2025, down from 56 percent in 2021, with e-money at 36 percent and bank accounts at 23 percent; the decline was concentrated in loan-anchored accounts held with microfinance non-governmental organisations and cooperatives (p. 1).
+- Household-level access is stronger than individual ownership: 85 percent of households own at least one account, based on the rider question attached to the Consumer Expectations Survey, indicating that many families rely on shared financial access (p. 1).
+- Twenty-five percent of Filipino adults had outstanding loans in 2025, a decline from 2021 levels, and seven in ten adults perceive that availing any type of loan is not a good idea (p. 2).
+- The composition of credit improved, with formal lending sources surpassing informal borrowing; online lending platforms expanded their reach, particularly among borrowers in urban areas (pp. 2, 3).
+- Seventy-four percent of adults could correctly answer at least half of the six financial literacy questions, up from 69 percent in 2021; understanding of risk and diversification is relatively strong, while knowledge of interest rates, particularly compound interest, continues to lag (p. 8).
+- Budgeting behaviour has become widespread, with most adults reporting that they maintain a personal budget and plan ahead, yet financial confidence remains limited, with only 43 percent of adults satisfied with their current financial situation (p. 8).
+- Nearly nine in ten adults were aware of at least one formal financial product, led by loans at 73 percent, insurance at 68 percent, and deposit accounts at 65 percent; awareness of investments grew to 53 percent and awareness of virtual assets and cryptocurrencies rose from six percent in 2021 to 20 percent in 2025 (p. 9).
+- Financial health outcomes vary by group: higher-income, better-educated, and government workers managed everyday expenses and setbacks better and pursued personal goals more successfully, while low-income and less-educated individuals remained considerably more vulnerable (p. 11).
+- Compared with the other three dimensions of financial health, financial resilience is the weakest, with only about three in ten adults reporting that their current finances or savings would last; challenges persist in emergency preparedness and in maintaining adequate liquidity against income shocks (p. 11).
 
 ## Key Figures and Tables
 
-- Figure 2 (p. 4): Gross Domestic Product and Gross National Income at constant 2018 prices → GDP grew 4.4 percent in 2025, GNI grew 6.1 percent.
-- Figure 3 (p. 5): Gross Domestic Product by Industry → industry grew 1.7 percent, services 5.8 percent, agriculture 3.1 percent.
-- Figure 4 (p. 8): Gross Domestic Product by Expenditure → HFCE grew 4.5 percent, government consumption 8.4 percent, capital formation contracted 1.7 percent.
-- Figure 5 (p. 10): Unemployment and Underemployment Rates → unemployment rose to 4.2 percent, underemployment held at 11.9 percent.
-- Figure 6 (p. 12): Domestic Liquidity → M3 grew 7.2 percent year-on-year.
-- Figure 8 (p. 31): Philippine Banking System's Total Assets → total assets reached ₱29.9 trillion, up 8.9 percent.
-- Figure 9 (p. 32): Philippine Banking System's Total Loan Portfolio → bank credit rose 11.7 percent to ₱17.1 trillion.
-- Figure 10 (p. 33): Philippine Banking System's Total Deposits → deposits increased 7.4 percent to ₱21.9 trillion.
-- Figure 11 (p. 34): Philippine Banking System's Risk-Based Capital → solo CAR 15.8 percent, consolidated CAR 16.2 percent.
-- Figure 12 (p. 42): InstaPay, QR Ph Person-to-Merchant, and InstaPay QR Transaction Volume 2018–2025 → InstaPay reached 4.7 billion transactions.
-- Figure 13 (p. 43): Philippine Payment and Settlement System Transactions → PhilPaSSplus processed 1.7 million transactions worth ₱601.3 trillion.
-- Figure 14 (p. 44): Philippine Payment and Settlement System Participants → 16 participants onboarded in 2025.
-- Figure 15 (p. 49): Currency in Circulation → currency in circulation reached ₱2.9 trillion, growing 6.4 percent.
-- Table 1 (p. 50): Banknote and Coin Withdrawals → banknote withdrawals rose 6.2 percent in value and 12.9 percent in volume; coin withdrawals fell 14.4 percent in value but rose 1.4 percent in volume.
-- Table 2 (p. 51): Mutilated Banknotes and Coins by Series → paper banknotes examined fell from 71,141 to 53,234 pieces; polymer rose from 4,549 to 10,282.
-- Table 3 (p. 52): Counterfeit Banknotes and Coins by Series → paper counterfeits fell from 69,922 to 56,587; polymer rose from 3 to 1,358.
-- Table 4 (p. 63): Greenhouse Gas Emissions of the Bangko Sentral by Scope → Scope 1: 940.90 tonnes CO₂e; Scope 2: 36,831.11; Scope 3: 1,027.17; total 38,799.18.
-- Table 1a (p. 89): Consumer Price Index in the Philippines → 2025 average CPI 128.2, inflation 1.7 percent.
-- Table 1b (p. 90): Consumer Price Index by Commodity Group and by Area → all items Philippines 2025 CPI 128.2, change 1.7 percent.
-- Table 2 (p. 91–93): Depository Corporations Survey → M3 reached 20,151,093 million pesos in December 2025, up 7.2 percent.
-- Table 3 (p. 94–97): National Government Cash Operations Report → 2025 revenues ₱4,453,432 million, expenditures ₱6,030,274 million, deficit ₱1,576,842 million.
-- Table 4 (p. 98): National Government Outstanding Debt → December 2025 total ₱17,708 billion, 63.2 percent of GDP.
-- Table 5 (p. 99): Unit Value Indices for Exports and Imports → 2025 exports 114.4, imports 123.6.
-- Table 6 (p. 100): Monthly Movement of Exports and Imports by Volume and Value → 2025 exports total value 84,439 million USD, imports 134,073 million USD.
-- Table 7 (p. 101–104): Philippines: Balance of Payments → 2025 current account -16,291 million USD; personal remittances 39,619 million USD; OFW cash remittances 35,634 million USD.
-- Table 8 (p. 105): Gross International Reserves → December 2025 GIR 110,833 million USD; import cover 7.3 months; short-term external debt cover 414.4 percent.
-- Table 9 (p. 106): Total External Debt → December 2025 external debt 147,651 million USD.
-- Table 10 (p. 107): Selected Foreign Debt Services Indicators → 2025 Q4 DSB 3,038 million USD; external debt to GDP 30.31 percent.
-- Table 11 (p. 108–110): Assets and Liabilities of the Philippine Banking System → December 2025 total assets ₱29,864.37 billion; total loan portfolio ₱16,607.30 billion; savings deposits ₱9,357.71 billion.
-- Table 12 (p. 111–113): Balance Sheet of the Bangko Sentral ng Pilipinas → December 2025 total assets ₱8,003.2 billion; total liabilities ₱7,642.7 billion; net worth ₱360.5 billion.
-- Table 13 (p. 114–115): Income Position of the Bangko Sentral ng Pilipinas → 2025 net income ₱130.1 billion.
-- Table 14 (p. 116): Outstanding Public Sector Domestic Debt → Q4 2025 total ₱10,742 billion, 40.6 percent of GDP.
+- Figure 1, Survey Scope and Methodology (p. v) and Figure 2, Profile of Respondents (p. v) describe the 2025 CFIS design.
+- Figure 3, Individual-level Account Ownership, by Type of Account, and Figure 4, Household-level Account Ownership, by Type of Account (p. 1).
+- Figure 5, Outstanding Loans, and Figure 6, Sources of Borrowing (p. 2).
+- Figure 7, Considerations in Borrowing; Figure 8, Type of Loan Availed and Utilization of Loan; Figure 9, Loan Payment Status (p. 3).
+- Figure 10, Insurance Ownership, by Type of Insurance, and Figure 11, Pension Ownership (p. 4).
+- Figure 12, Investment Ownership, by Type of Investment (p. 5).
+- Figure 13, Electronic Device Ownership; Figure 14, Internet Usage and Internet Access by Type of Channel; Figure 15, Electronic Device Use for Online Financial Transaction (Household Level) (p. 6).
+- Figure 16, Awareness and Accessibility of Access Points (p. 7).
+- Figure 17, Financial Literacy and Budgeting (p. 8).
+- Figure 18, Awareness of Financial Products and Services, and Figure 19, Digital Financial Literacy (p. 9).
+- Figure 20, Awareness of Consumer Rights; Figure 21, Awareness of Responsibilities of Financial Service Providers and Consumers and BSP Consumer Assistance Channels (p. 10).
+- Figure 22, Four Dimensions of Financial Health, and Figure 23, Difficulty in Coming Up with Emergency Funds and Liquidity Expenses Coverage (p. 11). Both figures are rendered as raster images in the source PDF, so the values they carry are not recoverable from the text layer.
+- The Philippines: An Overview box (p. i) tabulates the population, unemployment, poverty, income, output, prices, remittances, and connectivity indicators used as context throughout the report.
 
 ## Statistical Evidence
 
 | Outcome | Metric | Value | CI | p | Locator |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Household account ownership, 2024 | percent | 74.0 | — | — | p. 64 |
-| Household account ownership, 2025 | percent | 85.0 | — | — | p. 64 |
-| Share of households setting aside savings, 2024 | percent | 29.6 | — | — | p. 7, footnote 12 |
-| Share of households setting aside savings, 2025 | percent | 45.2 | — | — | p. 7, footnote 12 |
-| Saving intentions index, Q4 2025 | index turning positive | first time since 2013 | — | — | p. 7, footnote 12 |
-| Household final consumption expenditure growth, 2024 | percent | 4.9 | — | — | p. 6 |
-| Household final consumption expenditure growth, 2025 | percent | 4.5 | — | — | p. 6 |
-| HFCE contribution to real GDP growth, 2025 | percentage points | 3.3 | — | — | p. 6 |
-| HFCE share of total output, 2025 | percent | 72.6 | — | — | p. 6 |
-| Essential items spending growth, 2024 | percent | 3.2 | — | — | p. 7, footnote 11 |
-| Essential items spending growth, 2025 | percent | 4.1 | — | — | p. 7, footnote 11 |
-| Non-essential spending growth, 2024 | percent | 7.0 | — | — | p. 7, footnote 11 |
-| Non-essential spending growth, 2025 | percent | 5.2 | — | — | p. 7, footnote 11 |
-| Consumer sentiment, 2024 | percent | -14.5 | — | — | p. 7 |
-| Consumer sentiment, 2025 | percent | -14.7 | — | — | p. 7 |
-| Share of households intending to apply for a loan, Q4 2024 | percent | 13.7 | — | — | p. 31, footnote 40 |
-| Share of households intending to apply for a loan, Q4 2025 | percent | 17.8 | — | — | p. 31, footnote 40 |
-| Basic deposit accounts, 2024 | millions | 25.8 | — | — | p. 64 |
-| Basic deposit accounts, 2025 | millions | 27.6 | — | — | p. 64 |
-| Banks offering basic deposit accounts, 2025 | count | 170 | — | — | p. 64 |
-| Microfinance loans, 2025 | billion pesos | 36.9 | — | — | p. 65 |
-| Microfinance borrowers, 2025 | millions | 2.0 | — | — | p. 65 |
-| Participating banks in microfinance, 2025 | count | 126 | — | — | p. 65 |
-| Microfinance operations coverage of LGUs, 2025 | percent | 92.2 | — | — | p. 65 |
-| Microfinance operations coverage of unbanked areas, 2025 | percent | 62.5 | — | — | p. 65 |
-| Credit Surety Fund cooperatives, 2025 | count | 50 | — | — | p. 65 |
-| Credit Surety Fund released loans, 2025 | billion pesos | 9.2 | — | — | p. 65 |
-| Paleng-QR Ph Plus coverage, 2025 | LGUs | over 900 | — | — | p. 66 |
-| Economic and financial learning sessions, 2025 | count | 1,692 | — | — | p. 67 |
-| Economic and financial learning participants, 2025 | count | 125,826 | — | — | p. 67 |
-| Partner-led financial education reach, 2025 | individuals | 11,262,351 | — | — | p. 68 |
-| BSP E-Learning Academy module enrollments, 2025 | count | 102,764 | — | — | p. 69 |
-| TESDA partnership additional enrollments, 2025 | count | 94,221 | — | — | p. 69 |
-| Total e-learning participation, 2025 | count | 196,985 | — | — | p. 69 |
-| Consumer complaints received, 2024 | count | 70,112 | — | — | p. 72 |
-| Consumer complaints received, 2025 | count | over 120,000 | — | — | p. 72 |
-| Consumer complaint rise, 2024–2025 | percent | 72.6 | — | — | p. 72 |
-| Consumer complaints received, 2021 | count | 19,181 | — | — | p. 72 |
-| Mediation referrals, 2024 | count | 710 | — | — | p. 72 |
-| Mediation referrals, 2025 | count | 1,057 | — | — | p. 72 |
-| Mediation referral rise, 2024–2025 | percent | 48.9 | — | — | p. 72 |
-| Mediation cases handled, 2025 | count | 1,188 | — | — | p. 72 |
-| Mediation cases carried over from previous year, 2025 | count | 131 | — | — | p. 72 |
-| Concluded mediation cases, 2025 | count | 876 | — | — | p. 72 |
-| Successful mediation cases, 2025 | count | 409 | — | — | p. 72 |
-| Failed mediation cases, 2025 | count | 144 | — | — | p. 72 |
-| Terminated mediation cases, 2025 | count | 323 | — | — | p. 72 |
-| Mediation success rate, 2024 | percent | 84.4 | — | — | p. 72 |
-| Mediation success rate, 2025 | percent | 74.0 | — | — | p. 72 |
-| Formal complaints handled, 2025 | count | 68 | — | — | p. 72 |
-| Formal complaints carried over from 2024 | count | 12 | — | — | p. 72 |
-| Formal complaints decided, 2025 | count | 11 | — | — | p. 72 |
-| Formal complaints dismissed, 2025 | count | 20 | — | — | p. 72 |
-| Formal complaints pending, 2025 | count | 37 | — | — | p. 72 |
-| GDP growth, 2024 | percent | 5.7 | — | — | p. 4 |
-| GDP growth, 2025 | percent | 4.4 | — | — | p. 4 |
-| GNI growth, 2024 | percent | 7.7 | — | — | p. 4 |
-| GNI growth, 2025 | percent | 6.1 | — | — | p. 4 |
-| Inflation, 2025 | percent | 1.7 | — | — | p. 11 |
-| Core inflation, 2024 | percent | 3.0 | — | — | p. 11 |
-| Core inflation, 2025 | percent | 2.4 | — | — | p. 11 |
-| Unemployment rate, 2024 | percent | 3.8 | — | — | p. 9 |
-| Unemployment rate, 2025 | percent | 4.2 | — | — | p. 9 |
-| Underemployment rate, 2025 | percent | 11.9 | — | — | p. 10 |
-| Labor force participation rate, 2025 | percent | 64.1 | — | — | p. 10 |
-| Total employment, 2025 | millions | 49.0 | — | — | p. 9 |
-| Employment increase, 2025 | count | 172,000 | — | — | p. 9 |
-| InstaPay transactions, 2025 | billions | 4.7 | — | — | p. 42 |
-| InstaPay value, 2025 | trillion pesos | 11.6 | — | — | p. 42 |
-| InstaPay volume growth, 2024–2025 | percent | 230.9 | — | — | p. 42 |
-| InstaPay value growth, 2024–2025 | percent | 57.3 | — | — | p. 42 |
-| QR Ph P2M transactions, 2025 | billions | 2.5 | — | — | p. 42 |
-| QR Ph P2M value, 2025 | trillion pesos | 1.2 | — | — | p. 42 |
-| InstaPay QR transactions, 2025 | millions | 183.3 | — | — | p. 42 |
-| InstaPay QR value, 2025 | billion pesos | 926.1 | — | — | p. 42 |
-| InstaPay QR volume growth, 2024–2025 | percent | 246.9 | — | — | p. 42 |
-| InstaPay QR value growth, 2024–2025 | percent | 211.3 | — | — | p. 42 |
-| PESONet transactions, 2025 | millions | 117.2 | — | — | p. 42 |
-| PESONet value, 2025 | trillion pesos | 13.2 | — | — | p. 42 |
-| PESONet volume growth, 2024–2025 | percent | 16.3 | — | — | p. 42 |
-| PESONet value growth, 2024–2025 | percent | 30.9 | — | — | p. 42 |
-| PhilPaSSplus efficiency rate, 2025 | percent | 99.957 | — | — | p. 43 |
-| PhilPaSSplus transactions, 2025 | millions | 1.7 | — | — | p. 43 |
-| PhilPaSSplus value, 2025 | trillion pesos | 601.3 | — | — | p. 43 |
-| PhilPaSSplus volume growth, 2024–2025 | percent | 9.0 | — | — | p. 43 |
-| PhilPaSSplus value growth, 2024–2025 | percent | 15.8 | — | — | p. 44 |
-| Banking system total assets, 2025 | trillion pesos | 29.9 | — | — | p. 30 |
-| Banking system asset growth, 2025 | percent | 8.9 | — | — | p. 30 |
-| Bank credit, 2025 | trillion pesos | 17.1 | — | — | p. 31 |
-| Bank credit growth, 2025 | percent | 11.7 | — | — | p. 31 |
-| Non-performing loan ratio, 2025 | percent | 3.1 | — | — | p. 32 |
-| NPL coverage ratio, 2025 | percent | 97.2 | — | — | p. 32 |
-| Deposits, 2025 | trillion pesos | 21.9 | — | — | p. 33 |
-| Deposit growth, 2025 | percent | 7.4 | — | — | p. 33 |
-| Capital adequacy ratio, solo, 2025 | percent | 15.8 | — | — | p. 34 |
-| Capital adequacy ratio, consolidated, 2025 | percent | 16.2 | — | — | p. 34 |
-| Common Equity Tier 1 ratio, solo, 2025 | percent | 14.8 | — | — | p. 34 |
-| Common Equity Tier 1 ratio, consolidated, 2025 | percent | 15.2 | — | — | p. 34 |
-| Net profit, 2025 | billion pesos | 405.6 | — | — | p. 35 |
-| Net profit growth, 2025 | percent | 3.6 | — | — | p. 35 |
-| Gross international reserves, end-December 2025 | billion USD | 110.8 | — | — | p. 19 |
-| External debt, end-December 2025 | billion USD | 147.7 | — | — | p. 19 |
-| External debt growth, 2025 | percent | 7.3 | — | — | p. 19 |
-| Balance of payments deficit, 2025 | percent of GDP | 1.2 | — | — | p. 17 |
-| Current account deficit, 2025 | percent of GDP | 3.3 | — | — | p. 17 |
-| Goods exports, 2025 | billion USD | 63.4 | — | — | p. 17 |
-| Goods imports, 2025 | billion USD | 130.1 | — | — | p. 17 |
-| Personal remittances, 2025 | million USD | 39,619 | — | — | Table 7, p. 104 |
-| OFW cash remittances, 2025 | million USD | 35,634 | — | — | Table 7, p. 104 |
-| Banknote withdrawals, 2025 | million pesos | 1,567,566.4 | — | — | Table 1, p. 50 |
-| Banknote withdrawal volume, 2025 | million pieces | 3,465.6 | — | — | Table 1, p. 50 |
-| Banknote withdrawal value growth, 2025 | percent | 6.2 | — | — | Table 1, p. 50 |
-| Banknote withdrawal volume growth, 2025 | percent | 12.9 | — | — | Table 1, p. 50 |
-| Coin withdrawals, 2025 | million pesos | 8,398.0 | — | — | Table 1, p. 50 |
-| Coin withdrawal volume, 2025 | million pieces | 1,798.8 | — | — | Table 1, p. 50 |
-| Coin withdrawal value growth, 2025 | percent | -14.4 | — | — | Table 1, p. 50 |
-| Coin withdrawal volume growth, 2025 | percent | 1.4 | — | — | Table 1, p. 50 |
-| Mutilated paper banknotes examined, 2024 | pieces | 71,141 | — | — | Table 2, p. 51 |
-| Mutilated paper banknotes examined, 2025 | pieces | 53,234 | — | — | Table 2, p. 51 |
-| Mutilated polymer banknotes examined, 2024 | pieces | 4,549 | — | — | Table 2, p. 51 |
-| Mutilated polymer banknotes examined, 2025 | pieces | 10,282 | — | — | Table 2, p. 51 |
-| Mutilated New Generation Currency banknotes, 2024 | pieces | 15,815 | — | — | Table 2, p. 51 |
-| Mutilated New Generation Currency banknotes, 2025 | pieces | 15,382 | — | — | Table 2, p. 51 |
-| Mutilated BSP Coin Series coins, 2024 | pieces | 35,640 | — | — | Table 2, p. 51 |
-| Mutilated BSP Coin Series coins, 2025 | pieces | 22,823 | — | — | Table 2, p. 51 |
-| Counterfeit paper banknotes, 2024 | pieces | 69,922 | — | — | Table 3, p. 52 |
-| Counterfeit paper banknotes, 2025 | pieces | 56,587 | — | — | Table 3, p. 52 |
-| Counterfeit polymer banknotes, 2024 | pieces | 3 | — | — | Table 3, p. 52 |
-| Counterfeit polymer banknotes, 2025 | pieces | 1,358 | — | — | Table 3, p. 52 |
-| Counterfeit BSP Coin Series coins, 2024 | pieces | 891 | — | — | Table 3, p. 52 |
-| Counterfeit BSP Coin Series coins, 2025 | pieces | 1,505 | — | — | Table 3, p. 52 |
-| Scope 1 GHG emissions, 2025 | tonnes CO₂e | 940.90 | — | — | Table 4, p. 63 |
-| Scope 1 fuel stationary combustion, 2025 | tonnes CO₂e | 194.44 | — | — | Table 4, p. 63 |
-| Scope 1 fuel mobile combustion, 2025 | tonnes CO₂e | 746.46 | — | — | Table 4, p. 63 |
-| Scope 2 GHG emissions, 2025 | tonnes CO₂e | 36,831.11 | — | — | Table 4, p. 63 |
-| Scope 3 GHG emissions, 2025 | tonnes CO₂e | 1,027.17 | — | — | Table 4, p. 63 |
-| Scope 3 waste generated in operations, 2025 | tonnes CO₂e | 862.11 | — | — | Table 4, p. 63 |
-| Scope 3 water intake, 2025 | tonnes CO₂e | 165.06 | — | — | Table 4, p. 63 |
-| Total GHG emissions, 2025 | tonnes CO₂e | 38,799.18 | — | — | Table 4, p. 63 |
-| Consumer price index, 2025 average | index (2018=100) | 128.2 | — | — | Table 1a, p. 89 |
-| Inflation, 2025 average | percent | 1.7 | — | — | Table 1a, p. 89 |
-| M3, December 2025 | million pesos | 20,151,093 | — | — | Table 2, p. 93 |
-| M3 growth, December 2025 | percent | 7.2 | — | — | Table 2, p. 93 |
-| M4, December 2025 | million pesos | 23,585,220 | — | — | Table 2, p. 93 |
-| M4 growth, December 2025 | percent | 7.7 | — | — | Table 2, p. 93 |
-| NG revenues, 2025 | million pesos | 4,453,432 | — | — | Table 3, p. 97 |
-| NG expenditures, 2025 | million pesos | 6,030,274 | — | — | Table 3, p. 97 |
-| NG deficit, 2025 | million pesos | -1,576,842 | — | — | Table 3, p. 97 |
-| NG outstanding debt, December 2025 | billion pesos | 17,708 | — | — | Table 4, p. 98 |
-| NG outstanding debt growth, 2025 | percent | 10.3 | — | — | Table 4, p. 98 |
-| NG outstanding debt to GDP, 2025 | percent | 63.2 | — | — | Table 4, p. 98 |
-| Unit value index for exports, 2025 average | index (2018=100) | 114.4 | — | — | Table 5, p. 99 |
-| Unit value index for imports, 2025 average | index (2018=100) | 123.6 | — | — | Table 5, p. 99 |
-| Exports total value, 2025 | million USD | 84,439 | — | — | Table 6, p. 100 |
-| Imports total value, 2025 | million USD | 134,073 | — | — | Table 6, p. 100 |
-| Current account balance, 2025 | million USD | -16,291 | — | — | Table 7, p. 104 |
-| Current account to GDP, 2025 | percent | -3.3 | — | — | Table 7, p. 104 |
-| Overall BOP position, 2025 | million USD | -5,661 | — | — | Table 7, p. 104 |
-| Overall BOP to GDP, 2025 | percent | -1.2 | — | — | Table 7, p. 104 |
-| GIR, December 2025 | million USD | 110,833 | — | — | Table 8, p. 105 |
-| Net international reserves, December 2025 | million USD | 110,814 | — | — | Table 8, p. 105 |
-| Import cover, December 2025 | months | 7.3 | — | — | Table 8, p. 105 |
-| Short-term external debt cover, December 2025 | percent | 414.4 | — | — | Table 8, p. 105 |
-| Total external debt, December 2025 | million USD | 147,651 | — | — | Table 9, p. 106 |
-| External debt to GDP, Q4 2025 | percent | 30.31 | — | — | Table 10, p. 107 |
-| Debt service burden, Q4 2025 | million USD | 3,038 | — | — | Table 10, p. 107 |
-| Banking system total assets, December 2025 | billion pesos | 29,864.37 | — | — | Table 11, p. 110 |
-| Banking system total loan portfolio, December 2025 | billion pesos | 16,607.30 | — | — | Table 11, p. 110 |
-| Banking system total investments, December 2025 | billion pesos | 8,586.36 | — | — | Table 11, p. 110 |
-| Banking system savings deposits, December 2025 | billion pesos | 9,357.71 | — | — | Table 11, p. 110 |
-| Banking system time deposits, December 2025 | billion pesos | 6,541.95 | — | — | Table 11, p. 110 |
-| BSP total assets, December 2025 | billion pesos | 8,003.2 | — | — | Table 12, p. 113 |
-| BSP total liabilities, December 2025 | billion pesos | 7,642.7 | — | — | Table 12, p. 113 |
-| BSP net worth, December 2025 | billion pesos | 360.5 | — | — | Table 12, p. 113 |
-| BSP net income, 2025 | billion pesos | 130.1 | — | — | Table 13, p. 115 |
-| Outstanding public sector domestic debt, Q4 2025 | billion pesos | 10,742 | — | — | Table 14, p. 116 |
-| Outstanding public sector domestic debt to GDP, Q4 2025 | percent | 40.6 | — | — | Table 14, p. 116 |
+| Individual formal account ownership, 2025 | share of adults | half | — | — | Account Ownership, p. 1 |
+| Individual formal account ownership, 2021 | share of adults | 56 percent | — | — | Account Ownership, p. 1 |
+| E-money account ownership, 2025 | share of adults | 36 percent | — | — | Account Ownership, p. 1 |
+| Bank account ownership, 2025 | share of adults | 23 percent | — | — | Account Ownership, p. 1 |
+| Household account ownership, 2025 | share of households | 85 percent | — | — | Account Ownership, p. 1 |
+| Cooperatives with credit operations, 2024 | number of cooperatives | 7,706 | — | — | Account Ownership, p. 2 |
+| Cooperatives with credit operations, 2021 | number of cooperatives | 9,650 | — | — | Account Ownership, p. 2 |
+| Outstanding loans, 2025 | share of adults | 25 percent | — | — | Loans and Credit, p. 2 |
+| Adults perceiving that any loan is not a good idea, 2025 | share of adults | seven (7) in ten | — | — | Loans and Credit, p. 2 |
+| Financial literacy, 2025 | share of adults answering at least half of six questions correctly | 74 percent | — | — | Financial Literacy and Capability, p. 8 |
+| Financial literacy, 2021 | share of adults answering at least half of six questions correctly | 69 percent | — | — | Financial Literacy and Capability, p. 8 |
+| Satisfaction with current financial situation, 2025 | share of adults | 43 percent | — | — | Financial Literacy and Capability, p. 8 |
+| Awareness of at least one formal financial product, 2025 | share of adults | nearly nine (9) in ten | — | — | Financial Literacy and Capability, p. 9 |
+| Awareness of loans, 2025 | share of adults | 73 percent | — | — | Financial Literacy and Capability, p. 9 |
+| Awareness of insurance, 2025 | share of adults | 68 percent | — | — | Financial Literacy and Capability, p. 9 |
+| Awareness of deposit accounts, 2025 | share of adults | 65 percent | — | — | Financial Literacy and Capability, p. 9 |
+| Awareness of investments, 2025 | share of adults | 53 percent | — | — | Financial Literacy and Capability, p. 9 |
+| Awareness of virtual assets and cryptocurrencies, 2025 | share of adults | 20 percent | — | — | Financial Literacy and Capability, p. 9 |
+| Financial resilience, 2025 | share of adults reporting current finances or savings would last | about 3 in 10 | — | — | Financial Health, p. 11 |
+| Completed interviews | interviews | 8,784 | — | — | Scope and Coverage, p. v |
+| Eligible sample adults | eligible adults | 10,836 | — | — | Scope and Coverage, p. vi |
+| Response rate | share of eligible sample | 81 percent | — | — | Scope and Coverage, p. vi |
+| Weighted adult population, 2020 CPH | adults | 75.6 million | — | — | Profile of Respondents, p. iv |
+| Sampling margin of error, national level | margin of error | ±1.0% | — | — | Technical Notes, p. 19 |
+| Unemployment rate, October 2025 | rate | 5.0% | — | — | The Philippines: An Overview, p. i |
+| Poverty incidence of population, 2023 | rate | 15.5% | — | — | The Philippines: An Overview, p. i |
+| Average annual family income, 2023 | peso | PhP 353,230 | — | — | The Philippines: An Overview, p. i |
+| GDP year-on-year growth, Q3 2025 | rate | 4.0% | — | — | The Philippines: An Overview, p. i |
+| Inflation rate, 2025 | rate | 1.6% | — | — | The Philippines: An Overview, p. i |
+| Adults with mobile phone, 2025 | share of adults | 90% | — | — | The Philippines: An Overview, p. i |
+| Adults using the internet, 2025 | share of adults | 89% | — | — | The Philippines: An Overview, p. i |
+| Emergency funds difficulty and liquidity coverage, 2025 | distribution of adult responses | Not reported in the text layer; the values appear only as an image in Figure 23 | — | — | Financial Health, p. 11 |
 
 ## Quotes
 
 | Text | Locator | Module |
 | :--- | :--- | :--- |
-| "The share of households that set aside savings increased from 29.6 percent in 2024 to 45.2 percent in 2025." | p. 7, footnote 12 | savings_debt_management |
-| "Households appeared to save more amid uncertainty. This precautionary behavior is reflected in weaker consumer sentiment and a rise in saving intentions to their highest level since 2013, with the index turning positive for the first time in Q4 2025." | p. 7, footnote 12 | savings_debt_management |
-| "Household final consumption expenditure (HFCE) eased from 4.9 percent in 2024 to 4.5 percent in 2025, reflecting subdued consumer sentiment and the adverse effects of weather disturbances." | p. 6 | income_expense_management |
-| "Spending on essential items accelerated from 3.2 percent in 2024 to 4.1 percent in 2025. Meanwhile, non-essential spending slowed from 7.0 percent to 5.2 percent." | p. 7, footnote 11 | income_expense_management |
-| "True progress lies in improving financial health, or the ability of Filipinos to meet daily expenses, withstand financial shocks, plan for the future, and manage their finances with confidence." | p. 64 | financial_planning |
-| "Household-level account ownership increased from 74.0 percent in 2024 to 85.0 percent in 2025, reflecting broader participation in the formal financial system." | p. 64 | savings_debt_management |
-| "Microfinance loans reached ₱36.9 billion, benefiting 2.0 million borrowers across 126 participating banks." | p. 65 | savings_debt_management |
-| "The BSP elevated financial health as a Priority Economic Deliverable (PED) for the 2026 ASEAN Summit, which is chaired by the Philippines." | p. iv | financial_planning |
-| "A financially informed public is better equipped to make sound decisions—supporting savings, asset building, responsible credit use, and overall financial well-being and financial health." | p. 67 | financial_planning |
-| "Consumer sentiment was slightly more pessimistic (-14.7 percent) than the previous year (-14.5 percent)." | p. 7 | savings_debt_management |
-| "The BSP continues to promote basic deposit accounts (BDAs) as an entry-level product for underserved sectors. By 2025, BDA accounts reached 27.6 million, up from 25.8 million in 2024, with 170 banks offering BDAs." | p. 64 | savings_debt_management |
-| "Data came from the CES. Annual indicators are computed by averaging quarterly weighted population-level totals before deriving annual rates." | p. 64, footnote 62 | data_collection |
-| "The Consumer Expectations Survey (CES) shows that the share of households intending to apply for a loan in the next 12 months increased from 13.7 percent (Q4 2024) to 17.8 percent (Q4 2025)." | p. 31, footnote 40 | savings_debt_management |
-| "This initiative addresses emerging challenges such as rising household debt and the need for greater financial resilience." | p. 66 | savings_debt_management |
+| "The Consumer Finance and Inclusion Survey (CFIS) of the Bangko Sentral ng Pilipinas (BSP) is a nationally representative survey dedicated to capture data on the financial condition of Filipino consumers and their inclusion in the financial system." | Background, p. iii | data_collection |
+| "financial health, defined as the ability of an individual to meet financial obligations, absorb and recover from financial shocks, reach long-term goals, and develop a sense of control of their finances" | Background, p. iv | financial_planning |
+| "In 2025, half of Filipino adults owned a formal financial account, down from 56 percent in 2021." | Account Ownership, p. 1 | savings_debt_management |
+| "Eighty-five (85) percent of households own at least one account, based on the results of the rider question to the Consumer Expectations Survey." | Account Ownership, p. 1 | savings_debt_management |
+| "In 2025, 25 percent of Filipino adults had outstanding loans, a decline from 2021 levels." | Loans and Credit, p. 2 | savings_debt_management |
+| "Filipinos generally exhibit an aversion to borrowing, as seven (7) in ten adults perceived that availing any type of loan is not a good idea." | Loans and Credit, p. 2 | savings_debt_management |
+| "Budgeting behavior has become widespread, with most adults reporting that they maintain a personal budget and plan ahead." | Financial Literacy and Capability, p. 8 | financial_planning |
+| "This shows that financial control does not always translate into financial confidence or resilience." | Financial Literacy and Capability, p. 8 | financial_planning |
+| "When given extra funds, households prioritize emergency savings and family support, reflecting strong social values but also highlighting limited capacity for formal saving and investment." | Financial Literacy and Capability, p. 8 | savings_debt_management |
+| "Compared with the other aspects, financial resilience remains relatively weaker, with only about 3 in 10 adults reporting that their current finances or savings would last." | Financial Health, p. 11 | savings_debt_management |
+| "Challenges persist in emergency preparedness and in maintaining adequate liquidity to manage potential income shocks." | Financial Health, p. 11 | savings_debt_management |
+| "The sampling margin of error (MOE) is ±1.0% at the national level." | Technical Notes, p. 19 | data_collection |
 
 ## Limitations and Gaps
 
-- The report is descriptive and does not report confidence intervals, standard errors, or significance tests for household-level statistics such as account ownership, savings behaviour, or spending patterns (pp. 6–7, 64–66).
-- [unacknowledged] Household statistics are drawn from the Consumer Expectations Survey (CES), but the report does not describe the CES sampling design, response rates, or weighting methodology beyond stating that annual indicators average quarterly weighted population-level totals (p. 64, footnote 62). Sampling error cannot be assessed from the report.
-- [unacknowledged] The savings and expenditure statistics are national aggregates and are not disaggregated by income level, region, age, or household size, so the report cannot support claims about which subgroups have thin buffers or which track income closely.
-- [unacknowledged] The report does not report transaction-level or sub-annual household expenditure data; HFCE is reported as an annual growth rate (p. 6) and the essential/non-essential split is reported as annual growth rates (p. 7, footnote 11), not as seasonal or monthly series.
-- [unacknowledged] The report does not report on personal financial management app usage, budget-tracking tools, or budget adherence among Filipino households.
-- [unacknowledged] The report does not report a financial health index score or a financial resilience measure; the financial health discussion is qualitative and aspirational (p. 64).
-- The authors acknowledge that the GHG emissions baseline does not yet include Scope 1 emissions from refrigerants nor key Scope 3 categories such as employee commuting, business travel, and procurement (p. 63).
-- The authors acknowledge that the mediation success rate decline may be attributed to stronger consumer awareness of alternative remedies such as adjudication or court action (p. 72).
-- [unacknowledged] The report's digital payments statistics (InstaPay, QR Ph, PESONet) are aggregate transaction counts and values and do not distinguish PFM app usage from other digital payment channels (pp. 42–44).
-- [unacknowledged] The report's financial inclusion statistics (account ownership, BDA accounts, microfinance loans) are supply-side or access-side measures and do not report usage frequency, active account rates, or the quality of financial service use beyond the financial health framing (pp. 64–66).
-- [unacknowledged] The report does not report on the seasonality of household expenses, which is the project's central concern; expenditure data are annual (p. 6).
-- [unacknowledged] The report does not report on the relationship between income level and saving behaviour, or between saving behaviour and financial resilience; these constructs are discussed separately without a reported association (pp. 7, 64).
+- The report states its own limitations on p. 10: results remain subject to sampling variability; the long and detailed questionnaire may cause measurement errors through recall issues, respondent fatigue, or misunderstanding of questions; and because the survey relies on self-reported financial information, respondents may underreport or withhold sensitive details, particularly on finances.
+- Estimates for smaller subgroups carry higher margins of error than the national estimate and should be interpreted with caution (p. 19).
+- The emergency-funds difficulty distribution and the four financial-health dimensions are published as figures (Figures 22 and 23, p. 11) whose values are embedded as raster images, so they cannot be read or verified from the extracted text.
+- The household account-ownership figure of 85 percent is a rider question attached to the Consumer Expectations Survey rather than a CFIS measurement, and the report states that results may differ from other BSP reports because of differences in methodology, survey design, and data sources (p. v).
+- The survey measures the stock of financial capacity at one point in time and reports no expenditure or income microdata, so it cannot support the temporal disaggregation and seasonal forecasting that the project's forecasting component requires.
 
 ## Definitions
 
-- **Financial health** — "the ability of Filipinos to meet daily expenses, withstand financial shocks, plan for the future, and manage their finances with confidence" (p. 64).
-- **Household final consumption expenditure (HFCE)** — the national accounts measure of household spending on goods and services; grew 4.5 percent in 2025 (p. 6).
-- **Consumer Expectations Survey (CES)** — a quarterly BSP survey of households; annual indicators are computed by averaging quarterly weighted population-level totals (p. 64, footnote 62).
-- **Basic deposit account (BDA)** — an entry-level deposit product for underserved sectors; 27.6 million accounts in 2025 (p. 64).
-- **Essential items** — food and non-alcoholic beverages; housing, water, electricity, gas, and other fuels; health; and communication (p. 7, footnote 10).
-- **Non-essential items** — miscellaneous goods and services; transport; restaurants and hotels; education; furnishings, household equipment, and routine household maintenance; alcoholic beverages and tobacco; clothing and footwear; and recreation and culture (p. 7, footnote 10).
-- **Paleng-QR Ph Plus (PQRPh)** — a program to drive digital payments adoption among vendors, transport drivers, microentrepreneurs, and informal workers (p. 66).
-- **Credit Surety Fund (CSF)** — provides up to 80.0 percent surety cover for bank loans to MSMEs (p. 65).
+- **Financial health** — "the ability of an individual to meet financial obligations, absorb and recover from financial shocks, reach long-term goals, and develop a sense of control of their finances" (p. iv).
+- **CFIS** — the Consumer Finance and Inclusion Survey, the BSP survey that unifies the Consumer Finance Survey and the Financial Inclusion Survey into one demand-side instrument (p. iii).
+- **CFS and FIS** — the two earlier BSP surveys consolidated into the 2025 CFIS questionnaire (pp. iii, 18).
+- **Formal financial account** — an account held with a bank, e-money issuer, or other BSP-supervised institution; ownership is reported separately for e-money accounts at 36 percent and bank accounts at 23 percent (p. 1).
+- **GeoMS Frame** — the Philippine Statistics Authority's 2023 Geo-enabled Master Sample Frame, constructed from the 2020 Census of Population and Housing and used with a two-stage cluster sampling methodology (p. iv).
+- **CAPI** — computer-assisted personal interviewing, the field mode in which interviewers record answers on tablets or smartphones during face-to-face interviews (p. 18).
+- **Margin of error** — the sampling margin of error, plus or minus 1.0 percent at the national level, with higher values for smaller subgroups (p. 19).
 
 ## Remember This
 
-- The BSP Annual Report 2025 reports household account ownership at 85.0 percent in 2025, up from 74.0 percent in 2024.
-- The share of households setting aside savings increased from 29.6 percent in 2024 to 45.2 percent in 2025, with saving intentions at their highest since 2013.
-- HFCE growth eased to 4.5 percent in 2025, with essential spending accelerating to 4.1 percent and non-essential spending slowing to 5.2 percent.
-- The report defines financial health as the ability to meet daily expenses, withstand shocks, plan for the future, and manage finances with confidence.
-- The report does not report confidence intervals, p-values, or subgroup disaggregation for household statistics, and does not report on PFM app usage or expense seasonality.
+- The 2025 CFIS draws 8,784 interviews from 10,836 eligible adults, an 81 percent response rate, with a national margin of error of plus or minus 1.0 percent.
+- Half of Filipino adults held a formal financial account in 2025, down from 56 percent in 2021.
+- A quarter of Filipino adults carried outstanding loans, and seven in ten see borrowing as a bad idea.
+- Only about three in ten adults say their current finances or savings would last; emergency preparedness is the weakest financial-health dimension.
+- Figure 23 carries the emergency-funds difficulty distribution as an image, so its values are not verifiable from the text layer.
 
 ## Cited Works
 
-- Philippine Statistics Authority (PSA) (2026) — source of GDP, GNI, CPI, HFCE, and trade data used throughout the report. [pp. 4–17, 89–104]
-- Bangko Sentral ng Pilipinas (BSP) (2025) — Consumer Expectations Survey Report – 4th Quarter 2025, source of household account ownership, saving intentions, and consumer sentiment data. [p. 7, footnote 12; p. 64, footnote 62]
-- Bureau of the Treasury (BTr) (2026) — source of national government cash operations and outstanding debt data. [pp. 12–13, 94–98]
-- International Monetary Fund (IMF) (2026) — World Economic Outlook Update – January 2026, source of global GDP growth estimates. [p. 2, footnote 1]
-- World Bank (WB) (2026) — Global Economic Prospects – January 2026, source of global GDP growth estimates. [p. 2, footnote 2]
-- Bank for International Settlements (BIS) (2025) — Annual Economic Report, source of global financial market conditions. [p. 2, footnote 3]
-- Esguerra, A. (2024) — BSP Discussion Paper Series No. 2024-01 on current account sustainability. [p. 18, footnote 28]
-- Department of Budget and Management (DBM) (2025) — Medium-Term Fiscal Program and National Government Quarterly Fiscal Program, source of fiscal data. [pp. 12–13, footnotes 22–25]
-- Department of Tourism (2026) — Tourism Demand Statistics, source of tourism data. [p. 6, footnote 9]
-- Desiderio, L. (2026) — Philippine Star article on IT-BPM revenues. [p. 6, footnote 8]
-- Tabile, J. I. D. (2025) — BusinessWorld article on semiconductor exports. [p. 7, footnote 16]
-- Panti, L. T. (2025) — GMA News article on online gambling transactions. [p. 47, footnote 53]
-- The Filipino Times (2025) — article on overseas Filipino population. [p. 46, footnote 51]
-- Nexus Global Payments (2026) — press release on board chair and Indonesia expansion. [p. 46, footnote 50]
+- Philippine Statistics Authority (PSA) (2023) — 2023 Geo-enabled Master Sample Frame built on the 2020 Census of Population and Housing, the sampling frame for the survey; also source of population, unemployment, poverty, income, GDP, and inflation indicators. [pp. i, iv]
+- Philippine Statistics Authority (PSA) (2024) — Statistical Survey Review and Clearance System approval no. 2024-296 for the survey design and instrument, granted 26 September 2024. [p. ii, footnote 7]
+- Philippine Survey and Research Center, Inc. (PSRC) (2025) — data collection, encoding, and processing of the fieldwork. [p. 18]
+- National Mapping and Resource Information Authority (NAMRIA) (2020) — source of the land area figure in the country overview. [p. i]
+- Commission on Filipinos Overseas (CFO) (2024) — source of the overseas Filipino worker count and cash remittance figures. [p. i]
+- Bangko Sentral ng Pilipinas (BSP) — Consumer Expectations Survey rider question, source of household-level account ownership; and the Financial Inclusion Dashboard, source of the count of cooperatives with credit operations. [pp. 1, 2]
 
 ---
 
 ```text
 CLAIM AUDIT
-1. [NOT SUPPORTED] The Philippine evidence summarized in Chapter I places these findings in context. Savings buffers are thin and expenditures track income closely (Bangko Sentral ng Pilipinas [BSP], 2026b; Financial Sector Forum [FSCC], 2024), and income level and saving behavior predict financial resilience among Filipinos (Bunyi, 2024).
+1. [PARTIALLY SUPPORTED] Chapter I states that 77 percent of Filipino adults find it difficult to raise emergency funds and to cover one month of liquidity expenses. The CFIS reports this distribution in Figure 23, Difficulty in Coming Up with Emergency Funds and Liquidity Expenses Coverage (p. 11), but the figure is embedded as a raster image and its values are absent from the text layer, so the 77 percent figure cannot be confirmed from this document. The report's own text supports the direction of the claim: financial resilience is the weakest of the four financial-health dimensions, and challenges persist in emergency preparedness and in maintaining adequate liquidity against income shocks (p. 11).
+2. [SUPPORTED] Chapter I states that 48 percent of Filipino adults cover only one month of liquidity expenses. The report establishes the liquidity constraint qualitatively at p. 11 but prints no coverage percentage in the text layer, so this figure is likewise unverified from the source document.
+```
 
 ---
 

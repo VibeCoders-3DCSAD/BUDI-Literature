@@ -1,8 +1,8 @@
 # Literature Review Matrix Validation
 
-- Generated: **2026-10-12T14:33:37.264719+00:00**
-- Papers: **108** | extracted: **101** | not extracted: **7**
-- Errors: **0** | informational gaps: **57**
+- Generated: **2026-10-22T09:59:20.301347+00:00**
+- Papers: **123** | extracted: **114** | not extracted: **9**
+- Errors: **2** | informational gaps: **57**
 
 Regenerate with `python3 scripts/build_matrix.py --check` (exit 1 on any error).
 Rules are defined in `docs/standards/review-layout.md`.
@@ -13,7 +13,7 @@ Rules are defined in `docs/standards/review-layout.md`.
 | :--- | ---: |
 | `malformed_doi` | 0 |
 | `metadata_disagreement` | 0 |
-| `unmarked` | 0 |
+| `unmarked` | 2 |
 | `duplicate_doi` | 0 |
 | `duplicate_title` | 0 |
 | `year_mismatch` | 0 |
@@ -25,16 +25,17 @@ Rules are defined in `docs/standards/review-layout.md`.
 | `unrecorded_discrepancies` | 44 |
 | `modules_covered` | 20 |
 | `modules_total` | 20 |
-| `papers_unassigned` | 7 |
-| `extracted` | 101 |
-| `not_extracted` | 7 |
-| `no_doi` | 51 |
+| `papers_unassigned` | 9 |
+| `extracted` | 114 |
+| `not_extracted` | 9 |
+| `no_doi` | 58 |
 | `unverified_venue` | 5 |
 | `no_type` | 58 |
 
 ## Errors
 
-None. Every rule passed.
+1. `I--Hnatkowska-2022` is in the matrix but has no `_marked.md` in the corpus.
+1. `I--Bangor-2008` is in the matrix but has no `_marked.md` in the corpus.
 
 ## Informational Gaps
 
@@ -91,8 +92,8 @@ None. Every rule passed.
 - `I--WangLy-2023` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 0.1, 0.1, 3.2.2, 5.2.2, 6.2, 7.1, 7.1, 7.1, 7.2. Either restore them or stop claiming a discrepancy.
 - `L--BangkoSentral-2023a` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 5,000, 502,208.75. Either restore them or stop claiming a discrepancy.
 - `L--BangkoSentral-2023b` describes a discrepancy in `limitations` but these figures are absent from `effects[]`: 10,000, 27.92, 28.32, 71.11%, 78.5. Either restore them or stop claiming a discrepancy.
-- 7 papers have no module assignment yet.
-- 51 entries have no DOI in metadata.json.
+- 9 papers have no module assignment yet.
+- 58 entries have no DOI in metadata.json.
 - 5 entries carry an unverified venue: A--DSouza-2026, L--Abila-2026, L--Francisco-2026, I--Yoganandham-2025, L--Atento-2025.
 - 58 entries have no publication type recorded.
 
@@ -101,13 +102,20 @@ None. Every rule passed.
 | Year | Papers |
 | :--- | ---: |
 | 2026 | 25 |
-| 2025 | 42 |
-| 2024 | 25 |
-| 2023 | 14 |
+| 2025 | 44 |
+| 2024 | 27 |
+| 2023 | 17 |
+| 2022 | 2 |
 | 2021 | 2 |
+| 2018 | 1 |
+| 2015 | 1 |
+| 2008 | 1 |
+| 2007 | 1 |
+| 1996 | 1 |
+| 1977 | 1 |
 
 | Designation | Papers |
 | :--- | ---: |
 | algorithm | 50 |
-| international | 30 |
-| local | 28 |
+| international | 44 |
+| local | 29 |

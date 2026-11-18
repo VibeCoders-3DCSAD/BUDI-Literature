@@ -522,29 +522,6 @@
     "L--BangkoSentral-2026a": {
       "stem": "L--BangkoSentral-2026a",
       "designation": "L",
-      "source_pdf": "Bangko Sentral ng Pilipinas, 2026b.pdf",
-      "source_pdf_sha256": "c70dbfe5e93ceaf5c54d899d890734749d900997f56328a96cdb6d1970fe1cce",
-      "page_count": 72,
-      "converted_at": "2026-09-07T09:31:47Z",
-      "title": "Q1 2026 Report on Economic and Financial Developments",
-      "authors": [
-        "Bangko Sentral ng Pilipinas"
-      ],
-      "first_author": "Bangko Sentral ng Pilipinas",
-      "year": "2026",
-      "venue": "Bangko Sentral ng Pilipinas",
-      "note": "72-page quarterly report on global and domestic economic and financial conditions. Not a journal article. SOURCE_PDF CORRECTED 2026-09-29: the sidecar pointed this stem at 'Bangko Sentral ng Pilipinas, 2026.pdf' (the Q2 consumer expectations survey); this stem belongs to the '…2026b.pdf' file.",
-      "metadata_source": "verified from PDF page 1 on 2026-09-29",
-      "venue_unverified": false,
-      "publication_type": "institutional report",
-      "notes": "Publisher is the issuing agency; institutional series, not a journal.",
-      "source_pdf_path": "literature/pdfs/Bangko Sentral ng Pilipinas, 2026b.pdf",
-      "conversion_md": "Bangko Sentral ng Pilipinas, 2026b_marked.md",
-      "conversion_md_path": "literature/mds/Bangko Sentral ng Pilipinas, 2026b_marked.md"
-    },
-    "L--BangkoSentral-2026b": {
-      "stem": "L--BangkoSentral-2026b",
-      "designation": "L",
       "source_pdf": "Bangko Sentral ng Pilipinas, 2026a.pdf",
       "source_pdf_sha256": "af94e03704ccecdc0f305447034de000a7fa15b4b3abaac88a8690c8a01886da",
       "page_count": 24,
@@ -564,6 +541,29 @@
       "source_pdf_path": "literature/pdfs/Bangko Sentral ng Pilipinas, 2026a.pdf",
       "conversion_md": "Bangko Sentral ng Pilipinas, 2026a_marked.md",
       "conversion_md_path": "literature/mds/Bangko Sentral ng Pilipinas, 2026a_marked.md"
+    },
+    "L--BangkoSentral-2026b": {
+      "stem": "L--BangkoSentral-2026b",
+      "designation": "L",
+      "source_pdf": "Bangko Sentral ng Pilipinas, 2026b.pdf",
+      "source_pdf_sha256": "c70dbfe5e93ceaf5c54d899d890734749d900997f56328a96cdb6d1970fe1cce",
+      "page_count": 72,
+      "converted_at": "2026-09-07T09:31:47Z",
+      "title": "Q1 2026 Report on Economic and Financial Developments",
+      "authors": [
+        "Bangko Sentral ng Pilipinas"
+      ],
+      "first_author": "Bangko Sentral ng Pilipinas",
+      "year": "2026",
+      "venue": "Bangko Sentral ng Pilipinas",
+      "note": "72-page quarterly report on global and domestic economic and financial conditions. Not a journal article. SOURCE_PDF CORRECTED 2026-09-29: the sidecar pointed this stem at 'Bangko Sentral ng Pilipinas, 2026.pdf' (the Q2 consumer expectations survey); this stem belongs to the '…2026b.pdf' file.",
+      "metadata_source": "verified from PDF page 1 on 2026-09-29",
+      "venue_unverified": false,
+      "publication_type": "institutional report",
+      "notes": "Publisher is the issuing agency; institutional series, not a journal.",
+      "source_pdf_path": "literature/pdfs/Bangko Sentral ng Pilipinas, 2026b.pdf",
+      "conversion_md": "Bangko Sentral ng Pilipinas, 2026b_marked.md",
+      "conversion_md_path": "literature/mds/Bangko Sentral ng Pilipinas, 2026b_marked.md"
     },
     "L--Claro-2025": {
       "stem": "L--Claro-2025",

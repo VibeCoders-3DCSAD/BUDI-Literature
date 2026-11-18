@@ -3,8 +3,8 @@ A--DSouza-2026,D'Souza,2026,algorithm,preprint,extracted,10,financial_planning; 
 I--Cumaio-2026,Cumaio,2026,international,journal-article,extracted,3,financial_planning; savings_debt_management; income_expense_management,yes,yes,yes
 I--Samli-2026,Samli,2026,international,journal-article,extracted,3,financial_planning; budgeting; savings_debt_management,no,yes,yes
 I--Yadav-2026,Yadav,2026,international,journal-article,extracted,14,financial_planning; budgeting; savings_debt_management; income_expense_management; pfm_apps_overview; pfm_apps_features; pfm_apps_problems; pfm_apps_importance; rule_based_classification; linear_programming; model_algorithm_integration; data_collection; model_development; system_development,yes,yes,yes
-L--BangkoSentral-2026a,Bangko Sentral ng Pilipinas,2026,local,report,extracted,2,savings_debt_management; income_expense_management,no,yes,yes
-L--BangkoSentral-2026b,Bangko Sentral ng Pilipinas,2026,local,report,extracted,2,budgeting; savings_debt_management,no,yes,yes
+L--BangkoSentral-2026a,Bangko Sentral ng Pilipinas,2026,local,report,extracted,2,budgeting; savings_debt_management,no,yes,yes
+L--BangkoSentral-2026b,Bangko Sentral ng Pilipinas,2026,local,report,extracted,2,savings_debt_management; income_expense_management,no,yes,yes
 L--Francisco-2026,Francisco,2026,local,journal-article,extracted,4,financial_planning; budgeting; savings_debt_management; data_collection,no,yes,yes
 L--PSA-2026,Philippine Statistics Authority,2026,local,dataset,extracted,2,data_collection; model_development,no,yes,yes
 A--DeyArefin-2025,Dey,2025,algorithm,journal-article,extracted,9,financial_planning; budgeting; savings_debt_management; income_expense_management; rule_based_classification; data_collection; model_development; system_development; model_performance_evaluation,no,yes,yes

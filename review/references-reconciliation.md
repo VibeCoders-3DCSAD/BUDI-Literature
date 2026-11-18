@@ -62,28 +62,25 @@ already settled; what is missing is the source document and therefore the note.
 Adding them would give the corpus a `model_performance_evaluation` source for
 every metric the chapters use, which is the weakest part of the current coverage.
 
-## The Bangko Sentral lettering conflict
+## The Bangko Sentral lettering — settled
 
-Three BSP entries are in both places but under different labels, so a naive match
-reports them as missing from the corpus. They are not missing; the labels differ.
+The Chapter 3 reference list is the authority, and the corpus stems already
+match it. No rename is needed.
 
-| Note | Document | Label in `Base/references/references.md` | Label in the Chapter 3 reference list |
-| :--- | :--- | :--- | :--- |
-| `L--BangkoSentral-2025` | 2025 Consumer Finance and Inclusion Survey | BSP (2026a) | BSP (2025) |
-| `L--BangkoSentral-2026b` | Consumer Expectations Survey, Q2 2026 | BSP (2026b) | BSP (2026a) |
-| `L--BangkoSentral-2026a` | Q1 2026 Report on Economic and Financial Developments | BSP (2026c) | BSP (2026b) |
+| Note | Document | Label |
+| :--- | :--- | :--- |
+| `L--BangkoSentral-2025` | 2025 Consumer Finance and Inclusion Survey | BSP (2025) |
+| `L--BangkoSentral-2026a` | Consumer Expectations Survey, Q2 2026 | BSP (2026a) |
+| `L--BangkoSentral-2026b` | Q1 2026 Report on Economic and Financial Developments | BSP (2026b) |
 
-Three schemes are in play, and the corpus stems encode a third ordering again
-(Q1 report = `2026a`, CES = `2026b`). Under APA the suffixes should follow the
-documents' publication years and, within a year, alphabetical title order, which
-puts the CES before the Q1 report and matches the chapter's list rather than
-`Base/references/references.md`.
+The suffixes follow publication year, and alphabetical title order within 2026.
+The 2025 survey takes no letter. `Base/references/references.md` and
+`Base/references/citation-map.csv` were corrected to this scheme on 2026-11-18;
+the retired labels are recorded in `Base/references/bsp-mapping.md`.
 
-This file does not pick a scheme. The corpus stems are stable ids and renaming
-them would touch every note, every quote row, and the metadata keys, so the
-labels should be settled first. Until then the builder's duplicate-year gap on
-`L--BangkoSentral-2026a` / `2026b` is expected: both carry `year: 2026` because
-the disambiguating letter lives in the stem, not the year field.
+The builder still reports a duplicate-year gap on `L--BangkoSentral-2026a` /
+`2026b`, which is expected: both carry `year: 2026` because the disambiguating
+letter lives in the stem, not the year field.
 
 ## Remaining gaps in the corpus itself
 
@@ -101,7 +98,6 @@ in the outline, so it is left to the extraction pass that reads them.
 
 ## What this means for sourcing
 
-The corpus now matches the reference list exactly except for the ten metric
-sources above and the BSP label mismatch. It does not need pruning: two papers
-have no citation in Chapters 1 to 3, and both are the BSP entries described
-above rather than genuine excess.
+The corpus matches the reference list exactly except for the ten metric sources
+above. It does not need pruning: all 53 papers map to a cited work, and all three
+BSP reports are cited in Chapters 1 and 2.

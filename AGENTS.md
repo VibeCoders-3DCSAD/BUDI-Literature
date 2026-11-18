@@ -75,7 +75,7 @@ BUDI-Literature/
 | `review/synthesis/` | **Authored** cross-paper synthesis — nothing overwrites it |
 | `scripts/build_summary_tables.py` | Builds the two Chapter 2 summary tables from `review_stream` |
 | `skills/literature-review-summarizer.md` | Extraction contract for `review/notes/{stem}.md`, including the module assignment rules |
-| `review/references-reconciliation.md` | **Authored** corpus-versus-reference-list coverage: what is cited but unsourced, and the BSP label conflict |
+| `review/references-reconciliation.md` | **Authored** corpus-versus-reference-list coverage: what is cited but unsourced, and the BSP label mapping |
 
 `docs/OUTLINE-V4-COVERAGE_OLD.md` is the retired hand-maintained coverage view; `review/data/themes.csv` now generates the same figure from live assignments. The docs under `docs/standards/batch-*-algorithm-screening.md`, `docs/standards/bucket-bucket-triage.md`, `docs/standards/migration-workflow.md`, `docs/standards/summary-format_OLD.md`, and `docs/notes-to-improve-lrm.md` are **historical records** of completed work and of the retired JSON pipeline, not current specs.
 

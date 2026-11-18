@@ -16,6 +16,11 @@ This is the **self-contained RRL corpus and matrix generator** for the BUDI thes
 
 It does **not** contain thesis documents, application code, or ML model implementations — those live in **BUDI-Base** (documentation) and **BUDI-App** / **BUDI-ML** (code) respectively.
 
+**The official paper set** is the reference list in the Drive (mirrored at
+`Base/references/references.md`) plus any paper a task file in `In/` adds. The
+corpus is scoped to that set: do not add papers outside it, and do not prune a
+paper that the list cites.
+
 **There is no scoring pipeline.** Relevance scores, tiers, embeddings, and a corpus manifest were removed on 2026-09-30. A paper's outline modules are assigned during extraction, and coverage is a count of those assignments. Do not reintroduce a scoring stage.
 
 ---

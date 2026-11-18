@@ -8,6 +8,7 @@ doi: 10.1145/3776759.3776850
 type: conference-paper
 designation: algorithm
 status: extracted
+review_stream: study
 modules: [model_algorithm_integration, model_performance_evaluation, rule_based_classification, model_development]
 module_rationale:
   model_algorithm_integration: "Sect. 3 wires sliding-window statistics, Bayesian change point detection and a weighted Isolation Forest / DBSCAN / Local Outlier Factor ensemble into one pipeline, and Fig. 1 (p. 4) draws the feature-extraction streams that feed the threshold."

@@ -12,13 +12,13 @@ and the matrix is a count of those assignments.
 
 | Directory / File | Purpose |
 | :--- | :--- |
-| `config/taxonomy.yaml` | **The single source of truth** for the module namespace: 20 modules across the 5 Topical Outline V4 sections |
+| `config/taxonomy.yaml` | **The single source of truth** for the module namespace: 19 modules across the 5 Topical Outline V4 sections |
 | `literature/mds/` | The curated corpus, flat, one `{Author, Year}_marked.md` conversion per paper, plus `metadata.json`, the page-1 verified bibliographic authority |
 | `review/notes/` | **Authored** one extraction note per paper, `review/notes/{stem}.md` — the source of truth for everything except the bibliographic block |
-| `review/` | **Generated** matrix, CSV tables, and `validation.md`; `review/notes/` and `review/synthesis/` are authored |
-| `bucket/` | Raw candidate PDFs for intake (repo root) |
+| `review/` | **Generated** matrix, CSV tables, `summary/` tables, and `validation.md`; `review/notes/` and `review/synthesis/` are authored |
+| `bucket/` | Intake staging note (repo root); the staged payload was cleared on 2026-10-31 |
 | `literature/pdfs/` | Source PDFs, named by author and year (gitignored; use `scripts/fetch_pdfs.py`) |
-| `scripts/` | Fetch, convert, and matrix generation |
+| `scripts/` | Fetch, convert, matrix generation, and summary-table generation |
 | `skills/` | Agent-facing extraction contract for the note at `review/notes/{stem}.md` |
 | `docs/standards/` | Naming conventions, note schema, review layout, workflow documentation |
 
@@ -138,7 +138,9 @@ retagged.
 
 | File | Purpose |
 | :--- | :--- |
-| `review/literature-review-matrix.md` | Generated 15-column index over the corpus |
+| `review/literature-review-matrix.md` | Generated 15-column index over the active corpus |
+| `review/summary/related-literature.md` | Generated Chapter 2 table of contextual works |
+| `review/summary/related-studies.md` | Generated Chapter 2 table of primary studies |
 | `review/data/papers.csv` | The same 15 columns plus a controlled `tags` column |
 | `review/data/screening.csv` | Intake triage: status, module count, DOI and venue completeness |
 | `review/data/quotes.csv` | One row per extracted quotation |

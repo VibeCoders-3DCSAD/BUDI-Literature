@@ -8,6 +8,7 @@ doi: Not reported
 type: journal article
 designation: international
 status: extracted
+review_stream: literature
 modules: [sarima]
 module_rationale:
   sarima: "The paper derives minimum sample-size requirements for seasonal forecasting models (including seasonal ARIMA and related seasonal approaches), showing the requirements depend on model complexity and the amount of random variation in the data."

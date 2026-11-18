@@ -8,6 +8,7 @@ doi: 10.14744/sigma.2025.00119
 type: journal-article
 designation: algorithm
 status: extracted
+review_stream: study
 modules: [pfm_apps_overview, pfm_apps_features, pfm_apps_problems, budgeting, income_expense_management, model_algorithm_integration, model_development, system_development, model_performance_evaluation]
 module_rationale:
   pfm_apps_overview: "Sec. 4 Web Application Development and Application Description (pp. 6-9) specify what the Expense Tracker Management System is — a Django/PostgreSQL web application with expense and income entry, summaries, categorization and search."

@@ -8,6 +8,7 @@ doi: 10.26483/ijarcs.v16i3.7256
 type: journal-article
 designation: local
 status: extracted
+review_stream: study
 modules: [budgeting, income_expense_management, model_algorithm_integration, model_performance_evaluation, development_methodology, data_collection, system_development, software_quality_evaluation]
 module_rationale:
   budgeting: "Sec. I and Sec. V.B develop the Budget Allocation Module for automated MOOE budget creation and next-year allocation, and Fig. 6/Fig. 10 show budget entry and actual-versus-predicted allocation per category."

@@ -8,6 +8,7 @@ doi: 10.14488/BJOPM.1796.2023
 type: journal article
 designation: international
 status: extracted
+review_stream: literature
 modules: [development_methodology]
 module_rationale:
   development_methodology: "Empirically examines project management constraints in agile software development using multigroup analysis to compare Scrum and Kanban approaches."

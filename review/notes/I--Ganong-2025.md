@@ -8,6 +8,7 @@ doi: Not reported
 
 designation: international
 status: extracted
+review_stream: study
 modules: [income_expense_management, financial_planning, budgeting, savings_debt_management]
 module_rationale:
   income_expense_management: "The paper's central object is month-to-month earnings (inflow) volatility and its pass-through to spending (outflow) volatility, documented across Sections 3–7."

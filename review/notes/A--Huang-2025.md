@@ -8,11 +8,12 @@ doi: 10.4018/JGIM.395852
 type: journal-article
 designation: algorithm
 status: extracted
-modules: [model_algorithm_integration, model_performance_evaluation, system_performance_evaluation]
+review_stream: study
+modules: [model_algorithm_integration, model_performance_evaluation, software_quality_evaluation]
 module_rationale:
   model_algorithm_integration: "Sect. 3.1 (p. 5) wires four components into one streaming detector — sliding-window segmentation (Sec. 3.2), a temporal-attention encoder (Sec. 3.3), Isolation Forest scoring (Sec. 3.4) and a dynamic threshold calibration loop (Sec. 3.5) — and Sec. 3.6 (p. 9) runs the loop prequentially so scores, attention cues and the decision boundary advance together."
   model_performance_evaluation: "Sec. 5 (pp. 14-19) reports eight experiments over five payment datasets and six baselines — Table 2 (p. 15) precision/recall/F1/AUC/latency on IEEE-CIS, component ablations in Tables 3-4 (p. 16), concept-drift response in Table 5 (p. 17), window analysis in Table 6 (p. 18), minority-class detection in Table 7 (p. 19) and cross-dataset transfer in Table 8 (p. 19)."
-  system_performance_evaluation: "Sec. 4.2 (p. 11) evaluates the operating point against a fixed alert budget and reviewer capacity and reports tail latency, and Sec. 6 (p. 21) reports that stabilised alert volumes cut manual review time by around 12% in pilot replay, with overhead under 8% CPU and about 25-30k transactions per second."
+  software_quality_evaluation: "Sec. 4.2 (p. 11) evaluates the operating point against a fixed alert budget and reviewer capacity and reports tail latency, and Sec. 6 (p. 21) reports that stabilised alert volumes cut manual review time by around 12% in pilot replay, with overhead under 8% CPU and about 25-30k transactions per second."
 ---
 
 # Dynamic Calibration of Decision Thresholds for Financial Anomaly Detection: Verification With Payment Platform Information and Data
@@ -253,22 +254,22 @@ Global losses attributed to payment fraud are placed at more than USD 45 billion
 | :--- | :--- | :--- |
 | "The method monitors the evolving distribution of IF scores in streaming mode and updates the decision boundary online, while a lightweight temporal-attention module encodes short-range dependencies across consecutive transactions." | Abstract, p. 1 | model_algorithm_integration |
 | "A dynamic calibration step updates the decision boundary online using recent score statistics and delayed outcomes, keeping alert rates stable while tracking distribution change" | Sec. 1 Introduction, p. 2 | model_algorithm_integration |
-| "Experience with IF in production exposes a weak spot: decisions usually depend on a fixed score cutoff set during an initial calibration or chosen heuristically, then left in place." | Sec. 1 Introduction, p. 2 | system_performance_evaluation |
-| "A static line can flood reviewers during benign surges or miss gradual shifts that matter; both outcomes degrade performance." | Sec. 1 Introduction, p. 2 | system_performance_evaluation |
-| "In financial settings the asymmetry is costly—missed fraud yields direct loss, while excessive alerts erode reviewer trust and inflate operational budgets." | Sec. 2 Related Work, p. 4 | system_performance_evaluation |
+| "Experience with IF in production exposes a weak spot: decisions usually depend on a fixed score cutoff set during an initial calibration or chosen heuristically, then left in place." | Sec. 1 Introduction, p. 2 | software_quality_evaluation |
+| "A static line can flood reviewers during benign surges or miss gradual shifts that matter; both outcomes degrade performance." | Sec. 1 Introduction, p. 2 | software_quality_evaluation |
+| "In financial settings the asymmetry is costly—missed fraud yields direct loss, while excessive alerts erode reviewer trust and inflate operational budgets." | Sec. 2 Related Work, p. 4 | software_quality_evaluation |
 | "Calibrating decision thresholds remains underexplored relative to model design in anomaly detection." | Sec. 2 Related Work, p. 3 | model_algorithm_integration |
 | "A dynamic threshold calibration mechanism is proposed, enabling IF to operate adaptively in non-stationary data environments without external supervision" | Sec. 1 Contributions, p. 3 | model_algorithm_integration |
 | "This rule smooths threshold changes to prevent instability due to local score fluctuations." | Sec. 3.5.1 Adaptive Threshold Update Rule, p. 7 | model_algorithm_integration |
 | "This formulation penalizes overly aggressive thresholds (high FP) and overly conservative thresholds (high FN), encouraging balance." | Sec. 3.5.2 Feedback-Informed Calibration, p. 8 | model_performance_evaluation |
 | "Quantile selection was ablated across 90–99 percentiles. Below ~93% false positives surged; above ~97% recall fell sharply." | Sec. 3.6 Overall Algorithm Description, p. 9 | model_performance_evaluation |
 | "Because payment streams are heavily imbalanced, accuracy is not informative." | Sec. 4.2 Evaluation Metrics, p. 11 | model_performance_evaluation |
-| "Since a single number hides local behavior, we also examine the precision–recall neighborhood around the operating point chosen under a fixed alert budget so the analysis remains tied to reviewer capacity and loss-prevention costs." | Sec. 4.2 Evaluation Metrics, p. 11 | system_performance_evaluation |
-| "In our tests, even under peak load, the longest delays stayed within about 1.4 times the average." | Sec. 4.2 Evaluation Metrics, p. 11 | system_performance_evaluation |
+| "Since a single number hides local behavior, we also examine the precision–recall neighborhood around the operating point chosen under a fixed alert budget so the analysis remains tied to reviewer capacity and loss-prevention costs." | Sec. 4.2 Evaluation Metrics, p. 11 | software_quality_evaluation |
+| "In our tests, even under peak load, the longest delays stayed within about 1.4 times the average." | Sec. 4.2 Evaluation Metrics, p. 11 | software_quality_evaluation |
 | "Removing the dynamic threshold module leads to significant performance degradation across all metrics, particularly recall." | Sec. 5 Experiment 2, p. 16 | model_performance_evaluation |
 | "That said, this fallback mode isn't perfect: over time, recall tends to slide a bit." | Sec. 6 Discussion, p. 21 | model_performance_evaluation |
 | "The much smaller drop for TA-IFDC (−0.012) suggests that its adaptive thresholding and feedback updates helped it maintain performance when the data distribution shifted." | Sec. 5 Experiment 4, p. 17 | model_performance_evaluation |
 | "its efficacy may still depend on the availability of transaction timestamps and partial temporal continuity" | Sec. 6 Discussion, p. 21 | model_algorithm_integration |
-| "By stabilizing alert volumes, TA-IFDC reduced manual review time by around 12% in pilot replay." | Sec. 6 Discussion, p. 21 | system_performance_evaluation |
+| "By stabilizing alert volumes, TA-IFDC reduced manual review time by around 12% in pilot replay." | Sec. 6 Discussion, p. 21 | software_quality_evaluation |
 | "Continuous, time-stamped streams are assumed; legacy stacks with coarse or asynchronous logging may need ordering and clock-alignment shims." | Sec. 7 Conclusion, p. 22 | model_algorithm_integration |
 | "The current calibration loop leans on model-derived agreement signals; bringing in external feedback—analyst decisions, customer reports, inter-bank intelligence—should help under extreme imbalance, though privacy and integration constraints must be handled." | Sec. 7 Conclusion, p. 22 | model_algorithm_integration |
 

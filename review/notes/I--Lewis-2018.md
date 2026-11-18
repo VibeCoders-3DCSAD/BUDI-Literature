@@ -8,6 +8,7 @@ doi: 10.1080/10447318.2018.1455307
 type: journal article
 designation: international
 status: extracted
+review_stream: literature
 modules: [software_quality_evaluation]
 module_rationale:
   software_quality_evaluation: "Reviews the history, psychometrics, and interpretation of the System Usability Scale (SUS) and discusses its use as a standardized usability metric."

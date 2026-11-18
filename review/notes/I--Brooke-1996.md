@@ -8,6 +8,7 @@ doi: Not reported
 type: book chapter
 designation: international
 status: extracted
+review_stream: literature
 modules: [software_quality_evaluation]
 module_rationale:
   software_quality_evaluation: "Introduces the System Usability Scale (SUS), a 10-item Likert scale providing a quick, reliable global measure of system usability."

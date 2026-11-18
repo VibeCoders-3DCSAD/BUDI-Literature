@@ -8,6 +8,7 @@ doi: Not reported
 
 designation: local
 status: extracted
+review_stream: study
 modules: [financial_planning, budgeting, savings_debt_management, data_collection]
 module_rationale:
   financial_planning: "The study measures planning behaviours directly — 'I plan my budget to achieve my financial objective' (M = 4.29) and 'I look ahead and plan for the future' (M = 4.30) — under the STOP method (Table 6, p. 119)."
@@ -15,6 +16,8 @@ module_rationale:
   savings_debt_management: "The paper's dependent constructs are the STOP, PAY and CAUTION debt-management strategies, with repayment discipline and emergency saving measured at Tables 6-8, pp. 119-120."
   data_collection: "The paper specifies its instrument and sampling — a structured questionnaire pilot-tested on 20 respondents with Cronbach's alpha per construct and IOC = 0.92, administered to 100 wage earners under simple random sampling (Research Instrument, pp. 115-116)."
 ---
+
+> Citation note: the paper lists six authors — Esperanza, D. N., Bithay, L. L., Jesus, J. B., Ople-Alviola, C., Sumilhig, J. M., and Basilisco, G. L. Cite as Esperanza et al. (2025).
 
 ## Summary
 

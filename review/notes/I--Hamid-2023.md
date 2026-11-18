@@ -8,6 +8,7 @@ doi: 10.1007/s40847-023-00239-y
 type: journal article
 designation: international
 status: extracted
+review_stream: study
 modules: [savings_debt_management, financial_planning]
 module_rationale:
   savings_debt_management: "the paper measures and models the 'financial cushion' component (Resil 3, ability to withstand financial shock) and re-estimates resilience using five savings-ratio categories (Sect. Data and methodology, p. 483; Table 2, p. 485; Table 5, pp. 494–495)"

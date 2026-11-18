@@ -8,6 +8,7 @@ doi: null
 type: institutional report
 designation: local
 status: extracted
+review_stream: study
 modules: [savings_debt_management, income_expense_management]
 module_rationale:
   savings_debt_management: "Sect. 3.2, 'Household Financial Buffers and Debt Obligations', reports the share of households able to save (28.7 percent in Q4 2024), gross savings of one percent of income in 2023, rising household debt, and weak cash buffers (pp. 47-50)."

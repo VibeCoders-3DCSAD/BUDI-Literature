@@ -8,6 +8,7 @@ doi: "Not reported"
 type: journal-article
 designation: international
 status: extracted
+review_stream: study
 modules: [financial_planning, budgeting, savings_debt_management]
 module_rationale:
   financial_planning: "Sec. 1 (pp. 115-117) reviews planning competency as a determinant of debt outcomes — Jumady et al. (2024) on the effect of financial planning on consumer debt management, adjusting budgets after income shocks, and the closing prescription that interventions combine foundational education with skill-building exercises — while Sec. 6.3 (p. 123) reports financial decision-making and financial education as reinforcing nodes."

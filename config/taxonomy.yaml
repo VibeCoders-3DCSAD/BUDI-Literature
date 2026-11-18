@@ -1,43 +1,28 @@
 # Literature review taxonomy for BUDGIE.
 #
-# THIS FILE IS THE SINGLE SOURCE OF TRUTH for what a corpus paper can be
+# This file is the single source of truth for what a corpus paper can be
 # "about" in the literature review matrix. It is a controlled vocabulary, not a
 # scoring configuration: a paper is assigned to zero or more modules by whoever
-# reads it during extraction, and coverage is tallied from those assignments.
-# There are no weights, thresholds, or similarity scores.
+# reads it, and coverage is tallied from those assignments.
 #
 # ## Provenance
 #
-# Derived 2026-09-30 from the thesis outline and chapter drafts, then frozen
-# here so this repository does not depend on them at run time:
+# Revised 2026-10-31 after the October 27, 2026 proposal defense. The revision
+# follows the panel's model-versus-algorithm distinction and the Chapter 1
+# decision that the budget allocator is a continuous Linear Programming model,
+# not a Mixed-Integer Linear Programming model.
 #
-#   - PRIMARY: Topical Outline V4, `GROUP4 - TOPICAL OUTLINE - V4 - 09.26.26`.
-#     Five top-level sections. This is the target structure.
-#   - LEAF DETAIL: Chapter 2 V3, `GROUP4 - CHAPTER 2 - V3 - 09.26.2026`, for the
-#     sub-leaves and metric lists beneath each node.
-#   - SCOPE: Chapter 1 (current) and Technical Specification V1, 09.24.2026,
-#     lightly, for the definitions of the four BUDGIE algorithms.
+# The previous vocabulary had 20 modules. This version has 19:
 #
-# Chapter 2 is being revised and compressed to fit Outline V4, so where the two
-# disagree the outline wins and Chapter 2 supplies only finer detail. Chapter 2
-# V3 had six top-level sections; those compress into the five below, with its
-# "BUDGIE Application" section folding into the module leaves of sections 1, 3
-# and 5 rather than surviving as a section of its own.
-#
-# Those drafts live in a superseded mirror repository and are not a durable
-# reference. If the outline is revised, update this file and record the new
-# provenance here; nothing else needs to change.
-#
-# ## Why this replaced the previous 22-module vocabulary
-#
-# The previous vocabulary was keyed to a different axis — generic feature
-# buckets such as `ml_algorithms`, `financial_literacy`, `privacy_security` and
-# `synthetic_data_mlops`. It had no module at all for three of BUDGIE's four
-# algorithms: `mixed_integer_linear_programming`, `interquartile_range` and
-# `rule_based_classification` were absent, so literature on three quarters of
-# the thesis's technical contribution had nowhere to be recorded.
+#   - `mixed_integer_linear_programming` is renamed `linear_programming`.
+#   - `system_performance_evaluation` is removed. Papers that measured system
+#     operation were reassigned to `model_performance_evaluation` when they
+#     reported latency or throughput, and to `software_quality_evaluation` when
+#     they reported SUS, ISO/IEC 25010, or usability outcomes.
+#   - The three algorithms the panel asked to separate are explicit:
+#     `sarima` is the forecasting model; `rule_based_classification`,
+#     `linear_programming`, and `interquartile_range` are supporting algorithms.
 
-# A module is a node the review must cover. `section` groups related modules.
 sections:
   - id: pfm
     name: Personal Financial Management
@@ -154,14 +139,16 @@ modules:
     keywords: [rule-based classification, rule-based algorithm, rule-based system, if-then rules, decision list, profile classification]
     outline_leaves: [Rule-Based Classification, Rule-Based Classification in Savings and Debt Profile Classification, Rule-Based Classification Performance Metrics]
 
-  - id: mixed_integer_linear_programming
+  - id: linear_programming
     section: algorithms
-    name: Mixed-Integer Linear Programming (MILP)
+    name: Linear Programming
     definition: >-
-      MILP as an optimisation method for allocating constrained resources with integer
-      variables, applied to budget generation, and its evaluation.
-    keywords: [mixed integer linear programming, MILP, linear programming, LP, optimisation, constrained allocation, resource allocation, knapsack, branch and bound, integer programming]
-    outline_leaves: [Mixed-Integer Linear Programming (MILP), Overview of Mixed-Integer Linear Programming, Mixed-Integer Linear Programming in Budget Recommendation, Mixed-Integer Linear Programming Performance Metrics]
+      Continuous Linear Programming as an optimisation method for allocating a
+      constrained budget across competing needs, applied to monthly plan
+      generation, and its evaluation. The model has continuous allocation
+      variables and does not require integer variables.
+    keywords: [linear programming, LP, continuous optimisation, constrained allocation, resource allocation, budget allocation]
+    outline_leaves: [Linear Programming, Overview of Linear Programming, Linear Programming in Budget Recommendation, Linear Programming Performance Metrics]
 
   - id: interquartile_range
     section: algorithms
@@ -233,32 +220,15 @@ modules:
     name: Model Performance Evaluation
     definition: >-
       Measuring how well each of the four models performs, using the metrics
-      Chapter 1 names for each algorithm.
-    keywords: [model performance, performance evaluation, MAE, SMAPE, MDA, RMSE, accuracy, precision, recall, F1, rule coverage]
+      Chapter 1 names for each algorithm, and the operational measures that
+      belong to those runs: latency, throughput, and alert volume.
+    keywords: [model performance, performance evaluation, MAE, SMAPE, MDA, RMSE, accuracy, precision, recall, F1, rule coverage, latency]
     outline_leaves: [Model Performance Evaluation, Model Performance Evaluation]
 
-  - id: system_performance_evaluation
-    section: evaluation
-    name: System Performance Evaluation
-    definition: >-
-      Measuring the deployed system rather than the models: whether the plan it
-      produces is followed and whether alerts are useful.
-    keywords: [system performance, system evaluation metrics, plan adherence, savings progress, debt progress, alert frequency]
-    outline_leaves: [System Performance Evaluation]
-    # The outline requires these metrics to be derived from the topics above
-    # rather than asserted: "Must derive system performance metrics from
-    # abovementioned topics. If none can be identified, the provided system
-    # performance metrics below must be forcefully derived from the abovementioned
-    # topics." Chapter 2 V3 answers that derivation with the five measures below.
-    derived_metrics: [savings_rate, savings_progress, alert_frequency, debt_progress, plan_adherence]
-
-# Metric leaves the outline requires literature backing for, grouped by the
-# module that owns them. These are not modules: a paper is not "about" a metric.
-# They exist so the review can show whether each named metric has support, and
-# so an extraction records which metric a reported effect actually measures.
 metric_leaves:
   sarima: [mae, smape, mda, rmse]
   rule_based_classification: [rule_coverage, boundary_value_analysis, equivalence_partitioning, expected_output_agreement, test_case_pass_rate]
-  mixed_integer_linear_programming: [constraint_satisfaction_rate, budget_utilization_rate, deviation_from_user_preferences]
+  linear_programming: [constraint_satisfaction_rate, essential_coverage, idle_funds_rate, priority_validation_rate]
   interquartile_range: [accuracy, precision, recall, f1_score]
-  system_performance_evaluation: [savings_rate, savings_progress, alert_frequency, debt_progress, plan_adherence]
+  software_quality_evaluation: [sus_score, iso_25010_quality]
+  model_performance_evaluation: [mae, smape, mda, rmse, accuracy, precision, recall, f1_score, latency]

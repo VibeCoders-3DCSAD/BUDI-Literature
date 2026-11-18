@@ -8,6 +8,7 @@ doi: 10.3390/jrfm19060425
 type: journal-article
 designation: international
 status: extracted
+review_stream: study
 modules: [financial_planning, savings_debt_management, income_expense_management]
 module_rationale:
   financial_planning: "Sect. 1 (p. 2) frames the reviewed decisions as how individuals obtain resources to meet present needs and future financial goals, Sect. 3 (p. 7) gives rational allocation of resources as the aim of the research it synthesises, and Sect. 2.1 (p. 4) lists budgeting, purchase management, saving for emergencies and retirement, and debt management as the practices that constitute financial behaviour."

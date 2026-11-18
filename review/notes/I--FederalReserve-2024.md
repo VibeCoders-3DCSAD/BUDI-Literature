@@ -8,6 +8,7 @@ doi: "Not reported"
 type: report
 designation: international
 status: extracted
+review_stream: study
 modules: [savings_debt_management, financial_planning]
 module_rationale:
   savings_debt_management: "The SHED report quantifies household financial buffers and fragility: 63% of adults could cover a $400 emergency expense with cash or its equivalent, 18% could handle at most under $100 of an emergency using only savings, and 68% could afford an expense of at least $500 from current savings — direct evidence for why household buffers are thin."

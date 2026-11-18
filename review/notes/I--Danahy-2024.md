@@ -8,6 +8,7 @@ doi: 10.1111/joca.12581
 
 designation: international
 status: extracted
+review_stream: study
 modules: [savings_debt_management]
 module_rationale:
   savings_debt_management: "the paper's two focal predictors are student loan debt amount and lack of emergency savings tested against financial stress in the full sample and a borrower-only subsample (Abstract, p. 692; Sect. 2.1, p. 694; Table 3, p. 699; Table 4, p. 701)"

@@ -8,6 +8,7 @@ doi: Not reported
 
 designation: international
 status: extracted
+review_stream: literature
 modules: [financial_planning, budgeting, savings_debt_management, income_expense_management]
 module_rationale:
   financial_planning: "The stated objective is to emphasize 'the pivotal role of financial planning in securing long-term financial stability' (Objective of the article, p. 21), and the conclusion integrates budgeting, savings, investing and debt management under financial planning (Conclusion, p. 31)."

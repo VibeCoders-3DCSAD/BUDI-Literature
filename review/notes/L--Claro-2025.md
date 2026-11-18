@@ -8,6 +8,7 @@ doi: "Not reported"
 type: journal-article
 designation: local
 status: extracted
+review_stream: study
 modules: [savings_debt_management]
 module_rationale:
   savings_debt_management: "The Statement of the Problem and Review of Related Literature define financial well-being through financial preparedness (emergency savings buffers), beliefs of credit limits and risky indebtedness behaviour, so saving buffers and over-borrowing are the paper's measured outcomes; its regressors are financial-inclusion dimensions — accessibility, availability, affordability and usage — and financial literacy, which this taxonomy does not cover."

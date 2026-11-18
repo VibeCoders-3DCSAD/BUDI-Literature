@@ -34,6 +34,7 @@ doi: 10.1007/s44196-025-00776-w
 type: journal-article
 designation: algorithm
 status: extracted
+review_stream: study
 modules: [rule_based_classification, model_performance_evaluation]
 module_rationale:
   rule_based_classification: "Sect. 3 defines a five-branch threshold rule ..."
@@ -108,6 +109,7 @@ exact filename for a stem is the `conversion_md` field in
 | :--- | :--- |
 | `paper_id` | Required. Must equal the file's stem. |
 | `status` | Required. `extracted` or `not extracted`. |
+| `review_stream` | Required for extracted notes. `study` for primary data, a model, or a system evaluation; `literature` for standards, definitions, methods, or context. |
 | `modules[]` | Required when `status: extracted`. Ids copied verbatim from `config/taxonomy.yaml`. May be `[]` only with a stated reason. |
 | `module_rationale` | Required when `status: extracted`. Exactly one clause per id in `modules[]`, no id absent from `modules[]`. |
 | `type` | Optional. A controlled label; `metadata.json` `publication_type` takes precedence. |

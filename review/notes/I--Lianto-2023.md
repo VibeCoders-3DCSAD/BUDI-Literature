@@ -8,6 +8,7 @@ doi: 10.24002/konstelasi.v3i1.6620
 type: journal article
 designation: international
 status: extracted
+review_stream: literature
 modules: [software_quality_evaluation]
 module_rationale:
   software_quality_evaluation: "Evaluates a VR application using four characteristics of ISO/IEC 25010 (2011): functional suitability, performance efficiency, usability, and portability."

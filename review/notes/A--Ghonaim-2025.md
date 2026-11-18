@@ -8,6 +8,7 @@ doi: "Not reported"
 type: journal-article
 designation: algorithm
 status: extracted
+review_stream: study
 modules: [pfm_apps_overview, pfm_apps_features, pfm_apps_problems, budgeting, income_expense_management, savings_debt_management, model_development, data_collection, model_algorithm_integration, system_development, model_performance_evaluation, software_quality_evaluation]
 module_rationale:
   pfm_apps_overview: "Sec. 2.3 and 2.4 review 25 named consumer budgeting applications - Wafir, Wise Budget, Wallet, Amwaly, Masareef, Money Lover, Money Manager, GoodBudget, Moneon, Spendee and others - by platform, language and capability, and Table 1 compares them against the proposed app."

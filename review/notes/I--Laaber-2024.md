@@ -8,6 +8,7 @@ doi: 10.48550/arXiv.2412.11731
 type: preprint
 designation: algorithm
 status: extracted
+review_stream: literature
 modules: [rule_based_classification]
 module_rationale:
   rule_based_classification: "Evaluates automated testing of a medical rule engine (GURI) that executes rule-based logic; the study uses expected-output oracles for system-level testing."

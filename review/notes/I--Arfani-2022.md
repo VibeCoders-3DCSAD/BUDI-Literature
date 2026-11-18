@@ -8,6 +8,7 @@ doi: Not reported
 type: thesis or dissertation
 designation: international
 status: extracted
+review_stream: literature
 modules: [rule_based_classification]
 module_rationale:
   rule_based_classification: "Applies black box testing techniques including equivalence partitioning and boundary value analysis to test a student attendance (presensi) application."

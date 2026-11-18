@@ -8,6 +8,7 @@ doi: null
 type: working paper
 designation: local
 status: extracted
+review_stream: study
 modules: [data_collection, savings_debt_management, financial_planning, rule_based_classification, model_performance_evaluation]
 module_rationale:
   data_collection: "Section III (Data) documents the World Bank Global Findex instrument and its fielding — 1,000 computer-assisted face-to-face respondents in 2017 and 1,000 phone-based respondents in 2021 — plus the preprocessing that trims each round to 980 and 992 observations."

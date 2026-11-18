@@ -8,6 +8,7 @@ doi: "Not reported"
 type: journal-article
 designation: local
 status: extracted
+review_stream: study
 modules: [financial_planning, budgeting, savings_debt_management, data_collection]
 module_rationale:
   financial_planning: "Sec. 3.3 names inadequate budgeting, saving and debt management as the most prominent cause of recurring salary loans, and the six recommendations are a workplace financial-literacy program, counselling, payroll savings and cooperative reform (pp. 721-724)."

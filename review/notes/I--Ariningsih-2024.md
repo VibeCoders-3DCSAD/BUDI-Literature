@@ -8,6 +8,7 @@ doi: 10.24076/intechnojournal.2024v6i2.1870
 type: journal article
 designation: international
 status: extracted
+review_stream: literature
 modules: [software_quality_evaluation]
 module_rationale:
   software_quality_evaluation: "The study evaluates a ticketing management system using ISO/IEC 25010:2023 product quality characteristics and weights them with the Analytic Hierarchy Process (AHP)."

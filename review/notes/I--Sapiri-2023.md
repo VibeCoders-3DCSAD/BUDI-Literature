@@ -8,6 +8,7 @@ doi: Not reported
 
 designation: international
 status: extracted
+review_stream: study
 modules: [financial_planning, savings_debt_management]
 module_rationale:
   financial_planning: "The paper's dependent variable is investment decision behavior, which it frames as an allocation of income for future return (Sect. 1, p. 47); financial attitude is defined as the application of financial principles to create and maintain value through making the right decisions (Sect. 2.2, p. 48)."

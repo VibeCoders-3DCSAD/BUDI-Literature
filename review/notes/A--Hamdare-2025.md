@@ -1,12 +1,13 @@
 ---
 paper_id: A--Hamdare-2025
-first_author: Hamdare
+first_author: Agrawal
 year: 2025
 title: "Analyzing and Rewarding Credit Card Spending Habits in India: A Machine Learning Approach"
 venue: "International Journal of Computational Intelligence Systems, 18, 165"
 doi: Not reported
 designation: algorithm
 status: extracted
+review_stream: study
 modules: [data_collection, income_expense_management, model_development, model_algorithm_integration, model_performance_evaluation]
 module_rationale:
   data_collection: "Sect. 3.1–3.2 describe the public Kaggle 'Analyzing Credit Card Spending Habits in India' dataset and the Faker-generated synthetic replacement assembled from GitHub repositories and LLM-suggested attributes (pp. 5–8)."
@@ -17,6 +18,8 @@ module_rationale:
 ---
 
 # A--Hamdare-2025 — Analyzing and Rewarding Credit Card Spending Habits in India
+
+> Citation note: the source paper lists Renuka Agrawal first, then Ankit Khanna, then S. Hamdare. Cite as Agrawal et al. (2025). The internal stem keeps the original filename for compatibility.
 
 ## Summary
 

@@ -8,6 +8,7 @@ doi: "Not reported"
 type: institutional report
 designation: local
 status: extracted
+review_stream: study
 modules: [savings_debt_management, budgeting]
 module_rationale:
   savings_debt_management: "The report tracks households' savings sentiment, savings intention, and the percentage of income allocated to savings across income groups, documenting current-quarter saving behavior (Table 10/Savings sentiment)."

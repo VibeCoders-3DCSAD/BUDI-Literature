@@ -8,6 +8,7 @@ doi: "Not reported"
 type: journal-article
 designation: local
 status: extracted
+review_stream: study
 modules: [model_performance_evaluation]
 module_rationale:
   model_performance_evaluation: "Sect. Results and Discussion, Tables 2 and 3 (pp. 4-5) benchmark six classifiers and eleven tuned variants on accuracy, true positive rate, false positive rate, precision, recall, F-measure and kappa under 10-fold cross-validation (p. 3)."

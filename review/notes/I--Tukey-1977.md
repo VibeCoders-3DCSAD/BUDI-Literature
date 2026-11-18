@@ -8,6 +8,7 @@ doi: Not reported
 type: book
 designation: international
 status: extracted
+review_stream: literature
 modules: [interquartile_range]
 module_rationale:
   interquartile_range: "Introduces exploratory data analysis methods including hinges, the five-number summary, and the box-and-whisker plot, providing the robust definition of quartile-like hinges used for spread measures such as the interquartile range."

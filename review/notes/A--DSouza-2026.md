@@ -6,7 +6,8 @@ title: "A Comprehensive Review of Machine Learning Techniques for Intelligent Pe
 venue: "P.E.S Modern College of Engineering, Pune, India"
 designation: algorithm
 status: extracted
-modules: [financial_planning, budgeting, pfm_apps_overview, pfm_apps_features, pfm_apps_problems, sarima, rule_based_classification, model_algorithm_integration, model_performance_evaluation, system_performance_evaluation]
+review_stream: literature
+modules: [financial_planning, budgeting, pfm_apps_overview, pfm_apps_features, pfm_apps_problems, sarima, rule_based_classification, model_algorithm_integration, model_performance_evaluation, software_quality_evaluation]
 module_rationale:
   financial_planning: "The review's scope is planning within PFMS, e.g. 'planning for future financial needs' (Section 1, p. 2) and 'support adaptive budget management' (Section 2.2, p. 3)."
   budgeting: "Section 3 is devoted entirely to budgeting techniques in personal finance, covering rule-based, EWMA, clustering, and LSTM approaches (Section 3, pp. 4-7)."
@@ -17,7 +18,7 @@ module_rationale:
   rule_based_classification: "Section 3.1 and Section 5.2 describe deterministic rule-based budgeting and detection mechanisms (Sections 3.1 and 5.2, pp. 4 and 11)."
   model_algorithm_integration: "Section 8 identifies the absence of unified system-level integration as the central gap, calling for frameworks that integrate budgeting, forecasting, anomaly detection, and collaborative finance (Section 8, p. 16)."
   model_performance_evaluation: "Section 7 provides a comparative analysis of budgeting, forecasting, and anomaly-detection techniques across interpretability, scalability, adaptability, and data requirements (Section 7, pp. 14-16)."
-  system_performance_evaluation: "Section 4.5 discusses deployment constraints for mobile and web-based PFMS, including real-time responsiveness and resource limitations (Section 4.5, p. 11)."
+  software_quality_evaluation: "Section 4.5 discusses deployment constraints for mobile and web-based PFMS, including real-time responsiveness and resource limitations (Section 4.5, p. 11)."
 ---
 
 ## Summary

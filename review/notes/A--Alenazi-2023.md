@@ -8,6 +8,7 @@ doi: 10.14236/ewic/BCSHCI2023.1
 type: conference-paper
 designation: algorithm
 status: extracted
+review_stream: study
 modules: [pfm_apps_overview, pfm_apps_features, pfm_apps_problems, income_expense_management, budgeting]
 module_rationale:
   pfm_apps_overview: "Abstract, p. 1 and Sec. 3, pp. 2-3 define the reviewed artefact class and its selection procedure — 45 top-rated apps retained from 1335 identified on the UK Google Play Store and Apple Store by the PRISMA-style funnel in Fig. 1, p. 3."

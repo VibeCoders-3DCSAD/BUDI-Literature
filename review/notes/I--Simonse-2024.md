@@ -8,6 +8,7 @@ doi: 10.1016/j.jbef.2024.100933
 type: journal article
 designation: international
 status: extracted
+review_stream: study
 modules: [savings_debt_management, income_expense_management]
 module_rationale:
   savings_debt_management: "Sect. 3.3 (Independent Variables) operationalizes buffer savings and the number of debts, and Sect. 4.2 and Sect. 5 report that insufficient buffer savings and more debts predicted financial stress while debt amount did not (Sect. 3.3, p. 6; Table 4, p. 9)."

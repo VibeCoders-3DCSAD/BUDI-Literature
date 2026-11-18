@@ -8,6 +8,7 @@ doi: "Not reported"
 type: journal-article
 designation: algorithm
 status: extracted
+review_stream: study
 modules: [financial_planning, budgeting, savings_debt_management, income_expense_management, rule_based_classification, data_collection, model_development, system_development, model_performance_evaluation]
 module_rationale:
   financial_planning: "Sec. 1 Introduction (p. 1) frames the problem as allocating income across competing present and future needs, and Sec. 4.8 (p. 34) closes on helping users allocate resources efficiently while maintaining financial stability."

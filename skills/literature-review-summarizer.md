@@ -119,6 +119,7 @@ doi: 10.xxxx/xxxxx
 type: journal-article
 designation: algorithm
 status: extracted
+review_stream: study
 modules: [rule_based_classification, model_performance_evaluation]
 module_rationale:
   rule_based_classification: "Sect. 3 defines a five-branch threshold rule ..."
@@ -196,7 +197,7 @@ Only these map to matrix columns. Everything else is documentation.
 
 ### 5b. Module assignment
 
-`config/taxonomy.yaml` holds 20 module ids across the 5 outline sections
+`config/taxonomy.yaml` holds 19 module ids across the 5 outline sections
 (`pfm`, `pfm_apps`, `algorithms`, `methodology`, `evaluation`). Read it. Assign
 by **what the paper actually studies**, not by keyword overlap with the title.
 
@@ -207,7 +208,7 @@ Rules:
    paper that proposes a model and benchmarks it belongs in both
    `model_algorithm_integration` and `model_performance_evaluation`.
 3. **Zero is allowed but rare.** A paper belongs nowhere in this outline only if
-   it truly supports none of the 20 modules. Say so in `module_rationale` rather
+   it truly supports none of the 19 modules. Say so in `module_rationale` rather
    than forcing a false match.
 4. **One `module_rationale` clause per id**, citing where in the paper the fit is
    shown. The two must correspond exactly — an id explained but not assigned, or
@@ -215,7 +216,7 @@ Rules:
 5. **Never score.** There is no `relevance`, `weight`, `tier`, or `priority`. A
    module assignment is a routing decision, not a verdict on the paper.
 6. **The BUDGIE algorithms are first-class modules**: `sarima`,
-   `rule_based_classification`, `mixed_integer_linear_programming`, `interquartile_range`.
+   `rule_based_classification`, `linear_programming`, `interquartile_range`.
    A paper implementing one of these always gets that module, plus
    `model_algorithm_integration` if it also wires the algorithm into a system.
 
@@ -317,6 +318,7 @@ not a summary of the ones below it.
 - Do not write `topic_tags` or `topic_relevance`; both are retired.
 - Do not leave a documented discrepancy out of `## Statistical Evidence` while
   keeping the claim in `## Limitations and Gaps` — validation will flag it.
+- Set `review_stream` to `study` when the paper reports primary data, a model, or a system evaluation; set it to `literature` for standards, definitions, methods, or context. The summary tables use this field.
 - Do not mark a paper `status: extracted` with an empty `modules[]`. Either
   assign the modules it covers, or leave the paper unextracted.
 - Do not edit a note stub in place. Write the note as a whole new file so the

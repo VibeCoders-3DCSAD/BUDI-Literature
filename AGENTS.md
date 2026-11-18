@@ -56,7 +56,7 @@ BUDI-Literature/
 
 | Document | Purpose |
 |----------|---------|
-| `config/taxonomy.yaml` | The 20 module ids across the 5 Topical Outline V4 sections — the single source of truth for what modules exist |
+| `config/taxonomy.yaml` | The 19 module ids across the 5 Topical Outline V4 sections — the single source of truth for what modules exist |
 | `docs/standards/rrl-workflow.md` | Full processing workflow (fetch → convert → extract → build → verify) |
 | `docs/standards/note-format.md` | Schema for `review/notes/{stem}.md`, including `modules[]` and `module_rationale` |
 | `docs/standards/review-layout.md` | The `review/` tree, matrix columns, tag namespace, validator rules |
@@ -68,9 +68,12 @@ BUDI-Literature/
 | `review/data/screening.csv` | **Generated** intake triage queue |
 | `review/data/quotes.csv` | **Generated** one record per extracted quotation |
 | `review/data/effects.csv` | **Generated** one record per statistical result |
+| `review/summary/related-literature.md` | **Generated** Chapter 2 table of contextual works |
+| `review/summary/related-studies.md` | **Generated** Chapter 2 table of primary studies |
 | `review/validation.md` | **Generated** validation errors and informational gaps |
 | `review/notes/{stem}.md` | **Authored** one extraction note per paper — the source of truth for everything but the bibliographic block. The builder writes a stub only for a paper that has none. |
 | `review/synthesis/` | **Authored** cross-paper synthesis — nothing overwrites it |
+| `scripts/build_summary_tables.py` | Builds the two Chapter 2 summary tables from `review_stream` |
 | `skills/literature-review-summarizer.md` | Extraction contract for `review/notes/{stem}.md`, including the module assignment rules |
 | `docs/NEW-SCOPE-SOURCES.md` | Prioritised manual-download list. Its prioritization predates the current taxonomy and needs a re-pass |
 
@@ -107,7 +110,7 @@ paper, named by its bibliographically correct first author and year. Do not
 reintroduce per-intake subdirectories: `scripts/common.py` discovers the corpus
 by globbing `literature/mds/*_marked.md` and mapping each filename back to its
 stem through `metadata.json`, and a nested layout only obscures the corpus
-(101 papers as of 2026-10-12) when auditing stems, duplicates, or citation
+(53 active papers as of 2026-10-31) when auditing stems, duplicates, or citation
 metadata. A conversion the sidecar does not list is ignored.
 
 Intake provenance is tracked in git history, not in the directory layout. The
@@ -202,7 +205,7 @@ pip install -r requirements.txt
 - **PDFs are not committed.** Use `scripts/fetch_pdfs.py` to obtain them. The matrix build operates entirely on markdown conversions and notes — PDFs are only needed for conversion.
 - **`review/notes/` and `review/synthesis/` are authored.** Never hand-edit the matrix, the CSVs, or `validation.md`: `scripts/build_matrix.py` overwrites them from `metadata.json`, the `review/notes/*.md` files, and `config/taxonomy.yaml`. The builder never overwrites a note you wrote; it writes a stub only for a paper that has no note. To change a value, fix the source and rebuild. Run `build_matrix.py --check` after any extraction; it exits 1 on an error.
 - **A rename is cheap now, a module rename is not.** Corpus stems are keys in `metadata.json`; renaming one means editing the sidecar too. Renaming or removing a *module* id is worse: the ids live in every note's frontmatter `modules[]` and in the `Module` column of each `## Quotes` table, so the corpus keeps reporting the old namespace until the notes are retagged.
-- **Stems name the first author, but source PDF filenames often do not.** Seven corpus stems were built from filenames and turned out to name a later author. Each was corrected on 2026-09-26 after reading page 1. Verify any stem against the PDF before citing it. `literature/mds/metadata.json` is the citation authority and records verification per entry (all 101 entries verified from page 1 as of 2026-10-08; the file wraps them under an `entries` key, so count there, not at the top level).
+- **Stems name the first author, but source PDF filenames often do not.** Seven corpus stems were built from filenames and turned out to name a later author. Each was corrected on 2026-09-26 after reading page 1. Verify any stem against the PDF before citing it. `literature/mds/metadata.json` is the citation authority and records verification per entry (all 53 active entries verified from page 1 as of 2026-10-31; the file wraps them under an `entries` key, so count there, not at the top level).
 - **A paper that contradicts itself is not an extraction bug.** `A--Aldrees-2025` reports different headline figures in its abstract and its conclusion. Keep both rows with their locators in `## Statistical Evidence` and record the discrepancy in `## Limitations and Gaps`; the validator flags the conflict and deliberately does not choose.
 - **Never score or rank a paper.** Assigning a module says where the paper sits in the outline, not how good it is. `high`/`medium`/`low` relevance, weights, and tiers were all retired with `config/modules.yaml`.
 - **Batch structure is by intake run**, not by topic. Re-organize by topic when the topical outline is finalized.

@@ -8,6 +8,7 @@ doi: 10.70922/ctzevg57
 type: journal-article
 designation: local
 status: extracted
+review_stream: study
 modules: [sarima, model_performance_evaluation, data_collection]
 module_rationale:
   sarima: "Sec. 2.1.2.1 defines SARIMA as ARIMA plus a seasonal part, Sec. 3.2.1 fits SARIMA (1,0,0)(0,0,1)[4] on the quarterly series and selects it on the lowest Akaike Information Criterion, and Table 1 reports it as the lowest combined-error forecast of the three time-series models."

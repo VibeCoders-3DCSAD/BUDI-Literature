@@ -8,6 +8,7 @@ doi: Not reported
 
 designation: local
 status: extracted
+review_stream: study
 modules: [savings_debt_management, income_expense_management, financial_planning, data_collection]
 module_rationale:
   savings_debt_management: "The survey measures the household financial buffer directly, reporting that 25 percent of Filipino adults had outstanding loans in 2025, that seven in ten adults see borrowing as a bad idea, that only about three in ten adults say their current finances or savings would last, and that emergency preparedness remains a weak dimension of financial health (pp. 2, 11)."

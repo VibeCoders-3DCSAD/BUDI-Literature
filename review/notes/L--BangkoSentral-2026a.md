@@ -8,6 +8,7 @@ doi: "Not reported"
 
 designation: local
 status: extracted
+review_stream: study
 modules: [savings_debt_management, income_expense_management]
 module_rationale:
   savings_debt_management: "Reports household saving behaviour and borrowing — the Q1 2026 saving intention index hit a record-high 12.4 and household consumption loans rose to 15.6 percent of U/KB loans (Sect. II.A.1, fn. 3, p. 7; Sect. II.C.1, p. 17)."

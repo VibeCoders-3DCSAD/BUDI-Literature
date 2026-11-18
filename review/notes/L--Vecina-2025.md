@@ -8,6 +8,7 @@ doi: "Not reported"
 type: journal-article
 designation: local
 status: extracted
+review_stream: study
 modules: [financial_planning, budgeting, savings_debt_management, income_expense_management, pfm_apps_features, pfm_apps_importance, pfm_apps_problems, data_collection]
 module_rationale:
   financial_planning: "The study's dependent construct is financial management practice, defined in the Introduction (p. 1689) and measured across ten indicators in Table 2 (p. 1696) covering budgeting, financial control, savings and debt repayment."
